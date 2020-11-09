@@ -1,0 +1,20 @@
+{
+    "editor.minimap.enabled": false,
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Monokai Neon",
+    "latex-workshop.message.update.show": false,
+    "latex-workshop.view.pdf.viewer": "tab",
+    "window.openFilesInNewWindow": "off",
+    "window.openFoldersInNewWindow": "on",
+    "terminal.integrated.fontFamily": "MesloLGS NF",
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "git.enableSmartCommit": true,
+    "workbench.editor.enablePreview": false,
+    "java.project.importOnFirstTimeStartup": "automatic",
+    "workbench.startupEditor": "newUntitledFile"
+}
