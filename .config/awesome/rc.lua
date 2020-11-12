@@ -938,7 +938,7 @@ awful.rules.rules = {
           "MessageWin",  -- kalarm.
           "arcolinux-logout",
           "Peek",
-          "Skype",
+        --   "Skype",
           "System-config-printer.py",
           "Sxiv",
           "Unetbootin.elf",

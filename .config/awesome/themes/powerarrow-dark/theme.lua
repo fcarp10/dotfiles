@@ -9,6 +9,7 @@ local gears = require("gears")
 local lain  = require("lain")
 local awful = require("awful")
 local wibox = require("wibox")
+local beautiful = require("beautiful")
 local dpi   = require("beautiful.xresources").apply_dpi
 
 local os = os
@@ -58,6 +59,7 @@ theme.widget_battery_empty                      = theme.dir .. "/icons/battery_e
 theme.widget_mem                                = theme.dir .. "/icons/mem.png"
 theme.widget_cpu                                = theme.dir .. "/icons/cpu.png"
 theme.widget_temp                               = theme.dir .. "/icons/temp.png"
+theme.widget_net_wired                          = theme.dir .. "/icons/net_wired.png"
 theme.widget_net                                = theme.dir .. "/icons/net.png"
 theme.widget_hdd                                = theme.dir .. "/icons/hdd.png"
 theme.widget_music                              = theme.dir .. "/icons/note.png"
@@ -257,7 +259,7 @@ theme.volume.widget:buttons(awful.util.table.join(
 ))
 
 -- Net
-local neticon = wibox.widget.imagebox(theme.widget_net)
+local neticon = wibox.widget.imagebox(theme.widget_net_wired)
 local net = lain.widget.net({
     settings = function()
         widget:set_markup(markup.font(theme.font,
@@ -266,6 +268,8 @@ local net = lain.widget.net({
                           markup("#DDDDFF", " " .. string.format("%06.1f", net_now.sent) .. " ")))
     end
 })
+
+local systray = wibox.widget.systray()
 
 -- Separators
 local spr     = wibox.widget.textbox(' ')
@@ -304,7 +308,8 @@ function theme.at_screen_connect(s)
     s.mytasklist = awful.widget.tasklist(s, awful.widget.tasklist.filter.currenttags, awful.util.tasklist_buttons)
 
     -- Create the wibox
-    s.mywibox = awful.wibar({ position = "top", screen = s, height = dpi(18), bg = theme.bg_normal, fg = theme.fg_normal })
+    s.mywibox = awful.wibar({ position = "top", screen = s, height = dpi(18), bg = theme.bg_normal, fg = theme.fg_normal,
+     opacity = 1.0, border_width = 0, border_color = theme.bg_normal })
 
     -- Add widgets to the wibox
     s.mywibox:setup {
@@ -319,7 +324,7 @@ function theme.at_screen_connect(s)
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            wibox.widget.systray(),
+            systray,
             keyboardlayout,
             spr,
             arrl_ld,
