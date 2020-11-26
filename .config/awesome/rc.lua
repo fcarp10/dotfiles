@@ -137,16 +137,16 @@ awful.layout.suit.tile.left.mirror = true
 awful.layout.layouts = {
     awful.layout.suit.tile,
     awful.layout.suit.floating,
-    awful.layout.suit.tile.left,
-    awful.layout.suit.tile.bottom,
-    awful.layout.suit.tile.top,
+    -- awful.layout.suit.tile.left,
+    -- awful.layout.suit.tile.bottom,
+    -- awful.layout.suit.tile.top,
     --awful.layout.suit.fair,
     --awful.layout.suit.fair.horizontal,
     --awful.layout.suit.spiral,
     --awful.layout.suit.spiral.dwindle,
     awful.layout.suit.max,
     --awful.layout.suit.max.fullscreen,
-    awful.layout.suit.magnifier,
+    -- awful.layout.suit.magnifier,
     --awful.layout.suit.corner.nw,
     --awful.layout.suit.corner.ne,
     --awful.layout.suit.corner.sw,
@@ -303,56 +303,59 @@ root.buttons(my_table.join(
 globalkeys = my_table.join(
 
     -- super + ... function keys
-    -- awful.key({ modkey }, "F1", function () awful.util.spawn( browser ) end,
-    --     {description = browser, group = "function keys"}),
-    -- awful.key({ modkey }, "F2", function () awful.util.spawn( editorgui ) end,
-    --     {description = editorgui , group = "function keys" }),
-    -- awful.key({ modkey }, "F8", function () awful.util.spawn( filemanager ) end,
-    --     {description = filemanager , group = "function keys" }),
-    -- awful.key({ modkey }, "F9", function () awful.util.spawn( mailclient ) end,
-    --     {description = mailclient , group = "function keys" }),
     awful.key({ modkey }, "F11", function () xrandr.xrandr() end,
         {description = "xrandr" , group = "function keys" }),
     awful.key({ modkey }, "F12", function () awful.util.spawn( "rofi -show run" ) end,
         {description = "rofi" , group = "function keys" }),
+
+
 
     -- super + ...
     awful.key({ modkey }, "w", function () awful.util.spawn( browser ) end,
         {description = browser, group = "super"}),
     awful.key({ modkey }, "e", function () awful.util.spawn( editorgui ) end,
         {description = "run gui editor", group = "super"}),
-    -- awful.key({ modkey }, "r", function () awful.util.spawn( "rofi-theme-selector" ) end,
-    --     {description = "rofi theme selector", group = "super"}),
     awful.key({ modkey }, "t", function () awful.util.spawn( terminal ) end,
         {description = "terminal", group = "super"}),
     awful.key({ modkey }, "x",  function () awful.util.spawn( "arcolinux-logout" ) end,
         {description = "exit", group = "super"}),
     awful.key({ modkey }, "f", function() awful.util.spawn( filemanager ) end,
         {description = filemanager, group = "super"}),
-    awful.key({ modkey }, "c", function() awful.util.spawn( "slack" ) end,
-        {description = "slack", group = "super"}),
     awful.key({ modkey }, "a", function() awful.util.spawn( mailclient ) end,
         {description = mailclient, group = "super"}),
+
+    awful.key({ modkey }, "c", function() awful.util.spawn( "slack" ) end,
+        {description = "slack", group = "super"}),
+    awful.key({ modkey }, "g", function() awful.util.spawn( "telegram-desktop" ) end,
+        {description = "telegram-desktop", group = "super"}),
+    awful.key({ modkey }, "p", function() awful.util.spawn( "pamac-manager" ) end,
+        {description = "pamac-manager", group = "super"}),
+    awful.key({ modkey }, "r", function() awful.util.spawn( "chromium" ) end,
+        {description = "chromium", group = "super"}),
+    awful.key({ modkey }, "d", function() awful.util.spawn( "torbrowser-launcher" ) end,
+        {description = "torbrowser-launcher", group = "super"}),
+
 
     -- ctrl + shift + ...
     -- awful.key({ modkey1, "Shift"  }, "Escape", function() awful.util.spawn("xfce4-taskmanager") end),
 
 
+
     -- ctrl+alt +  ...
-    awful.key({ modkey1, altkey   }, "b", function() awful.util.spawn( filemanager ) end,
-        {description = filemanager, group = "alt+ctrl"}),
-    awful.key({ modkey1, altkey   }, "l", function() awful.util.spawn( "arcolinux-logout" ) end,
-        {description = scrlocker, group = "alt+ctrl"}),
-    awful.key({ modkey1, altkey   }, "t", function() awful.util.spawn( terminal ) end,
-        {description = terminal, group = "alt+ctrl"}),
-    awful.key({ modkey1, altkey   }, "p", function() awful.util.spawn( "pamac-manager" ) end,
-        {description = "Pamac Manager", group = "alt+ctrl"}),
+    -- awful.key({ modkey1, altkey   }, "b", function() awful.util.spawn( filemanager ) end,
+    --     {description = filemanager, group = "alt+ctrl"}),
+    -- awful.key({ modkey1, altkey   }, "l", function() awful.util.spawn( "arcolinux-logout" ) end,
+    --     {description = scrlocker, group = "alt+ctrl"}),
+    -- awful.key({ modkey1, altkey   }, "t", function() awful.util.spawn( terminal ) end,
+    --     {description = terminal, group = "alt+ctrl"}),
+    -- awful.key({ modkey1, altkey   }, "p", function() awful.util.spawn( "pamac-manager" ) end,
+    --     {description = "Pamac Manager", group = "alt+ctrl"}),
 
     -- screenshots
-    awful.key({ }, "Print", function () awful.util.spawn("scrot 'ArcoLinux-%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'") end,
-        {description = "Scrot", group = "screenshots"}),
-    awful.key({ modkey1           }, "Print", function () awful.util.spawn( "xfce4-screenshooter" ) end,
-        {description = "Xfce screenshot", group = "screenshots"}),
+    -- awful.key({ }, "Print", function () awful.util.spawn("scrot 'ArcoLinux-%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'") end,
+    --     {description = "Scrot", group = "screenshots"}),
+    -- awful.key({ modkey1           }, "Print", function () awful.util.spawn( "xfce4-screenshooter" ) end,
+    --     {description = "Xfce screenshot", group = "screenshots"}),
     awful.key({ modkey1, "Shift"  }, "Print", function() awful.util.spawn("gnome-screenshot -i") end,
         {description = "Gnome screenshot", group = "screenshots"}),
 
@@ -491,8 +494,7 @@ globalkeys = my_table.join(
         {description = "toggle wibox", group = "awesome"}),
 
  -- Show/Hide Systray
-    awful.key({ modkey }, "-", function ()
-    awful.screen.focused().systray.visible = not awful.screen.focused().systray.visible
+    awful.key({ modkey }, "-", function () awful.screen.focused().systray.visible = not awful.screen.focused().systray.visible
     end, {description = "Toggle systray visibility", group = "awesome"}),
 
  -- Show/Hide Systray
@@ -606,53 +608,52 @@ globalkeys = my_table.join(
     --awful.key({}, "XF86AudioStop", function() awful.util.spawn("playerctl stop", false) end),
 
 --Media keys supported by mpd.
-    awful.key({}, "XF86AudioPlay", function () awful.util.spawn("mpc toggle") end),
-    awful.key({}, "XF86AudioNext", function () awful.util.spawn("mpc next") end),
-    awful.key({}, "XF86AudioPrev", function () awful.util.spawn("mpc prev") end),
-    awful.key({}, "XF86AudioStop", function () awful.util.spawn("mpc stop") end),
+    -- awful.key({}, "XF86AudioPlay", function () awful.util.spawn("mpc toggle") end),
+    -- awful.key({}, "XF86AudioNext", function () awful.util.spawn("mpc next") end),
+    -- awful.key({}, "XF86AudioPrev", function () awful.util.spawn("mpc prev") end),
+    -- awful.key({}, "XF86AudioStop", function () awful.util.spawn("mpc stop") end),
 
-    -- MPD control
-    awful.key({ modkey1, "Shift" }, "Up",
-        function ()
-            os.execute("mpc toggle")
-            beautiful.mpd.update()
-        end,
-        {description = "mpc toggle", group = "widgets"}),
-    awful.key({ modkey1, "Shift" }, "Down",
-        function ()
-            os.execute("mpc stop")
-            beautiful.mpd.update()
-        end,
-        {description = "mpc stop", group = "widgets"}),
-    awful.key({ modkey1, "Shift" }, "Left",
-        function ()
-            os.execute("mpc prev")
-            beautiful.mpd.update()
-        end,
-        {description = "mpc prev", group = "widgets"}),
-    awful.key({ modkey1, "Shift" }, "Right",
-        function ()
-            os.execute("mpc next")
-            beautiful.mpd.update()
-        end,
-        {description = "mpc next", group = "widgets"}),
-    awful.key({ modkey1, "Shift" }, "s",
+    -- -- MPD control
+    -- awful.key({ modkey1, "Shift" }, "Up",
+    --     function ()
+    --         os.execute("mpc toggle")
+    --         beautiful.mpd.update()
+    --     end,
+    --     {description = "mpc toggle", group = "widgets"}),
+    -- awful.key({ modkey1, "Shift" }, "Down",
+    --     function ()
+    --         os.execute("mpc stop")
+    --         beautiful.mpd.update()
+    --     end,
+    --     {description = "mpc stop", group = "widgets"}),
+    -- awful.key({ modkey1, "Shift" }, "Left",
+    --     function ()
+    --         os.execute("mpc prev")
+    --         beautiful.mpd.update()
+    --     end,
+    --     {description = "mpc prev", group = "widgets"}),
+    -- awful.key({ modkey1, "Shift" }, "Right",
+    --     function ()
+    --         os.execute("mpc next")
+    --         beautiful.mpd.update()
+    --     end,
+    --     {description = "mpc next", group = "widgets"}),
+    -- awful.key({ modkey1, "Shift" }, "s",
+        -- function ()
+        --     local common = { text = "MPD widget ", position = "top_middle", timeout = 2 }
+        --     if beautiful.mpd.timer.started then
+        --         beautiful.mpd.timer:stop()
+        --         common.text = common.text .. lain.util.markup.bold("OFF")
+        --     else
+        --         beautiful.mpd.timer:start()
+        --         common.text = common.text .. lain.util.markup.bold("ON")
+        --     end
+        --     naughty.notify(common)
+        -- end,
+        -- {description = "mpc on/off", group = "widgets"}),
 
 
-
-        function ()
-            local common = { text = "MPD widget ", position = "top_middle", timeout = 2 }
-            if beautiful.mpd.timer.started then
-                beautiful.mpd.timer:stop()
-                common.text = common.text .. lain.util.markup.bold("OFF")
-            else
-                beautiful.mpd.timer:start()
-                common.text = common.text .. lain.util.markup.bold("ON")
-            end
-            naughty.notify(common)
-        end,
-        {description = "mpc on/off", group = "widgets"}),
-
+        
     -- Copy primary to clipboard (terminals to gtk)
     --awful.key({ modkey }, "c", function () awful.spawn.with_shell("xsel | xsel -i -b") end,
              -- {description = "copy terminal to gtk", group = "hotkeys"}),
@@ -700,8 +701,6 @@ clientkeys = my_table.join(
               {description = "move to master", group = "client"}),
     awful.key({ modkey,           }, "o",      function (c) c:move_to_screen()               end,
               {description = "move to screen", group = "client"}),
-    --awful.key({ modkey,           }, "t",      function (c) c.ontop = not c.ontop            end,
-              --{description = "toggle keep on top", group = "client"}),
     awful.key({ modkey,           }, "n",
         function (c)
             -- The client currently has the input focus, so it cannot be
@@ -959,7 +958,8 @@ awful.rules.rules = {
         }
       }, properties = { floating = true }},
 
-          -- Floating clients but centered in screen
+
+    -- Floating clients but centered in screen
     { rule_any = {
        	class = {
        		"Polkit-gnome-authentication-agent-1"

@@ -6,6 +6,7 @@ function run {
     $@&
   fi
 }
+# run "xrandr --output DP1-8 --primary --mode 1920x1200 --output HDMI3 --mode 1920x1200"
 run "nm-applet"
 run "pamac-tray"
 run "xfce4-power-manager"
@@ -15,5 +16,5 @@ run "numlockx on"
 run "volumeicon"
 #run applications from startup
 #run "firefox"
-# run "syncthing"
+run "syncthing"
 
