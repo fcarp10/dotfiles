@@ -1,4 +1,4 @@
-# Arcolinux installation
+# Arcolinux installation (TESTING)
 
 Script for installing `awesomewm` and all additional packages for `arcolinux`.
 
