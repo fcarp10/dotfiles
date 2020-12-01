@@ -12,13 +12,21 @@ Script for installing `awesomewm` and all additional packages for `arcolinux`.
 
 ### Post-installation script
 
-Run `post-installation-script.sh` to install the software. The available options are:
+Run `post-installation-script.sh` to install the software:
 
 ```
+chmod +x post-installation-script.sh
+./post-installation-script.sh -h
+
+Options:
 -c --core: installs core software.
 -s --sound: installs sound software.
 -p --printers: installs printers software.
 -b --bluetooth: installs bluetooth software.
 -l --laptop: installs laptop software.
 -e --extra: installs extra software.
+-h --help: shows available options.
 ```
+
+
+
