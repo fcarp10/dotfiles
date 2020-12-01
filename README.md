@@ -1,10 +1,14 @@
-# Dotfiles
+# Dotfiles and Arcolinux installation
 
-Repository for dotfiles.
+Repository for dotfiles and arcolinux post-installation script.
 
-Tutorial on: https://www.atlassian.com/git/tutorials/dotfiles
+## Arcolinux installation
 
-## Initial configuration
+Instructions [here](https://github.com/fcarp10/dotfiles/blob/master/.arcolinux-install/README.md)  
+
+## Dotfiles configuration 
+
+### Initial configuration
 Creates a folder in `$HOME` and adds an alias to `zsh`:
 ```
 git init --bare $HOME/.dotfiles
@@ -13,7 +17,7 @@ config config --local status.showUntrackedFiles no
 echo "alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" >> $HOME/.zshrc
 ```
 
-## Add files
+### Add files
 
 Example of how to add a file:
 ```
@@ -22,3 +26,24 @@ config add .zshrc
 config commit -m "Add zshrc"
 config push
 ```
+
+### Apply configuration to existing installation
+
+1. Add the next alias to `.zsh`:
+    ```
+    echo "alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" >> $HOME/.zshrc
+    ```
+2. Clone the dotfiles repository:
+    ```
+    git clone --bare https://github.com/fcarp10/dotfiles $HOME/.dotfiles
+    ```
+3. Make sure you delete or backup all conflicting files. Then, checkout the content from the repository to `$HOME`:
+    ```
+    config checkout
+    ```
+4. Set flag `showUntrackedFiles` on this specific local repository:
+    ```
+    config config --local status.showUntrackedFiles no
+    ```
+    
+- For more details go [here](https://www.atlassian.com/git/tutorials/dotfiles)
