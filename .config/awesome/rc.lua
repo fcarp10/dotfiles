@@ -88,15 +88,12 @@ run_once({ "unclutter -root" }) -- entries must be comma-separated
 -- {{{ Variable definitions
 
 local themes = {
-    -- "multicolor",		-- 1
-    -- "powerarrow",      		-- 2
-    -- "powerarrow-blue",	 	-- 3
-    -- "blackburn",		-- 4
-    "powerarrow-dark",		-- 1
+    "powerarrow-dark",
+    "multicolor"
 }
 
 -- choose your theme here
-local chosen_theme = themes[1]
+local chosen_theme = themes[2]
 
 local theme_path = string.format("%s/.config/awesome/themes/%s/theme.lua", os.getenv("HOME"), chosen_theme)
 beautiful.init(theme_path)
@@ -127,8 +124,8 @@ awful.layout.layouts = {
     -- awful.layout.suit.tile.left,
     -- awful.layout.suit.tile.bottom,
     -- awful.layout.suit.tile.top,
-    --awful.layout.suit.fair,
-    --awful.layout.suit.fair.horizontal,
+    awful.layout.suit.fair,
+    awful.layout.suit.fair.horizontal,
     --awful.layout.suit.spiral,
     --awful.layout.suit.spiral.dwindle,
     awful.layout.suit.max,
