@@ -146,7 +146,7 @@ dmenu
 firefox
 chromium
 syncthing
-evolution
+xreader
 thunar
 code
 slack-desktop
