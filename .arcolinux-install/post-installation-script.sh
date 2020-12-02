@@ -147,7 +147,7 @@ firefox
 chromium
 syncthing
 evolution
-nautilus
+thunar
 code
 slack-desktop
 wps-office
