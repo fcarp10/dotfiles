@@ -144,7 +144,9 @@ arandr
 dmenu
 ## additional software
 firefox
+thunderbird
 chromium
+torbrowser-launcher
 syncthing
 xreader
 thunar
@@ -176,7 +178,7 @@ list_aur=(
 tela-icon-theme
 ttf-meslo-nerd-font-powerlevel10k
 jabref
-mailspring
+drawio-desktop
 )
 
 while [ "$1" != "" ]; do
