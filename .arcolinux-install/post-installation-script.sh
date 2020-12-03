@@ -151,6 +151,7 @@ syncthing
 xreader
 thunar
 code
+gnome-screenshot
 slack-desktop
 wps-office
 alacritty
