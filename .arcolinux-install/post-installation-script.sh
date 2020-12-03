@@ -155,6 +155,7 @@ file-roller
 zip
 unrar
 p7zip
+nomacs
 code
 gnome-screenshot
 slack-desktop
