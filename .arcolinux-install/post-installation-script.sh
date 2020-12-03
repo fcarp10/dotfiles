@@ -30,7 +30,6 @@ usage='Usage:
 '$0' [OPTION]
 
 OPTIONS:
-[Only one option is allowed]
 \n -c --core
 \t Installs core software.
 \n -s --sound
@@ -55,13 +54,27 @@ function install_package {
     fi
 }
 
+function install_package_aur {
+	if yay -Qi $1 &> /dev/null; then
+		log "WARN" "the package "$1" is already installed"
+	else
+		log "INFO" "installing package "$1" "
+    	sudo yay -S --noconfirm --needed $1
+    fi
+}
+
 function install_list {
-    count=0
-    for name in "${list[@]}" ; do
-        count=$[count+1]
+    for name in $@ ; do
         install_package $name
     done
 }
+
+function install_list_aur {
+    for name in $@ ; do
+        install_package_aur $name
+    done
+}
+
 
 list_core=(
 lightdm
@@ -131,11 +144,20 @@ arandr
 dmenu
 ## additional software
 firefox
+thunderbird
 chromium
+torbrowser-launcher
 syncthing
-evolution
-nautilus
+xreader
+thunar
+gvfs
+file-roller
+zip
+unrar
+p7zip
+nomacs
 code
+gnome-screenshot
 slack-desktop
 wps-office
 alacritty
@@ -163,14 +185,14 @@ list_aur=(
 tela-icon-theme
 ttf-meslo-nerd-font-powerlevel10k
 jabref
-mailspring
+drawio-desktop
 )
 
 while [ "$1" != "" ]; do
   case $1 in
     --core | -c )
     log "INFO" "starting installation of core software"
-    install_list "$list_core"
+    install_list "${list_core[*]}"
     log "INFO" "enabling lightdm as display manager"
     sudo systemctl enable lightdm.service -f
     log "INFO" "core software has been installed, reboot your system"
@@ -178,20 +200,20 @@ while [ "$1" != "" ]; do
     
     --sound | -s )       
     log "INFO" "starting installation of sound software"
-    install_list "$list_audio"
+    install_list "${list_audio[*]}"
     log "INFO" "sound software has been installed"
     ;;
     
     --printers | -p )
     log "INFO" "starting the installation of printers software"
-    install_list "$list_printers"
+    install_list "${list_printers[*]}"
     sudo systemctl enable org.cups.cupsd.service
     log "INFO" "printers software has been installed"
     ;;
     
     --bluetooth | -b )
     log "INFO" "starting the installation of bluetooth software"
-    install_list "$list_bluetooth"
+    install_list "${list_bluetooth[*]}"
     sudo systemctl enable bluetooth.service
     sudo systemctl start bluetooth.service
     sudo sed -i 's/'#AutoEnable=false'/'AutoEnable=true'/g' /etc/bluetooth/main.conf
@@ -200,15 +222,15 @@ while [ "$1" != "" ]; do
     
     --laptop | -l )
     log "INFO" "starting the installation of laptop software"
-    install_list "$list_laptop"
+    install_list "${list_laptop[*]}"
     sudo systemctl enable tlp.service
     log "INFO" "laptop software has been installed"
     ;;
     
     --extra | -e )
     log "INFO" "starting the installation of extra software"
-    install_list "$list_extra"
-    install_list "$list_aur"
+    install_list "${list_extra[*]}"
+    install_list_aur "${list_aur[*]}"
     # change shell to zsh and install powerlevel10k
     chsh -s /usr/bin/zsh
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
