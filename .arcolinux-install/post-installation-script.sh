@@ -150,6 +150,7 @@ torbrowser-launcher
 syncthing
 xreader
 thunar
+gvfs
 code
 gnome-screenshot
 slack-desktop
