@@ -108,8 +108,8 @@ local modkey1      = "Control"
 local browser          = "firefox"
 -- local editor            = os.getenv("EDITOR") or "nano"
 local editorgui         = "code"
-local filemanager       = "nautilus -w"
-local mailclient        = "mailspring"
+local filemanager       = "thunar"
+local mailclient        = "thunderbird"
 local terminal          = "alacritty"
 
 -- awesome variables
@@ -262,6 +262,20 @@ awful.screen.connect_for_each_screen(function(s) beautiful.at_screen_connect(s)
 -- }}}
 
 
+-- Keyboard map indicator and changer
+kbdcfg = {}
+kbdcfg.cmd = "setxkbmap"
+kbdcfg.layout = { { "us", "" , "US" }, { "es", "" , "ES" } }
+kbdcfg.current = 1  -- us is our default layout
+-- kbdcfg.widget = wibox.widget.textbox()
+-- kbdcfg.widget:set_text(" " .. kbdcfg.layout[kbdcfg.current][3] .. " ")
+kbdcfg.switch = function ()
+  kbdcfg.current = kbdcfg.current % #(kbdcfg.layout) + 1
+  local t = kbdcfg.layout[kbdcfg.current]
+--   kbdcfg.widget:set_text(" " .. t[3] .. " ")
+  os.execute( kbdcfg.cmd .. " " .. t[1] .. " " .. t[2] )
+end
+
 
 -- {{{ Mouse bindings
 root.buttons(my_table.join(
@@ -313,7 +327,7 @@ globalkeys = my_table.join(
     -- ctrl + shift + ...
     -- awful.key({ modkey1, "Shift"  }, "Escape", function() awful.util.spawn("xfce4-taskmanager") end),
 
-
+    awful.key({ modkey1 }, "space", function () kbdcfg.switch() end),
 
     -- ctrl+alt +  ...
     -- awful.key({ modkey1, altkey   }, "b", function() awful.util.spawn( filemanager ) end,
@@ -530,13 +544,13 @@ globalkeys = my_table.join(
     --awful.key({ modkey1 }, "Up",
     awful.key({ }, "XF86AudioRaiseVolume",
         function ()
-            os.execute(string.format("amixer -q set %s 1%%+", beautiful.volume.channel))
+            os.execute(string.format("amixer -q set %s 5%%+", beautiful.volume.channel))
             beautiful.volume.update()
         end),
     --awful.key({ modkey1 }, "Down",
     awful.key({ }, "XF86AudioLowerVolume",
         function ()
-            os.execute(string.format("amixer -q set %s 1%%-", beautiful.volume.channel))
+            os.execute(string.format("amixer -q set %s 5%%-", beautiful.volume.channel))
             beautiful.volume.update()
         end),
     awful.key({ }, "XF86AudioMute",
@@ -710,8 +724,8 @@ awful.rules.rules = {
     -- find class or role via xprop command
     { rule = { class = "Slack" },
       properties = { screen = 2, tag = awful.util.tagnames[4], switchtotag = true  } },
-    { rule = { class = "Mailspring" },
-      properties = { screen = 2, tag = awful.util.tagnames[5], switchtotag = true  } },
+    { rule = { class = mailclient },
+      properties = { tag = awful.util.tagnames[5], switchtotag = true  } },
     { rule = { class = browser },
       properties = { tag = awful.util.tagnames[3], switchtotag = true  } },
     { rule = { class = editorgui },
