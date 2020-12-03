@@ -151,6 +151,10 @@ syncthing
 xreader
 thunar
 gvfs
+file-roller
+zip
+unrar
+p7zip
 code
 gnome-screenshot
 slack-desktop
