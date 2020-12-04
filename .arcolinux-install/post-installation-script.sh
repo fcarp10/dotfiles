@@ -158,6 +158,7 @@ p7zip
 nomacs
 code
 gnome-screenshot
+celluloid
 slack-desktop
 wps-office
 alacritty
