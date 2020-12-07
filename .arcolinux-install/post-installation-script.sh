@@ -59,7 +59,7 @@ function install_package_aur {
 		log "WARN" "the package "$1" is already installed"
 	else
 		log "INFO" "installing package "$1" "
-    	sudo yay -S --noconfirm --needed $1
+    	yay -S --noconfirm --needed $1
     fi
 }
 
@@ -158,6 +158,7 @@ p7zip
 nomacs
 code
 gnome-screenshot
+celluloid
 slack-desktop
 wps-office
 alacritty
