@@ -55,6 +55,12 @@ function install_package_aur {
     fi
 }
 
+function install_package_flatpak {
+	log "INFO" "installing package "$1" "
+    	flatpak install $1
+    fi
+}
+
 function install_list {
     for name in $@ ; do
         install_package $name
@@ -64,6 +70,12 @@ function install_list {
 function install_list_aur {
     for name in $@ ; do
         install_package_aur $name
+    done
+}
+
+function install_list_flatpak {
+    for name in $@ ; do
+        install_package_flatpak $name
     done
 }
 
@@ -79,6 +91,8 @@ keychain
 cawbird
 gnome-podcasts
 gnome-tweaks
+gnome-themes-extra
+flatpak
 retroarch
 libretro-snes9x
 )
@@ -86,6 +100,10 @@ libretro-snes9x
 list_aur=(
 tela-icon-theme
 ttf-meslo-nerd-font-powerlevel10k
+)
+
+list_flatpak=(
+Adwaita-dark
 )
 
 while [ "$1" != "" ]; do
@@ -107,6 +125,11 @@ while [ "$1" != "" ]; do
     # set up git
     git config --global user.name "Francisco Carpio"
     git config --global user.email "carpiofj@gmail.com"
+    ;;
+    
+    --flatpak | -f )
+    log "INFO" "starting the installation of flatpaks"
+    install_list_flatpak "${list_flatpak[*]}"
     ;;
     
     --help | -h )        echo -e "${usage}"
