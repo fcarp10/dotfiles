@@ -76,6 +76,11 @@ telegram-desktop
 zsh
 neofetch
 keychain
+cawbird
+gpodder
+gnome-tweaks
+retroarch
+libretro-snes9x
 )
 
 list_aur=(
@@ -89,6 +94,7 @@ while [ "$1" != "" ]; do
     log "INFO" "starting installation of apps"
     install_list "${list_pacman[*]}"
     scale-to-fit cawbird
+    scale-to-fit gpodder
     scale-to-fit gnome-tweaks
     ;;
     
