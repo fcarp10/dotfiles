@@ -104,6 +104,8 @@ ttf-meslo-nerd-font-powerlevel10k
 
 list_flatpak=(
 Adwaita-dark
+com.gitlab.newsflash
+org.gnome.Weather
 )
 
 while [ "$1" != "" ]; do
@@ -113,6 +115,7 @@ while [ "$1" != "" ]; do
     install_list "${list_pacman[*]}"
     scale-to-fit cawbird
     scale-to-fit gnome-tweaks
+    scale-to-fit org.gnome.Weather
     ;;
     
     --extra | -e )
