@@ -84,7 +84,7 @@ list_pacman=(
 firefox
 syncthing
 celluloid
-telegram-desktop
+# telegram-desktop
 zsh
 neofetch
 keychain
@@ -106,6 +106,7 @@ list_flatpak=(
 Adwaita-dark
 com.gitlab.newsflash
 org.gnome.Weather
+org.telegram.desktop
 )
 
 while [ "$1" != "" ]; do
@@ -116,6 +117,7 @@ while [ "$1" != "" ]; do
     scale-to-fit cawbird
     scale-to-fit gnome-tweaks
     scale-to-fit org.gnome.Weather
+    scale-to-fit org.telegram.desktop
     ;;
     
     --extra | -e )
