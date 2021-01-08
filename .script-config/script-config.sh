@@ -88,25 +88,30 @@ celluloid
 zsh
 neofetch
 keychain
-cawbird
+# cawbird
 gnome-podcasts
 gnome-tweaks
 gnome-themes-extra
 flatpak
 retroarch
 libretro-snes9x
+anbox
+anbox-image
+adb
 )
 
 list_aur=(
 tela-icon-theme
 ttf-meslo-nerd-font-powerlevel10k
+gnome-weather-git
 )
 
 list_flatpak=(
 Adwaita-dark
 com.gitlab.newsflash
-org.gnome.Weather
+uk.co.ibboard.cawbird
 org.telegram.desktop
+dev.tchx84.Portfolio
 )
 
 while [ "$1" != "" ]; do
@@ -114,9 +119,7 @@ while [ "$1" != "" ]; do
     --apps | -a )
     log "INFO" "starting installation of apps"
     install_list "${list_pacman[*]}"
-    scale-to-fit cawbird
     scale-to-fit gnome-tweaks
-    scale-to-fit org.gnome.Weather
     scale-to-fit org.telegram.desktop
     ;;
     
