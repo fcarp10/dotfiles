@@ -55,6 +55,12 @@ function install_package_aur {
     fi
 }
 
+function install_package_flatpak {
+	log "INFO" "installing package "$1" "
+    	flatpak install $1
+    fi
+}
+
 function install_list {
     for name in $@ ; do
         install_package $name
@@ -67,20 +73,45 @@ function install_list_aur {
     done
 }
 
+function install_list_flatpak {
+    for name in $@ ; do
+        install_package_flatpak $name
+    done
+}
+
 
 list_pacman=(
 firefox
 syncthing
 celluloid
-telegram-desktop
+# telegram-desktop
 zsh
 neofetch
 keychain
+# cawbird
+gnome-podcasts
+gnome-tweaks
+gnome-themes-extra
+flatpak
+retroarch
+libretro-snes9x
+anbox
+anbox-image
+adb
 )
 
 list_aur=(
 tela-icon-theme
 ttf-meslo-nerd-font-powerlevel10k
+gnome-weather-git
+)
+
+list_flatpak=(
+Adwaita-dark
+com.gitlab.newsflash
+uk.co.ibboard.cawbird
+org.telegram.desktop
+dev.tchx84.Portfolio
 )
 
 while [ "$1" != "" ]; do
@@ -88,8 +119,8 @@ while [ "$1" != "" ]; do
     --apps | -a )
     log "INFO" "starting installation of apps"
     install_list "${list_pacman[*]}"
-    scale-to-fit cawbird
     scale-to-fit gnome-tweaks
+    scale-to-fit org.telegram.desktop
     ;;
     
     --extra | -e )
@@ -102,6 +133,11 @@ while [ "$1" != "" ]; do
     # set up git
     git config --global user.name "Francisco Carpio"
     git config --global user.email "carpiofj@gmail.com"
+    ;;
+    
+    --flatpak | -f )
+    log "INFO" "starting the installation of flatpaks"
+    install_list_flatpak "${list_flatpak[*]}"
     ;;
     
     --help | -h )        echo -e "${usage}"
