@@ -130,7 +130,7 @@ arcolinux-tweak-tool-git
 arcolinux-bin-git
 arcolinux-hblock-git
 arcolinux-root-git
-arcolinux-arc-themes
+arcolinux-arc-themes-git
 arcolinux-fonts-git
 )
 

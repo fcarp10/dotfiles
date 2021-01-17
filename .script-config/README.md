@@ -16,8 +16,8 @@ The script has only been tested in ArcoLinuxD. Short instructions on how to inst
 Run `script-config.sh` to install a set of packages:
 
 ```
-chmod +x post-installation-script.sh
-./post-installation-script.sh -h
+chmod +x script-config.sh
+./script-config.sh -h
 
 OPTIONS:
 \n -A --awesome
