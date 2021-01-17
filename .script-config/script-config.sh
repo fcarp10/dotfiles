@@ -30,18 +30,24 @@ usage='Usage:
 '$0' [OPTION]
 
 OPTIONS:
-\n -c --core
-\t Installs core software.
+\n -A --awesome
+\t Installs core packages for awesomewm.
+\n -Q --qtile
+\t Installs core packages for qtile.
+\n -a --arcolinuxd
+\t Installs extra packages from arcolinux.
 \n -s --sound
-\t Installs sound software.
+\t Installs sound packages.
 \n -p --printers
-\t Installs printers software.
+\t Installs printers packages.
 \n -b --bluetooth
-\t Installs bluetooth software.
+\t Installs bluetooth packages.
 \n -l --laptop
-\t Installs laptop software.
+\t Installs laptop packages.
 \n -e --extra
-\t Installs extra software.
+\t Installs extra packages.
+\n -h --help
+\t Shows available options.
 \n\t Only one option is allowed.
 '
 
@@ -75,21 +81,61 @@ function install_list_aur {
     done
 }
 
-
-list_core=(
+# -A --awesome: installs core packages for awesomewm.
+awesome_core=(
 lightdm
 arcolinux-lightdm-gtk-greeter
 arcolinux-lightdm-gtk-greeter-settings
 arcolinux-wallpapers-git
+thunar
 awesome
+dmenu
 vicious
 arcolinux-awesome-git
 arcolinux-awesome-dconf-git
 arcolinux-config-awesome-git
 arcolinux-logout-git
+arandr
+lxappearance
+picom
 )
 
-list_audio=(
+# -Q --qtile: installs core packages for qtile.
+qtile_core=(
+lightdm
+arcolinux-lightdm-gtk-greeter
+arcolinux-lightdm-gtk-greeter-settings
+arcolinux-wallpapers-git
+thunar
+qtile
+sxhkd
+dmenu
+python-psutil
+xcb-util-cursor
+arcolinux-qtile-git
+arcolinux-qtile-dconf-git
+arcolinux-config-qtile-git
+arcolinux-logout-git
+arandr
+lxappearance
+picom
+)
+
+# -a --arcolinuxd: installs extra packages from arcolinux.
+arco_extra=(
+downgrade
+inxi
+pamac-aur
+arcolinux-tweak-tool-git
+arcolinux-bin-git
+arcolinux-hblock-git
+arcolinux-root-git
+arcolinux-arc-themes
+arcolinux-fonts-git
+)
+
+# -s --sound: installs sound packages.
+audio=(
 pulseaudio
 pulseaudio-alsa
 pavucontrol
@@ -106,7 +152,8 @@ playerctl
 volumeicon
 )
 
-list_printers=(
+# -p --printers: installs printers packages.
+printers=(
 cups
 cups-pdf
 ghostscript
@@ -117,7 +164,8 @@ libcups
 system-config-printer
 )
 
-list_bluetooth=(
+# -b --bluetooth: installs bluetooth packages.
+bluetooth=(
 pulseaudio-bluetooth
 bluez
 bluez-libs
@@ -125,31 +173,19 @@ bluez-utils
 blueberry
 )
 
-list_laptop=(
+# -l --laptop: installs laptop packages.
+laptop=(
 tlp
 )
 
-list_extra=(
-## arcolinux specific
-downgrade
-inxi
-pamac-aur
-arcolinux-tweak-tool-git
-arcolinux-bin-git
-arcolinux-hblock-git
-arcolinux-root-git
-arcolinux-arc-themes
-## awesome specific
-arandr
-dmenu
-## additional software
+# -e --extra: installs extra packages.
+extra=(
 firefox
 thunderbird
 chromium
 torbrowser-launcher
 syncthing
 xreader
-thunar
 gvfs
 file-roller
 zip
@@ -168,7 +204,6 @@ pyenv
 etcher-bin
 docker
 zsh
-## latex
 texlive-bibextra
 texlive-bin
 texlive-core
@@ -178,11 +213,8 @@ texlive-latexextra
 texlive-pictures
 texlive-publishers
 texlive-science
-## fonts
-arcolinux-fonts-git
 )
-
-list_aur=(
+aur=(
 tela-icon-theme
 ttf-meslo-nerd-font-powerlevel10k
 jabref
@@ -191,47 +223,65 @@ drawio-desktop
 
 while [ "$1" != "" ]; do
   case $1 in
-    --core | -c )
-    log "INFO" "starting installation of core software"
-    install_list "${list_core[*]}"
+    --awesome | -A )
+    log "INFO" "starting installation of core packages for awesomewm"
+    install_list "${awesome_core[*]}"
+    cp -Rf ~/.config ~/.config-backup-$(date +%Y.%m.%d-%H.%M.%S)
+    cp -arf /etc/skel/. ~
     log "INFO" "enabling lightdm as display manager"
     sudo systemctl enable lightdm.service -f
-    log "INFO" "core software has been installed, reboot your system"
+    log "INFO" "core packages for awesomewm have been installed, reboot your system"
+    ;;
+
+    --qtile | -Q )
+    log "INFO" "starting installation of core packages for qtile"
+    install_list "${qtile_core[*]}"
+    cp -Rf ~/.config ~/.config-backup-$(date +%Y.%m.%d-%H.%M.%S)
+    cp -arf /etc/skel/. ~
+    log "INFO" "enabling lightdm as display manager"
+    sudo systemctl enable lightdm.service -f
+    log "INFO" "core packages for qtile have been installed, reboot your system"
+    ;;
+
+    --arcolinuxd | -a )
+    log "INFO" "starting installation of extra packages from arcolinux."
+    install_list "${arco_extra[*]}"
+    log "INFO" "extra packages from arcolinux have been installed"
     ;;
     
     --sound | -s )       
-    log "INFO" "starting installation of sound software"
-    install_list "${list_audio[*]}"
-    log "INFO" "sound software has been installed"
+    log "INFO" "starting installation of sound packages"
+    install_list "${audio[*]}"
+    log "INFO" "sound packages have been installed"
     ;;
     
     --printers | -p )
-    log "INFO" "starting the installation of printers software"
-    install_list "${list_printers[*]}"
+    log "INFO" "starting the installation of printers packages"
+    install_list "${printers[*]}"
     sudo systemctl enable org.cups.cupsd.service
-    log "INFO" "printers software has been installed"
+    log "INFO" "printers packages have been installed"
     ;;
     
     --bluetooth | -b )
-    log "INFO" "starting the installation of bluetooth software"
-    install_list "${list_bluetooth[*]}"
+    log "INFO" "starting the installation of bluetooth packages"
+    install_list "${bluetooth[*]}"
     sudo systemctl enable bluetooth.service
     sudo systemctl start bluetooth.service
     sudo sed -i 's/'#AutoEnable=false'/'AutoEnable=true'/g' /etc/bluetooth/main.conf
-    log "INFO" "bluetooth software has been installed"
+    log "INFO" "bluetooth packages have been installed"
     ;;
     
     --laptop | -l )
-    log "INFO" "starting the installation of laptop software"
-    install_list "${list_laptop[*]}"
+    log "INFO" "starting the installation of laptop packages"
+    install_list "${laptop[*]}"
     sudo systemctl enable tlp.service
-    log "INFO" "laptop software has been installed"
+    log "INFO" "laptop packages have been installed"
     ;;
     
     --extra | -e )
-    log "INFO" "starting the installation of extra software"
-    install_list "${list_extra[*]}"
-    install_list_aur "${list_aur[*]}"
+    log "INFO" "starting the installation of extra packages"
+    install_list "${extra[*]}"
+    install_list_aur "${aur[*]}"
     # change shell to zsh and install powerlevel10k
     chsh -s /usr/bin/zsh
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k

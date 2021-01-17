@@ -1,6 +1,6 @@
 ## Arcolinux configuration
 
-Script for installing `awesomewm` and all additional packages and settings.
+Script for installing `awesomewm` or `qtile` and additional packages and settings.
 
 ### Prerequisites 
 
@@ -13,20 +13,32 @@ The script has only been tested in ArcoLinuxD. Short instructions on how to inst
 
 ### Configuration script
 
-Run `script-config.sh` to install the software:
+Run `script-config.sh` to install a set of packages:
 
 ```
 chmod +x post-installation-script.sh
 ./post-installation-script.sh -h
 
-Options:
--c --core: installs core software.
--s --sound: installs sound software.
--p --printers: installs printers software.
--b --bluetooth: installs bluetooth software.
--l --laptop: installs laptop software.
--e --extra: installs extra software.
--h --help: shows available options.
+OPTIONS:
+\n -A --awesome
+\t Installs core packages for awesomewm.
+\n -Q --qtile
+\t Installs core packages for qtile.
+\n -a --arcolinuxd
+\t Installs extra packages from arcolinux.
+\n -s --sound
+\t Installs sound packages.
+\n -p --printers
+\t Installs printers packages.
+\n -b --bluetooth
+\t Installs bluetooth packages.
+\n -l --laptop
+\t Installs laptop packages.
+\n -e --extra
+\t Installs extra packages.
+\n -h --help
+\t Shows available options.
+\n\t Only one option is allowed.
 ```
 
 
