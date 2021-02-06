@@ -34,6 +34,10 @@ OPTIONS:
 \t Installs main packages.
 \n -e --extra
 \t Installs packages from AUR.
+\n -f --extra
+\t Installs packages from flathub.
+\n -h --help
+\t Shows available options.
 \n\t Only one option is allowed.
 '
 
@@ -57,7 +61,7 @@ function install_package_aur {
 
 function install_package_flatpak {
 	log "INFO" "installing package "$1" "
-    	flatpak install $1
+    	flatpak install flathub $1
     fi
 }
 
@@ -84,11 +88,11 @@ list_pacman=(
 firefox
 syncthing
 celluloid
-# telegram-desktop
+telegram-desktop
 zsh
 neofetch
 keychain
-# cawbird
+cawbird
 gnome-podcasts
 gnome-tweaks
 gnome-themes-extra
@@ -109,9 +113,11 @@ gnome-weather-git
 list_flatpak=(
 Adwaita-dark
 com.gitlab.newsflash
-uk.co.ibboard.cawbird
 org.telegram.desktop
 dev.tchx84.Portfolio
+com.bitstower.Markets
+io.github.rinigus.PureMaps
+org.gabmus.whatip
 )
 
 while [ "$1" != "" ]; do
