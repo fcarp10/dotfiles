@@ -105,7 +105,6 @@ adb
 )
 
 list_aur=(
-tela-icon-theme
 ttf-meslo-nerd-font-powerlevel10k
 gnome-weather-git
 )
