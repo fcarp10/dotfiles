@@ -18,10 +18,17 @@ Run `script-config.sh` to install the software:
 chmod +x post-installation-script.sh
 ./post-installation-script.sh -h
 
-Options:
--a --apps: installs main packages.
--e --extra: installs packages from AUR.
--h --help: shows available options.
+OPTIONS:
+\n -a --apps
+\t Installs main packages.
+\n -e --extra
+\t Installs packages from AUR.
+\n -f --extra
+\t Installs packages from flathub.
+\n -h --help
+\t Shows available options.
+\n\t Only one option is allowed.
+'
 ```
 
 
