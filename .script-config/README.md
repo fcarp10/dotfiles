@@ -15,7 +15,7 @@ The script has only been tested in [Arch Linux ARM](https://github.com/dreemurrs
 Run `script-config.sh` to install the software:
 
 ```
-chmod +x script-config.sh
+chmod 0755 script-config.sh
 ./script-config.sh -h
 
 OPTIONS:
