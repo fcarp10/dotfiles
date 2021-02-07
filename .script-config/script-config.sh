@@ -32,9 +32,13 @@ usage='Usage:
 OPTIONS:
 \n -a --apps
 \t Installs main packages.
-\n -e --extra
-\t Installs packages from AUR.
-\n -f --extra
+\n -p --paru
+\t Installs paru.
+\n -r --aur
+\t Install AUR packages.
+\n -c --config
+\t Apply configuration.
+\n -f --flatpak
 \t Installs packages from flathub.
 \n -h --help
 \t Shows available options.
@@ -124,15 +128,23 @@ while [ "$1" != "" ]; do
     install_list "${list_pacman[*]}"
     scale-to-fit gnome-tweaks
     scale-to-fit org.telegram.desktop
+    ;;
+    
+    --paru | -p )
+    log "INFO" "starting installation of paru"
     sudo pacman -S --noconfirm --needed base-devel
     git clone https://aur.archlinux.org/paru.git
     cd paru
     makepkg -si
     ;;
     
-    --extra | -e )
+    --aur | -r )
     log "INFO" "starting the installation of apps from AUR"
     install_list_aur "${list_aur[*]}"
+    ;;
+    
+    --config | -c )
+    log "INFO" "starting installation of paru"
     # change shell to zsh and install powerlevel10k
     chsh -s /usr/bin/zsh
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
