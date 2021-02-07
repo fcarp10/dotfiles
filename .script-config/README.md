@@ -21,9 +21,13 @@ chmod 0755 script-config.sh
 OPTIONS:
 \n -a --apps
 \t Installs main packages.
-\n -e --extra
-\t Installs packages from AUR.
-\n -f --extra
+\n -p --paru
+\t Installs paru.
+\n -r --aur
+\t Install AUR packages.
+\n -c --config
+\t Apply configuration.
+\n -f --flatpak
 \t Installs packages from flathub.
 \n -h --help
 \t Shows available options.
