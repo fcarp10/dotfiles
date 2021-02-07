@@ -60,9 +60,8 @@ function install_package_aur {
 }
 
 function install_package_flatpak {
-	log "INFO" "installing package "$1" "
-    	flatpak install flathub $1
-    fi
+    log "INFO" "installing package "$1" "
+    flatpak install flathub $1
 }
 
 function install_list {
