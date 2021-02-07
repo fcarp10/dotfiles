@@ -15,8 +15,8 @@ The script has only been tested in [Arch Linux ARM](https://github.com/dreemurrs
 Run `script-config.sh` to install the software:
 
 ```
-chmod +x post-installation-script.sh
-./post-installation-script.sh -h
+chmod +x script-config.sh
+./script-config.sh -h
 
 OPTIONS:
 \n -a --apps
