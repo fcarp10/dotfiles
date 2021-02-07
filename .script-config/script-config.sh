@@ -51,11 +51,11 @@ function install_package {
 }
 
 function install_package_aur {
-	if yay -Qi $1 &> /dev/null; then
+	if paru -Qi $1 &> /dev/null; then
 		log "WARN" "the package "$1" is already installed"
 	else
 		log "INFO" "installing package "$1" "
-    	yay -S --noconfirm --needed $1
+    	paru -S --noconfirm --needed $1
     fi
 }
 
@@ -113,7 +113,6 @@ list_flatpak=(
 Adwaita-dark
 com.gitlab.newsflash
 org.telegram.desktop
-dev.tchx84.Portfolio
 com.bitstower.Markets
 io.github.rinigus.PureMaps
 org.gabmus.whatip
@@ -126,6 +125,10 @@ while [ "$1" != "" ]; do
     install_list "${list_pacman[*]}"
     scale-to-fit gnome-tweaks
     scale-to-fit org.telegram.desktop
+    sudo pacman -S --needed base-devel
+    git clone https://aur.archlinux.org/paru.git
+    cd paru
+    makepkg -si
     ;;
     
     --extra | -e )
