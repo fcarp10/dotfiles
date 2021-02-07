@@ -35,7 +35,7 @@ config push
     ```
 2. Clone the dotfiles repository:
     ```
-    git clone --bare https://github.com/fcarp10/dotfiles $HOME/.dotfiles
+    git clone --bare https://github.com/fcarp10/dotfiles-pinephone $HOME/.dotfiles
     ```
 3. Make sure you delete or backup all conflicting files. Then, checkout the content from the repository to `$HOME`:
     ```
