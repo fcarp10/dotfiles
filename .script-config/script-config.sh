@@ -124,7 +124,7 @@ while [ "$1" != "" ]; do
     install_list "${list_pacman[*]}"
     scale-to-fit gnome-tweaks
     scale-to-fit org.telegram.desktop
-    sudo pacman -S --needed base-devel
+    sudo pacman -S --noconfirm --needed base-devel
     git clone https://aur.archlinux.org/paru.git
     cd paru
     makepkg -si
