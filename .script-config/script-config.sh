@@ -116,7 +116,7 @@ gnome-weather-git
 list_flatpak=(
 Adwaita-dark
 com.gitlab.newsflash
-org.telegram.desktop
+# org.telegram.desktop
 com.bitstower.Markets
 io.github.rinigus.PureMaps
 org.gabmus.whatip
