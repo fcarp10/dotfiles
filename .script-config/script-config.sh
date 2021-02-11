@@ -94,6 +94,7 @@ celluloid
 telegram-desktop
 zsh
 neofetch
+htop
 keychain
 cawbird
 gnome-podcasts
