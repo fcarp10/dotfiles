@@ -61,11 +61,11 @@ function install_package {
 }
 
 function install_package_aur {
-	if yay -Qi $1 &> /dev/null; then
+	if paru -Qi $1 &> /dev/null; then
 		log "WARN" "the package "$1" is already installed"
 	else
 		log "INFO" "installing package "$1" "
-    	yay -S --noconfirm --needed $1
+    	paru -S --noconfirm --needed $1
     fi
 }
 
@@ -215,6 +215,7 @@ texlive-latexextra
 texlive-pictures
 texlive-publishers
 texlive-science
+paru-bin
 )
 aur=(
 ttf-meslo-nerd-font-powerlevel10k
