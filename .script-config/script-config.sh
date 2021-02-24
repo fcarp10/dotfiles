@@ -196,8 +196,10 @@ code
 gnome-screenshot
 celluloid
 slack-desktop
-wps-office
+onlyoffice
 alacritty
+bashtop
+neofetch
 telegram-desktop
 jdk-openjdk
 pyenv
@@ -215,7 +217,6 @@ texlive-publishers
 texlive-science
 )
 aur=(
-tela-icon-theme
 ttf-meslo-nerd-font-powerlevel10k
 jabref
 drawio-desktop
