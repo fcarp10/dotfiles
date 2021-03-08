@@ -30,7 +30,7 @@ local beautiful     = require("beautiful")
 local naughty       = require("naughty")
 naughty.config.defaults['icon_size'] = 100
 
---local menubar       = require("menubar")
+local menubar       = require("menubar")
 
 local lain          = require("lain")
 local freedesktop   = require("freedesktop")
@@ -46,6 +46,12 @@ local dpi           = require("beautiful.xresources").apply_dpi
 local xrandr = require("xrandr")
 
 
+
+awesome.set_preferred_icon_size(64)
+
+-- for s in screen do
+--     freedesktop.desktop.add_icons({screen = s})
+-- end
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -204,6 +210,7 @@ lain.layout.cascade.tile.ncol          = 2
 
 beautiful.init(string.format("%s/.config/awesome/themes/%s/theme.lua", os.getenv("HOME"), chosen_theme))
 -- }}}
+
 
 
 
@@ -861,6 +868,32 @@ end)
 
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
+
+--
+-- Icon Code
+--
+
+client.connect_signal("manage", function(c)
+c.size_hints_honor = false
+if c.instance ~= nil then
+    local icon = menubar.utils.lookup_icon(c.instance)
+    local lower_icon = menubar.utils.lookup_icon(c.instance:lower())
+    if icon ~= nil then
+        local new_icon =gears.surface(icon) 
+        c.icon = new_icon._native
+    elseif lower_icon ~= nil then 
+        local new_icon = gears.surface(lower_icon)
+        c.icon = new_icon._native
+    elseif c.icon == nil then
+        local new_icon = gears.surface(menubar.utils.lookup_icon("application-default-icon"))
+        c.icon = new_icon._native
+    end
+else
+    local new_icon = gears.surface(menubar.utils.lookup_icon("application-default-icon"))
+    c.icon = new_icon._native
+
+end
+end)
 
 
 -- }}}

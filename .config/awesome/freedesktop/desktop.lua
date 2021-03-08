@@ -244,7 +244,7 @@ function desktop.add_icons(args)
     -- trying to fallback on Adwaita if theme.icon_theme is not defined
     -- if Adwaita is missing too, no icons will be shown
     if not theme.icon_theme then
-        theme.icon_theme = args.icon_theme or "Adwaita"
+        theme.icon_theme = args.icon_theme or "Papirus-Dark"
     end
 
     desktop.add_base_icons(args)

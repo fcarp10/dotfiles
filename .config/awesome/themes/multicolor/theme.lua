@@ -53,6 +53,7 @@ theme.taglist_squares_sel                       = theme.confdir .. "/icons/squar
 theme.taglist_squares_unsel                     = theme.confdir .. "/icons/square_b.png"
 theme.tasklist_plain_task_name                  = true
 theme.tasklist_disable_icon                     = false
+theme.icon_theme                                = "Papirus-Dark"
 theme.tasklist_disable_task_name                = false
 theme.useless_gap                               = dpi(5)
 theme.layout_tile                               = theme.confdir .. "/icons/tile.png"
@@ -204,6 +205,9 @@ local separator = wibox.widget {
     visible = true
  }
 
+local systray = wibox.widget.systray()
+systray:set_base_size(20)
+
 function theme.at_screen_connect(s)
     -- Quake application
     s.quake = lain.util.quake({ app = awful.util.terminal })
@@ -254,7 +258,7 @@ function theme.at_screen_connect(s)
         -- nil,
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            wibox.widget.systray(),
+            systray,
             keyboardlayout,
             separator,
             volicon,
