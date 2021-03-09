@@ -1,9 +1,15 @@
 {
     "editor.minimap.enabled": false,
-    "workbench.iconTheme": "material-icon-theme",
+    "editor.formatOnSave": true,
+    "editor.semanticHighlighting.enabled": true,
+    "editor.wordWrap": "on",
+    "editor.mouseWheelZoom": true,
+    "workbench.editor.enablePreview": false,
     "workbench.colorTheme": "Monokai Neon",
-    "latex-workshop.message.update.show": false,
-    "latex-workshop.view.pdf.viewer": "tab",
+    "workbench.iconTheme": "eq-material-theme-icons-darker",
+    "workbench.startupEditor": "newUntitledFile",
+    "window.menuBarVisibility": "toggle",
+    "diffEditor.ignoreTrimWhitespace": false,
     "window.openFilesInNewWindow": "off",
     "window.openFoldersInNewWindow": "on",
     "terminal.integrated.fontFamily": "MesloLGS NF",
@@ -13,8 +19,13 @@
         "**/.settings": true,
         "**/.factorypath": true
     },
-    "workbench.editor.enablePreview": false,
+    "git.enableSmartCommit": true,
+    "python.formatting.provider": "black",
     "java.project.importOnFirstTimeStartup": "automatic",
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.latex.recipe.default": "lastUsed",
+    "latex-workshop.bind.altKeymap.enabled": true,
+    "latex-workshop.latex.autoBuild.run": "onSave",
     "latex-workshop.latex.recipes": [
         {
             "name": "pdflatex ➞ bibtex ➞ pdflatex × 2",
@@ -35,9 +46,8 @@
             ]
         },
         {
-            "name": "pdflatex × 2",
+            "name": "pdflatex",
             "tools": [
-                "pdflatex",
                 "pdflatex"
             ]
         }
@@ -65,11 +75,9 @@
         {
             "name": "biber",
             "command": "biber",
-            "args": ["%DOCFILE%"]
-        }     
-    ],
-    "latex-workshop.latex.recipe.default": "lastUsed",
-    "diffEditor.ignoreTrimWhitespace": false,
-    "workbench.startupEditor": "newUntitledFile",
-    "editor.mouseWheelZoom": true
+            "args": [
+                "%DOCFILE%"
+            ]
+        }
+    ]
 }
