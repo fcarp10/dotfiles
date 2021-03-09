@@ -113,7 +113,7 @@ local modkey1      = "Control"
 --change these variables if you want
 local browser          = "firefox"
 -- local editor            = os.getenv("EDITOR") or "nano"
-local editorgui         = "code"
+local editorgui         = "vscodium"
 local filemanager       = "thunar"
 local mailclient        = "thunderbird"
 local terminal          = "alacritty"
