@@ -26,6 +26,7 @@
     "latex-workshop.latex.recipe.default": "lastUsed",
     "latex-workshop.bind.altKeymap.enabled": true,
     "latex-workshop.latex.autoBuild.run": "onSave",
+    "latex-workshop.view.pdf.backgroundColor": "#16171d",
     "latex-workshop.latex.recipes": [
         {
             "name": "pdflatex ➞ bibtex ➞ pdflatex × 2",
