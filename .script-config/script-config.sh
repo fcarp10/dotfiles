@@ -65,7 +65,7 @@ function install_package_aur {
 
 function install_package_flatpak {
     log "INFO" "installing package "$1" "
-    flatpak install flathub $1
+    flatpak install -y flathub $1 --user
 }
 
 function install_list {
@@ -127,8 +127,11 @@ while [ "$1" != "" ]; do
     --apps | -a )
     log "INFO" "Installing apps..."
     install_list "${list_pacman[*]}"
+    # scale-to-fit
     scale-to-fit gnome-tweaks
     scale-to-fit org.telegram.desktop
+    log "INFO" "Rebooting the system now..."
+    sudo reboot
     ;;
     
     --paru | -p )
@@ -146,6 +149,7 @@ while [ "$1" != "" ]; do
     
     --flatpak | -f )
     log "INFO" "Installing flatpaks..."
+    flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo --user
     install_list_flatpak "${list_flatpak[*]}"
     ;;
     
