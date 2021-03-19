@@ -29,9 +29,9 @@ config push
 
 ### Apply configuration to existing installation
 
-1. Add the next alias to `.zsh`:
+1. Add the next alias to `.bashrc`:
     ```
-    echo "alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" >> $HOME/.zshrc
+    echo "alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" >> $HOME/.bashrc
     ```
 2. Clone the dotfiles repository:
     ```
