@@ -125,14 +125,14 @@ org.gabmus.whatip
 while [ "$1" != "" ]; do
   case $1 in
     --apps | -a )
-    log "INFO" "starting installation of apps"
+    log "INFO" "Installing apps..."
     install_list "${list_pacman[*]}"
     scale-to-fit gnome-tweaks
     scale-to-fit org.telegram.desktop
     ;;
     
     --paru | -p )
-    log "INFO" "starting installation of paru"
+    log "INFO" "Installing paru..."
     sudo pacman -S --noconfirm --needed base-devel
     git clone https://aur.archlinux.org/paru.git
     cd paru
@@ -140,12 +140,17 @@ while [ "$1" != "" ]; do
     ;;
     
     --aur | -r )
-    log "INFO" "starting the installation of apps from AUR"
+    log "INFO" "Installing AUR packages..."
     install_list_aur "${list_aur[*]}"
     ;;
     
+    --flatpak | -f )
+    log "INFO" "Installing flatpaks..."
+    install_list_flatpak "${list_flatpak[*]}"
+    ;;
+    
     --config | -c )
-    log "INFO" "starting installation of paru"
+    log "INFO" "Applying personal configuration..."
     # change shell to zsh and install powerlevel10k
     chsh -s /usr/bin/zsh
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
@@ -153,11 +158,6 @@ while [ "$1" != "" ]; do
     # set up git
     git config --global user.name "Francisco Carpio"
     git config --global user.email "carpiofj@gmail.com"
-    ;;
-    
-    --flatpak | -f )
-    log "INFO" "starting the installation of flatpaks"
-    install_list_flatpak "${list_flatpak[*]}"
     ;;
     
     --help | -h )        echo -e "${usage}"
