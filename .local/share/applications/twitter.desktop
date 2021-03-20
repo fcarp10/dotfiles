@@ -1,7 +1,0 @@
-[Desktop Entry]
-Name=Twitter
-Exec=firefox --profile /home/alarm/.mozilla/firefox/firefox.default --ssb https://mobile.twitter.com/home
-Terminal=false
-Type=Application
-Categories=GNOME;GTK;
-Icon=/home/alarm/.local/share/applications/twitter-icon.png
