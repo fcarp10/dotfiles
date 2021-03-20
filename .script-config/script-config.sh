@@ -116,7 +116,6 @@ gnome-weather-git
 list_flatpak=(
 Adwaita-dark
 com.gitlab.newsflash
-# org.telegram.desktop
 com.bitstower.Markets
 io.github.rinigus.PureMaps
 org.gabmus.whatip
@@ -128,8 +127,7 @@ while [ "$1" != "" ]; do
     log "INFO" "Installing apps..."
     install_list "${list_pacman[*]}"
     # scale-to-fit
-    scale-to-fit gnome-tweaks
-    scale-to-fit org.telegram.desktop
+    gsettings set sm.puri.phoc scale-to-fit true
     log "INFO" "Rebooting the system now..."
     sudo reboot
     ;;
