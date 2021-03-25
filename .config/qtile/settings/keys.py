@@ -53,6 +53,8 @@ keys = [
         ([mod], "a", lazy.spawn("thunderbird")),
         # chat
         ([mod], "c", lazy.spawn("slack")),
+        # arcolinux-logout
+        ([mod], "x", lazy.spawn("arcolinux-logout")),
         # Screenshot
         # ([mod], "s", lazy.spawn("scrot")),
         # ------------ Hardware Configs ------------

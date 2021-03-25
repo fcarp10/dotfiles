@@ -55,8 +55,13 @@ def workspaces():
 primary_widgets = [
     *workspaces(),
     separator(),
+    widget.Systray(background=colors["background"], padding=5),
+    widget.Sep(
+        padding=5,
+        foreground=colors["background"],
+        background=colors["background"],
+    ),  # line separator
     icon(fg="foreground", text=" "),  # updates icon
-    widget.Systray(background=colors["background"], padding=10),
     widget.CheckUpdates(
         foreground=colors["foreground"],
         background=colors["background"],
