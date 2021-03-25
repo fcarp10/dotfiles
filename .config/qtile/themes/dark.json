@@ -1,0 +1,30 @@
+{
+    "background": [
+        "#212121",
+        "#212121"
+    ],
+    "foreground": [
+        "#ffffff",
+        "#ffffff"
+    ],
+    "text": [
+        "#ffffff",
+        "#ffffff"
+    ],
+    "focus": [
+        "#757575",
+        "#757575"
+    ],
+    "active": [
+        "#212121",
+        "#212121"
+    ],
+    "inactive": [
+        "#ffffff",
+        "#ffffff"
+    ],
+    "urgent": [
+        "#F07178",
+        "#F07178"
+    ]
+}

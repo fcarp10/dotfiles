@@ -15,7 +15,12 @@ def status_bar(widgets):
     return bar.Bar(widgets, 24, opacity=0.95)
 
 
-screens = [Screen(top=status_bar(primary_widgets))]
+screens = [
+    Screen(
+        wallpaper="/home/no-one/.config/qtile/themes/wall.jpg",
+        top=status_bar(primary_widgets),
+    )
+]
 
 xrandr = "xrandr | grep -w 'connected' | cut -d ' ' -f 2 | wc -l"
 
