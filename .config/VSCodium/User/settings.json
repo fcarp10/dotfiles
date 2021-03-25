@@ -7,6 +7,7 @@
     "workbench.editor.enablePreview": false,
     "workbench.colorTheme": "Monokai Neon",
     "workbench.iconTheme": "eq-material-theme-icons-darker",
+    "workbench.productIconTheme": "material-product-icons",
     "workbench.startupEditor": "newUntitledFile",
     "window.menuBarVisibility": "toggle",
     "diffEditor.ignoreTrimWhitespace": false,
@@ -26,6 +27,7 @@
     "latex-workshop.latex.recipe.default": "lastUsed",
     "latex-workshop.bind.altKeymap.enabled": true,
     "latex-workshop.latex.autoBuild.run": "onSave",
+    "latex-workshop.view.pdf.backgroundColor": "#16171d",
     "latex-workshop.latex.recipes": [
         {
             "name": "pdflatex ➞ bibtex ➞ pdflatex × 2",
@@ -78,6 +80,16 @@
             "args": [
                 "%DOCFILE%"
             ]
+        }
+    ],
+    "git.autofetch": true,
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python"
+    },
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
         }
     ]
 }
