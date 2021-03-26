@@ -16,7 +16,7 @@ workspaces = [
     {
         "name": "   ",
         "key": "1",
-        "matches": [Match(wm_class="firefox")],
+        "matches": [Match(wm_class="firefox"), Match(wm_class="chromium")],
     },  # nf-oct-browser
     {
         "name": "   ",

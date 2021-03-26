@@ -35,19 +35,21 @@ keys = [
     # ------------ App Configs ------------
     # Menu
     Key([mod], "d", lazy.spawn("dmenu_run -p 'Run: '")),
-    # Browser
+    # Browsers
     Key([mod], "b", lazy.spawn("firefox")),
-    # File Explorer
-    Key([mod], "f", lazy.spawn("thunar")),
+    Key([mod], "r", lazy.spawn("chromium")),
     # Terminal
     Key([mod], "Return", lazy.spawn("alacritty")),
     Key([mod], "t", lazy.spawn("alacritty")),
-    # editor gui
+    # Editor gui
     Key([mod], "e", lazy.spawn("vscodium")),
-    # mail
-    Key([mod], "a", lazy.spawn("thunderbird")),
+    # File Explorer
+    Key([mod], "f", lazy.spawn("thunar")),
     # chat
     Key([mod], "c", lazy.spawn("slack")),
+    Key([mod], "g", lazy.spawn("telegram-desktop")),
+    # mail
+    Key([mod], "a", lazy.spawn("thunderbird")),
     # arcolinux-logout
     Key([mod], "x", lazy.spawn("arcolinux-logout")),
     # pamac-manager
