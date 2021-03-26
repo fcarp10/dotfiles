@@ -34,7 +34,7 @@ keys = [
     Key([mod, "shift"], "q", lazy.shutdown()),
     # ------------ App Configs ------------
     # Menu
-    Key([mod, "shift"], "Return", lazy.spawn("dmenu_run -p 'Run: '")),
+    Key([mod], "d", lazy.spawn("dmenu_run -p 'Run: '")),
     # Browser
     Key([mod], "b", lazy.spawn("firefox")),
     # File Explorer
@@ -54,6 +54,13 @@ keys = [
     Key([mod], "p", lazy.spawn("pamac-manager")),
     # Screenshot
     Key([mod], "Print", lazy.spawn("gnome-screenshot -i")),
+    # keyboardlayout
+    Key(
+        [mod],
+        "space",
+        lazy.widget["keyboardlayout"].next_keyboard(),
+        desc="Next keyboard layout.",
+    ),
     # ------------ Hardware Configs ------------
     # Volume
     Key(

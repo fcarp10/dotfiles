@@ -80,6 +80,7 @@ primary_widgets = [
     widget.KeyboardLayout(
         foreground=colors["foreground"],
         background=colors["background"],
+        configured_keyboards=["us", "es"],
     ),
     widget.Sep(  # line separator
         linewidth=1,
