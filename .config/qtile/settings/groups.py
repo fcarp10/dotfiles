@@ -4,32 +4,48 @@
 
 # Qtile workspaces
 
-from libqtile.config import Key, Group
+from libqtile.config import Key, Group, Match
 from libqtile.command import lazy
 from settings.keys import mod, keys
-
+from libqtile import hook
 
 # Get the icons at https://www.nerdfonts.com/cheat-sheet (you need a Nerd Font)
 
-groups = [
-    Group(i)
-    for i in [
-        "   ",  # nf-oct-browser
-        "   ",  # nf-dev-terminal
-        "   ",  # nf-fa-code
-        "   ",  # nf-mdi-folder
-        " ﬐  ",  # nf-mdi-wechat
-        "   ",  # nf-mdi-email
-    ]
+
+workspaces = [
+    {
+        "name": "   ",
+        "key": "1",
+        "matches": [Match(wm_class="firefox")],
+    },  # nf-oct-browser
+    {
+        "name": "   ",
+        "key": "2",
+        "matches": [Match(wm_class="alacritty")],
+    },  # nf-dev-terminal
+    {"name": "   ", "key": "3", "matches": [Match(wm_class="vscodium")]},  # nf-fa-code
+    {
+        "name": "   ",
+        "key": "4",
+        "matches": [Match(wm_class="thunar")],
+    },  # nf-mdi-folder
+    {
+        "name": " ﬐  ",
+        "key": "5",
+        "matches": [Match(wm_class="telegram-desktop"), Match(wm_class="slack")],
+    },  # nf-mdi-wechat
+    {
+        "name": "   ",
+        "key": "6",
+        "matches": [Match(wm_class="thunderbird")],
+    },  # nf-mdi-email
 ]
 
-for i, group in enumerate(groups):
-    actual_key = str(i + 1)
-    keys.extend(
-        [
-            # Switch to workspace N
-            Key([mod], actual_key, lazy.group[group.name].toscreen()),
-            # Send window to workspace N
-            Key([mod, "shift"], actual_key, lazy.window.togroup(group.name)),
-        ]
+groups = []
+for workspace in workspaces:
+    matches = workspace["matches"] if "matches" in workspace else None
+    groups.append(Group(workspace["name"], matches=matches, layout="monadtall"))
+    keys.append(Key([mod], workspace["key"], lazy.group[workspace["name"]].toscreen()))
+    keys.append(
+        Key([mod, "shift"], workspace["key"], lazy.window.togroup(workspace["name"]))
     )

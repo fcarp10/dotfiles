@@ -56,11 +56,11 @@ primary_widgets = [
     *workspaces(),
     separator(),
     widget.Systray(background=colors["background"], padding=5),
-    widget.Sep(
+    widget.Sep(  # space separator
         padding=5,
         foreground=colors["background"],
         background=colors["background"],
-    ),  # line separator
+    ),
     icon(fg="foreground", text=" "),  # updates icon
     widget.CheckUpdates(
         foreground=colors["foreground"],
@@ -72,23 +72,33 @@ primary_widgets = [
         update_interval=1800,
         custom_command="checkupdates",
     ),
-    widget.Sep(
+    widget.Sep(  # space separator
         padding=5,
         foreground=colors["background"],
         background=colors["background"],
-    ),  # line separator
+    ),
     widget.KeyboardLayout(
         foreground=colors["foreground"],
         background=colors["background"],
     ),
-    widget.Sep(
+    widget.Sep(  # line separator
         linewidth=1,
         padding=15,
         foreground=colors["foreground"],
         background=colors["background"],
-    ),  # line separator
+    ),
     widget.TextBox(
-        text="  ",  # CPU icon
+        text="墳 ",  # volume icon
+        foreground=colors["foreground"],
+        background=colors["background"],
+        padding=0,
+    ),
+    widget.Volume(
+        foreground=colors["foreground"],
+        background=colors["background"],
+    ),
+    widget.TextBox(
+        text="    ",  # CPU icon
         foreground=colors["foreground"],
         background=colors["background"],
         padding=0,
@@ -125,12 +135,12 @@ primary_widgets = [
         padding=0,
         threshold=80,
     ),
-    widget.Sep(
+    widget.Sep(  # line separator
         linewidth=1,
         padding=15,
         foreground=colors["foreground"],
         background=colors["background"],
-    ),  # line separator
+    ),
     icon(fg="foreground", fontsize=17, text=" "),  # calendar icon
     widget.Clock(**base(fg="foreground"), format="%d/%m/%Y - %H:%M "),
     widget.CurrentLayoutIcon(**base(fg="foreground"), scale=0.65),

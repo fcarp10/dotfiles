@@ -12,12 +12,12 @@ import subprocess
 
 
 def status_bar(widgets):
-    return bar.Bar(widgets, 24, opacity=0.95)
+    return bar.Bar(widgets, 24, opacity=1.0)
 
 
 screens = [
     Screen(
-        wallpaper="/home/no-one/.config/qtile/themes/wall.jpg",
+        wallpaper="~/.config/qtile/themes/wall.jpg",
         top=status_bar(primary_widgets),
     )
 ]
