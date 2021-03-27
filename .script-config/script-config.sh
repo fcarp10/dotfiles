@@ -103,7 +103,7 @@ picom
 # -Q --qtile: installs core packages for qtile.
 qtile_core=(
 sddm
-arcolinux-sddm-sugar-candy-git
+arcolinux-sddm-theme-git
 arcolinux-wallpapers-git
 thunar
 qtile
