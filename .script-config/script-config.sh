@@ -102,9 +102,8 @@ picom
 
 # -Q --qtile: installs core packages for qtile.
 qtile_core=(
-lightdm
-arcolinux-lightdm-gtk-greeter
-arcolinux-lightdm-gtk-greeter-settings
+sddm
+arcolinux-sddm-sugar-candy-git
 arcolinux-wallpapers-git
 thunar
 qtile
@@ -192,7 +191,6 @@ zip
 unrar
 p7zip
 nomacs
-code
 gnome-screenshot
 celluloid
 slack-desktop
@@ -221,6 +219,8 @@ aur=(
 ttf-meslo-nerd-font-powerlevel10k
 jabref
 drawio-desktop
+vscodium-bin
+vscodium-bin-marketplace
 )
 
 while [ "$1" != "" ]; do
@@ -240,8 +240,8 @@ while [ "$1" != "" ]; do
     install_list "${qtile_core[*]}"
     cp -Rf ~/.config ~/.config-backup-$(date +%Y.%m.%d-%H.%M.%S)
     cp -arf /etc/skel/. ~
-    log "INFO" "enabling lightdm as display manager"
-    sudo systemctl enable lightdm.service -f
+    log "INFO" "enabling sddm as display manager"
+    sudo systemctl enable sddm.service -f
     log "INFO" "core packages for qtile have been installed, reboot your system"
     ;;
 
