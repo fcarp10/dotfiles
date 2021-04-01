@@ -132,6 +132,7 @@ arcolinux-hblock-git
 arcolinux-root-git
 arcolinux-arc-themes-git
 arcolinux-fonts-git
+xcursor-arch-cursor-complete
 )
 
 # -s --sound: installs sound packages.
