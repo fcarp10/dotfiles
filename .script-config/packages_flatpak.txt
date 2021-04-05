@@ -1,0 +1,8 @@
+Adwaita-dark
+com.gitlab.newsflash
+com.bitstower.Markets
+org.gabmus.whatip
+com.github.fabiocolacio.marker
+com.github.gi_lom.dialect
+com.rafaelmardojai.Blanket
+io.github.seadve.Mousai

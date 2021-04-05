@@ -31,7 +31,7 @@ usage='Usage:
 
 OPTIONS:
 \n -a --apps
-\t Installs main packages.
+\t Installs pacman packages.
 \n -p --paru
 \t Installs paru.
 \n -r --aur
@@ -39,13 +39,13 @@ OPTIONS:
 \n -c --config
 \t Apply configuration.
 \n -f --flatpak
-\t Installs packages from flathub.
+\t Installs flathub apps.
 \n -h --help
 \t Shows available options.
 \n\t Only one option is allowed.
 '
 
-function install_package {
+function install_package_pacman {
 	if pacman -Qi $1 &> /dev/null; then
 		log "WARN" "the package "$1" is already installed"
 	else
@@ -68,73 +68,14 @@ function install_package_flatpak {
     flatpak install -y flathub $1 --user
 }
 
-function install_list {
-    for name in $@ ; do
-        install_package $name
-    done
-}
-
-function install_list_aur {
-    for name in $@ ; do
-        install_package_aur $name
-    done
-}
-
-function install_list_flatpak {
-    for name in $@ ; do
-        install_package_flatpak $name
-    done
-}
-
-
-list_pacman=(
-zsh
-curl
-neofetch
-htop
-keychain
-flatpak
-firefox
-syncthing
-celluloid
-telegram-desktop
-# cawbird
-gnome-podcasts
-gnome-tweaks
-gnome-themes-extra
-eog
-gnome-sound-recorder
-retroarch
-libretro-snes9x
-anbox
-anbox-image
-adb
-)
-
-list_aur=(
-# ttf-meslo-nerd-font-powerlevel10k
-)
-
-list_flatpak=(
-Adwaita-dark
-com.gitlab.newsflash
-com.bitstower.Markets
-org.gabmus.whatip
-com.github.fabiocolacio.marker
-com.github.gi_lom.dialect
-com.rafaelmardojai.Blanket
-io.github.seadve.Mousai
-)
-
 while [ "$1" != "" ]; do
   case $1 in
     --apps | -a )
-    log "INFO" "Installing apps..."
-    install_list "${list_pacman[*]}"
-    # scale-to-fit
-    gsettings set sm.puri.phoc scale-to-fit true
-    log "INFO" "Rebooting the system now..."
-    sudo reboot
+    log "INFO" "Installing pacman packages..."
+    cat packages_pacman.txt | while read y
+    do
+    install_package_pacman $y
+    done
     ;;
     
     --paru | -p )
@@ -147,13 +88,19 @@ while [ "$1" != "" ]; do
     
     --aur | -r )
     log "INFO" "Installing AUR packages..."
-    install_list_aur "${list_aur[*]}"
+    cat packages_aur.txt | while read y
+    do
+    install_package_aur $y
+    done
     ;;
     
     --flatpak | -f )
-    log "INFO" "Installing flatpaks..."
+    log "INFO" "Installing flatpak apps..."
     flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo --user
-    install_list_flatpak "${list_flatpak[*]}"
+    cat packages_flatpak.txt | while read y
+    do
+    install_package_flatpak $y
+    done
     ;;
     
     --config | -c )
@@ -170,6 +117,8 @@ while [ "$1" != "" ]; do
     # set up git
     git config --global user.name "Francisco Carpio"
     git config --global user.email "carpiofj@gmail.com"
+    # scale-to-fit
+    gsettings set sm.puri.phoc scale-to-fit true
     ;;
     
     --help | -h )        echo -e "${usage}"
