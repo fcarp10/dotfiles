@@ -74,5 +74,8 @@ fi
 
 neofetch
 
-alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 eval $(keychain --eval --quiet)
+
+if [ -f ~/.aliases ]; then
+	. ~/.aliases
+fi
