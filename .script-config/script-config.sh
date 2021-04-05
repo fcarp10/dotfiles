@@ -46,12 +46,14 @@ OPTIONS:
 \t Installs laptop packages.
 \n -e --extra
 \t Installs extra packages.
+\n -c --config
+\t Apply configuration.
 \n -h --help
 \t Shows available options.
 \n\t Only one option is allowed.
 '
 
-function install_package {
+function install_package_pacman {
 	if pacman -Qi $1 &> /dev/null; then
 		log "WARN" "the package "$1" is already installed"
 	else
@@ -69,223 +71,99 @@ function install_package_aur {
     fi
 }
 
-function install_list {
-    for name in $@ ; do
-        install_package $name
-    done
-}
-
-function install_list_aur {
-    for name in $@ ; do
-        install_package_aur $name
-    done
-}
-
-# -A --awesome: installs core packages for awesomewm.
-awesome_core=(
-lightdm
-arcolinux-lightdm-gtk-greeter
-arcolinux-lightdm-gtk-greeter-settings
-arcolinux-wallpapers-git
-thunar
-awesome
-dmenu
-vicious
-arcolinux-awesome-git
-arcolinux-awesome-dconf-git
-arcolinux-config-awesome-git
-arcolinux-logout-git
-arandr
-lxappearance
-picom
-)
-
-# -Q --qtile: installs core packages for qtile.
-qtile_core=(
-sddm
-arcolinux-sddm-sugar-candy-git
-sddm-config-editor-git
-arcolinux-wallpapers-git
-thunar
-qtile
-sxhkd
-dmenu
-python-psutil
-xcb-util-cursor
-arcolinux-qtile-git
-arcolinux-qtile-dconf-git
-arcolinux-config-qtile-git
-arcolinux-logout-git
-arandr
-lxappearance
-picom
-)
-
-# -a --arcolinuxd: installs extra packages from arcolinux.
-arco_extra=(
-downgrade
-inxi
-pamac-aur
-arcolinux-tweak-tool-git
-arcolinux-bin-git
-arcolinux-hblock-git
-arcolinux-root-git
-arcolinux-arc-themes-git
-arcolinux-fonts-git
-xcursor-arch-cursor-complete
-)
-
-# -s --sound: installs sound packages.
-audio=(
-pulseaudio
-pulseaudio-alsa
-pavucontrol
-alsa-firmware
-alsa-lib
-alsa-plugins
-alsa-utils
-gstreamer
-gst-plugins-good
-gst-plugins-bad
-gst-plugins-base
-gst-plugins-ugly
-playerctl
-volumeicon
-)
-
-# -p --printers: installs printers packages.
-printers=(
-cups
-cups-pdf
-ghostscript
-gsfonts
-gutenprint
-gtk3-print-backends
-libcups
-system-config-printer
-)
-
-# -b --bluetooth: installs bluetooth packages.
-bluetooth=(
-pulseaudio-bluetooth
-bluez
-bluez-libs
-bluez-utils
-blueberry
-)
-
-# -l --laptop: installs laptop packages.
-laptop=(
-tlp
-)
-
-# -e --extra: installs extra packages.
-extra=(
-firefox
-thunderbird
-chromium
-torbrowser-launcher
-syncthing
-xreader
-gvfs
-file-roller
-zip
-unrar
-p7zip
-nomacs
-gnome-screenshot
-celluloid
-slack-desktop
-onlyoffice
-alacritty
-bashtop
-neofetch
-telegram-desktop
-jdk-openjdk
-pyenv
-etcher-bin
-docker
-zsh
-texlive-bibextra
-texlive-bin
-texlive-core
-texlive-fontsextra
-texlive-formatextra
-texlive-latexextra
-texlive-pictures
-texlive-publishers
-texlive-science
-paru-bin
-)
-aur=(
-ttf-meslo-nerd-font-powerlevel10k
-jabref
-drawio-desktop
-vscodium-bin
-vscodium-bin-marketplace
-)
-
 while [ "$1" != "" ]; do
   case $1 in
     --awesome | -A )
-    log "INFO" "starting installation of core packages for awesomewm"
-    install_list "${awesome_core[*]}"
+    log "INFO" "starting installation of awesomewm packages..."
+    cat packages_awesome.txt | while read y
+    do
+    install_package_pacman $y
+    done
     cp -Rf ~/.config ~/.config-backup-$(date +%Y.%m.%d-%H.%M.%S)
     cp -arf /etc/skel/. ~
     log "INFO" "enabling lightdm as display manager"
     sudo systemctl enable lightdm.service -f
-    log "INFO" "core packages for awesomewm have been installed, reboot your system"
+    log "INFO" "done, reboot your system"
     ;;
 
     --qtile | -Q )
-    log "INFO" "starting installation of core packages for qtile"
-    install_list "${qtile_core[*]}"
+    log "INFO" "starting installation of qtile packages..."
+    cat packages_qtile.txt | while read y
+    do
+    install_package_pacman $y
+    done
     cp -Rf ~/.config ~/.config-backup-$(date +%Y.%m.%d-%H.%M.%S)
     cp -arf /etc/skel/. ~
     log "INFO" "enabling sddm as display manager"
     sudo systemctl enable sddm.service -f
-    log "INFO" "core packages for qtile have been installed, reboot your system"
+    log "INFO" "done, reboot your system"
     ;;
 
     --arcolinuxd | -a )
-    log "INFO" "starting installation of extra packages from arcolinux."
-    install_list "${arco_extra[*]}"
-    log "INFO" "extra packages from arcolinux have been installed"
+    log "INFO" "starting installation of arcolinux packages..."
+    cat packages_arcolinux.txt | while read y
+    do
+    install_package_pacman $y
+    done
+    log "INFO" "done"
     ;;
-    
-    --sound | -s )       
-    log "INFO" "starting installation of sound packages"
-    install_list "${audio[*]}"
-    log "INFO" "sound packages have been installed"
+
+    --sound | -s )
+    log "INFO" "starting installation of audio packages..."
+    cat packages_audio.txt | while read y
+    do
+    install_package_pacman $y
+    done
+    log "INFO" "done"
     ;;
-    
+
     --printers | -p )
-    log "INFO" "starting the installation of printers packages"
-    install_list "${printers[*]}"
+    log "INFO" "starting installation of printers packages..."
+    cat packages_printers.txt | while read y
+    do
+    install_package_pacman $y
+    done
     sudo systemctl enable org.cups.cupsd.service
-    log "INFO" "printers packages have been installed"
+    log "INFO" "done"
     ;;
-    
+
     --bluetooth | -b )
-    log "INFO" "starting the installation of bluetooth packages"
-    install_list "${bluetooth[*]}"
+    log "INFO" "starting installation of bluetooth packages..."
+    cat packages_bluetooth.txt | while read y
+    do
+    install_package_pacman $y
+    done
     sudo systemctl enable bluetooth.service
     sudo systemctl start bluetooth.service
     sudo sed -i 's/'#AutoEnable=false'/'AutoEnable=true'/g' /etc/bluetooth/main.conf
-    log "INFO" "bluetooth packages have been installed"
+    log "INFO" "done"
     ;;
-    
+
     --laptop | -l )
-    log "INFO" "starting the installation of laptop packages"
-    install_list "${laptop[*]}"
+    log "INFO" "starting installation of laptop packages..."
+    cat packages_laptop.txt | while read y
+    do
+    install_package_pacman $y
+    done
     sudo systemctl enable tlp.service
-    log "INFO" "laptop packages have been installed"
+    log "INFO" "done"
     ;;
-    
+
     --extra | -e )
-    log "INFO" "starting the installation of extra packages"
-    install_list "${extra[*]}"
-    install_list_aur "${aur[*]}"
+    log "INFO" "starting installation of extra packages..."
+    cat packages_pacman.txt | while read y
+    do
+    install_package_pacman $y
+    done
+    cat packages_aur.txt | while read y
+    do
+    install_package_aur $y
+    done
+    log "INFO" "done"
+    ;;
+
+	--config | -c )
+    log "INFO" "applying personal configuration..."
     # change shell to zsh and install powerlevel10k
     chsh -s /usr/bin/zsh
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
@@ -300,8 +178,9 @@ while [ "$1" != "" ]; do
     sudo systemctl start docker
     sudo usermod -aG docker $USER
     newgrp docker
+	log "INFO" "done"
     ;;
-    
+
     --help | -h )        echo -e "${usage}"
     exit 1
     ;;

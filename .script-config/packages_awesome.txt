@@ -1,0 +1,14 @@
+arcolinux-lightdm-gtk-greeter
+arcolinux-lightdm-gtk-greeter-settings
+arcolinux-wallpapers-git
+thunar
+awesome
+dmenu
+vicious
+arcolinux-awesome-git
+arcolinux-awesome-dconf-git
+arcolinux-config-awesome-git
+arcolinux-logout-git
+arandr
+lxappearance
+picom

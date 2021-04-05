@@ -36,6 +36,8 @@ OPTIONS:
 \t Installs laptop packages.
 \n -e --extra
 \t Installs extra packages.
+\n -c --config
+\t Apply configuration.
 \n -h --help
 \t Shows available options.
 \n\t Only one option is allowed.
