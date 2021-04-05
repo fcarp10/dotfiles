@@ -88,19 +88,22 @@ function install_list_flatpak {
 
 
 list_pacman=(
+zsh
+curl
+neofetch
+htop
+keychain
+flatpak
 firefox
 syncthing
 celluloid
 telegram-desktop
-zsh
-neofetch
-htop
-keychain
-cawbird
+# cawbird
 gnome-podcasts
 gnome-tweaks
 gnome-themes-extra
-flatpak
+eog
+gnome-sound-recorder
 retroarch
 libretro-snes9x
 anbox
@@ -109,16 +112,18 @@ adb
 )
 
 list_aur=(
-ttf-meslo-nerd-font-powerlevel10k
-gnome-weather-git
+# ttf-meslo-nerd-font-powerlevel10k
 )
 
 list_flatpak=(
 Adwaita-dark
 com.gitlab.newsflash
 com.bitstower.Markets
-io.github.rinigus.PureMaps
 org.gabmus.whatip
+com.github.fabiocolacio.marker
+com.github.gi_lom.dialect
+com.rafaelmardojai.Blanket
+io.github.seadve.Mousai
 )
 
 while [ "$1" != "" ]; do
@@ -157,6 +162,11 @@ while [ "$1" != "" ]; do
     chsh -s /usr/bin/zsh
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
     echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>! ~/.zshrc
+    # install fonts
+    cd ~/.local/share/fonts && curl -fLo "MesloLGS NF Regular.ttf" https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf && cd
+    cd ~/.local/share/fonts && curl -fLo "MesloLGS NF Bold.ttf" https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf && cd
+    cd ~/.local/share/fonts && curl -fLo "MesloLGS NF Italic.ttf" https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf && cd
+    cd ~/.local/share/fonts && curl -fLo "MesloLGS NF Bold Italic.ttf" https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf && cd
     # set up git
     git config --global user.name "Francisco Carpio"
     git config --global user.email "carpiofj@gmail.com"
