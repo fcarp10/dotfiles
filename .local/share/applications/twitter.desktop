@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Twitter
+Exec=angelfish-webapp twitter.desktop
+Icon=/home/alarm/.local/share/applications/twitter-icon.png
+URL=https://mobile.twitter.com/home
+Type=Application
