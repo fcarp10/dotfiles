@@ -20,7 +20,7 @@ chmod 0755 script-config.sh
 
 OPTIONS:
 \n -a --apps
-\t Installs main packages.
+\t Installs pacman packages.
 \n -p --paru
 \t Installs paru.
 \n -r --aur
@@ -28,7 +28,7 @@ OPTIONS:
 \n -c --config
 \t Apply configuration.
 \n -f --flatpak
-\t Installs packages from flathub.
+\t Installs flathub apps.
 \n -h --help
 \t Shows available options.
 \n\t Only one option is allowed.
