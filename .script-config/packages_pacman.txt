@@ -18,6 +18,8 @@ alacritty
 bashtop
 neofetch
 telegram-desktop
+skypeforlinux-stable-bin
+gnome-keyring
 jdk-openjdk
 pyenv
 etcher-bin
