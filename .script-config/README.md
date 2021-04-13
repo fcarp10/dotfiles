@@ -35,5 +35,61 @@ OPTIONS:
 '
 ```
 
+### Troubleshooting
 
+To install `paru`, it is required to enable zRAM in the 2GB model. 
 
+#### Steps
+
+Create a new configuration file and add the word `zram` to it:
+
+    sudo nano /etc/modules-load.d/zram.conf
+
+Create a second configuration file in:
+
+    sudo nano /etc/modprobe.d/zram.conf
+
+and paste this:
+
+    options zram num_devices=1
+
+Next to configure is the size of the zRAM partition. Create a new file in:
+
+    sudo nano /etc/udev/rules.d/99-zram.rules
+
+and paste the following:
+
+    KERNEL=="zram0", ATTR{disksize}="512M",TAG+="systemd"
+
+In order for zRAM to function, disable traditional swap. Open:
+
+    sudo nano /etc/fstab
+
+Comment out the line starting with `/swap.img`.
+
+For zRAM to run, create a systemd unit file:
+
+    sudo nano /etc/systemd/system/zram.service
+
+Paste the following:
+
+    
+    [Unit]
+    Description=Swap with zram
+    After=multi-user.target
+
+    [Service]
+    Type=oneshot 
+    RemainAfterExit=true
+    ExecStartPre=/sbin/mkswap /dev/zram0
+    ExecStart=/sbin/swapon /dev/zram0
+    ExecStop=/sbin/swapoff /dev/zram0
+
+    [Install]
+    WantedBy=multi-user.target
+    
+Enable the unit:
+
+    sudo systemctl enable zram
+
+Reboot. 

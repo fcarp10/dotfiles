@@ -9,10 +9,13 @@ syncthing
 celluloid
 telegram-desktop
 gnome-podcasts
-gnome-tweaks
 gnome-themes-extra
 eog
 gnome-sound-recorder
+drawing
+gnome-weather
+postmarketos-tweaks-app
+postmarketos-tweaks-app-phosh
 retroarch
 libretro-snes9x
 anbox
