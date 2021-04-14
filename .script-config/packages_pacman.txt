@@ -17,6 +17,7 @@ onlyoffice
 alacritty
 bashtop
 neofetch
+baobab
 telegram-desktop
 skypeforlinux-stable-bin
 gnome-keyring
