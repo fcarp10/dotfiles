@@ -173,6 +173,8 @@ while [ "$1" != "" ]; do
     # set up git
     git config --global user.name "Francisco Carpio"
     git config --global user.email "carpiofj@gmail.com"
+    git config credential.helper store
+    git config --global credential.helper store
     # set up docker
     sudo systemctl enable docker
     sudo systemctl start docker
