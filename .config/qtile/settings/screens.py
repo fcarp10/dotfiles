@@ -15,9 +15,10 @@ def status_bar(widgets):
     return bar.Bar(widgets, 24, opacity=1.0)
 
 
+wallpaper_path = "~/.config/qtile/themes/wall.jpg"
 screens = [
     Screen(
-        wallpaper="~/.config/qtile/themes/wall.jpg",
+        wallpaper=wallpaper_path,
         top=status_bar(primary_widgets),
     )
 ]
@@ -40,4 +41,9 @@ else:
 
 if connected_monitors > 1:
     for _ in range(1, connected_monitors):
-        screens.append(Screen(top=status_bar(secondary_widgets)))
+        screens.append(
+            Screen(
+                wallpaper=wallpaper_path,
+                top=status_bar(secondary_widgets),
+            )
+        )

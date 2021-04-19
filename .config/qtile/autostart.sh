@@ -1,6 +1,6 @@
 #!/bin/sh
 
-xrandr --output DP1-8 --primary --mode 1920x1200 --output HDMI3 --mode 1920x1200 --left-of DP1-8
+# xrandr --output DP1-8 --primary --mode 1920x1200 --output HDMI3 --mode 1920x1200 --left-of DP1-8
 
 # cbatticon -u 5 & # systray battery icon
 nm-applet & # systray network

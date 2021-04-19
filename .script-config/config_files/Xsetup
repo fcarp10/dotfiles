@@ -1,0 +1,5 @@
+#!/bin/sh
+# File located in /usr/share/sddm/scripts/Xsetup
+# Xsetup - run as root before the login dialog appears
+
+xrandr --output DP1-8 --primary --mode 1920x1200 --output HDMI3 --mode 1920x1200 --left-of DP1-8
