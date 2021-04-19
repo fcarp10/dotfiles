@@ -56,22 +56,22 @@ primary_widgets = [
     *workspaces(),
     separator(),
     widget.Systray(background=colors["background"], padding=5),
-    widget.Sep(  # space separator
-        padding=5,
-        foreground=colors["background"],
-        background=colors["background"],
-    ),
-    icon(fg="foreground", text=" "),  # updates icon
-    widget.CheckUpdates(
-        foreground=colors["foreground"],
-        background=colors["background"],
-        colour_have_updates=colors["urgent"],
-        colour_no_updates=colors["foreground"],
-        no_update_string="0",
-        display_format="{updates}",
-        update_interval=1800,
-        custom_command="checkupdates",
-    ),
+    # widget.Sep(  # space separator
+    #     padding=5,
+    #     foreground=colors["background"],
+    #     background=colors["background"],
+    # ),
+    # icon(fg="foreground", text=" "),  # updates icon
+    # widget.CheckUpdates(
+    #     foreground=colors["foreground"],
+    #     background=colors["background"],
+    #     colour_have_updates=colors["urgent"],
+    #     colour_no_updates=colors["foreground"],
+    #     no_update_string="0",
+    #     display_format="{updates}",
+    #     update_interval=1800,
+    #     custom_command="checkupdates",
+    # ),
     widget.Sep(  # space separator
         padding=5,
         foreground=colors["background"],
