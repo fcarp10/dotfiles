@@ -60,6 +60,9 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -87,4 +90,4 @@ eval $(keychain --eval --quiet)
 if [ -f ~/.aliases ]; then
 	. ~/.aliases
 fi
-export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
+

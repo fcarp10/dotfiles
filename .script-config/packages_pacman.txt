@@ -26,6 +26,9 @@ pyenv
 etcher-bin
 docker
 zsh
+zsh-autosuggestions
+zsh-completions
+zsh-syntax-highlighting
 texlive-bibtexextra
 texlive-bin
 texlive-core
