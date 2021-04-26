@@ -1,0 +1,6 @@
+[Desktop Entry]
+Exec=angelfish-webapp jellyfin.desktop
+Icon=/home/alarm/.local/share/applications/jellyfin-icon.png
+Name=Jellyfin
+URL=http://192.168.50.233:8096/web/index.html#!/home.html
+Type=Application
