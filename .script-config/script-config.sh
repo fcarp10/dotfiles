@@ -117,6 +117,7 @@ while [ "$1" != "" ]; do
     # set up git
     git config --global user.name "Francisco Carpio"
     git config --global user.email "carpiofj@gmail.com"
+    git config --global credential.helper store
     # scale-to-fit
     gsettings set sm.puri.phoc scale-to-fit true
     ;;
