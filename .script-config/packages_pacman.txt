@@ -39,3 +39,5 @@ texlive-pictures
 texlive-publishers
 texlive-science
 paru-bin
+ttf-roboto
+ttf-roboto-mono
