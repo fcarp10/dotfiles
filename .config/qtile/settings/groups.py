@@ -14,28 +14,32 @@ from libqtile import hook
 
 workspaces = [
     {
-        "name": "   ",
+        "name": "    ",
         "key": "1",
         "matches": [Match(wm_class="firefox"), Match(wm_class="chromium")],
     },  # nf-oct-browser
     {
-        "name": "   ",
+        "name": "    ",
         "key": "2",
         "matches": [Match(wm_class="alacritty")],
     },  # nf-dev-terminal
-    {"name": "   ", "key": "3", "matches": [Match(wm_class="vscodium")]},  # nf-fa-code
     {
-        "name": "   ",
+        "name": "    ",
+        "key": "3",
+        "matches": [Match(wm_class="vscodium")],
+    },  # nf-fa-code
+    {
+        "name": "    ",
         "key": "4",
         "matches": [Match(wm_class="thunar")],
     },  # nf-mdi-folder
     {
-        "name": " ﬐  ",
+        "name": "  ﬐  ",
         "key": "5",
         "matches": [Match(wm_class="telegram-desktop"), Match(wm_class="slack")],
     },  # nf-mdi-wechat
     {
-        "name": "   ",
+        "name": "    ",
         "key": "6",
         "matches": [Match(wm_class="thunderbird")],
     },  # nf-mdi-email

@@ -27,7 +27,8 @@ def workspaces():
         separator(),
         widget.GroupBox(
             **base(fg="foreground"),
-            font="UbuntuMono Nerd Font",
+            # font="UbuntuMono Nerd Font",
+            font="Roboto Mono",
             fontsize=19,
             margin_y=3,
             margin_x=0,
@@ -47,7 +48,9 @@ def workspaces():
             disable_drag=True
         ),
         separator(),
-        widget.WindowName(**base(fg="focus"), fontsize=14, padding=5),
+        widget.WindowName(
+            **base(fg="focus"), font="Roboto Mono", fontsize=14, padding=5
+        ),
         separator(),
     ]
 
@@ -56,22 +59,6 @@ primary_widgets = [
     *workspaces(),
     separator(),
     widget.Systray(background=colors["background"], padding=5),
-    # widget.Sep(  # space separator
-    #     padding=5,
-    #     foreground=colors["background"],
-    #     background=colors["background"],
-    # ),
-    # icon(fg="foreground", text=" "),  # updates icon
-    # widget.CheckUpdates(
-    #     foreground=colors["foreground"],
-    #     background=colors["background"],
-    #     colour_have_updates=colors["urgent"],
-    #     colour_no_updates=colors["foreground"],
-    #     no_update_string="0",
-    #     display_format="{updates}",
-    #     update_interval=1800,
-    #     custom_command="checkupdates",
-    # ),
     widget.Sep(  # space separator
         padding=5,
         foreground=colors["background"],
@@ -81,6 +68,7 @@ primary_widgets = [
         foreground=colors["foreground"],
         background=colors["background"],
         configured_keyboards=["us", "es"],
+        fontsize=12,
     ),
     widget.Sep(  # line separator
         linewidth=1,
@@ -99,7 +87,7 @@ primary_widgets = [
         background=colors["background"],
     ),
     widget.TextBox(
-        text="    ",  # CPU icon
+        text="   ",  # CPU icon
         foreground=colors["foreground"],
         background=colors["background"],
         padding=0,
@@ -150,13 +138,14 @@ primary_widgets = [
 secondary_widgets = [
     *workspaces(),
     separator(),
-    widget.Clock(**base(fg="foreground"), format="%d/%m/%Y - %H:%M "),
+    # widget.Clock(**base(fg="foreground"), format="%d/%m/%Y - %H:%M "),
     widget.CurrentLayoutIcon(**base(fg="foreground"), scale=0.65),
 ]
 
 widget_defaults = {
-    "font": "UbuntuMono Nerd Font Bold",
-    "fontsize": 14,
+    # "font": "UbuntuMono Nerd Font",
+    "font": "Roboto Mono",
+    "fontsize": 13,
     "padding": 1,
 }
 extension_defaults = widget_defaults.copy()
