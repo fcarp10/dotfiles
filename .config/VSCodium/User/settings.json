@@ -4,6 +4,8 @@
     "editor.semanticHighlighting.enabled": true,
     "editor.wordWrap": "on",
     "editor.mouseWheelZoom": true,
+    "editor.fontFamily": "'Roboto Mono'",
+    "editor.renderControlCharacters": true,
     "workbench.editor.enablePreview": false,
     "workbench.colorTheme": "Monokai Neon",
     "workbench.iconTheme": "eq-material-theme-icons-darker",
@@ -86,10 +88,5 @@
     "[python]": {
         "editor.defaultFormatter": "ms-python.python"
     },
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter.notebook.ipynb",
-            "filenamePattern": "*.ipynb"
-        }
-    ]
+    "dashboard.projectData": null,
 }
