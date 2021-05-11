@@ -41,3 +41,4 @@ texlive-science
 paru-bin
 ttf-roboto
 ttf-roboto-mono
+zsh-theme-powerlevel10k

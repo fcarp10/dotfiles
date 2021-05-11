@@ -164,10 +164,8 @@ while [ "$1" != "" ]; do
 
 	--config | -c )
     log "INFO" "applying personal configuration..."
-    # change shell to zsh and install powerlevel10k
+    # change shell to zsh
     chsh -s /usr/bin/zsh
-    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
-    echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>! ~/.zshrc
     # add pluging to pyenv
     git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv
     # set up git
