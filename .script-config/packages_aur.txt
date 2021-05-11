@@ -3,3 +3,4 @@ jabref
 drawio-desktop
 vscodium-bin
 vscodium-bin-marketplace
+devbook-bin
