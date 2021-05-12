@@ -1,4 +1,7 @@
 zsh
+zsh-autosuggestions
+zsh-completions
+zsh-syntax-highlighting
 curl
 neofetch
 htop
@@ -20,3 +23,6 @@ retroarch
 libretro-snes9x
 anbox
 anbox-image
+ttf-roboto
+ttf-roboto-mono
+zsh-theme-powerlevel10k
