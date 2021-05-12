@@ -105,21 +105,13 @@ while [ "$1" != "" ]; do
     
     --config | -c )
     log "INFO" "Applying personal configuration..."
-    # change shell to zsh and install powerlevel10k
+    # change shell to zsh
     chsh -s /usr/bin/zsh
-    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
-    echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>! ~/.zshrc
-    # install fonts
-    cd ~/.local/share/fonts && curl -fLo "MesloLGS NF Regular.ttf" https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf && cd
-    cd ~/.local/share/fonts && curl -fLo "MesloLGS NF Bold.ttf" https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf && cd
-    cd ~/.local/share/fonts && curl -fLo "MesloLGS NF Italic.ttf" https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf && cd
-    cd ~/.local/share/fonts && curl -fLo "MesloLGS NF Bold Italic.ttf" https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf && cd
     # set up git
     git config --global user.name "Francisco Carpio"
     git config --global user.email "carpiofj@gmail.com"
+    git config credential.helper store
     git config --global credential.helper store
-    # scale-to-fit
-    gsettings set sm.puri.phoc scale-to-fit true
     ;;
     
     --help | -h )        echo -e "${usage}"
