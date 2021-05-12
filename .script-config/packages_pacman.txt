@@ -8,6 +8,7 @@ htop
 keychain
 flatpak
 firefox
+geary
 syncthing
 celluloid
 telegram-desktop
