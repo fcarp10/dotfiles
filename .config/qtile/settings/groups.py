@@ -21,7 +21,7 @@ workspaces = [
     {
         "name": "    ",
         "key": "2",
-        "matches": [Match(wm_class="alacritty")],
+        # "matches": [Match(wm_class="Alacritty")],
     },  # nf-dev-terminal
     {
         "name": "    ",
@@ -31,7 +31,7 @@ workspaces = [
     {
         "name": "    ",
         "key": "4",
-        "matches": [Match(wm_class="thunar")],
+        # "matches": [Match(wm_class="thunar")],
     },  # nf-mdi-folder
     {
         "name": "  ﬐  ",
@@ -41,7 +41,7 @@ workspaces = [
     {
         "name": "    ",
         "key": "6",
-        "matches": [Match(wm_class="thunderbird")],
+        "matches": [Match(wm_class="Thunderbird")],
     },  # nf-mdi-email
 ]
 
