@@ -42,3 +42,4 @@ paru-bin
 ttf-roboto
 ttf-roboto-mono
 zsh-theme-powerlevel10k
+duf-bin
