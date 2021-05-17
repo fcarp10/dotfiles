@@ -44,3 +44,4 @@ ttf-roboto-mono
 zsh-theme-powerlevel10k
 duf-bin
 xcursor-arch-cursor-complete 
+pamac-all
