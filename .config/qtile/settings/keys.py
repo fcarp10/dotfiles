@@ -49,7 +49,7 @@ keys = [
     Key([mod], "c", lazy.spawn("slack")),
     Key([mod], "g", lazy.spawn("telegram-desktop")),
     # mail
-    Key([mod], "a", lazy.spawn("thunderbird")),
+    Key([mod], "a", lazy.spawn("mailspring")),
     # arcolinux-logout
     Key([mod], "x", lazy.spawn("arcolinux-logout")),
     # pamac-manager

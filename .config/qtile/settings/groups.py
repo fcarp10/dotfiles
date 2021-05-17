@@ -41,7 +41,7 @@ workspaces = [
     {
         "name": "    ",
         "key": "6",
-        "matches": [Match(wm_class="Thunderbird")],
+        "matches": [Match(wm_class="mailspring")],
     },  # nf-mdi-email
 ]
 
