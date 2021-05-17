@@ -1,5 +1,5 @@
 firefox
-thunderbird
+mailspring
 chromium
 torbrowser-launcher
 syncthing
@@ -42,3 +42,6 @@ paru-bin
 ttf-roboto
 ttf-roboto-mono
 zsh-theme-powerlevel10k
+duf-bin
+xcursor-arch-cursor-complete 
+pamac-all
