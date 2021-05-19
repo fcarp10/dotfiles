@@ -123,6 +123,8 @@ primary_widgets = [
         metric=True,
         padding=0,
         threshold=80,
+        tag_sensor="CPU",
+        update_interval=5,
     ),
     widget.Sep(  # line separator
         linewidth=1,
