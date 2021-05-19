@@ -1,6 +1,6 @@
 ttf-meslo-nerd-font-powerlevel10k
 jabref
-drawio-desktop
+drawio-desktop-bin
 vscodium-bin
 vscodium-bin-marketplace
 devbook-bin

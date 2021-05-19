@@ -8,3 +8,4 @@ arcolinux-root-git
 arcolinux-arc-themes-git
 arcolinux-fonts-git
 xcursor-arch-cursor-complete
+papirus-icon-theme
