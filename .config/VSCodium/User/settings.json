@@ -6,15 +6,17 @@
     "editor.mouseWheelZoom": true,
     "editor.fontFamily": "'Roboto Mono'",
     "editor.renderControlCharacters": true,
+    "editor.smoothScrolling": true,
+    "editor.fastScrollSensitivity": 10,
     "workbench.editor.enablePreview": false,
     "workbench.colorTheme": "Monokai Neon",
     "workbench.iconTheme": "eq-material-theme-icons-darker",
     "workbench.productIconTheme": "material-product-icons",
     "workbench.startupEditor": "newUntitledFile",
     "window.menuBarVisibility": "toggle",
-    "diffEditor.ignoreTrimWhitespace": false,
     "window.openFilesInNewWindow": "off",
     "window.openFoldersInNewWindow": "on",
+    "diffEditor.ignoreTrimWhitespace": false,
     "terminal.integrated.fontFamily": "MesloLGS NF",
     "files.exclude": {
         "**/.classpath": true,
@@ -89,4 +91,16 @@
         "editor.defaultFormatter": "ms-python.python"
     },
     "dashboard.projectData": null,
+    "shellformat.effectLanguages": [
+        "shellscript",
+        // "dockerfile",
+        "dotenv",
+        "hosts",
+        "jvmoptions",
+        "ignore",
+        "gitignore",
+        "properties",
+        "spring-boot-properties",
+        "azcli"
+    ],
 }
