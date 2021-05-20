@@ -1,3 +1,5 @@
+neofetch
+
 # create a zkbd compatible hash;
 # to add other keys to this hash, see: man 5 terminfo
 typeset -g -A key
@@ -82,8 +84,6 @@ PATH="$PYENV_ROOT/bin:$PATH"
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
-
-neofetch
 
 eval $(keychain --eval --quiet)
 
