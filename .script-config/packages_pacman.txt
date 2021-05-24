@@ -2,6 +2,7 @@ firefox
 mailspring
 chromium
 torbrowser-launcher
+qutebrowser
 syncthing
 xreader
 gvfs
