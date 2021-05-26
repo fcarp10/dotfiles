@@ -1,13 +1,7 @@
-## Extensions
-
-`vscodium --list-extensions`
-
-```
 ## themes ##
 equinusocio.vsc-material-theme-icons
 ryolambertdev.monokai-neon
 PKief.material-product-icons
-
 ## dev ##
 streetsidesoftware.code-spell-checker
 ms-python.python
@@ -18,14 +12,11 @@ vscjava.vscode-java-test
 vscjava.vscode-maven
 foxundermoon.shell-format
 timonwong.shellcheck
-
 ## latex ##
 James-Yu.latex-workshop
 stkb.rewrap
-
 ## others ##
 yzhang.markdown-all-in-one
 randomfractalsinc.vscode-data-preview
 kruemelkatze.vscode-dashboard
 kirozen.wordcounter
-```
