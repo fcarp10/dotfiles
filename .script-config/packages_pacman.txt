@@ -27,3 +27,5 @@ anbox-image
 ttf-roboto
 ttf-roboto-mono
 zsh-theme-powerlevel10k
+newsflash
+dconf-editor
