@@ -24,6 +24,7 @@ retroarch
 libretro-snes9x
 anbox
 anbox-image
+android-tools
 ttf-roboto
 ttf-roboto-mono
 zsh-theme-powerlevel10k
