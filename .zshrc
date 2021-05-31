@@ -78,10 +78,18 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-eval "$(pyenv init -)"
-
 eval $(keychain --eval --quiet)
 
 if [ -f ~/.aliases ]; then
 	. ~/.aliases
 fi
+
+# move all paths ending in 'sbin' to the back of PATH
+# This is needed because pyenv fails to find the system python otherwise [PR to be fixed]
+for SB in $(echo "$PATH" | grep ':*/[^:]*sbin' -o)
+do
+  export PATH="${PATH/$SB}:${SB#:}"
+done
+
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
