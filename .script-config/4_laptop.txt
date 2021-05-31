@@ -1,3 +1,4 @@
+tlp
 pulseaudio-bluetooth
 bluez
 bluez-libs

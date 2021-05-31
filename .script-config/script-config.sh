@@ -30,22 +30,16 @@ usage='Usage:
 '$0' [OPTION]
 
 OPTIONS:
-\n -A --awesome
-\t Installs core packages for awesomewm.
-\n -Q --qtile
-\t Installs core packages for qtile.
-\n -a --arcolinuxd
-\t Installs extra packages from arcolinux.
-\n -s --sound
-\t Installs sound packages.
+\n -q --qtile
+\t Installs qtile and arcolinux packages.
+\n -a --audio
+\t Installs audio packages.
 \n -p --printers
 \t Installs printers packages.
-\n -b --bluetooth
-\t Installs bluetooth packages.
 \n -l --laptop
-\t Installs laptop packages.
-\n -e --extra
-\t Installs extra packages.
+\t Installs laptop and bluetooth packages.
+\n -A --apps
+\t Installs apps.
 \n -c --config
 \t Apply configuration.
 \n -h --help
@@ -54,138 +48,105 @@ OPTIONS:
 '
 
 function install_package_pacman {
-	if pacman -Qi $1 &> /dev/null; then
-		log "WARN" "the package "$1" is already installed"
-	else
-		log "INFO" "installing package "$1" "
-    	sudo pacman -S --noconfirm --needed $1
+    if pacman -Qi $1 &>/dev/null; then
+        log "WARN" "the package "$1" is already installed"
+    else
+        log "INFO" "installing package "$1" "
+        sudo pacman -S --noconfirm --needed $1
     fi
 }
 
 function install_package_aur {
-	if paru -Qi $1 &> /dev/null; then
-		log "WARN" "the package "$1" is already installed"
-	else
-		log "INFO" "installing package "$1" "
-    	paru -S --noconfirm --needed $1
+    if paru -Qi $1 &>/dev/null; then
+        log "WARN" "the package "$1" is already installed"
+    else
+        log "INFO" "installing package "$1" "
+        paru -S --noconfirm --needed $1
     fi
 }
 
 while [ "$1" != "" ]; do
-  case $1 in
-    --awesome | -A )
-    log "INFO" "starting installation of awesomewm packages..."
-    cat packages_awesome.txt | while read y
-    do
-    install_package_pacman $y
-    done
-    cp -Rf ~/.config ~/.config-backup-$(date +%Y.%m.%d-%H.%M.%S)
-    cp -arf /etc/skel/. ~
-    log "INFO" "enabling lightdm as display manager"
-    sudo systemctl enable lightdm.service -f
-    log "INFO" "done, reboot your system"
-    ;;
+    case $1 in
 
-    --qtile | -Q )
-    log "INFO" "starting installation of qtile packages..."
-    cat packages_qtile.txt | while read y
-    do
-    install_package_pacman $y
-    done
-    cp -Rf ~/.config ~/.config-backup-$(date +%Y.%m.%d-%H.%M.%S)
-    cp -arf /etc/skel/. ~
-    log "INFO" "enabling sddm as display manager"
-    sudo systemctl enable sddm.service -f
-    log "INFO" "done, reboot your system"
-    ;;
+    --qtile | -q)
+        log "INFO" "installing qtile and arcolinux packages... please wait"
+        cat 1_qtile.txt | while read y; do
+            install_package_pacman $y
+        done
+        cp -Rf ~/.config ~/.config-backup-$(date +%Y.%m.%d-%H.%M.%S)
+        cp -arf /etc/skel/. ~
+        log "INFO" "enabling sddm as display manager"
+        sudo systemctl enable sddm.service -f
+        log "INFO" "done, reboot your system"
+        ;;
 
-    --arcolinuxd | -a )
-    log "INFO" "starting installation of arcolinux packages..."
-    cat packages_arcolinux.txt | while read y
-    do
-    install_package_pacman $y
-    done
-    log "INFO" "done"
-    ;;
+    --audio | -a)
+        log "INFO" "installing audio packages... please wait"
+        cat 2_audio.txt | while read y; do
+            install_package_pacman $y
+        done
+        log "INFO" "done"
+        ;;
 
-    --sound | -s )
-    log "INFO" "starting installation of audio packages..."
-    cat packages_audio.txt | while read y
-    do
-    install_package_pacman $y
-    done
-    log "INFO" "done"
-    ;;
+    --printers | -p)
+        log "INFO" "installing printers packages... please wait"
+        cat 3_printers.txt | while read y; do
+            install_package_pacman $y
+        done
+        sudo systemctl enable org.cups.cupsd.service
+        log "INFO" "done"
+        ;;
 
-    --printers | -p )
-    log "INFO" "starting installation of printers packages..."
-    cat packages_printers.txt | while read y
-    do
-    install_package_pacman $y
-    done
-    sudo systemctl enable org.cups.cupsd.service
-    log "INFO" "done"
-    ;;
+    --laptop | -l)
+        log "INFO" "installing laptop and bluetooth packages... please wait"
+        cat 4_laptop.txt | while read y; do
+            install_package_pacman $y
+        done
+        sudo systemctl enable tlp.service
+        sudo systemctl enable bluetooth.service
+        sudo systemctl start bluetooth.service
+        sudo sed -i 's/' #AutoEnable=false'/'AutoEnable=true'/g' /etc/bluetooth/main.conf
+        log "INFO" "done"
+        ;;
 
-    --bluetooth | -b )
-    log "INFO" "starting installation of bluetooth packages..."
-    cat packages_bluetooth.txt | while read y
-    do
-    install_package_pacman $y
-    done
-    sudo systemctl enable bluetooth.service
-    sudo systemctl start bluetooth.service
-    sudo sed -i 's/'#AutoEnable=false'/'AutoEnable=true'/g' /etc/bluetooth/main.conf
-    log "INFO" "done"
-    ;;
+    --apps | -A)
+        log "INFO" "installing apps... please wait"
+        cat 5_apps.txt | while read y; do
+            install_package_pacman $y
+        done
+        cat 6_aur.txt | while read y; do
+            install_package_aur $y
+        done
+        log "INFO" "done"
+        ;;
 
-    --laptop | -l )
-    log "INFO" "starting installation of laptop packages..."
-    cat packages_laptop.txt | while read y
-    do
-    install_package_pacman $y
-    done
-    sudo systemctl enable tlp.service
-    log "INFO" "done"
-    ;;
+    --config | -c)
+        log "INFO" "applying personal configuration... please wait"
+        # change shell to zsh
+        chsh -s /usr/bin/zsh
+        # add pluging to pyenv
+        git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv
+        # set up git
+        git config --global user.name "Francisco Carpio"
+        git config --global user.email "carpiofj@gmail.com"
+        git config credential.helper store
+        git config --global credential.helper store
+        # set up docker
+        sudo systemctl enable docker
+        sudo systemctl start docker
+        sudo usermod -aG docker $USER
+        newgrp docker
+        log "INFO" "done"
+        ;;
 
-    --extra | -e )
-    log "INFO" "starting installation of extra packages..."
-    cat packages_pacman.txt | while read y
-    do
-    install_package_pacman $y
-    done
-    cat packages_aur.txt | while read y
-    do
-    install_package_aur $y
-    done
-    log "INFO" "done"
-    ;;
-
-	--config | -c )
-    log "INFO" "applying personal configuration..."
-    # change shell to zsh
-    chsh -s /usr/bin/zsh
-    # add pluging to pyenv
-    git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv
-    # set up git
-    git config --global user.name "Francisco Carpio"
-    git config --global user.email "carpiofj@gmail.com"
-    git config credential.helper store
-    git config --global credential.helper store
-    # set up docker
-    sudo systemctl enable docker
-    sudo systemctl start docker
-    sudo usermod -aG docker $USER
-    newgrp docker
-	log "INFO" "done"
-    ;;
-
-    --help | -h )        echo -e "${usage}"
-    exit 1
-    ;;
-    * )         echo -e "Invalid option $1 \n\n${usage}"
-    exit 0
-  esac
-  shift
+    --help | -h)
+        echo -e "${usage}"
+        exit 1
+        ;;
+    *)
+        echo -e "Invalid option $1 \n\n${usage}"
+        exit 0
+        ;;
+    esac
+    shift
 done

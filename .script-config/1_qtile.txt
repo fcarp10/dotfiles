@@ -16,3 +16,15 @@ arandr
 lxappearance
 picom
 xfce-settings
+downgrade
+inxi
+pamac-aur
+arcolinux-tweak-tool-git
+arcolinux-bin-git
+arcolinux-hblock-git
+arcolinux-root-git
+arcolinux-arc-themes-git
+arcolinux-fonts-git
+xcursor-arch-cursor-complete
+papirus-icon-theme
+arcolinux-logout-git
