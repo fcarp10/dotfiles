@@ -1,8 +1,8 @@
-## Arch Linux ARM installation
+# Arch Linux ARM installation
 
 Arch Linux ARM installation and script for installing additional software.
 
-### Prerequisites 
+## Prerequisites 
 
 The script has only been tested in [Arch Linux ARM](https://github.com/dreemurrs-embedded/Pine64-Arch). Short instructions on how to flash the image:
 
@@ -10,7 +10,7 @@ The script has only been tested in [Arch Linux ARM](https://github.com/dreemurrs
 2. Insert the SD card into the Pinephone, login with user: `alarm`, password: `123456`, open the terminal an update the system `sudo pacman -Syyu`.
 3. (optional) Enable SSH: `sudo systemctl enable --now sshd`
 
-### Software installation script
+## Software installation script
 
 Run `script-config.sh` to install the software:
 
@@ -35,11 +35,11 @@ OPTIONS:
 '
 ```
 
-### Troubleshooting
+## Troubleshooting
 
 To install `paru`, it might be required to enable zRAM in the 2GB model. 
 
-#### Steps
+### Steps
 
 Create a new configuration file and add the word `zram` to it:
 
