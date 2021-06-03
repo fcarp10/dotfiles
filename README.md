@@ -2,6 +2,8 @@
 
 Repository for dotfiles and Arcolinux configuration script.
 
+![screeshoot](screenshot.png)
+
 ## Arcolinux configuration
 
 Instructions [here](https://github.com/fcarp10/dotfiles/blob/master/.script-config/README.md)  
