@@ -15,7 +15,7 @@ def status_bar(widgets):
     return bar.Bar(widgets, 24, opacity=1.0)
 
 
-wallpaper_path = "~/.config/qtile/themes/wall.jpg"
+wallpaper_path = "~/.config/qtile/themes/galaxy.jpg"
 screens = [
     Screen(
         wallpaper=wallpaper_path,
