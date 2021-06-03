@@ -3,7 +3,7 @@
 # cbatticon -u 5 & # systray battery icon
 nm-applet & # systray network
 numlockx on &
-pamac-tray &
+# pamac-tray &
 volumeicon &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 syncthing &
