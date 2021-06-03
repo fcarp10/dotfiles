@@ -10,7 +10,7 @@
 configuration {
 	modi: 			"drun,run";
 	width: 			750;
-	lines: 			12;
+	lines: 			10;
 	show-match: 		false;
 	separator-style: 	"solid";
 	hide-scrollbar: 	true;
@@ -57,7 +57,7 @@ configuration {
     padding:          0;
 }
 #mainbox {
-    border:  4;
+    border:  0;
     padding: 20;
 }
 #message {
@@ -72,7 +72,7 @@ configuration {
     fixed-height: 0;
     border:       2px 0px 0px ;
     border-color: @separatorcolor;
-    spacing:      5px ;
+    spacing:      10px ;
     scrollbar:    false;
     padding:	  5 0 0;
 
