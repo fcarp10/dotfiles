@@ -17,7 +17,6 @@ picom
 xfce-settings
 downgrade
 inxi
-pamac-aur
 arcolinux-tweak-tool-git
 arcolinux-bin-git
 arcolinux-hblock-git
