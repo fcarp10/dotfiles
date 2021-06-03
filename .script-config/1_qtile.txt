@@ -27,5 +27,3 @@ xcursor-arch-cursor-complete
 papirus-icon-theme
 arcolinux-logout-git
 rofi
-arcolinux-rofi-git
-arcolinux-rofi-themes-git
