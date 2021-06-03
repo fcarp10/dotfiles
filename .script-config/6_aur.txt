@@ -4,3 +4,4 @@ drawio-desktop-bin
 vscodium-bin
 vscodium-bin-marketplace
 devbook-bin
+aur/pamac-aur
