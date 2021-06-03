@@ -5,7 +5,6 @@ arcolinux-wallpapers-git
 thunar
 qtile
 sxhkd
-dmenu
 python-psutil
 xcb-util-cursor
 arcolinux-qtile-git
@@ -28,3 +27,6 @@ arcolinux-fonts-git
 xcursor-arch-cursor-complete
 papirus-icon-theme
 arcolinux-logout-git
+rofi
+arcolinux-rofi-git
+arcolinux-rofi-themes-git
