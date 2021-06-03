@@ -35,7 +35,7 @@ keys = [
     # ------------ App Configs ------------
     # Menu
     # Key([mod], "d", lazy.spawn("dmenu_run -p 'Run: '")),
-    Key([mod], "space" , lazy.spawn('rofi -modi "drun,run,window,ssh" -show drun'), desc="Run Rofi"),
+    Key([mod], "space" , lazy.spawn('rofi -modi "drun,run,window,ssh" -show drun -show-icons'), desc="Run Rofi"),
     # Browsers
     Key([mod], "b", lazy.spawn("firefox")),
     Key([mod], "r", lazy.spawn("chromium")),
