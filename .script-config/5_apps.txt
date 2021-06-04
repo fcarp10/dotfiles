@@ -30,6 +30,7 @@ zsh
 zsh-autosuggestions
 zsh-completions
 zsh-syntax-highlighting
+zsh-theme-powerlevel10k
 texlive-bibtexextra
 texlive-bin
 texlive-core
@@ -42,6 +43,5 @@ texlive-science
 paru-bin
 ttf-roboto
 ttf-roboto-mono
-zsh-theme-powerlevel10k
 duf-bin
 pamac-all

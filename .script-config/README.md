@@ -1,8 +1,8 @@
-## Arcolinux configuration
+# Arcolinux configuration
 
-Script for installing `qtile`, apps and apply config.
+Arcolinux installation and script for installing `qtile` and additional software.
 
-### Prerequisites 
+## Prerequisites 
 
 The script has only been tested in ArcoLinuxD. Short instructions on how to install ArcoLinuxD:
 
@@ -11,9 +11,9 @@ The script has only been tested in ArcoLinuxD. Short instructions on how to inst
 3. After the installation, restart and login.
 4. Run `mirror` to update mirrors, run `update` or `sudo pacman -Syyu` to upgrade the system, and reboot.
 
-### Configuration script
+## Configuration script
 
-Run `script-config.sh` to install a set of packages:
+Run `script-config.sh` to install the software:
 
 ```
 chmod +x script-config.sh
