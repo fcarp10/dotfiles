@@ -15,10 +15,11 @@ def status_bar(widgets):
     return bar.Bar(widgets, 24, opacity=1.0)
 
 
-wallpaper_path = "~/.config/qtile/themes/galaxy.jpg"
+wallpaper_path = "~/.config/qtile/themes/galaxy.png"
 screens = [
     Screen(
         wallpaper=wallpaper_path,
+        wallpaper_mode="stretch",
         top=status_bar(primary_widgets),
     )
 ]
@@ -44,6 +45,7 @@ if connected_monitors > 1:
         screens.append(
             Screen(
                 wallpaper=wallpaper_path,
+                wallpaper_mode="stretch",
                 top=status_bar(secondary_widgets),
             )
         )

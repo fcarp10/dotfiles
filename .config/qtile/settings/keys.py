@@ -57,6 +57,7 @@ keys = [
     Key([mod], "p", lazy.spawn("pamac-manager")),
     # Screenshot
     Key([mod], "Print", lazy.spawn("gnome-screenshot -i")),
+    Key([], "Print", lazy.spawn("gnome-screenshot")),
     # keyboardlayout
     Key(
         [mod, "shift"],
