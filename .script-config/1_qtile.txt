@@ -32,6 +32,7 @@ bashtop
 neofetch
 rofi
 pass
+pass-otp
 rofi-pass
 gvfs
 file-roller
@@ -47,4 +48,3 @@ zsh-syntax-highlighting
 zsh-theme-powerlevel10k
 ttf-roboto
 ttf-roboto-mono
-
