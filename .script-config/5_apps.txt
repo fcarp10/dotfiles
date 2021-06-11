@@ -1,5 +1,6 @@
 firefox
 browserpass
+browserpass-firefox
 alacritty
 mailspring
 chromium
