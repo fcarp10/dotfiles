@@ -10,6 +10,7 @@ The script has only been tested in ArcoLinuxD. Short instructions on how to inst
 2. Boot the system from an USB drive, launch calamares and select only: `linux kernel without Nvidia`.
 3. After the installation, restart and login.
 4. Run `mirror` to update mirrors, run `update` or `sudo pacman -Syyu` to upgrade the system, and reboot.
+    - if only wifi connection is possible, run `nmtui` to connect.
 
 ## Configuration script
 
