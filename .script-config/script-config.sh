@@ -48,7 +48,7 @@ OPTIONS:
 '
 
 function install_package_pacman {
-    if [[ $1 != \#* ]] ; then
+    if [ $1 != \#* ] && [ -n "$1" ]; then
         if pacman -Qi $1 &>/dev/null; then
             log "WARN" "the package "$1" is already installed"
         else
@@ -59,7 +59,7 @@ function install_package_pacman {
 }
 
 function install_package_aur {
-    if [[ $1 != \#* ]] ; then
+    if [ $1 != \#* ] && [ -n "$1" ]; then
         if paru -Qi $1 &>/dev/null; then
             log "WARN" "the package "$1" is already installed"
         else
