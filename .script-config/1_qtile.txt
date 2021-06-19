@@ -14,7 +14,7 @@ arcolinux-logout-git
 arandr
 lxappearance
 picom
-xfce-settings
+xfce4-settings
 downgrade
 inxi
 arcolinux-tweak-tool-git
