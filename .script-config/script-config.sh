@@ -48,20 +48,24 @@ OPTIONS:
 '
 
 function install_package_pacman {
-    if pacman -Qi $1 &>/dev/null; then
-        log "WARN" "the package "$1" is already installed"
-    else
-        log "INFO" "installing package "$1" "
-        sudo pacman -S --noconfirm --needed $1
+    if [[ $1 != \#* ]] ; then
+        if pacman -Qi $1 &>/dev/null; then
+            log "WARN" "the package "$1" is already installed"
+        else
+            log "INFO" "installing package "$1" "
+            sudo pacman -S --noconfirm --needed $1
+        fi
     fi
 }
 
 function install_package_aur {
-    if paru -Qi $1 &>/dev/null; then
-        log "WARN" "the package "$1" is already installed"
-    else
-        log "INFO" "installing package "$1" "
-        paru -S --noconfirm --needed $1
+    if [[ $1 != \#* ]] ; then
+        if paru -Qi $1 &>/dev/null; then
+            log "WARN" "the package "$1" is already installed"
+        else
+            log "INFO" "installing package "$1" "
+            paru -S --noconfirm --needed $1
+        fi
     fi
 }
 
