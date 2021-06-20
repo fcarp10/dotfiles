@@ -29,7 +29,7 @@ config push
     ```
     git clone --bare https://github.com/fcarp10/dotfiles-arcolinux $HOME/.dotfiles
     ```
-3. Make sure you delete or backup all conflicting files. Then, checkout the content from the repository to `$HOME`:
+3. Make sure you delete or backup all conflicting files, or `config reset --hard`. Then, checkout the content from the repository to `$HOME`:
     ```
     config checkout
     ```
