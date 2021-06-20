@@ -1,5 +1,4 @@
 ttf-meslo-nerd-font-powerlevel10k
-jabref
 drawio-desktop-bin
 vscodium-bin
 vscodium-bin-marketplace

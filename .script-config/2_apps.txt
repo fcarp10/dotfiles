@@ -1,0 +1,17 @@
+firefox
+browserpass
+browserpass-firefox
+alacritty
+mailspring
+chromium
+torbrowser-launcher
+syncthing
+xreader
+nomacs
+celluloid
+baobab
+telegram-desktop
+jdk-openjdk
+pyenv
+etcher-bin
+docker

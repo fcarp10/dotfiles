@@ -32,14 +32,14 @@ usage='Usage:
 OPTIONS:
 \n -q --qtile
 \t Installs qtile and arcolinux packages.
-\n -a --audio
-\t Installs audio packages.
-\n -p --printers
-\t Installs printers packages.
+\n -a --apps
+\t Installs apps.
+\n -aw --apps-work
+\t Installs apps work.
 \n -l --laptop
 \t Installs laptop and bluetooth packages.
-\n -A --apps
-\t Installs apps.
+\n -p --printers
+\t Installs printers packages.
 \n -c --config
 \t Apply configuration.
 \n -h --help
@@ -48,7 +48,7 @@ OPTIONS:
 '
 
 function install_package_pacman {
-    if [ $1 != \#* ] && [ -n "$1" ]; then
+    if [[ $1 != \#* ]] && [ -n "$1" ]; then
         if pacman -Qi $1 &>/dev/null; then
             log "WARN" "the package "$1" is already installed"
         else
@@ -59,7 +59,7 @@ function install_package_pacman {
 }
 
 function install_package_aur {
-    if [ $1 != \#* ] && [ -n "$1" ]; then
+    if [[ $1 != \#* ]] && [ -n "$1" ]; then
         if paru -Qi $1 &>/dev/null; then
             log "WARN" "the package "$1" is already installed"
         else
@@ -84,26 +84,31 @@ while [ "$1" != "" ]; do
         log "INFO" "done, reboot your system"
         ;;
 
-    --audio | -a)
-        log "INFO" "installing audio packages... please wait"
-        cat 2_audio.txt | while read y; do
+    --apps | -a)
+        log "INFO" "installing apps... please wait"
+        cat 2_apps.txt | while read y; do
             install_package_pacman $y
+        done
+        cat 3_aur.txt | while read y; do
+            install_package_aur $y
         done
         log "INFO" "done"
         ;;
-
-    --printers | -p)
-        log "INFO" "installing printers packages... please wait"
-        cat 3_printers.txt | while read y; do
+    
+    --apps-work | -aw)
+        log "INFO" "installing apps... please wait"
+        cat 4_apps-work.txt | while read y; do
             install_package_pacman $y
         done
-        sudo systemctl enable org.cups.cupsd.service
+        cat 5_aur-work.txt | while read y; do
+            install_package_aur $y
+        done
         log "INFO" "done"
         ;;
 
     --laptop | -l)
         log "INFO" "installing laptop and bluetooth packages... please wait"
-        cat 4_laptop.txt | while read y; do
+        cat 6_laptop.txt | while read y; do
             install_package_pacman $y
         done
         sudo systemctl enable tlp.service
@@ -113,14 +118,12 @@ while [ "$1" != "" ]; do
         log "INFO" "done"
         ;;
 
-    --apps | -A)
-        log "INFO" "installing apps... please wait"
-        cat 5_apps.txt | while read y; do
+    --printers | -p)
+        log "INFO" "installing printers packages... please wait"
+        cat 7_printers.txt | while read y; do
             install_package_pacman $y
         done
-        cat 6_aur.txt | while read y; do
-            install_package_aur $y
-        done
+        sudo systemctl enable org.cups.cupsd.service
         log "INFO" "done"
         ;;
 

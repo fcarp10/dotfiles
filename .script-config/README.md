@@ -23,14 +23,14 @@ chmod +x script-config.sh
 OPTIONS:
 \n -q --qtile
 \t Installs qtile and arcolinux packages.
-\n -a --audio
-\t Installs audio packages.
-\n -p --printers
-\t Installs printers packages.
+\n -a --apps
+\t Installs apps.
+\n -aw --apps-work
+\t Installs apps work.
 \n -l --laptop
 \t Installs laptop and bluetooth packages.
-\n -A --apps
-\t Installs apps.
+\n -p --printers
+\t Installs printers packages.
 \n -c --config
 \t Apply configuration.
 \n -h --help
