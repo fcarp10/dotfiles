@@ -114,7 +114,7 @@ while [ "$1" != "" ]; do
         sudo systemctl enable tlp.service
         sudo systemctl enable bluetooth.service
         sudo systemctl start bluetooth.service
-        sudo sed -i 's/' #AutoEnable=false'/'AutoEnable=true'/g' /etc/bluetooth/main.conf
+        sudo sed -i 's|#AutoEnable=false|AutoEnable=true|g' /etc/bluetooth/main.conf
         log "INFO" "done"
         ;;
 
