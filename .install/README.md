@@ -1,8 +1,8 @@
-# Arcolinux configuration
+# Arcolinux installation
 
 Arcolinux installation and script for installing `qtile` and additional software.
 
-## Prerequisites 
+## Installation 
 
 The script has only been tested in ArcoLinuxD. Short instructions on how to install ArcoLinuxD:
 
@@ -12,13 +12,13 @@ The script has only been tested in ArcoLinuxD. Short instructions on how to inst
 4. Run `mirror` to update mirrors, run `update` or `sudo pacman -Syyu` to upgrade the system, and reboot.
     - if only wifi connection is possible, run `nmtui` to connect.
 
-## Configuration script
+## Installation of qtile and rest of packages
 
-Run `script-config.sh` to install the software:
+Run `install-packages.sh` to install the software:
 
 ```
 chmod +x script-config.sh
-./script-config.sh -h
+./install-packages.sh -h
 
 OPTIONS:
 \n -q --qtile

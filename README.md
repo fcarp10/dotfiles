@@ -6,7 +6,7 @@ Repository for dotfiles and Arcolinux installation script.
 
 ## Arcolinux installation
 
-Instructions [here](https://github.com/fcarp10/dotfiles-arcolinux/blob/master/.script-config/README.md)  
+Instructions [here](https://github.com/fcarp10/dotfiles-arcolinux/blob/master/.install/README.md)  
 
 ## Dotfiles configuration 
 
