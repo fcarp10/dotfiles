@@ -1,6 +1,6 @@
-# Dotfiles | Arch Linux ARM | Pinephone
+# Dotfiles | Arch Linux ARM | Phosh
 
-Repository for dotfiles and Arch Linux installation script.
+Repository for dotfiles and Arch Linux / Phosh installation script.
 
 
 Phosh shell                |  Arch Linux ARM
