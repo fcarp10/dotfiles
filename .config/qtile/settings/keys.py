@@ -20,7 +20,7 @@ keys = [
     Key([mod, "shift"], "f", lazy.window.toggle_floating()),
     # Move windows up or down in current stack
     Key([mod, "shift"], "k", lazy.layout.shuffle_down()),
-    Key([mod, "shift"], "j", lazy.layout.shuffle_up()),
+    Key([mod, "shift"], "l", lazy.layout.shuffle_up()),
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.next_layout()),
     Key([mod, "shift"], "Tab", lazy.prev_layout()),
