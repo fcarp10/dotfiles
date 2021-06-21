@@ -1,3 +1,4 @@
+## core ##
 sddm
 arcolinux-sddm-sugar-candy-git
 sddm-config-editor-git
@@ -14,7 +15,7 @@ arcolinux-logout-git
 arandr
 lxappearance
 picom
-xfce-settings
+xfce4-settings
 downgrade
 inxi
 arcolinux-tweak-tool-git
@@ -26,6 +27,8 @@ arcolinux-fonts-git
 xcursor-arch-cursor-complete
 papirus-icon-theme
 arcolinux-logout-git
+
+## utils ##
 paru
 duf-bin
 bashtop
@@ -48,3 +51,19 @@ zsh-syntax-highlighting
 zsh-theme-powerlevel10k
 ttf-roboto
 ttf-roboto-mono
+
+## audio ##
+pulseaudio
+pulseaudio-alsa
+pavucontrol
+alsa-firmware
+alsa-lib
+alsa-plugins
+alsa-utils
+gstreamer
+gst-plugins-good
+gst-plugins-bad
+gst-plugins-base
+gst-plugins-ugly
+playerctl
+volumeicon

@@ -1,4 +1,7 @@
+## laptop ##
 tlp
+
+## bluetooth ##
 pulseaudio-bluetooth
 bluez
 bluez-libs
