@@ -1,9 +1,0 @@
-## laptop ##
-tlp
-
-## bluetooth ##
-pulseaudio-bluetooth
-bluez
-bluez-libs
-bluez-utils
-blueberry
