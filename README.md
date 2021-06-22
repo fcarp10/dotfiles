@@ -7,7 +7,7 @@ Windows managers:
 
 ## Arcolinux installation
 
-Instructions [here](https://github.com/fcarp10/arcolinux-install/blob/master/README.md)
+Instructions [here](https://github.com/fcarp10/arcolinux-install/blob/master/)
 
 ## Dotfiles configuration 
 
