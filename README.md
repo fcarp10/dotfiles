@@ -1,5 +1,4 @@
-# Dotfiles | Arch Linux ARM | Pinephone
-
+# Dotfiles | Arch Linux ARM | Phosh
 
 
 Phosh shell                |  Arch Linux ARM
