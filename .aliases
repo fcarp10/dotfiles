@@ -1,13 +1,31 @@
-# web apps
+## ls ##
+alias ls='ls --color=auto'
+alias ll='ls -la'
+alias l.='ls -d .* --color=auto'
+
+## cd ##
+alias dl="cd ~/Downloads"
+alias rp="cd ~/repository"
+alias ..='cd ..'
+alias ...='cd ../../../'
+alias ....='cd ../../../../'
+alias .....='cd ../../../../'
+alias .4='cd ../../../../'
+alias .5='cd ../../../../..'
+
+## web apps ##
 alias wt='function _wt(){ curl wttr.in/$1; };_wt'
 alias pubip="curl ifconfig.co/json"
 alias cheat='function _cheat(){ curl cheat.sh/$1; };_cheat'
 alias cryp='function _cryp(){ curl rate.sx/$1; };_cryp'
 
-# config
+## config ##
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
-# commands
-alias rm-orphans='sudo pacman -Qtdq | sudo pacman -Rns -'
+## ssh ##
 alias rpi='ssh microbot@192.168.50.233'
 alias rpi-shutdown='ssh microbot@192.168.50.233 "sudo shutdown now"'
+
+## others ##
+alias rm-orphans='sudo pacman -Qtdq | sudo pacman -Rns -'
+alias please='sudo $(fc -ln -1)'

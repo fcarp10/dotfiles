@@ -1,6 +1,5 @@
 # Dotfiles | Arch Linux ARM | Pinephone
 
-Repository for dotfiles and Arch Linux installation script.
 
 
 Phosh shell                |  Arch Linux ARM
@@ -10,8 +9,47 @@ Phosh shell                |  Arch Linux ARM
 
 ## Arch Linux ARM installation
 
-Instructions [here](https://github.com/fcarp10/dotfiles-pinephone/blob/master/.script-config/README.md) 
+Instructions [here](https://github.com/fcarp10/archlinuxARM-install) 
 
 ## Dotfiles configuration 
 
-Instructions [here](https://github.com/fcarp10/dotfiles-pinephone/blob/master/.config/README.md)
+### Initial configuration
+Creates a folder in `$HOME` and adds an alias to `zsh`:
+```
+git init --bare $HOME/.dotfiles
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+config config --local status.showUntrackedFiles no
+echo "alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" >> $HOME/.zshrc
+```
+
+### Add files
+
+Example of how to add a file:
+```
+config status
+config add .zshrc
+config commit -m "Add zshrc"
+config push
+```
+
+### Apply configuration to existing installation
+
+1. Add the next alias to `.bashrc`:
+    ```
+    echo "alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" >> $HOME/.bashrc
+    ```
+2. Clone the dotfiles repository:
+    ```
+    git clone --bare https://github.com/fcarp10/dotfiles-archlinuxARM $HOME/.dotfiles
+    ```
+3. Make sure you delete or backup all conflicting files. Then, checkout the content from the repository to `$HOME`:
+    ```
+    config checkout
+    ```
+4. Set flag `showUntrackedFiles` on this specific local repository:
+    ```
+    config config --local status.showUntrackedFiles no
+    ```
+    
+- For more details go [here](https://www.atlassian.com/git/tutorials/dotfiles)
+
