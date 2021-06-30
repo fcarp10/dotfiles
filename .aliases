@@ -29,3 +29,4 @@ alias rpi-shutdown='ssh microbot@192.168.50.233 "sudo shutdown now"'
 ## others ##
 alias rm-orphans='sudo pacman -Qtdq | sudo pacman -Rns -'
 alias please='sudo $(fc -ln -1)'
+alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
