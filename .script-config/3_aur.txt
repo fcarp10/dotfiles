@@ -1,6 +1,0 @@
-ttf-meslo-nerd-font-powerlevel10k
-drawio-desktop-bin
-vscodium-bin
-vscodium-bin-marketplace
-devbook-bin
-aur/pamac-aur
