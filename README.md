@@ -38,7 +38,7 @@ config push
     ```
 2. Clone the dotfiles repository:
     ```
-    git clone --bare https://github.com/fcarp10/dotfiles-arcolinux $HOME/.dotfiles
+    git clone --bare git@github.com:fcarp10/dotfiles-arcolinux.git $HOME/.dotfiles
     ```
 3. Make sure you delete or backup all conflicting files, or `config reset --hard`. Then, checkout the content from the repository to `$HOME`:
     ```
