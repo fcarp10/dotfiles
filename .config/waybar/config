@@ -4,21 +4,16 @@
     "height": 24,
     "modules-left": ["sway/workspaces"],
     "modules-center": ["sway/window"],
-    "modules-right": ["tray", "pulseaudio", "network", "temperature", "cpu", "memory", "battery", "clock", "custom/japan"],
+    "modules-right": ["tray", "pulseaudio", "network", "temperature", "cpu", "memory", "battery", "clock"],
     "sway/workspaces": {
         "disable-scroll": true,
-        "disable-click": true,
+        "disable-click": false,
     },
     "tray": {
         "spacing": 10,
     },
     "clock": {
         "format": "{:%a %Y %b %d %R}"
-    },
-    "custom/japan": {
-        "format": "{}",
-        "exec": "TZ=Asia/Tokyo date \"+%H:%M %Z\"",
-        "interval": 30,
     },
     "cpu": {
         "format": " {usage}%"

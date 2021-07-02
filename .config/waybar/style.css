@@ -3,27 +3,27 @@
     border-radius: 0;
     font-family: "Ubuntu Nerd Font";
     font-size: 13px;
-    min-height: 0;
+    min-height: 20px;
 }
 
 window#waybar {
-    background: transparent;
+    /* background: transparent; */
+    background: black;
     color: white;
 }
 
 #window {
     font-family: "Ubuntu";
-    margin-top: 5px;
+    /* margin-top: 5px; */
 }
 
-/*
-#workspaces {
+/* #workspaces {
     padding: 0 5px;
-}
-*/
+} */
+
 
 #workspaces button {
-    padding: 0 5px;
+    padding: 0 20px;
     background: transparent;
     color: white;
     border-top: 2px solid transparent;
@@ -37,7 +37,7 @@ window#waybar {
 #tray, #custom-japan, #temperature, #clock, #battery, #cpu, #memory, #network, #pulseaudio {
     padding: 0 5px;
     margin-right: 5px;
-    margin-top: 5px;
+    /* margin-top: 5px; */
 }
 
 #temperature.critical {
@@ -48,8 +48,8 @@ window#waybar {
     color: red;
 }
 
-#battery.charging {
-}
+/* #battery.charging {
+} */
 
 @keyframes blink {
     to {

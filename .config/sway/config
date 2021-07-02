@@ -41,7 +41,9 @@ set $term alacritty
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/arcolinux/entity-3840x2160.png fill
+# output * bg /usr/share/backgrounds/arcolinux/entity-3840x2160.png fill
+output * bg black-hole-1.jpg fill
+
 #
 # Example configuration:
 #
@@ -296,7 +298,7 @@ bar {
 	bindsym $mod+f exec thunar
 	bindsym $mod+a exec mailspring
 	bindsym $mod+space exec wofi --show drun 
-
+	bindsym $mod+e exec vscodium --enable-features=UseOzonePlatform --ozone-platform=wayland
    
 # SUPER + Shift Keys
 	#bindsym $mod+shift+Return exec thunar
