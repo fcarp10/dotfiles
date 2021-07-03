@@ -5,7 +5,7 @@
 ###################################################################################
 
 ### Autostart
-#exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec autotiling
 exec pamac-tray-applet &
 exec blueberry-tray &
@@ -14,8 +14,6 @@ exec blueberry-tray &
 exec volumeicon-applet &
 exec nm-applet --indicator &
 exec pasystray  &
-exec xrdb ~/.Xresources
-exec picom -b --config ~/.config/sway/picom.conf &
 
 ###################################################################################
 
@@ -95,8 +93,8 @@ default_border pixel 2
 ### GTK Theme
 set $gnome-schema org.gnome.desktop.interface
 	exec_always {
-		gsettings set $gnome-schema gtk-theme 'Arc-Dark'
-		gsettings set $gnome-schema icon-theme 'Surfn'
+		gsettings set $gnome-schema gtk-theme 'Arc-Punch-Dark'
+		gsettings set $gnome-schema icon-theme 'Papirus-Dark'
 		gsettings set $gnome-schema cursor-theme 'Bibata-Modern-Ice'
 		}
 
