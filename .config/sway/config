@@ -31,7 +31,6 @@ set $right l
 set $term alacritty
 
 # Your preferred application launcher
-# set $menu dmenu_path | dmenu | xargs swaymsg exec --
 # set $menu | wofi --show run | xargs swaymsg exec --
 
 ###################################################################################	
@@ -113,14 +112,11 @@ set $gnome-schema org.gnome.desktop.interface
     	bindsym $mod+t exec $term
     
     #Xwayland Support
-	#xwayland enable
+		#xwayland enable
 
     # Kill focused window
     	bindsym $mod+Shift+q kill
     	bindsym $mod+q kill
-
-    # Start your launcher
-    	bindsym $mod+d exec $menu
 	
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -267,29 +263,6 @@ set $gnome-schema org.gnome.desktop.interface
 ### Status Bar
 bar {
 	swaybar_command waybar
-    	# position top
-    	# font "Terminus (TTF)"
-    	# swaybar_command waybar
-	#colors {
-        #	statusline #ffffff
-        #	background #323232
-        #	inactive_workspace #32323200 #32323200 #5c5c5c
-    	#}
-	### colors {
-    	#	background #000000AA
-    	#	statusline #ffffff
-    	#	inactive_workspace #323232AA #323232AA #5c5c5cAA
-
-    	#    background #2F2F2F
-    	#    statusline #eeeeee
-    	#    separator  #fdb95b
-
- 	 #colorclass           border  backgr. text
-    	#    focused_workspace     #a9a9a9 #fdb95b #000000
-    	#    active_workspace      #a9a9a9 #ffddaf #000000
-    	#    inactive_workspace    #a9a9a9 #5f676a #eeeeee
-    	#    urgent_workspace      #a9a9a9 #d42121 #eeeeee
-    	#}
 }
 
 ###################################################################################
