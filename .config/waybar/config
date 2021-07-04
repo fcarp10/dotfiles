@@ -4,7 +4,7 @@
     "height": 24,
     "modules-left": ["sway/workspaces"],
     "modules-center": ["sway/window"],
-    "modules-right": ["tray", "pulseaudio", "network", "temperature", "cpu", "memory", "battery", "clock"],
+    "modules-right": ["tray", "pulseaudio", "temperature", "cpu", "memory", "battery", "clock"],
     "sway/workspaces": {
         "disable-scroll": true,
         "disable-click": false,
@@ -35,10 +35,6 @@
         },
         "format": "{icon} {capacity}%",
         "format-icons": ["", "", "", "", ""]
-    },
-    "network": {
-        "format-wifi": " {essid}",
-        "format-disconnected": "⚠ Disconnected"
     },
     "pulseaudio": {
         "format": "{icon} {volume}%",
