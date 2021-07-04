@@ -287,7 +287,9 @@ bar {
 #ALT + ... Keys
 
 	#Screenshot
-	bindsym $mod+Shift+s exec grim ~/Pictures/$(date '+%Y-%m-%d-%T')-screenshot.png
+	bindsym Print exec grim ~/Pictures/$(date '+%Y-%m-%d-%T')-screenshot.png
+	bindsym shift+Print exec grim -g "$(slurp)" ~/Pictures/$(date '+%Y-%m-%d-%T')-screenshot.png
+
 
 
 #MULTIMEDIA Keys
