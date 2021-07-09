@@ -35,18 +35,18 @@ keys = [
     # ------------ App Configs ------------
     # Menu
     # Key([mod], "d", lazy.spawn("dmenu_run -p 'Run: '")),
-    Key([mod], "space" , lazy.spawn('rofi -modi "drun,run,window,ssh" -show drun -show-icons'), desc="Run rofi"),
-    Key([mod, "mod1"], "space" , lazy.spawn('rofi-pass'), desc="Run rofi-pass"),
+    Key([mod], "d" , lazy.spawn('rofi -modi "drun,run,window,ssh" -show drun -show-icons'), desc="Run rofi"),
+    # Key([mod, "mod1"], "space" , lazy.spawn('rofi-pass'), desc="Run rofi-pass"),
     # Browsers
-    Key([mod], "b", lazy.spawn("firefox")),
+    Key([mod], "w", lazy.spawn("firefox")),
     Key([mod], "r", lazy.spawn("chromium")),
     # Terminal
     Key([mod], "Return", lazy.spawn("alacritty")),
-    Key([mod], "t", lazy.spawn("alacritty")),
+    # Key([mod], "t", lazy.spawn("alacritty")),
     # Editor gui
     Key([mod], "e", lazy.spawn("vscodium")),
     # File Explorer
-    Key([mod], "f", lazy.spawn("thunar")),
+    Key([mod], "z", lazy.spawn("thunar")),
     # chat
     Key([mod], "c", lazy.spawn("slack")),
     Key([mod], "g", lazy.spawn("telegram-desktop")),
