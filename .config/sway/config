@@ -60,8 +60,8 @@ bindswitch --reload --locked lid:off output $laptop enable
 #
 # Example configuration:
 exec swayidle -w \
-          timeout 60 'swaylock -f -c 000000' \
-          timeout 65 'swaymsg "output * dpms off"' \
+          timeout 300 'swaylock -f -c 000000' \
+          timeout 305 'swaymsg "output * dpms off"' \
                resume 'swaymsg "output * dpms on"' \
           before-sleep 'swaylock -f -c 000000' \
 		  before-sleep 'playerctl pause'
@@ -88,12 +88,15 @@ input "1739:52710:DLL0945:00_06CB:CDE6_Touchpad" {
 default_border none
 
 # Establish gaps between windows and from the screen edge  
-gaps outer 5
-gaps inner 5
+gaps outer 1
+gaps inner 1
 smart_gaps on
 smart_borders off
 default_border pixel 1
 #hide_edge_borders both
+
+# Color of the client when focused --> <border> <background> <text> [<indicator> [<child_border>]]
+client.focused #ffffff #ffffff #ffffff #ffffff #ffffff 
 
 ###################################################################################
 
@@ -195,10 +198,10 @@ set $gnome-schema org.gnome.desktop.interface
     # bindsym $mod+b splith
     # bindsym $mod+v splitv
 
-    # Switch the current container between different layout styles --WORKING???? 
+    # Switch the current container between different layout styles
         # bindsym $mod+s layout stacking
     	# bindsym $mod+w layout tabbed
-    	# bindsym $mod+z layout toggle split
+    	bindsym $mod+space layout toggle split
 
     # Make the current focus fullscreen
     	bindsym $mod+f fullscreen
@@ -310,3 +313,6 @@ bar {
 # assign [class="Google-chrome"] $ws2
 # assign [class="firefox"] $ws1
 # assign [class="pamac-manager"] $ws3
+
+#####################################################################################
+
