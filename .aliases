@@ -23,8 +23,8 @@ alias cryp='function _cryp(){ curl rate.sx/$1; };_cryp'
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 ## ssh ##
-alias rpi='ssh microbot@192.168.50.233'
-alias rpi-shutdown='ssh microbot@192.168.50.233 "sudo shutdown now"'
+alias rpi='ssh ubuntu@192.168.50.233'
+alias rpi-shutdown='ssh ubuntu@192.168.50.233 "sudo shutdown now"'
 
 ## others ##
 alias rm-orphans='sudo pacman -Qtdq | sudo pacman -Rns -'
