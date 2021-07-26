@@ -15,6 +15,7 @@ exec volumeicon-applet &
 exec nm-applet --indicator &
 exec pasystray  &
 exec libinput-gestures-setup start
+exec syncthing &
 ###################################################################################
 
 ### Variables
