@@ -94,7 +94,7 @@ input "1133:49282:Logitech_G403_Prodigy_Wired/Wireless_Gaming_Mouse" {
         drag_lock enabled
         natural_scroll disabled
         pointer_accel -0.7
-        scroll_factor 0.5
+        scroll_factor 1.5
 }
 
 # You can get the names of your inputs by running: swaymsg -t get_inputs
