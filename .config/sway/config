@@ -104,8 +104,8 @@ input "1133:49282:Logitech_G403_Prodigy_Wired/Wireless_Gaming_Mouse" {
 default_border none
 
 # Establish gaps between windows and from the screen edge  
-gaps outer 1
-gaps inner 1
+gaps outer 2
+gaps inner 2
 smart_gaps on
 smart_borders off
 default_border pixel 1
@@ -137,7 +137,6 @@ set $gnome-schema org.gnome.desktop.interface
 		#xwayland enable
 
     # Kill focused window
-    	bindsym $mod+Shift+q kill
     	bindsym $mod+q kill
 	
     # Drag floating windows by holding down $mod and left mouse button.
@@ -152,6 +151,9 @@ set $gnome-schema org.gnome.desktop.interface
 
     # Exit sway (logs you out of your Wayland session)    	
     	bindsym $mod+x exec arcolinux-logout
+	
+	# Logout 
+		bindsym $mod+Shift+q exec swaymsg 'exit'
 
 ###################################################################################
 

@@ -1,55 +1,50 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: "Ubuntu Nerd Font";
-    font-size: 13px;
-    min-height: 20px;
+    font-family: Ubuntu Nerd Font;
+    font-size: 15px;
+    min-height: 30px;
 }
 
 window#waybar {
-    /* background: transparent; */
-    background: black;
-    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fdf6e3;
 }
 
 #window {
-    font-family: "Ubuntu";
+    font-family: Ubuntu;
     /* margin-top: 5px; */
 }
-
-/* #workspaces {
-    padding: 0 5px;
-} */
-
 
 #workspaces button {
     padding: 0 20px;
     background: transparent;
-    color: white;
+    color: #fdf6e3;
     border-top: 2px solid transparent;
 }
 
 #workspaces button.focused {
-    color: white;
-    border-top: 2px solid white;
+    color: #fdf6e3;
+    border-top: 2px solid #fdf6e3;
 }
 
-#tray, #custom-japan, #temperature, #clock, #battery, #cpu, #memory, #network, #pulseaudio {
+#tray, #temperature, #battery, #cpu, #memory, #network, #pulseaudio {
     padding: 0 5px;
-    margin-right: 5px;
-    /* margin-top: 5px; */
+    margin-right: 15px;
 }
 
 #temperature.critical {
-    color: red;
+    color: #ff6347;
 }
 
 #battery icon {
-    color: red;
+    color: #ff6347;
 }
 
-/* #battery.charging {
-} */
+#clock {
+    padding: 0 5px;
+    margin-right: 5px;
+}
 
 @keyframes blink {
     to {
@@ -61,12 +56,12 @@ window#waybar {
 #battery.warning:not(.charging) {
     color: white;
     animation-name: blink;
-    animation-duration: 0.5s;
+    animation-duration: 2.5s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
 
 #network.disconnected {
-    background: #f53c3c;
+    background: #ff6347;
 }
