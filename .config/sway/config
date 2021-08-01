@@ -112,7 +112,7 @@ default_border pixel 1
 #hide_edge_borders both
 
 # Color of the client when focused --> <border> <background> <text> [<indicator> [<child_border>]]
-client.focused #ffffff #ffffff #ffffff #ffffff #ffffff 
+client.focused #808080 #808080 #808080 #808080 #808080 
 
 ###################################################################################
 
