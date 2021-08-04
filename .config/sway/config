@@ -61,11 +61,13 @@ bindswitch --reload --locked lid:off output $laptop enable
 #
 # Example configuration:
 exec swayidle -w \
+	timeout 120 'swaymsg "output * dpms off"' \
 	timeout 300 'swaylock -f -c 000000' \
-	timeout 305 'swaymsg "output * dpms off"' \
+	timeout 600 'systemctl suspend' \
 	resume 'swaymsg "output * dpms on"' \
-	before-sleep 'swaylock -f -c 000000' \
-	before-sleep 'playerctl pause'
+	before-sleep 'swaylock -f -c 000000' 
+
+for_window [app_id="io.github.celluloid_player.Celluloid"] inhibit_idle fullscreen
 
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
