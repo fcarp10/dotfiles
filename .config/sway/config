@@ -121,7 +121,7 @@ client.focused #808080 #808080 #808080 #808080 #808080
 ### GTK Theme
 set $gnome-schema org.gnome.desktop.interface
 	exec_always {
-		gsettings set $gnome-schema gtk-theme 'Yaru-Red-dark'
+		gsettings set $gnome-schema gtk-theme 'Material-Black-Cherry-3.38'
 		gsettings set $gnome-schema icon-theme 'Numix'
 		gsettings set $gnome-schema cursor-theme 'Bibata-Modern-Ice'
 		}
@@ -301,6 +301,7 @@ bar {
 	bindsym $mod+a exec mailspring
 	bindsym $mod+d exec wofi --show drun 
 	bindsym $mod+e exec vscodium --enable-features=UseOzonePlatform --ozone-platform=wayland
+	bindsym $mod+p exec pamac-manager
    
 # SUPER + Shift Keys
 	#bindsym $mod+shift+Return exec thunar
