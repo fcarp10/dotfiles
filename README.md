@@ -1,53 +1,40 @@
-# Dotfiles | Arcolinux 
+# Dotfiles 
 
-Windows managers:
+Tiling window managers:
 
-- [Qtile](https://github.com/fcarp10/dotfiles-arcolinux/blob/master/.config/qtile/) config
-- [Sway](https://github.com/fcarp10/dotfiles-arcolinux/blob/master/.config/sway/) config
+- [Qtile](https://github.com/fcarp10/dotfiles/blob/master/.config/qtile/) config
+- [Sway](https://github.com/fcarp10/dotfiles/blob/master/.config/sway/) config
 
-## Arcolinux installation
+## Dotfiles configuration
 
-Instructions [here](https://github.com/fcarp10/arcolinux-install/)
+1. Create the dotfiles folder in `$HOME` and add an alias to `bash` or `zsh`:
+   
 
-## Dotfiles configuration 
-
-### Initial configuration
-Creates a folder in `$HOME` and adds an alias to `zsh`:
-```
-git init --bare $HOME/.dotfiles
-alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-config config --local status.showUntrackedFiles no
-echo "alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" >> $HOME/.zshrc
-```
-
-### Add files
-
-Example of how to add a file:
-```
-config status
-config add .zshrc
-config commit -m "Add zshrc"
-config push
-```
-
-### Apply configuration to existing installation
-
-1. Add the next alias to `.bashrc`:
+    ```shell
+    git init --bare $HOME/.dotfiles
+    alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+    config config --local status.showUntrackedFiles no
+    echo "alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" >> $HOME/.zshrc
     ```
+
+
+2. Add files and commit the changes:
+   
+
+    ```shell
+    config status
+    config add .zshrc
+    config commit -m "Add zshrc"
+    config push
+    ```
+
+
+3. Apply configuration to existing installation ():
+
+    ```shell
     echo "alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" >> $HOME/.bashrc
-    ```
-2. Clone the dotfiles repository:
-    ```
-    git clone --bare git@github.com:fcarp10/dotfiles-arcolinux.git $HOME/.dotfiles
-    ```
-3. Make sure you delete or backup all conflicting files, or `config reset --hard`. Then, checkout the content from the repository to `$HOME`:
-    ```
+    git clone --bare https://github.com/fcarp10/dotfiles.git $HOME/.dotfiles
     config checkout
-    ```
-4. Set flag `showUntrackedFiles` on this specific local repository:
-    ```
     config config --local status.showUntrackedFiles no
     ```
-    
-- For more details go [here](https://www.atlassian.com/git/tutorials/dotfiles)
  
