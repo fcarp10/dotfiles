@@ -123,9 +123,8 @@ set $gnome-schema org.gnome.desktop.interface
 	exec_always {
 		gsettings set $gnome-schema gtk-theme 'Material-Black-Cherry-3.38'
 		gsettings set $gnome-schema icon-theme 'Numix'
-		gsettings set $gnome-schema cursor-theme 'Bibata-Modern-Ice'
+		gsettings set $gnome-schema cursor-theme 'Breeze_Default'
 		}
-
 ###################################################################################
 
 ### Key bindings
