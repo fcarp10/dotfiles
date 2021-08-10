@@ -1,6 +1,4 @@
-#Arcolinux Sway Config
-
-	include /etc/sway/config.d/*
+include /etc/sway/config.d/*
 
 ###################################################################################
 
@@ -32,7 +30,6 @@ set $term alacritty
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-# output * bg /usr/share/backgrounds/arcolinux/entity-3840x2160.png fill
 output * bg black-hole-1.jpg fill
 
 #
@@ -144,10 +141,9 @@ set $gnome-schema org.gnome.desktop.interface
     	bindsym $mod+Shift+r reload
 
     # Exit sway (logs you out of your Wayland session)    	
-    	bindsym $mod+x exec arcolinux-logout
 	
-	# Logout 
-		bindsym $mod+Shift+q exec swaymsg 'exit'
+    # Logout 
+	bindsym $mod+Shift+q exec swaymsg 'exit'
 
 ###################################################################################
 
@@ -234,8 +230,6 @@ set $gnome-schema org.gnome.desktop.interface
 ###################################################################################
 
 ### Floating Windows
-	for_window [app_id="arcolinux-welcome-app.py"] floating enable 
-	for_window [app_id="arcolinux-tweak-tool.py"] floating enable
 	for_window [app_id="pavucontrol"] floating enable
 
 ###################################################################################
@@ -285,8 +279,6 @@ bar {
 
 ###################################################################################
 
-### ARCOLINUX DEFAULT KEYBOARD BINDINGS 
-
 # SUPER + ... KEYS
 	bindsym $mod+w exec firefox
 	bindsym $mod+z exec thunar
@@ -299,9 +291,7 @@ bar {
 	#bindsym $mod+shift+Return exec thunar
 
 #Control + ALT Keys
-	#bindsym ctrl+alt+w exec arcolinux-welcome-app
-	bindsym ctrl+alt+e exec arcolinux-tweak-tool     
-	bindsym ctrl+alt+o exec ~/.config/sway/scripts/picom-toggle.sh
+	# bindsym ctrl+alt+o exec 
 
 #ALT + ... Keys
 
