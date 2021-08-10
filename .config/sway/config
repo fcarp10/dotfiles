@@ -6,15 +6,9 @@
 
 ### Autostart
 exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec autotiling
-exec pamac-tray-applet &
-exec blueberry-tray &
-#exec blueman-applet &
-#exec xfce4-power-manager &
-exec volumeicon-applet &
 exec nm-applet --indicator &
-exec pasystray  &
-
+exec libinput-gestures-setup start
+exec syncthing &
 ###################################################################################
 
 ### Variables
@@ -49,7 +43,7 @@ output * bg black-hole-1.jpg fill
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
 output eDP-1 mode 3456x2160 position 0,0 scale 2
-output DP-1 mode 3840x2160 position 1728,0 scale 2
+output 'Goldstar Company Ltd LG HDR 4K 0x000062D5' mode 3840x2160 position 1728,0 scale 1.5
 
 # laptop lid
 set $laptop eDP-1
@@ -59,12 +53,15 @@ bindswitch --reload --locked lid:off output $laptop enable
 ### Idle configuration
 #
 # Example configuration:
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * dpms off"' \
-#               resume 'swaymsg "output * dpms on"' \
-#          before-sleep 'swaylock -f -c 000000'
-#
+exec swayidle -w \
+	timeout 300 'swaylock -f -c 000000' \
+	timeout 500 'swaymsg "output * dpms off"' \
+	timeout 600 'systemctl suspend' \
+	resume 'swaymsg "output * dpms on"' \
+	before-sleep 'swaylock -f -c 000000' 
+
+for_window [app_id="io.github.celluloid_player.Celluloid"] inhibit_idle fullscreen
+
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
@@ -74,10 +71,25 @@ bindswitch --reload --locked lid:off output $laptop enable
 ### Input configuration
 
 input "1739:52710:DLL0945:00_06CB:CDE6_Touchpad" {
-       dwt enabled
-       tap enabled
-       natural_scroll enabled
-       middle_emulation enabled
+	accel_profile adaptive
+	drag enabled
+	drag_lock enabled
+	dwt enabled
+	natural_scroll enabled
+	pointer_accel 0.3
+	scroll_factor 0.5
+	scroll_method two_finger
+	tap enabled
+	middle_emulation disabled
+}
+
+input "1133:49282:Logitech_G403_Prodigy_Wired/Wireless_Gaming_Mouse" {
+        accel_profile adaptive
+        drag enabled
+        drag_lock enabled
+        natural_scroll disabled
+        pointer_accel -0.7
+        scroll_factor 1.5
 }
 
 # You can get the names of your inputs by running: swaymsg -t get_inputs
@@ -87,23 +99,25 @@ input "1739:52710:DLL0945:00_06CB:CDE6_Touchpad" {
 default_border none
 
 # Establish gaps between windows and from the screen edge  
-gaps outer 5
-gaps inner 5
+gaps outer 2
+gaps inner 2
 smart_gaps on
 smart_borders off
 default_border pixel 1
 #hide_edge_borders both
+
+# Color of the client when focused --> <border> <background> <text> [<indicator> [<child_border>]]
+client.focused #808080 #808080 #808080 #808080 #808080 
 
 ###################################################################################
 
 ### GTK Theme
 set $gnome-schema org.gnome.desktop.interface
 	exec_always {
-		gsettings set $gnome-schema gtk-theme 'Arc-Punch-Dark'
-		gsettings set $gnome-schema icon-theme 'Papirus-Dark'
-		gsettings set $gnome-schema cursor-theme 'Bibata-Modern-Ice'
+		gsettings set $gnome-schema gtk-theme 'Material-Black-Cherry-3.38'
+		gsettings set $gnome-schema icon-theme 'Numix'
+		gsettings set $gnome-schema cursor-theme 'Breeze_Default'
 		}
-
 ###################################################################################
 
 ### Key bindings
@@ -117,7 +131,6 @@ set $gnome-schema org.gnome.desktop.interface
 		#xwayland enable
 
     # Kill focused window
-    	bindsym $mod+Shift+q kill
     	bindsym $mod+q kill
 	
     # Drag floating windows by holding down $mod and left mouse button.
@@ -132,6 +145,9 @@ set $gnome-schema org.gnome.desktop.interface
 
     # Exit sway (logs you out of your Wayland session)    	
     	bindsym $mod+x exec arcolinux-logout
+	
+	# Logout 
+		bindsym $mod+Shift+q exec swaymsg 'exit'
 
 ###################################################################################
 
@@ -194,10 +210,10 @@ set $gnome-schema org.gnome.desktop.interface
     # bindsym $mod+b splith
     # bindsym $mod+v splitv
 
-    # Switch the current container between different layout styles --WORKING???? 
+    # Switch the current container between different layout styles
         # bindsym $mod+s layout stacking
     	# bindsym $mod+w layout tabbed
-    	# bindsym $mod+z layout toggle split
+    	bindsym $mod+space layout toggle split
 
     # Make the current focus fullscreen
     	bindsym $mod+f fullscreen
@@ -277,6 +293,7 @@ bar {
 	bindsym $mod+a exec mailspring
 	bindsym $mod+d exec wofi --show drun 
 	bindsym $mod+e exec vscodium --enable-features=UseOzonePlatform --ozone-platform=wayland
+	bindsym $mod+p exec pamac-manager
    
 # SUPER + Shift Keys
 	#bindsym $mod+shift+Return exec thunar
@@ -309,3 +326,6 @@ bar {
 # assign [class="Google-chrome"] $ws2
 # assign [class="firefox"] $ws1
 # assign [class="pamac-manager"] $ws3
+
+#####################################################################################
+
