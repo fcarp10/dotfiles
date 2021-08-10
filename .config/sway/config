@@ -125,7 +125,7 @@ set $gnome-schema org.gnome.desktop.interface
     	bindsym $mod+t exec $term
     
     #Xwayland Support
-		#xwayland enable
+	xwayland disable
 
     # Kill focused window
     	bindsym $mod+q kill
