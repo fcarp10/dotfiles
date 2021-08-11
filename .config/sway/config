@@ -139,12 +139,12 @@ set $gnome-schema org.gnome.desktop.interface
 
     # Reload the configuration file
     	bindsym $mod+Shift+r reload
-
-    # Exit sway (logs you out of your Wayland session)    	
 	
     # Logout 
 	bindsym $mod+Shift+q exec swaymsg 'exit'
 
+    # Shutdown
+	bindsym $mod+Shift+s exec shutdown now
 ###################################################################################
 
 ### Moving around:
@@ -281,23 +281,26 @@ bar {
 
 # SUPER + ... KEYS
 	bindsym $mod+w exec firefox
+	bindsym $mod+g exec chromium --enable-features=UseOzonePlatform --ozone-platform=wayland
 	bindsym $mod+z exec thunar
-	bindsym $mod+a exec mailspring
 	bindsym $mod+d exec wofi --show drun 
 	bindsym $mod+e exec vscodium --enable-features=UseOzonePlatform --ozone-platform=wayland
 	bindsym $mod+p exec pamac-manager
-   
+	# bindsym $mod+s exec slack-desktop (not working on wayland yet)
+	# bindsym $mod+a exec mailspring (not working on wayland yet)
+	bindsym $mod+a exec alacritty -e aerc
+	
 # SUPER + Shift Keys
-	#bindsym $mod+shift+Return exec thunar
+	# bindsym $mod+shift+Return exec ...
 
 #Control + ALT Keys
-	# bindsym ctrl+alt+o exec 
+	# bindsym ctrl+alt+o exec ...
 
 #ALT + ... Keys
 
 	#Screenshot
-	bindsym Print exec grim ~/Pictures/$(date '+%Y-%m-%d-%T')-screenshot.png
-	bindsym shift+Print exec grim -g "$(slurp)" ~/Pictures/$(date '+%Y-%m-%d-%T')-screenshot.png
+	bindsym Print exec grim ~/$(date '+%Y-%m-%d-%T')-screenshot.png
+	bindsym shift+Print exec grim -g "$(slurp)" ~/$(date '+%Y-%m-%d-%T')-screenshot.png
 
 
 
