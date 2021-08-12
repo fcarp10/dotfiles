@@ -5,10 +5,3 @@ phosh-lockscreen, .phosh-lockshield {
 	background-position: center;
 }
 /* TWEAKS-END phosh-lockscreen-background */
-/* TWEAKS-START phosh-applist-background */
-phosh-app-grid {
-	background-image: url("file:///home/alarm/home.jpg");
-	background-size: cover;
-	background-position: center;
-}
-/* TWEAKS-END phosh-applist-background */
