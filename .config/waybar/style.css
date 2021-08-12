@@ -37,30 +37,18 @@ window#waybar {
     color: #ff6347;
 }
 
-#battery icon {
-    color: #ff6347;
-}
-
 #clock {
     padding: 0 5px;
     margin-right: 5px;
 }
 
-@keyframes blink {
-    to {
-        background-color: #ffffff;
-        color: black;
-    }
+#battery icon {
+    color: #fdf6e3;
 }
 
 #battery.warning:not(.charging) {
     color: #ff6347;
-    animation-name: blink;
-    animation-duration: 2.0s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
+} 
 
 #network.disconnected {
     background: #ff6347;
