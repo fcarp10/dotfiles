@@ -29,6 +29,10 @@ alias laptop='ssh goku@192.168.100.10'
 alias office='ssh vegeta@192.168.100.11'
 alias xps='ssh vegito@192.168.100.12'
 
+## battery dell ##
+alias bat-long='sudo /opt/dell/dcc/cctk --primarybatterycfg=custom:60-80'
+alias bat-full='sudo /opt/dell/dcc/cctk --primarybatterycfg=Adaptive'
+
 ## others ##
 alias rm-orphans='sudo pacman -Qtdq | sudo pacman -Rns -'
 alias please='sudo $(fc -ln -1)'
