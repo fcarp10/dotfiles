@@ -284,8 +284,7 @@ bar {
 	bindsym $mod+e exec vscodium --enable-features=UseOzonePlatform --ozone-platform=wayland
 	bindsym $mod+p exec pamac-manager
 	# bindsym $mod+s exec slack-desktop (not working on wayland yet)
-	# bindsym $mod+a exec mailspring (not working on wayland yet)
-	bindsym $mod+a exec alacritty -e aerc
+	bindsym $mod+a exec thunderbird
 	
 # SUPER + Shift Keys
 	# bindsym $mod+shift+Return exec ...
