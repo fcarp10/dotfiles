@@ -279,12 +279,15 @@ bar {
 # SUPER + ... KEYS
 	bindsym $mod+w exec firefox
 	bindsym $mod+g exec chromium --enable-features=UseOzonePlatform --ozone-platform=wayland
+	bindsym $mod+b exec brave --enable-features=UseOzonePlatform --ozone-platform=wayland
 	bindsym $mod+z exec thunar
 	bindsym $mod+d exec wofi --show drun 
 	bindsym $mod+e exec vscodium --enable-features=UseOzonePlatform --ozone-platform=wayland
 	bindsym $mod+p exec pamac-manager
-	# bindsym $mod+s exec slack-desktop (not working on wayland yet)
+	bindsym $mod+s exec slack --enable-features=UseOzonePlatform --ozone-platform=wayland
+	bindsym $mod+n exec signal-desktop --enable-features=UseOzonePlatform --ozone-platform=wayland
 	bindsym $mod+a exec thunderbird
+
 	
 # SUPER + Shift Keys
 	# bindsym $mod+shift+Return exec ...
