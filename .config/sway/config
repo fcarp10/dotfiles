@@ -213,7 +213,7 @@ set $gnome-schema org.gnome.desktop.interface
     # Switch the current container between different layout styles
         # bindsym $mod+s layout stacking
     	# bindsym $mod+w layout tabbed
-    	bindsym $mod+space layout toggle split
+    	bindsym $mod+ctrl+space layout toggle split
 
     # Make the current focus fullscreen
     	bindsym $mod+f fullscreen
