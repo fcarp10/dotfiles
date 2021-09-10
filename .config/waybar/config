@@ -2,15 +2,31 @@
     "layer": "top",
     "position": "top",
     "height": 24,
-    "modules-left": ["sway/workspaces"],
-    "modules-center": ["sway/window"],
-    "modules-right": ["tray", "pulseaudio", "temperature", "cpu", "memory", "battery", "clock"],
+    "modules-left": [
+        "sway/workspaces"
+    ],
+    "modules-center": [
+        "sway/window"
+    ],
+    "modules-right": [
+        "tray",
+        "sway/language",
+        "pulseaudio",
+        "temperature",
+        "cpu",
+        "memory",
+        "battery",
+        "clock"
+    ],
     "sway/workspaces": {
         "disable-scroll": true,
         "disable-click": false,
     },
     "tray": {
         "spacing": 10,
+    },
+    "sway/language": {
+        "format": "{}",
     },
     "clock": {
         "format": "{:%a %Y %b %d %R}"
@@ -35,14 +51,23 @@
             "critical": 15
         },
         "format": "{icon}  {capacity}%",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
     },
     "pulseaudio": {
-        "format": "{icon}  {volume}%",
+        "format": "  {icon}  {volume}%",
         "format-muted": "",
         "format-icons": {
             "headphones": "",
-            "default": ["", ""]
+            "default": [
+                "",
+                ""
+            ]
         },
         "on-click": "pavucontrol"
     },
