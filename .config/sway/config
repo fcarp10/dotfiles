@@ -219,7 +219,7 @@ set $gnome-schema org.gnome.desktop.interface
     	bindsym $mod+f fullscreen
 
     # Toggle the current focus between tiling and floating mode
-    	# bindsym $mod+Shift+space floating toggle
+    	bindsym $mod+Shift+space floating toggle
 
     # Swap focus between the tiling area and the floating area
     	# bindsym $mod+space focus mode_toggle
@@ -235,6 +235,7 @@ set $gnome-schema org.gnome.desktop.interface
 
 ### Floating Windows
 	for_window [app_id="pavucontrol"] floating enable
+	for_window [app_id="nm-connection-editor"] floating enable
 
 ###################################################################################
 
@@ -292,6 +293,7 @@ bar {
 	bindsym $mod+e exec vscodium --enable-features=UseOzonePlatform --ozone-platform=wayland
 	bindsym $mod+p exec pamac-manager
 	bindsym $mod+s exec slack --enable-features=UseOzonePlatform --ozone-platform=wayland
+	bindsym $mod+ctrl+s exec element-desktop --enable-features=UseOzonePlatform --ozone-platform=wayland
 	bindsym $mod+n exec signal-desktop --enable-features=UseOzonePlatform --ozone-platform=wayland
 	bindsym $mod+a exec thunderbird
 
