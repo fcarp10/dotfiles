@@ -69,7 +69,7 @@ for_window [app_id="io.github.celluloid_player.Celluloid"] inhibit_idle fullscre
 
 input "1739:52710:DLL0945:00_06CB:CDE6_Touchpad" {
 	accel_profile adaptive
-	# drag enabled
+	drag disabled
 	# drag_lock enabled
 	dwt enabled
 	natural_scroll enabled
@@ -291,8 +291,8 @@ bar {
 	bindsym $mod+d exec wofi --show drun 
 	bindsym $mod+e exec vscodium --enable-features=UseOzonePlatform --ozone-platform=wayland
 	bindsym $mod+p exec pamac-manager
-	bindsym $mod+s exec slack --enable-features=UseOzonePlatform --ozone-platform=wayland
-	bindsym $mod+ctrl+s exec element-desktop --enable-features=UseOzonePlatform --ozone-platform=wayland
+	bindsym $mod+s exec element-desktop --enable-features=UseOzonePlatform --ozone-platform=wayland
+	bindsym $mod+ctrl+s exec slack --enable-features=UseOzonePlatform --ozone-platform=wayland
 	bindsym $mod+n exec signal-desktop --enable-features=UseOzonePlatform --ozone-platform=wayland
 	bindsym $mod+a exec thunderbird
 
