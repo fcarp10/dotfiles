@@ -65,7 +65,7 @@
                 "-interaction=nonstopmode",
                 "-file-line-error",
                 "-shell-escape",
-                "%DOC%",
+                "%DOC%"
             ],
             "env": {}
         },
@@ -102,9 +102,13 @@
         // "spring-boot-properties",
         // "azcli"
     ],
+<<<<<<< HEAD
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter.notebook.ipynb"
     },
     "editor.formatOnSave": true,
     "go.toolsManagement.autoUpdate": true,
 }
+=======
+}
+>>>>>>> 99819544386c2a007559e2834fe4b46a0dc33119
