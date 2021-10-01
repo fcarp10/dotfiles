@@ -92,23 +92,5 @@
     "dashboard.projectData": null,
     "shellformat.effectLanguages": [
         "shellscript",
-        // "dockerfile",
-        // "dotenv",
-        // "hosts",
-        // "jvmoptions",
-        // "ignore",
-        // "gitignore",
-        // "properties",
-        // "spring-boot-properties",
-        // "azcli"
     ],
-<<<<<<< HEAD
-    "workbench.editorAssociations": {
-        "*.ipynb": "jupyter.notebook.ipynb"
-    },
-    "editor.formatOnSave": true,
-    "go.toolsManagement.autoUpdate": true,
 }
-=======
-}
->>>>>>> 99819544386c2a007559e2834fe4b46a0dc33119
