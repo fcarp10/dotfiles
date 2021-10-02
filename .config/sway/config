@@ -42,8 +42,11 @@ output * bg black-hole-1.jpg fill
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
-output eDP-1 mode 3456x2160 position 0,0 scale 2
-output 'Goldstar Company Ltd LG HDR 4K 0x000062D5' mode 3840x2160 position 1728,0 scale 1.5
+# output eDP-1 mode 3456x2160 position 0,0 scale 2
+# output 'Goldstar Company Ltd LG HDR 4K 0x000062D5' mode 3840x2160 position 1728,0 scale 1.5
+
+output 'Dell Inc. DELL U2415 7MT0177P0PKS' mode 1920x1200 position 1920,0
+output 'Samsung Electric Company SyncMaster H9XS807751' mode 1920x1200 position 0,0
 
 # laptop lid
 set $laptop eDP-1
@@ -53,9 +56,12 @@ bindswitch --reload --locked lid:off output $laptop enable
 ### Idle configuration
 #
 # Example configuration:
+# exec swayidle -w \
+# 	timeout 300 'swaylock -f -c 000000' \
+# 	timeout 600 'systemctl suspend'
+
 exec swayidle -w \
-	timeout 300 'swaylock -f -c 000000' \
-	timeout 600 'systemctl suspend'
+	timeout 300 'swaylock -f -c 000000'
 
 for_window [app_id="io.github.celluloid_player.Celluloid"] inhibit_idle fullscreen
 
@@ -119,7 +125,7 @@ client.focused #808080 #808080 #808080 #808080 #808080
 set $gnome-schema org.gnome.desktop.interface
 	exec_always {
 		gsettings set $gnome-schema gtk-theme 'Material-Black-Cherry-3.38'
-		gsettings set $gnome-schema icon-theme 'Numix'
+		gsettings set $gnome-schema icon-theme 'Vimix-Doder-dark'
 		gsettings set $gnome-schema cursor-theme 'Breeze_Default'
 		}
 ###################################################################################
@@ -148,6 +154,7 @@ set $gnome-schema org.gnome.desktop.interface
 	bindsym $mod+ctrl+1 exec shutdown now
 	bindsym $mod+ctrl+2 exec reboot
 	bindsym $mod+ctrl+3 exec swaymsg 'exit'
+	bindsym $mod+ctrl+4 exec 'swaylock -f -c 000000'
 ###################################################################################
 
 ### Moving around:

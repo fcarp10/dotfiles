@@ -1,6 +1,5 @@
 {
     "editor.minimap.enabled": false,
-    "editor.formatOnSave": true,
     "editor.semanticHighlighting.enabled": true,
     "editor.wordWrap": "on",
     "editor.mouseWheelZoom": true,
@@ -29,7 +28,6 @@
     "java.project.importOnFirstTimeStartup": "automatic",
     "latex-workshop.view.pdf.viewer": "tab",
     "latex-workshop.latex.recipe.default": "lastUsed",
-    "latex-workshop.bind.altKeymap.enabled": true,
     "latex-workshop.latex.autoBuild.run": "onSave",
     "latex-workshop.view.pdf.backgroundColor": "#16171d",
     "latex-workshop.latex.recipes": [
@@ -66,6 +64,7 @@
                 "-synctex=1",
                 "-interaction=nonstopmode",
                 "-file-line-error",
+                "-shell-escape",
                 "%DOC%"
             ],
             "env": {}
@@ -93,14 +92,5 @@
     "dashboard.projectData": null,
     "shellformat.effectLanguages": [
         "shellscript",
-        // "dockerfile",
-        "dotenv",
-        "hosts",
-        "jvmoptions",
-        "ignore",
-        "gitignore",
-        "properties",
-        "spring-boot-properties",
-        "azcli"
     ],
 }
