@@ -233,9 +233,12 @@ set $gnome-schema org.gnome.desktop.interface
     # Move focus to the parent container
     	# bindsym $mod+a focus parent
 
-    #Moving between workspaces
+    # Moving between workspaces
     	bindsym $mod+Tab workspace next
     	bindsym $mod+Shift+Tab workspace prev
+	
+	# Switch workspaces between monitors
+		bindsym $mod+Shift+Return exec $HOME/.config/sway/switch-workspaces.sh
 
 ###################################################################################
 
