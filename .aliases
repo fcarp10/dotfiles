@@ -46,6 +46,10 @@ alias history-upgraded='grep -i upgraded /var/log/pacman.log'
 ## sway ##
 alias list-appids='swaymsg -t get_tree | grep "app_id"'
 
+## docker ##
+alias docker-rm-cts='docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)'
+alias docker-rm-imgs='docker rmi -f $(docker images -a -q)'
+
 ## others ##
 alias please='sudo $(fc -ln -1)'
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
