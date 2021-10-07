@@ -7,6 +7,7 @@ exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec nm-applet --indicator &
 exec libinput-gestures-setup start
 exec syncthing &
+exec autotiling
 ###################################################################################
 
 ########### Xwayland Support ###########
@@ -298,11 +299,10 @@ bar {
 	bindsym $mod+g exec chromium --enable-features=UseOzonePlatform --ozone-platform=wayland
 	bindsym $mod+b exec brave --enable-features=UseOzonePlatform --ozone-platform=wayland
 	bindsym $mod+z exec thunar
-	bindsym $mod+d exec wofi --show drun 
+	bindsym $mod+d exec wofi --show drun
 	bindsym $mod+e exec vscodium --enable-features=UseOzonePlatform --ozone-platform=wayland
 	bindsym $mod+p exec pamac-manager
 	bindsym $mod+s exec element-desktop --enable-features=UseOzonePlatform --ozone-platform=wayland
-	bindsym $mod+ctrl+s exec slack --enable-features=UseOzonePlatform --ozone-platform=wayland
 	bindsym $mod+n exec signal-desktop --enable-features=UseOzonePlatform --ozone-platform=wayland
 	bindsym $mod+a exec thunderbird
 
