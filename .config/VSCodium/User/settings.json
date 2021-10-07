@@ -93,4 +93,5 @@
     "shellformat.effectLanguages": [
         "shellscript",
     ],
+    "editor.acceptSuggestionOnEnter": "off",
 }
