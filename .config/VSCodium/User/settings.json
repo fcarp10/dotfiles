@@ -93,5 +93,6 @@
     "shellformat.effectLanguages": [
         "shellscript",
     ],
-    "editor.acceptSuggestionOnEnter": "off",
+    "editor.formatOnSave": true,
+    "python.languageServer": "Jedi",
 }
