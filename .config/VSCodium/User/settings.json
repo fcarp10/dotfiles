@@ -93,5 +93,10 @@
     "shellformat.effectLanguages": [
         "shellscript",
     ],
-    "editor.acceptSuggestionOnEnter": "off",
+    "editor.formatOnSave": true,
+    "python.languageServer": "Jedi",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "explorer.confirmDragAndDrop": false,
+    "go.toolsManagement.autoUpdate": true
 }

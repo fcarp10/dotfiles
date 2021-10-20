@@ -7,7 +7,7 @@ exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec nm-applet --indicator &
 exec libinput-gestures-setup start
 exec syncthing &
-exec autotiling
+# exec autotiling -w 1 3 5
 ###################################################################################
 
 ########### Xwayland Support ###########
@@ -125,7 +125,7 @@ client.focused #808080 #808080 #808080 #808080 #808080
 ### GTK Theme
 set $gnome-schema org.gnome.desktop.interface
 	exec_always {
-		gsettings set $gnome-schema gtk-theme 'Material-Black-Cherry-3.38'
+		gsettings set $gnome-schema gtk-theme 'Materia-dark'
 		gsettings set $gnome-schema icon-theme 'Vimix-Doder-dark'
 		gsettings set $gnome-schema cursor-theme 'Breeze_Default'
 		}

@@ -93,3 +93,5 @@ done
 
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
+export KUBECONFIG=~/.kube/k3s-config
