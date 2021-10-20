@@ -8,7 +8,6 @@
     "editor.smoothScrolling": true,
     "editor.fastScrollSensitivity": 10,
     "workbench.editor.enablePreview": false,
-    "workbench.colorTheme": "Monokai Neon",
     "workbench.iconTheme": "eq-material-theme-icons-darker",
     "workbench.productIconTheme": "material-product-icons",
     "workbench.startupEditor": "newUntitledFile",
@@ -28,7 +27,6 @@
     "java.project.importOnFirstTimeStartup": "automatic",
     "latex-workshop.view.pdf.viewer": "tab",
     "latex-workshop.latex.recipe.default": "lastUsed",
-    "latex-workshop.latex.autoBuild.run": "onSave",
     "latex-workshop.view.pdf.backgroundColor": "#16171d",
     "latex-workshop.latex.recipes": [
         {
@@ -95,4 +93,6 @@
     ],
     "editor.formatOnSave": true,
     "python.languageServer": "Jedi",
+    "latex-workshop.synctex.afterBuild.enabled": true,
+    "workbench.colorTheme": "Monokai Vibrant",
 }
