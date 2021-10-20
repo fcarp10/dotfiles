@@ -84,14 +84,4 @@ if [ -f ~/.aliases ]; then
 	. ~/.aliases
 fi
 
-# move all paths ending in 'sbin' to the back of PATH
-# This is needed because pyenv fails to find the system python otherwise [PR to be fixed]
-for SB in $(echo "$PATH" | grep ':*/[^:]*sbin' -o)
-do
-  export PATH="${PATH/$SB}:${SB#:}"
-done
-
 eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
-export KUBECONFIG=~/.kube/k3s-config
