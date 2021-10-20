@@ -9,6 +9,7 @@
     "editor.fastScrollSensitivity": 10,
     "workbench.editor.enablePreview": false,
     "workbench.iconTheme": "eq-material-theme-icons-darker",
+    "workbench.colorTheme": "Monokai Vibrant",
     "workbench.productIconTheme": "material-product-icons",
     "workbench.startupEditor": "newUntitledFile",
     "window.menuBarVisibility": "toggle",
@@ -93,6 +94,8 @@
     ],
     "editor.formatOnSave": true,
     "python.languageServer": "Jedi",
-    "latex-workshop.synctex.afterBuild.enabled": true,
-    "workbench.colorTheme": "Monokai Vibrant",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "explorer.confirmDragAndDrop": false,
+    "go.toolsManagement.autoUpdate": true
 }
