@@ -29,7 +29,7 @@
         "format": "{}",
     },
     "clock": {
-        "format": "{:%a %Y %b %d %R}"
+        "format": "{:%a %b %d %R}"
     },
     "cpu": {
         "format": "  {usage}%"
