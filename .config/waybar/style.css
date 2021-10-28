@@ -1,7 +1,8 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: Ubuntu Nerd Font;
+    /* font-family: "Ubuntu Nerd Font"; */
+    font-family: Roboto; 
     font-size: 15px;
     min-height: 30px;
 }
