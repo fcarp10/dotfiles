@@ -28,9 +28,8 @@ window#waybar {
     border-top: 2px solid #fdf6e3;
 }
 
-#tray, #temperature, #battery, #cpu, #memory, #network, #pulseaudio {
-    padding: 0 5px;
-    margin-right: 15px;
+#tray, #temperature, #battery, #cpu, #memory, #network, #pulseaudio, #language {
+    padding: 0 10px;
 }
 
 #temperature.critical {
