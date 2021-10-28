@@ -11,11 +11,11 @@
     "modules-right": [
         "tray",
         "sway/language",
+        "battery",
         "pulseaudio",
         "temperature",
         "cpu",
         "memory",
-        "battery",
         "clock"
     ],
     "sway/workspaces": {
