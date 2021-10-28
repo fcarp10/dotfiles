@@ -11,8 +11,8 @@
     "modules-right": [
         "tray",
         "sway/language",
-        "battery",
         "pulseaudio",
+        "battery",
         "temperature",
         "cpu",
         "memory",
