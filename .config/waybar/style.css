@@ -1,7 +1,7 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: Ubuntu Nerd Font;
+    font-family: Roboto; 
     font-size: 15px;
     min-height: 30px;
 }
@@ -11,36 +11,67 @@ window#waybar {
     color: #fdf6e3;
 }
 
-#window {
-    font-family: Ubuntu;
-    /* margin-top: 5px; */
-}
-
 #workspaces button {
     padding: 0 20px;
     background: transparent;
     color: #fdf6e3;
-    border-top: 2px solid transparent;
+    border-top: 1px solid transparent;
 }
 
 #workspaces button.focused {
     color: #fdf6e3;
-    border-top: 2px solid #fdf6e3;
+    border-top: 1px solid #fdf6e3;
 }
 
-#tray, #temperature, #battery, #cpu, #memory, #network, #pulseaudio {
-    padding: 0 5px;
-    margin-right: 15px;
+#tray, #language, #pulseaudio, #temperature, #cpu, #memory,#battery, #clock{
+    border-top: 1px solid #fdf6e3;
+}
+
+#tray {
+    padding: 0 5px 0 5px;
+    margin: 0 5px 0 5px;
+}
+
+#language{
+    padding-left: 7px;
+    margin-left: 5px;
+    padding-right: 15px;
+}
+
+#pulseaudio{
+    padding-right: 5px;
+    margin-right: 5px;
+}
+
+#battery {
+    padding: 0 5px 0 5px;
+    margin: 0 5px 0 5px;
+}
+
+#temperature{
+    padding-left: 7px;
+    margin-left: 5px;
+    padding-right: 15px;
+}
+
+#cpu{
+    padding-right: 15px;
+}
+
+#memory{
+    padding-right: 5px;
+    margin-right: 5px;
+}
+
+#clock{
+    padding: 0 5px 0 5px;
+    margin: 0 5px 0 5px;
 }
 
 #temperature.critical {
     color: #ff6347;
 }
 
-#clock {
-    padding: 0 5px;
-    margin-right: 5px;
-}
 
 #battery icon {
     color: #fdf6e3;
