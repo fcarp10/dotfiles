@@ -27,52 +27,23 @@ set $right l
 set $term alacritty
 
 # Your preferred application launcher
-# set $menu | wofi --show run | xargs swaymsg exec --
+bindsym $mod+d exec wofi --show drun
 
 ###################################################################################	
 
 ### Output configuration
-#
-# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
+
+# Wallpaper
 output * bg black-hole-1.jpg fill
 
-#
-# Example configuration:
-#
-#   output HDMI-A-1 resolution 1920x1080 position 1920,0
-#
-# You can get the names of your outputs by running: swaymsg -t get_outputs
-
-output eDP-1 mode 3456x2160 position 0,0 scale 2
-output 'Goldstar Company Ltd LG HDR 4K 0x000062D5' mode 3840x2160 position 1728,0 scale 1.5
-
-# output 'Dell Inc. DELL U2415 7MT0177P0PKS' mode 1920x1200 position 1920,0
-# output 'Samsung Electric Company SyncMaster H9XS807751' mode 1920x1200 position 0,0
-
-# laptop lid
-set $laptop eDP-1
-bindswitch --reload --locked lid:on output $laptop disable
-bindswitch --reload --locked lid:off output $laptop enable
-
-### Idle configuration
-#
-# Example configuration:
-exec swayidle -w \
-	timeout 300 'swaylock -f -c 000000' \
-	timeout 600 'systemctl suspend'
-
-# exec swayidle -w \
-# 	timeout 300 'swaylock -f -c 000000'
+# Output config
+include $HOME/.config/sway/config-output2
 
 for_window [app_id="io.github.celluloid_player.Celluloid"] inhibit_idle fullscreen
 
-# This will lock your screen after 300 seconds of inactivity, then turn off
-# your displays after another 300 seconds, and turn your screens back on when
-# resumed. It will also lock your screen before your computer goes to sleep.
-
 ###################################################################################
 
-### Input configuration
+### Input configuration (swaymsg -t get_inputs)
 
 input "1739:52710:DLL0945:00_06CB:CDE6_Touchpad" {
 	accel_profile adaptive
@@ -96,15 +67,11 @@ input "1133:49282:Logitech_G403_Prodigy_Wired/Wireless_Gaming_Mouse" {
 	scroll_factor 1.5
 }
 
-
 input "1:1:AT_Translated_Set_2_keyboard" {
     xkb_layout "us,es"
     xkb_options "grp:win_space_toggle"
 	xkb_model "dell"
 }
-
-# You can get the names of your inputs by running: swaymsg -t get_inputs
-# Read `man 5 sway-input` for more information about this section. 
 
 # Remove all borders from applications
 default_border none
@@ -136,7 +103,7 @@ set $gnome-schema org.gnome.desktop.interface
 
     #Start a terminal
     	bindsym $mod+Return exec $term
-    	bindsym $mod+t exec $term
+    	# bindsym $mod+t exec $term
 
     # Kill focused window
     	bindsym $mod+q kill
@@ -296,15 +263,14 @@ bar {
 
 # SUPER + ... KEYS
 	bindsym $mod+w exec firefox
-	bindsym $mod+g exec chromium --enable-features=UseOzonePlatform --ozone-platform=wayland
-	bindsym $mod+b exec brave --enable-features=UseOzonePlatform --ozone-platform=wayland
+	bindsym $mod+g exec brave --enable-features=UseOzonePlatform --ozone-platform=wayland
 	bindsym $mod+z exec thunar
-	bindsym $mod+d exec wofi --show drun
 	bindsym $mod+e exec vscodium --enable-features=UseOzonePlatform --ozone-platform=wayland
 	bindsym $mod+p exec pamac-manager
 	bindsym $mod+s exec element-desktop --enable-features=UseOzonePlatform --ozone-platform=wayland
 	bindsym $mod+n exec signal-desktop --enable-features=UseOzonePlatform --ozone-platform=wayland
 	bindsym $mod+a exec thunderbird
+	bindsym $mod+t exec re.sonny.Tangram
 
 	
 # SUPER + Shift Keys
