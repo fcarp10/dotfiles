@@ -8,8 +8,8 @@
     "editor.smoothScrolling": true,
     "editor.fastScrollSensitivity": 10,
     "workbench.editor.enablePreview": false,
-    "workbench.colorTheme": "Monokai Neon",
     "workbench.iconTheme": "eq-material-theme-icons-darker",
+    "workbench.colorTheme": "Monokai Vibrant",
     "workbench.productIconTheme": "material-product-icons",
     "workbench.startupEditor": "newUntitledFile",
     "window.menuBarVisibility": "toggle",
@@ -28,7 +28,6 @@
     "java.project.importOnFirstTimeStartup": "automatic",
     "latex-workshop.view.pdf.viewer": "tab",
     "latex-workshop.latex.recipe.default": "lastUsed",
-    "latex-workshop.latex.autoBuild.run": "onSave",
     "latex-workshop.view.pdf.backgroundColor": "#16171d",
     "latex-workshop.latex.recipes": [
         {

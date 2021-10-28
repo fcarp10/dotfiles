@@ -11,7 +11,7 @@ exec syncthing &
 ###################################################################################
 
 ########### Xwayland Support ###########
-xwayland disable
+#xwayland disable
 
 ### Variables
 #Logo key. Use Mod1 for Alt.
