@@ -9,9 +9,9 @@
     "editor.fastScrollSensitivity": 10,
     "workbench.editor.enablePreview": false,
     "workbench.iconTheme": "eq-material-theme-icons-darker",
-    "workbench.colorTheme": "Monokai Vibrant",
     "workbench.productIconTheme": "material-product-icons",
     "workbench.startupEditor": "newUntitledFile",
+    "workbench.colorTheme": "Monokai Vibrant",
     "window.menuBarVisibility": "toggle",
     "window.openFilesInNewWindow": "off",
     "window.openFoldersInNewWindow": "on",
@@ -98,5 +98,5 @@
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "explorer.confirmDragAndDrop": false,
     "go.toolsManagement.autoUpdate": true,
-    "git.confirmSync": false
+    "git.confirmSync": false,
 }
