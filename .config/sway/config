@@ -42,7 +42,8 @@ output * bg black-hole-1.jpg fill
 # Output config
 include $HOME/.config/sway/output_$setupIO
 
-for_window [app_id="io.github.celluloid_player.Celluloid"] inhibit_idle fullscreen
+for_window [class="^.*"] inhibit_idle fullscreen
+for_window [app_id="^.*"] inhibit_idle fullscreen
 
 ###################################################################################
 
