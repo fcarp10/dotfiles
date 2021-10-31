@@ -249,10 +249,9 @@ bar {
 	bindsym $mod+n exec signal-desktop --enable-features=UseOzonePlatform --ozone-platform=wayland
 	bindsym $mod+a exec thunderbird
 	bindsym $mod+t exec re.sonny.Tangram
-
 	
 # SUPER + Shift Keys
-	# bindsym $mod+shift+Return exec ...
+	bindsym $mod+shift+t exec systemd-inhibit transmission-gtk
 
 #Control + ALT Keys
 	# bindsym ctrl+alt+o exec ...
