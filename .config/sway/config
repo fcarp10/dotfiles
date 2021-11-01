@@ -168,6 +168,7 @@ set $gnome-schema org.gnome.desktop.interface
 
     # Make the current focus fullscreen
     	bindsym $mod+f fullscreen
+		bindsym $mod+Shift+f fullscreen global
 
     # Toggle the current focus between tiling and floating mode
     	bindsym $mod+Shift+space floating toggle

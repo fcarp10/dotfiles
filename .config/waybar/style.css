@@ -1,10 +1,12 @@
+@define-color fgcolor #f2f2f2;	/* white */
+@define-color critical #ff6347;	/* red */
+
 * {
     border: none;
     border-radius: 0;
-    font-family: Roboto; 
-    font-size: 15px;
+    font-family: "Font Awesome 5 Free Solid";
+    font-size: 14px;
     min-height: 30px;
-    color: #f2f2f2;
 }
 
 window#waybar {
@@ -12,16 +14,22 @@ window#waybar {
 }
 
 #workspaces button {
-    padding: 0 20px;
-    background: transparent;
-    border-top: 1px solid transparent;
+	font-weight: bolder;
+    padding-left: 20px;
+    padding-right: 20px;
+	color: @fgcolor;
+}
+
+#workspaces button.visible {
+	color: @fgcolor;
 }
 
 #workspaces button.focused {
     border-top: 1px solid;
+	color: @fgcolor;
 }
 
-#tray, #language, #pulseaudio, #temperature, #cpu, #memory,#battery, #clock{
+#tray, #language, #idle_inhibitor, #pulseaudio, #temperature, #cpu, #memory,#battery, #clock{
     border-top: 1px solid;
 }
 
@@ -33,6 +41,10 @@ window#waybar {
 #language{
     padding-left: 7px;
     margin-left: 5px;
+    padding-right: 15px;
+}
+
+#idle_inhibitor{
     padding-right: 15px;
 }
 
@@ -67,13 +79,13 @@ window#waybar {
 }
 
 #temperature.critical {
-    color: #ff6347;
+    color: @critical;
 }
 
 #battery.warning:not(.charging) {
-    color: #ff6347;
+    color:  @critical;
 } 
 
 #network.disconnected {
-    background: #ff6347;
+    background:  @critical;
 }

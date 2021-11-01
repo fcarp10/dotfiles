@@ -1,7 +1,6 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 24,
     "modules-left": [
         "sway/workspaces"
     ],
@@ -11,6 +10,7 @@
     "modules-right": [
         "tray",
         "sway/language",
+        "idle_inhibitor",
         "pulseaudio",
         "battery",
         "temperature",
@@ -31,16 +31,40 @@
     "clock": {
         "format": "{:%a %b %d %R}"
     },
+    "idle_inhibitor": {
+        "format": " {icon} ",
+        "format-icons": {
+            "activated": "",
+            "deactivated": "",
+        },
+    },
     "cpu": {
-        "format": "  {usage}%"
+        "format": "  {usage}%",
+        "interval": 3,
+        "states": {
+            "critical": 90,
+        },
     },
     "memory": {
-        "format": "  {}%"
+        "format": "  {}%",
+        "states": {
+            "critical": 90,
+        },
     },
     "temperature": {
         "critical-threshold": 75,
         "thermal-zone": 2,
-        "format": "  {temperatureC}°C"
+        "format": "{icon}  {temperatureC}°C",
+        "format-critical": "{icon}  {temperatureC}°C",
+        "format-icons": {
+            "default": [
+                "",
+                "",
+                "",
+                "",
+                ""
+            ],
+        },
     },
     "battery": {
         "bat": "BAT0",
@@ -51,13 +75,16 @@
             "critical": 15
         },
         "format": "{icon}  {capacity}%",
+        "format-plugged": "  {capacity}%",
+        "format-charging": "  {capacity}%",
         "format-icons": [
             "",
             "",
             "",
             "",
             ""
-        ]
+        ],
+        "format-time": "{H}h:{M}m",
     },
     "pulseaudio": {
         "format": "{icon}  {volume}%",
