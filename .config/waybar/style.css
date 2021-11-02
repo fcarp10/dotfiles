@@ -6,7 +6,7 @@
     border-radius: 0;
     font-family: "Font Awesome 5 Free Solid";
     font-size: 14px;
-    min-height: 30px;
+    min-height: 20px;
 }
 
 window#waybar {
@@ -21,6 +21,7 @@ window#waybar {
 }
 
 #workspaces button.visible {
+    border-top: 1px solid;
 	color: @fgcolor;
 }
 
@@ -34,8 +35,10 @@ window#waybar {
 }
 
 #tray {
-    padding: 0 5px 0 5px;
-    margin: 0 5px 0 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 #language{
@@ -54,8 +57,10 @@ window#waybar {
 }
 
 #battery {
-    padding: 0 5px 0 5px;
-    margin: 0 5px 0 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 #temperature{
@@ -74,8 +79,10 @@ window#waybar {
 }
 
 #clock{
-    padding: 0 5px 0 5px;
-    margin: 0 5px 0 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 #temperature.critical {

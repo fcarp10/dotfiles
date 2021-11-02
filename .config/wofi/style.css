@@ -1,26 +1,26 @@
+@define-color bgcolor rgba(0, 0, 0, 0.6); /* black transparent */
+@define-color fgcolor #f2f2f2;	/* white */
+
 window {
-opacity: 1.0;
-background-color: #262626;
-color: #f2f2f2;
-border-radius: 0px;
+	background: @bgcolor;
+	color: @fgcolor;
+	border-radius: 0px;
 }
 
 #outer-box {
 	margin: 10px;
+	
 }
 
 #input {
+	background: none;
+	border-radius: 0px;
 	border: none;
-	background-color: #262626;
 	padding: 10px;
 }
 
-#inner-box {
-	margin: 10px;	
-}
-
 #entry:selected {
-	background-color: #f2f2f2;
+	background-color: @fgcolor;
 	border-radius: 0px;
 	border-style: none;
 	box-shadow: none;
@@ -28,6 +28,6 @@ border-radius: 0px;
 }
 
 #text {
-	margin-left: 1em;
+	margin-left: 20px;
 }
 

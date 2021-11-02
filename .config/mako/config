@@ -9,9 +9,9 @@ ignore-timeout=1
 font=Roboto 12
 border-size=0
 border-radius=0
-border-color=#999999
+border-color=#00000060
 padding=10
-background-color=#262626
+background-color=#000000AA
 text-color=#f2f2f2
 format=<b>%s</b> <span color="#999999">%a</span>\n%b
 
