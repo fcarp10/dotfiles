@@ -11,7 +11,7 @@ exec syncthing &
 ###################################################################################
 
 ##### setup confing (1: laptop, 2: desktop) #####
-set $setupIO 1
+set $setupIO 2
 
 ########### Xwayland Support ###########
 #xwayland disable
@@ -253,6 +253,7 @@ bar {
 	
 # SUPER + Shift Keys
 	bindsym $mod+shift+t exec systemd-inhibit transmission-gtk
+	bindsym $mod+shift+z exec alacritty -e joshuto
 
 #Control + ALT Keys
 	# bindsym ctrl+alt+o exec ...
