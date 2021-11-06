@@ -11,10 +11,10 @@ exec syncthing &
 ###################################################################################
 
 ##### setup confing (1: laptop, 2: desktop) #####
-set $setupIO 2
+set $setupIO 1
 
 ########### Xwayland Support ###########
-#xwayland disable
+xwayland disable
 
 ### Variables
 #Logo key. Use Mod1 for Alt.
