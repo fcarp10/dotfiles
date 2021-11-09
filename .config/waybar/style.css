@@ -1,3 +1,4 @@
+@define-color bgcolor rgba(0, 0, 0, 0.6); /* black transparent */
 @define-color fgcolor #f2f2f2;	/* white */
 @define-color critical #ff6347;	/* red */
 
@@ -10,7 +11,8 @@
 }
 
 window#waybar {
-    background: rgba(0, 0, 0, 0.6);
+    background: @bgcolor;
+
 }
 
 #workspaces button {
@@ -28,6 +30,10 @@ window#waybar {
 #workspaces button.focused {
     border-top: 1px solid;
 	color: @fgcolor;
+}
+
+#taskbar {
+    margin-left: 5px;
 }
 
 #tray, #language, #idle_inhibitor, #pulseaudio, #temperature, #cpu, #memory,#battery, #clock{

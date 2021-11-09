@@ -2,10 +2,11 @@
     "layer": "top",
     "position": "top",
     "modules-left": [
-        "sway/workspaces"
+        "sway/workspaces",
     ],
     "modules-center": [
-        "sway/window"
+        "sway/window",
+        "wlr/taskbar",
     ],
     "modules-right": [
         "tray",
@@ -16,11 +17,22 @@
         "temperature",
         "cpu",
         "memory",
-        "clock"
+        "clock",
     ],
     "sway/workspaces": {
         "disable-scroll": true,
         "disable-click": false,
+    },
+    "sway/window": {
+        "format": "{}",
+    },
+    "wlr/taskbar": {
+        "all-outputs": false,
+        "active-first": true,
+        "format": "{icon}",
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-middle": "close"
     },
     "tray": {
         "spacing": 10,

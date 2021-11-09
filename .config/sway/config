@@ -14,7 +14,7 @@ exec syncthing &
 set $setupIO 2
 
 ########### Xwayland Support ###########
-#xwayland disable
+xwayland disable
 
 ### Variables
 #Logo key. Use Mod1 for Alt.
@@ -192,6 +192,7 @@ set $gnome-schema org.gnome.desktop.interface
 	for_window [app_id="pavucontrol"] floating enable
 	for_window [app_id="nm-connection-editor"] floating enable
 	for_window [app_id="blueberry.py"] floating enable
+	for_window [title="Sharing Indicator"] border none; floating enable
 
 ###################################################################################
 
