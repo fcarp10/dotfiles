@@ -6,7 +6,6 @@
     ],
     "modules-center": [
         "sway/window",
-        "wlr/taskbar",
     ],
     "modules-right": [
         "tray",
