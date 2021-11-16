@@ -5,7 +5,7 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: "Font Awesome 5 Free Solid";
+    font-family: "Roboto Mono", "Font Awesome 5 Free Solid";
     font-size: 14px;
     min-height: 20px;
 }
@@ -29,10 +29,6 @@ window#waybar {
 #workspaces button.focused {
     border-top: 1px solid;
 	color: @fgcolor;
-}
-
-#window {
-    font-family: "Roboto Mono";
 }
 
 #taskbar {
