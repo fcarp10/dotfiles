@@ -43,21 +43,21 @@
         "format": "{:%a %b %d %R}"
     },
     "idle_inhibitor": {
-        "format": " {icon} ",
+        "format": "{icon}",
         "format-icons": {
             "activated": "",
             "deactivated": "",
         },
     },
     "cpu": {
-        "format": "  {usage}%",
+        "format": " {usage}%",
         "interval": 3,
         "states": {
             "critical": 90,
         },
     },
     "memory": {
-        "format": "  {}%",
+        "format": " {}%",
         "states": {
             "critical": 90,
         },
@@ -65,7 +65,7 @@
     "temperature": {
         "critical-threshold": 75,
         "thermal-zone": 2,
-        "format": "{icon}  {temperatureC}°C",
+        "format": "{icon} {temperatureC}°C",
         "format-critical": "{icon}  {temperatureC}°C",
         "format-icons": {
             "default": [
@@ -85,9 +85,9 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{icon}  {capacity}%",
-        "format-plugged": "  {capacity}%",
-        "format-charging": "  {capacity}%",
+        "format": "{icon} {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-charging": " {capacity}%",
         "format-icons": [
             "",
             "",
@@ -98,8 +98,8 @@
         "format-time": "{H}h:{M}m",
     },
     "pulseaudio": {
-        "format": "{icon}  {volume}%",
-        "format-bluetooth": "  {icon}  {volume}%",
+        "format": "{icon} {volume}%",
+        "format-bluetooth": " {icon} {volume}%",
         "format-muted": "婢 ",
         "format-icons": {
             "headphone": "",
