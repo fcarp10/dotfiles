@@ -12,7 +12,6 @@
 
 window#waybar {
     background: @bgcolor;
-
 }
 
 #workspaces button {
@@ -30,6 +29,10 @@ window#waybar {
 #workspaces button.focused {
     border-top: 1px solid;
 	color: @fgcolor;
+}
+
+#window {
+    font-family: "Roboto Mono";
 }
 
 #taskbar {

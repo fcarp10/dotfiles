@@ -7,7 +7,7 @@ exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec nm-applet --indicator &
 exec libinput-gestures-setup start
 exec syncthing &
-exec_always --no-startup-id workstyle &> /tmp/workstyle.log
+exec sworkstyle &> /tmp/sworkstyle.log
 ###################################################################################
 
 ##### setup confing (1: laptop, 2: desktop) #####
