@@ -2,4 +2,5 @@ input "16700:8467:Dell_KB216_Wired_Keyboard" {
     xkb_layout "us,es"
     xkb_options "grp:win_space_toggle"
 	xkb_model "dell"
+    xkb_numlock enabled
 }

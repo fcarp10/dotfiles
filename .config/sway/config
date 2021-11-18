@@ -11,7 +11,7 @@ exec sworkstyle &> /tmp/sworkstyle.log
 ###################################################################################
 
 ##### setup confing (1: laptop, 2: desktop) #####
-set $setupIO 1
+set $setupIO 2
 
 ########### Xwayland Support ###########
 xwayland disable
@@ -251,7 +251,7 @@ bar {
 	bindsym $mod+s exec element-desktop --enable-features=UseOzonePlatform --ozone-platform=wayland
 	bindsym $mod+n exec signal-desktop --enable-features=UseOzonePlatform --ozone-platform=wayland
 	bindsym $mod+a exec thunderbird
-	bindsym $mod+t exec re.sonny.Tangram
+	bindsym $mod+t exec ferdi --enable-features=UseOzonePlatform --ozone-platform=wayland
 	
 # SUPER + Shift Keys
 	# bindsym $mod+shift+t exec systemd-inhibit transmission-gtk
