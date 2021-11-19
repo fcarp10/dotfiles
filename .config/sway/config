@@ -249,7 +249,6 @@ bar {
 	bindsym $mod+e exec vscodium --enable-features=UseOzonePlatform --ozone-platform=wayland
 	bindsym $mod+p exec pamac-manager
 	bindsym $mod+s exec element-desktop --enable-features=UseOzonePlatform --ozone-platform=wayland
-	bindsym $mod+n exec signal-desktop --enable-features=UseOzonePlatform --ozone-platform=wayland
 	bindsym $mod+a exec thunderbird
 	bindsym $mod+t exec ferdi --enable-features=UseOzonePlatform --ozone-platform=wayland
 	
