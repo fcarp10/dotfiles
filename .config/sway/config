@@ -69,7 +69,7 @@ client.focused #808080 #808080 #808080 #808080 #808080
 ### GTK Theme
 set $gnome-schema org.gnome.desktop.interface
 	exec_always {
-		gsettings set $gnome-schema gtk-theme 'Materia-dark'
+		gsettings set $gnome-schema gtk-theme 'Skeuos-Blue-Dark'
 		gsettings set $gnome-schema icon-theme 'Vimix-Doder-dark'
 		gsettings set $gnome-schema cursor-theme 'Breeze_Default'
 		}
