@@ -11,7 +11,7 @@ exec sworkstyle &> /tmp/sworkstyle.log
 ###################################################################################
 
 ##### setup confing (1: laptop, 2: desktop) #####
-set $setupIO 2
+set $setupIO 1
 
 ########### Xwayland Support ###########
 xwayland disable
