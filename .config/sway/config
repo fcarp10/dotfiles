@@ -11,7 +11,7 @@ exec sworkstyle &> /tmp/sworkstyle.log
 ###################################################################################
 
 ##### setup confing (1: laptop, 2: desktop) #####
-set $setupIO 1
+set $setupIO 2 
 
 ########### Xwayland Support ###########
 xwayland disable
@@ -32,6 +32,8 @@ set $term alacritty
 # Your preferred application launcher
 bindsym $mod+d exec wofi --show drun
 
+# set calendar app
+set $calendar $term -e khal interactive
 ###################################################################################	
 
 ### Output configuration
@@ -254,7 +256,7 @@ bar {
 	
 # SUPER + Shift Keys
 	# bindsym $mod+shift+t exec systemd-inhibit transmission-gtk
-	bindsym $mod+shift+z exec alacritty -e joshuto
+	bindsym $mod+shift+z exec $term -e joshuto
 
 #Control + ALT Keys
 	# bindsym ctrl+alt+o exec ...
