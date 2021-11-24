@@ -1,5 +1,5 @@
 ### Output configuration (swaymsg -t get_inputs)
-input "1739:52710:DLL0945:00_06CB:CDE6_Touchpad" {
+input type:touchpad {
 	accel_profile adaptive
 	drag disabled
 	# drag_lock enabled
@@ -12,7 +12,7 @@ input "1739:52710:DLL0945:00_06CB:CDE6_Touchpad" {
 	middle_emulation disabled
 }
 
-input "1133:49282:Logitech_G403_Prodigy_Wired/Wireless_Gaming_Mouse" {
+input type:pointer {
 	accel_profile adaptive
 	drag enabled
 	drag_lock enabled
@@ -21,13 +21,7 @@ input "1133:49282:Logitech_G403_Prodigy_Wired/Wireless_Gaming_Mouse" {
 	scroll_factor 1.5
 }
 
-input "1:1:AT_Translated_Set_2_keyboard" {
-    xkb_layout "us,es"
-    xkb_options "grp:win_space_toggle"
-	xkb_model "dell"
-}
-
-input "17498:4641:DZTECH_DZ60RGB_ANSI" {
+input type:keyboard {
     xkb_layout "us,es"
     xkb_options "grp:win_space_toggle"
 	xkb_model "dell"
