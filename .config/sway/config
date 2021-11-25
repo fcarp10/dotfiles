@@ -186,8 +186,8 @@ set $gnome-schema org.gnome.desktop.interface
     	bindsym $mod+Shift+Tab workspace prev
 	
 	# Switch workspaces between monitors
-		bindsym $mod+Shift+Return exec $HOME/.config/sway/switch-workspaces.sh
-
+		bindsym $mod+alt+Left move workspace to output left
+		bindsym $mod+alt+Right move workspace to output right
 ###################################################################################
 
 ### Floating Windows
@@ -245,8 +245,8 @@ bar {
 ###################################################################################
 
 # SUPER + ... KEYS
-	bindsym $mod+w exec firefox
-	bindsym $mod+g exec brave --enable-features=UseOzonePlatform --ozone-platform=wayland
+	bindsym $mod+g exec firefox
+	bindsym $mod+w exec brave --enable-features=UseOzonePlatform --ozone-platform=wayland
 	bindsym $mod+z exec thunar
 	bindsym $mod+e exec vscodium --enable-features=UseOzonePlatform --ozone-platform=wayland
 	bindsym $mod+p exec pamac-manager
