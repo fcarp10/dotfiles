@@ -2,7 +2,7 @@
 
 ## Sway:
 
-![sway_desktop](sway_desktop.png)
+![sway_desktop](sway.png)
 
 Add ons:
 
