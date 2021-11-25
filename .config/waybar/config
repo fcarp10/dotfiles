@@ -1,0 +1,116 @@
+{
+    "layer": "top",
+    "position": "top",
+    "modules-left": [
+        "sway/workspaces",
+    ],
+    "modules-center": [
+        "sway/window",
+    ],
+    "modules-right": [
+        "tray",
+        "sway/language",
+        "idle_inhibitor",
+        "pulseaudio",
+        "battery",
+        "temperature",
+        "cpu",
+        "memory",
+        "clock",
+    ],
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "disable-click": false,
+    },
+    "sway/window": {
+        "format": "{}",
+    },
+    "wlr/taskbar": {
+        "all-outputs": false,
+        "active-first": true,
+        "format": "{icon}",
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-middle": "close"
+    },
+    "tray": {
+        "spacing": 10,
+    },
+    "sway/language": {
+        "format": "{}",
+    },
+    "clock": {
+        "format": "{:%a %b %d %R}",
+        "tooltip-format": "<big>{:%B %Y}</big>\n<tt>{calendar}</tt>",
+        "on-click": "swaymsg exec \\$calendar",
+        "locale": "de_DE.UTF8"
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": "",
+        },
+    },
+    "cpu": {
+        "format": " {usage}%",
+        "interval": 3,
+        "states": {
+            "critical": 90,
+        },
+    },
+    "memory": {
+        "format": " {}%",
+        "states": {
+            "critical": 90,
+        },
+    },
+    "temperature": {
+        "critical-threshold": 75,
+        "thermal-zone": 2,
+        "format": "{icon} {temperatureC}°C",
+        "format-critical": "{icon}  {temperatureC}°C",
+        "format-icons": {
+            "default": [
+                "",
+                "",
+                "",
+                "",
+                ""
+            ],
+        },
+    },
+    "battery": {
+        "bat": "BAT0",
+        "full-at": 95,
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "format-time": "{H}h:{M}m",
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-bluetooth": " {icon} {volume}%",
+        "format-muted": "婢 ",
+        "format-icons": {
+            "headphone": "",
+            "default": [
+                "",
+                ""
+            ]
+        },
+        "on-click": "pavucontrol"
+    },
+}

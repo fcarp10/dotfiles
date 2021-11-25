@@ -29,9 +29,27 @@ alias laptop='ssh goku@192.168.100.10'
 alias office='ssh vegeta@192.168.100.11'
 alias xps='ssh vegito@192.168.100.12'
 
-## others ##
+## battery dell ##
+alias bat-standard='sudo cctk --PrimaryBattChargeCfg=Standard'
+alias bat-express='sudo cctk --PrimaryBattChargeCfg=Express'
+alias bat-primacuse='sudo cctk --PrimaryBattChargeCfg=PrimAcUse'
+alias bat-adaptive='sudo cctk --PrimaryBattChargeCfg=Adaptive'
+alias bat-custom='sudo cctk --PrimaryBattChargeCfg=Custom:60-75'
+
+## pacman ##
 alias rm-orphans='sudo pacman -Qtdq | sudo pacman -Rns -'
-alias please='sudo $(fc -ln -1)'
 alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
-alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias find-pacman='function _find-pacman(){ pacman -Qi | grep Name | grep $1;};_find-pacman'
+alias history-installed='grep -i installed /var/log/pacman.log'
+alias history-upgraded='grep -i upgraded /var/log/pacman.log'
+
+## sway ##
+alias list-appids='swaymsg -t get_tree | grep "app_id"'
+
+## docker ##
+alias docker-rm-cts='docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)'
+alias docker-rm-imgs='docker rmi -f $(docker images -a -q)'
+
+## others ##
+alias please='sudo $(fc -ln -1)'
+alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"

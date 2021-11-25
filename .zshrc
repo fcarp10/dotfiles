@@ -48,6 +48,7 @@ key[Control-Right]="${terminfo[kRIT5]}"
 [[ -n "${key[Control-Left]}"  ]] && bindkey -- "${key[Control-Left]}"  backward-word
 [[ -n "${key[Control-Right]}" ]] && bindkey -- "${key[Control-Right]}" forward-word
 
+
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=1000
@@ -82,3 +83,5 @@ eval $(keychain --eval --quiet)
 if [ -f ~/.aliases ]; then
 	. ~/.aliases
 fi
+
+eval "$(pyenv init -)"

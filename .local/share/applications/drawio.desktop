@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=drawio
+Exec=/opt/drawio/drawio %U --enable-features=UseOzonePlatform --ozone-platform=wayland
+Terminal=false
+Type=Application
+Icon=drawio
+StartupWMClass=drawio
+Comment=diagrams.net desktop
+MimeType=application/vnd.jgraph.mxfile;application/vnd.visio;
+Categories=Graphics;

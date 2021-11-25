@@ -1,0 +1,35 @@
+@define-color bgcolor rgba(0, 0, 0, 0.6); /* black transparent */
+@define-color fgcolor #f2f2f2;	/* white */
+
+window {
+	background: @bgcolor;
+	color: @fgcolor;
+	border-radius: 0px;
+}
+
+#outer-box {
+	margin: 10px;
+	
+}
+
+#input {
+	background: none;
+	border-radius: 0px;
+	border: none;
+	padding: 10px;
+}
+
+#text {
+	margin-left: 20px;
+}
+
+#entry:selected {
+	background-color: @fgcolor;
+	border-radius: 0px;
+	border-style: none;
+	box-shadow: none;
+}
+
+#text:selected {
+	color: black;
+} 
