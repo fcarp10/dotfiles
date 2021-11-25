@@ -1,9 +1,30 @@
 # Dotfiles 
 
-Tiling window managers:
+## Sway:
 
-- [Qtile](https://github.com/fcarp10/dotfiles/blob/master/.config/qtile/) config
-- [Sway](https://github.com/fcarp10/dotfiles/blob/master/.config/sway/) config
+![sway_desktop](sway_desktop.png)
+
+Add ons:
+
+- waybar
+- swaylock
+- swayidle
+- wofi
+- mako
+- wob
+- sworkstyle
+
+Instructions for installation [here](https://github.com/fcarp10/archlinux-install) 
+
+## Phosh:
+
+|      &nbsp;      |      &nbsp;      |
+| :--------------: | :--------------: |
+| ![](phosh_1.png) | ![](phosh_2.png) |
+
+Instructions for installation [here](https://github.com/fcarp10/danctnix-install) 
+
+
 
 ## Dotfiles configuration
 
@@ -29,7 +50,7 @@ Tiling window managers:
     ```
 
 
-3. Apply configuration to existing installation ():
+3. Apply configuration to existing installation:
 
     ```shell
     echo "alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" >> $HOME/.bashrc
