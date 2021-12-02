@@ -40,7 +40,7 @@ set $calendar $term -e khal interactive
 ### Output configuration
 
 # Wallpaper
-output * bg black-hole-1.jpg fill
+output * bg wallpaper.jpg fill
 
 # Output config
 include $HOME/.config/sway/output_$setupIO
