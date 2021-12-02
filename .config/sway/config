@@ -8,13 +8,14 @@ exec nm-applet --indicator &
 exec libinput-gestures-setup start
 exec syncthing &
 exec sworkstyle &> /tmp/sworkstyle.log
+# exec element-desktop --hidden
 ###################################################################################
 
 ##### setup confing (1: laptop, 2: desktop) #####
 set $setupIO 2 
 
 ########### Xwayland Support ###########
-xwayland disable
+#xwayland disable
 
 ### Variables
 #Logo key. Use Mod1 for Alt.
