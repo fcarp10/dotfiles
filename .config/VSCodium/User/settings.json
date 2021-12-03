@@ -38,6 +38,12 @@
     "latex-workshop.latex.autoBuild.run": "onSave",
     "latex-workshop.latex.recipes": [
         {
+            "name": "pdflatex",
+            "tools": [
+                "pdflatex"
+            ]
+        },
+        {
             "name": "pdflatex ➞ bibtex ➞ pdflatex × 2",
             "tools": [
                 "pdflatex",
@@ -55,12 +61,6 @@
                 "pdflatex"
             ]
         },
-        {
-            "name": "pdflatex",
-            "tools": [
-                "pdflatex"
-            ]
-        }
     ],
     "latex-workshop.latex.tools": [
         {
