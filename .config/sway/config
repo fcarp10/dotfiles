@@ -7,13 +7,14 @@ exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec nm-applet --indicator &
 exec syncthing &
 exec sworkstyle &> /tmp/sworkstyle.log
+# exec element-desktop --hidden
 ###################################################################################
 
 ##### setup confing (1: laptop, 2: desktop) #####
 set $setupIO 1
 
 ########### Xwayland Support ###########
-xwayland disable
+#xwayland disable
 
 ### Variables
 #Logo key. Use Mod1 for Alt.
