@@ -34,7 +34,7 @@ alias bat-standard='sudo cctk --PrimaryBattChargeCfg=Standard'
 alias bat-express='sudo cctk --PrimaryBattChargeCfg=Express'
 alias bat-primacuse='sudo cctk --PrimaryBattChargeCfg=PrimAcUse'
 alias bat-adaptive='sudo cctk --PrimaryBattChargeCfg=Adaptive'
-alias bat-custom='sudo cctk --PrimaryBattChargeCfg=Custom:60-75'
+alias bat-custom='sudo cctk --PrimaryBattChargeCfg=Custom:50-80'
 
 ## pacman ##
 alias rm-orphans='sudo pacman -Qtdq | sudo pacman -Rns -'
