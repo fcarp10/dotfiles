@@ -9,10 +9,10 @@
     "editor.fastScrollSensitivity": 10,
     "editor.suggestSelection": "first",
     "workbench.editor.enablePreview": false,
-    "workbench.iconTheme": "eq-material-theme-icons-darker",
+    "workbench.iconTheme": "eq-material-theme-icons-light",
+    "workbench.colorTheme": "Monokai Vibrant",
     "workbench.productIconTheme": "material-product-icons",
     "workbench.startupEditor": "newUntitledFile",
-    "workbench.colorTheme": "Monokai Vibrant",
     "window.menuBarVisibility": "toggle",
     "window.openFilesInNewWindow": "off",
     "window.openFoldersInNewWindow": "on",
@@ -102,7 +102,7 @@
     "explorer.confirmDragAndDrop": false,
     "go.toolsManagement.autoUpdate": true,
     "openInApplication.applications": {
-        "drawio": "drawio",
-        "pdf": "evince",
+        "drawio": "re.sonny.Junction",
+        "pdf": "re.sonny.Junction",
     },
 }
