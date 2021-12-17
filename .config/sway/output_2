@@ -4,4 +4,5 @@ output 'Samsung Electric Company SyncMaster H9XS807751' mode 1920x1200 position 
 
 ### Idle configuration
 exec swayidle -w \
-    timeout 600 'swaylock -f -c 000000'
+    timeout 300 "alacritty -t Screensaver -e zsh -c 'sleep .1 && cmatrix' &" \
+    timeout 600 'swaylock -f -c 000000B3'

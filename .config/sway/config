@@ -53,9 +53,11 @@ exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
 
 ###### windows behavior ######
 # fullscreen
-for_window [class="^.*"] inhibit_idle fullscreen
-for_window [app_id="^.*"] inhibit_idle fullscreen
-for_window [title="Screensaver"] fullscreen enable
+# for_window [class="^.*"] inhibit_idle fullscreen
+# for_window [app_id="^.*"] inhibit_idle fullscreen
+for_window [app_id="io.github.celluloid_player.Celluloid"] inhibit_idle fullscreen
+for_window [app_id="brave-browser"] inhibit_idle fullscreen
+for_window [title="Screensaver"] fullscreen enable global
 # floating
 for_window [app_id="pavucontrol"] floating enable
 for_window [app_id="nm-connection-editor"] floating enable
@@ -76,6 +78,9 @@ bindsym $mod+ctrl+2 exec reboot
 bindsym $mod+ctrl+3 exec swaymsg 'exit'
 bindsym $mod+ctrl+4 exec 'swaylock -f -c 000000'
 bindsym $mod+ctrl+5 exec $term -t Screensaver -e $SHELL -c 'sleep .1 && cmatrix'
+bindsym $mod+ctrl+6 exec $term -t Screensaver -e $SHELL -c 'sleep .1 && cmatrix' & swaylock -f -c 000000B3
+bindsym $mod+ctrl+7 exec makoctl set-mode dnd
+bindsym $mod+ctrl+8 exec makoctl set-mode default
 # Move your focus around
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
