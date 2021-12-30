@@ -144,6 +144,7 @@ bindsym $mod+b exec blueberry
 bindsym $mod+y exec freetube --enable-features=UseOzonePlatform --ozone-platform=wayland
 # SUPER + Shift
 bindsym $mod+shift+z exec $term -e joshuto
+bindsym $mod+shift+s exec signal-desktop --enable-features=UseOzonePlatform --ozone-platform=wayland
 # ALT +
 bindsym Print exec grim ~/$(date '+%Y-%m-%d-%T')-screenshot.png
 bindsym shift+Print exec grim -g "$(slurp)" ~/$(date '+%Y-%m-%d-%T')-screenshot.png
