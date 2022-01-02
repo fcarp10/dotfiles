@@ -1,13 +1,13 @@
 @define-color bgcolor rgba(0, 0, 0, 0.6); /* black transparent */
-@define-color fgcolor #f2f2f2;	/* white */
-@define-color critical #ff6347;	/* red */
+@define-color bordercolor #666666; /* light gray */
+@define-color criticalcolor #ff6347;	/* red */
 
 * {
     border: none;
     border-radius: 0;
     font-family: "Roboto Mono", "Font Awesome 5 Free Solid";
     font-size: 14px;
-    min-height: 20px;
+    min-height: 0;
 }
 
 window#waybar {
@@ -18,25 +18,15 @@ window#waybar {
 	font-weight: bolder;
     padding-left: 20px;
     padding-right: 20px;
-	color: @fgcolor;
-}
-
-#workspaces button.visible {
-    border-top: 1px solid;
-	color: @fgcolor;
+    border-top: 2px solid @bgcolor;
 }
 
 #workspaces button.focused {
-    border-top: 1px solid;
-	color: @fgcolor;
-}
-
-#taskbar {
-    margin-left: 5px;
+    border-top: 2px solid @bordercolor;
 }
 
 #tray, #language, #idle_inhibitor, #pulseaudio, #temperature, #cpu, #memory,#battery, #clock{
-    border-top: 1px solid;
+    border-top: 2px solid @bordercolor;
 }
 
 #tray {
@@ -91,13 +81,9 @@ window#waybar {
 }
 
 #temperature.critical {
-    color: @critical;
+    color: @criticalcolor;
 }
 
 #battery.warning:not(.charging) {
-    color:  @critical;
+    color:  @criticalcolor;
 } 
-
-#network.disconnected {
-    background:  @critical;
-}

@@ -7,11 +7,12 @@
     "editor.renderControlCharacters": true,
     "editor.smoothScrolling": true,
     "editor.fastScrollSensitivity": 10,
+    "editor.suggestSelection": "first",
     "workbench.editor.enablePreview": false,
-    "workbench.iconTheme": "eq-material-theme-icons-darker",
+    "workbench.iconTheme": "eq-material-theme-icons-light",
+    "workbench.colorTheme": "Monokai Vibrant",
     "workbench.productIconTheme": "material-product-icons",
     "workbench.startupEditor": "newUntitledFile",
-    "workbench.colorTheme": "Monokai Vibrant",
     "window.menuBarVisibility": "toggle",
     "window.openFilesInNewWindow": "off",
     "window.openFoldersInNewWindow": "on",
@@ -25,11 +26,23 @@
     },
     "git.enableSmartCommit": true,
     "python.formatting.provider": "black",
+    "python.languageServer": "None",
+    "python.linting.pylintEnabled": true,
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python"
+    },
     "java.project.importOnFirstTimeStartup": "automatic",
     "latex-workshop.view.pdf.viewer": "tab",
     "latex-workshop.latex.recipe.default": "lastUsed",
     "latex-workshop.view.pdf.backgroundColor": "#16171d",
+    "latex-workshop.latex.autoBuild.run": "onSave",
     "latex-workshop.latex.recipes": [
+        {
+            "name": "pdflatex",
+            "tools": [
+                "pdflatex"
+            ]
+        },
         {
             "name": "pdflatex ➞ bibtex ➞ pdflatex × 2",
             "tools": [
@@ -48,12 +61,6 @@
                 "pdflatex"
             ]
         },
-        {
-            "name": "pdflatex",
-            "tools": [
-                "pdflatex"
-            ]
-        }
     ],
     "latex-workshop.latex.tools": [
         {
@@ -85,18 +92,17 @@
         }
     ],
     "git.autofetch": true,
-    "[python]": {
-        "editor.defaultFormatter": "ms-python.python"
-    },
+    "git.confirmSync": false,
     "dashboard.projectData": null,
+    "dashboard.openOnStartup": "always",
     "shellformat.effectLanguages": [
         "shellscript",
     ],
-    "editor.formatOnSave": true,
-    "python.languageServer": "Jedi",
-    "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "explorer.confirmDragAndDrop": false,
     "go.toolsManagement.autoUpdate": true,
-    "git.confirmSync": false,
+    "openInApplication.applications": {
+        "drawio": "re.sonny.Junction",
+        "pdf": "re.sonny.Junction",
+    },
 }

@@ -9,5 +9,6 @@ bindswitch --reload --locked lid:off output $laptop enable
 
 ### Idle configuration
 exec swayidle -w \
-    timeout 300 'swaylock -f -c 000000' \
-    timeout 600 'systemctl suspend'
+    timeout 300 "alacritty -t Screensaver -e zsh -c 'sleep .1 && cmatrix' &" \
+    timeout 600 'swaylock -f -c 000000B3' \
+    timeout 900 'systemctl suspend'

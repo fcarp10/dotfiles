@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=drawio
-Exec=/opt/drawio/drawio %U --enable-features=UseOzonePlatform --ozone-platform=wayland
+Exec=/opt/drawio/drawio --enable-features=UseOzonePlatform --ozone-platform=wayland %U
 Terminal=false
 Type=Application
 Icon=drawio
