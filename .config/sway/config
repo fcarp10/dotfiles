@@ -80,9 +80,10 @@ bindsym $mod+ctrl+3 exec swaymsg 'exit'
 bindsym $mod+ctrl+4 exec 'swaylock -f -c 000000'
 bindsym $mod+ctrl+5 exec $term -t Screensaver -e $SHELL -c 'sleep .1 && cmatrix'
 bindsym $mod+ctrl+6 exec $term -t Screensaver -e $SHELL -c 'sleep .1 && cmatrix' & swaylock -f -c 000000B3
-bindsym $mod+ctrl+7 exec makoctl set-mode dnd
-bindsym $mod+ctrl+8 exec makoctl set-mode default
+bindsym $mod+ctrl+7 exec notify-send "DND ON" && sleep 2 && makoctl set-mode dnd
+bindsym $mod+ctrl+8 exec makoctl set-mode default && notify-send "DND OFF"
 bindsym $mod+ctrl+9 exec killall -SIGUSR1 waybar
+bindsym $mod+ctrl+0 exec systemctl suspend
 # Move your focus around
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
