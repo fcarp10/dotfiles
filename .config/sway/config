@@ -8,7 +8,7 @@ exec sworkstyle &> /tmp/sworkstyle.log
 # exec element-desktop --hidden
 
 ###### Setup confing (1: laptop, 2: desktop) ######
-set $setupIO 1
+set $setupIO 2
 
 ###### Xwayland Support ######
 xwayland disable
@@ -133,11 +133,11 @@ bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 # SUPER +
 bindsym $mod+g exec firefox
-bindsym $mod+w exec brave --enable-features=UseOzonePlatform --ozone-platform=wayland
+bindsym $mod+w exec brave
 bindsym $mod+z exec thunar
 bindsym $mod+e exec vscodium --enable-features=UseOzonePlatform --ozone-platform=wayland
 bindsym $mod+p exec pamac-manager
-bindsym $mod+s exec element-desktop --enable-features=UseOzonePlatform --ozone-platform=wayland
+bindsym $mod+s exec element-desktop
 bindsym $mod+a exec thunderbird
 bindsym $mod+t exec ferdi --enable-features=UseOzonePlatform --ozone-platform=wayland
 bindsym $mod+b exec blueberry
