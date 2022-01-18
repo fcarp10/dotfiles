@@ -25,9 +25,10 @@ alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 ## ssh ##
 alias rpi='ssh ubuntu@192.168.50.233'
 alias rpi-shutdown='ssh ubuntu@192.168.50.233 "sudo shutdown now"'
-alias laptop='ssh goku@192.168.100.10'
+alias mac-laptop='ssh goku@192.168.100.10'
 alias office='ssh vegeta@192.168.100.11'
-alias xps='ssh vegito@192.168.100.12'
+alias alex='ssh alex@192.168.100.12'
+alias manu='ssh manu@192.168.100.13'
 
 ## battery dell ##
 alias bat-standard='sudo cctk --PrimaryBattChargeCfg=Standard'
@@ -53,3 +54,4 @@ alias docker-rm-imgs='docker rmi -f $(docker images -a -q)'
 ## others ##
 alias please='sudo $(fc -ln -1)'
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+alias nebula-start="sudo systemctl start nebula"
