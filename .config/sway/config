@@ -139,7 +139,7 @@ bindsym $mod+w exec brave
 bindsym $mod+z exec thunar
 bindsym $mod+e exec vscodium --enable-features=UseOzonePlatform --ozone-platform=wayland
 bindsym $mod+p exec pamac-manager
-bindsym $mod+s exec element-desktop
+bindsym $mod+s exec element-desktop --enable-features=UseOzonePlatform --ozone-platform=wayland
 bindsym $mod+a exec thunderbird
 bindsym $mod+t exec ferdi --enable-features=UseOzonePlatform --ozone-platform=wayland
 bindsym $mod+b exec blueberry
