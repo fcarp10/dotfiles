@@ -29,7 +29,7 @@
     "python.languageServer": "None",
     "python.linting.pylintEnabled": true,
     "[python]": {
-        "editor.defaultFormatter": "ms-python.python"
+        "editor.defaultFormatter": "ms-python.python",
     },
     "java.project.importOnFirstTimeStartup": "automatic",
     "latex-workshop.view.pdf.viewer": "tab",
@@ -91,6 +91,9 @@
             ]
         }
     ],
+    "[latex]": {
+        "editor.fontFamily": "sans-serif"
+    },
     "git.autofetch": true,
     "git.confirmSync": false,
     "dashboard.projectData": null,
