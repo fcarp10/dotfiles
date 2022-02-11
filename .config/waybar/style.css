@@ -15,7 +15,7 @@ window#waybar {
 }
 
 #workspaces button {
-	font-weight: bolder;
+	/* font-weight: bolder; */
     padding-left: 20px;
     padding-right: 20px;
     border-top: 2px solid @bgcolor;
