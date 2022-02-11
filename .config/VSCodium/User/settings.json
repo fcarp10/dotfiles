@@ -1,7 +1,6 @@
 {
     "editor.minimap.enabled": false,
     "editor.semanticHighlighting.enabled": true,
-    "editor.wordWrap": "on",
     "editor.mouseWheelZoom": true,
     "editor.fontFamily": "'Roboto Mono'",
     "editor.renderControlCharacters": true,
