@@ -5,9 +5,9 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: "Roboto Mono", "Font Awesome 5 Free Solid";
+    font-family:"Roboto Mono", "Font Awesome 6 Free Solid"; 
     font-size: 14px;
-    min-height: 0;
+    /* min-height: 0; */
 }
 
 window#waybar {
