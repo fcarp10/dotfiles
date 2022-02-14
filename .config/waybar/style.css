@@ -8,6 +8,7 @@
     font-family:"Roboto Mono", "Font Awesome 6 Free Solid"; 
     font-size: 14px;
     /* min-height: 0; */
+    font-weight: bolder;
 }
 
 window#waybar {
@@ -15,7 +16,6 @@ window#waybar {
 }
 
 #workspaces button {
-	/* font-weight: bolder; */
     padding-left: 20px;
     padding-right: 20px;
     border-top: 2px solid @bgcolor;
