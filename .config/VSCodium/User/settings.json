@@ -35,6 +35,8 @@
     "latex-workshop.latex.recipe.default": "lastUsed",
     "latex-workshop.view.pdf.backgroundColor": "#16171d",
     "latex-workshop.latex.autoBuild.run": "onSave",
+    "latex-workshop.message.warning.show": false,
+    "latex-workshop.message.error.show": false,
     "latex-workshop.latex.recipes": [
         {
             "name": "pdflatex",
@@ -107,4 +109,5 @@
         "drawio": "re.sonny.Junction",
         "pdf": "re.sonny.Junction",
     },
+    "editor.largeFileOptimizations": false,
 }
