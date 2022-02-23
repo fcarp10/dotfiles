@@ -22,10 +22,9 @@ alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 ## ssh ##
 alias ssh-rpi='ssh ubuntu@192.168.50.233'
 alias ssh-rpi-shutdown='ssh ubuntu@192.168.50.233 "sudo shutdown now"'
-alias ssh-mac='ssh goku@192.168.100.10'
-alias ssh-office='ssh vegeta@192.168.100.11'
-alias ssh-alex='ssh alex@192.168.100.12'
-alias ssh-manu='ssh manu@192.168.100.13'
+alias ssh-office='ssh vegeta@192.168.100.3'
+alias ssh-alex='ssh alex@192.168.100.11'
+alias ssh-manu='ssh manu@192.168.100.10'
 
 ## battery dell ##
 alias bat-standard='sudo cctk --PrimaryBattChargeCfg=Standard'
