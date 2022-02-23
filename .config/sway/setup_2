@@ -1,8 +1,23 @@
-### Output configuration (swaymsg -t get_outputs)
+### autostart
+exec wayvnc &
+# exec element-desktop --hidden
+
+###### Xwayland Support ######
+# xwayland disable
+
+### input
+input type:keyboard {
+    xkb_layout "us,es"
+    xkb_options "grp:win_space_toggle"
+	xkb_model "dell"
+    xkb_numlock enabled
+}
+
+### output
 output 'Dell Inc. DELL U2415 7MT0177P0PKS' mode 1920x1200 position 1920,0
 output 'Samsung Electric Company SyncMaster H9XS807751' mode 1920x1200 position 0,0
 
-### Idle configuration
+### idle
 exec swayidle -w \
     timeout 300 "alacritty -t Screensaver -e zsh -c 'sleep .1 && cmatrix' &" \
     timeout 600 'swaylock -f -c 000000B3'

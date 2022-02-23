@@ -5,13 +5,9 @@ exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec nm-applet --indicator &
 exec syncthing &
 exec sworkstyle &> /tmp/sworkstyle.log
-# exec element-desktop --hidden
 
 ###### Setup confing (1: laptop, 2: desktop) ######
-set $setupIO 1
-
-###### Xwayland Support ######
-xwayland disable
+set $setupN 2
 
 ###### Variables ######
 set $mod Mod4
@@ -22,11 +18,8 @@ set $calendar $term -e khal interactive
 ###### Wallpaper ######
 output * bg wallpaper.jpg fill
 
-###### Output configuration ######
-include $HOME/.config/sway/output_$setupIO
-
-###### Input configuration (swaymsg -t get_inputs) ######
-include $HOME/.config/sway/input_$setupIO
+###### setup configuration ######
+include $HOME/.config/sway/setup_$setupN
 
 ###### Theming ######
 default_border none 
