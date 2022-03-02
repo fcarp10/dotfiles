@@ -46,3 +46,7 @@ exec swayidle -w \
     timeout 300 "alacritty -t Screensaver -e zsh -c 'sleep .1 && cmatrix' &" \
     timeout 600 'swaylock -f -c 000000B3' \
     timeout 900 'systemctl suspend'
+
+### custom shorcut (temporal solution until hci_uart for AX500 is fixed in the kernel)
+# remove hci_uart from blacklist `sudo rm /etc/modprobe.d/blacklist_bt.conf`
+bindsym $mod+b exec pkexec modprobe hci_uart && blueberry

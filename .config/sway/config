@@ -7,7 +7,7 @@ exec syncthing &
 exec sworkstyle &> /tmp/sworkstyle.log
 
 ###### Setup confing (1: laptop, 2: desktop) ######
-set $setupN 2
+set $setupN 1
 
 ###### Variables ######
 set $mod Mod4
@@ -138,7 +138,6 @@ bindsym $mod+p exec pamac-manager
 bindsym $mod+s exec element-desktop --enable-features=UseOzonePlatform --ozone-platform=wayland
 bindsym $mod+a exec thunderbird
 bindsym $mod+t exec ferdi --enable-features=UseOzonePlatform --ozone-platform=wayland
-bindsym $mod+b exec blueberry
 bindsym $mod+y exec freetube --enable-features=UseOzonePlatform --ozone-platform=wayland
 # SUPER + Shift
 bindsym $mod+shift+z exec $term -e joshuto
