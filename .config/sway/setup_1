@@ -1,4 +1,5 @@
 ### autostart
+# exec syncthing &
 
 ###### Xwayland Support ######
 xwayland disable
@@ -49,4 +50,4 @@ exec swayidle -w \
 
 ### custom shorcut (temporal solution until hci_uart for AX500 is fixed in the kernel)
 # remove hci_uart from blacklist `sudo rm /etc/modprobe.d/blacklist_bt.conf`
-bindsym $mod+b exec pkexec modprobe hci_uart && blueberry
+bindsym $mod+b exec pkexec modprobe hci_uart && sleep 2 && blueberry
