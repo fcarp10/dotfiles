@@ -8,10 +8,19 @@
     "editor.fastScrollSensitivity": 10,
     "editor.suggestSelection": "first",
     "workbench.editor.enablePreview": false,
-    "workbench.colorTheme": "Blakai Theme",
     "workbench.iconTheme": "eq-material-theme-icons-light",
     "workbench.productIconTheme": "material-product-icons",
     "workbench.startupEditor": "newUntitledFile",
+    "workbench.colorCustomizations": {
+        "sideBar.background": "#000000",
+        "sideBar.foreground": "#FFFFFF",
+        "editor.background": "#000000",
+        "editor.foreground": "#FFFFFF",  
+        "activityBar.background": "#000000", 
+        "tab.activeBackground": "#000000",
+        "tab.activeBorderTop": "#000000",
+    },
+    "workbench.colorTheme": "Monokai Vibrant",
     "window.menuBarVisibility": "toggle",
     "window.openFilesInNewWindow": "off",
     "window.openFoldersInNewWindow": "on",
@@ -93,7 +102,7 @@
         }
     ],
     "[latex]": {
-        "editor.fontFamily": "sans-serif"
+        "editor.fontFamily": "'Roboto'",
     },
     "git.autofetch": true,
     "git.confirmSync": false,
@@ -109,4 +118,5 @@
         "drawio": "re.sonny.Junction",
         "pdf": "re.sonny.Junction",
     },
+
 }
