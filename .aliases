@@ -52,3 +52,4 @@ alias please='sudo $(fc -ln -1)'
 alias nebula-start="sudo systemctl start nebula"
 alias aliases='function _get_alias(){ grep -r alias ~/.aliases | grep -v \# |  grep alias; };_get_alias'
 alias vpn-tubs='sudo openconnect --authgroup Tunnel-All-Traffic -u fracarpi vpngate.tu-bs.de'
+alias pdf-words='function _count_words(){pdftotext $1 - | wc -w;};_count_words'
