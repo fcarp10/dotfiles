@@ -10,7 +10,7 @@ set $setupN 1
 
 ###### Variables ######
 set $mod Mod4
-set $term alacritty
+set $term foot
 bindsym $mod+d exec wofi --show drun
 set $calendar $term -e khal interactive
 
@@ -70,8 +70,8 @@ bindsym $mod+ctrl+1 exec shutdown now
 bindsym $mod+ctrl+2 exec reboot
 bindsym $mod+ctrl+3 exec swaymsg 'exit'
 bindsym $mod+ctrl+4 exec 'swaylock -f -c 000000'
-bindsym $mod+ctrl+5 exec $term -t Screensaver -e $SHELL -c 'sleep .1 && cmatrix'
-bindsym $mod+ctrl+6 exec $term -t Screensaver -e $SHELL -c 'sleep .1 && cmatrix' & swaylock -f -c 000000B3
+bindsym $mod+ctrl+5 exec alacritty -t Screensaver -e $SHELL -c 'sleep .1 && cmatrix'
+bindsym $mod+ctrl+6 exec alacritty -t Screensaver -e $SHELL -c 'sleep .1 && cmatrix' & swaylock -f -c 000000B3
 bindsym $mod+ctrl+7 exec notify-send "DND ON" && sleep 2 && makoctl set-mode dnd
 bindsym $mod+ctrl+8 exec makoctl set-mode default && notify-send "DND OFF"
 bindsym $mod+ctrl+9 exec killall -SIGUSR1 waybar
@@ -132,14 +132,13 @@ bindsym $mod+minus scratchpad show
 bindsym $mod+g exec firefox
 bindsym $mod+w exec brave
 bindsym $mod+z exec thunar
-bindsym $mod+e exec vscodium --enable-features=UseOzonePlatform --ozone-platform=wayland
+bindsym $mod+e exec vscodium
 bindsym $mod+p exec pamac-manager
 bindsym $mod+s exec element-desktop --enable-features=UseOzonePlatform --ozone-platform=wayland
 bindsym $mod+a exec thunderbird
 bindsym $mod+t exec ferdi --enable-features=UseOzonePlatform --ozone-platform=wayland
 bindsym $mod+y exec freetube --enable-features=UseOzonePlatform --ozone-platform=wayland
 # SUPER + Shift
-bindsym $mod+shift+z exec $term -e joshuto
 bindsym $mod+shift+s exec signal-desktop --enable-features=UseOzonePlatform --ozone-platform=wayland
 # ALT +
 bindsym Print exec grim ~/$(date '+%Y-%m-%d-%T')-screenshot.png
