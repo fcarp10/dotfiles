@@ -10,7 +10,7 @@ set $setupN 2
 
 ###### Variables ######
 set $mod Mod4
-set $term alacritty
+set $term foot
 bindsym $mod+d exec wofi --show drun
 set $calendar $term -e khal interactive
 
@@ -70,8 +70,8 @@ bindsym $mod+ctrl+1 exec shutdown now
 bindsym $mod+ctrl+2 exec reboot
 bindsym $mod+ctrl+3 exec swaymsg 'exit'
 bindsym $mod+ctrl+4 exec 'swaylock -f -c 000000'
-bindsym $mod+ctrl+5 exec $term -t Screensaver -e $SHELL -c 'sleep .1 && cmatrix'
-bindsym $mod+ctrl+6 exec $term -t Screensaver -e $SHELL -c 'sleep .1 && cmatrix' & swaylock -f -c 000000B3
+bindsym $mod+ctrl+5 exec alacritty -t Screensaver -e $SHELL -c 'sleep .1 && cmatrix'
+bindsym $mod+ctrl+6 exec alacritty -t Screensaver -e $SHELL -c 'sleep .1 && cmatrix' & swaylock -f -c 000000B3
 bindsym $mod+ctrl+7 exec notify-send "DND ON" && sleep 2 && makoctl set-mode dnd
 bindsym $mod+ctrl+8 exec makoctl set-mode default && notify-send "DND OFF"
 bindsym $mod+ctrl+9 exec killall -SIGUSR1 waybar
