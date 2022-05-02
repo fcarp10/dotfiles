@@ -3,7 +3,8 @@
 " specify directory for plugins
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'projekt0n/github-nvim-theme'
+Plug 'cpea2506/one_monokai.nvim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'lervag/vimtex'
 Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
 Plug 'vim-airline/vim-airline'
@@ -15,12 +16,14 @@ call plug#end()
 " == Colors ==
 
 syntax on                   " syntax highlighting
-colorscheme github_dark_default
-
+colorscheme one_monokai
 
 " == Options ==
 set number
 
+
+" == CHADTree
+nnoremap <leader>v <cmd>CHADopen<cr>
 
 " == VimTeX ==
 
