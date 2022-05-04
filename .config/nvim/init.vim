@@ -24,6 +24,7 @@ set number
 
 " == CHADTree
 nnoremap <leader>v <cmd>CHADopen<cr>
+let g:chadtree_settings = { 'ignore.name_glob':[".*"] }
 
 " == VimTeX ==
 
