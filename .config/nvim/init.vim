@@ -3,11 +3,14 @@
 " specify directory for plugins
 call plug#begin('~/.config/nvim/plugged')
 
+" appearance
 Plug 'cpea2506/one_monokai.nvim'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'lervag/vimtex'
 Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'vim-airline/vim-airline'
+
+" latex
+Plug 'lervag/vimtex'
 
 " initialize plugin system
 call plug#end()
@@ -15,15 +18,23 @@ call plug#end()
 
 " == Colors ==
 
-syntax on                   " syntax highlighting
-colorscheme one_monokai
+syntax on										" syntax highlighting
+colorscheme one_monokai							" theme
+
 
 " == Options ==
-set number
+set number										" shows line numbers
+set clipboard=unnamedplus						" enables clipboard between neovim and other applications
+set completeopt=noinsert,menuone,noselect		" modifies the auto-complete menu to behave more like an IDE
+set cursorline									" highlights the current line in the editor
+set mouse=a										" allows the use of the mouse in the editor
+set title										" show the file title
+set wildmenu									" shows a more advanced menu for auto-completion suggestions
 
 
 " == CHADTree
 nnoremap <leader>v <cmd>CHADopen<cr>
+let g:chadtree_settings = { 'ignore.name_glob':[".*"] }
 
 " == VimTeX ==
 
@@ -41,8 +52,8 @@ syntax enable
 let g:vimtex_view_method = 'zathura'
 
 " Or with a generic interface:
-" let g:vimtex_view_general_viewer = 'okular'
-" let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
+let g:vimtex_view_general_viewer = 'evince'
+"let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
 
 " VimTeX uses latexmk as the default compiler backend. If you use it, which is
 " strongly recommended, you probably don't need to configure anything. If you
@@ -51,6 +62,5 @@ let g:vimtex_view_method = 'zathura'
 " see ":help vimtex-compiler".
 " let g:vimtex_compiler_method = 'latexrun'
 
-" Most VimTeX mappings rely on localleader and this can be changed with the
-" following line. The default is usually fine and is the symbol "\".
-" let maplocalleader = ","
+" `update` ensures document is saved before single-shot compilation
+noremap <leader>ll <Cmd>update<CR><Cmd>VimtexCompileSS<CR>
