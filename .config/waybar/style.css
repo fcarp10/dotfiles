@@ -1,4 +1,3 @@
-@define-color bgcolor rgba(0, 0, 0, 0.6); /* black transparent */
 @define-color bordercolor #666666; /* light gray */
 @define-color criticalcolor #ff6347;	/* red */
 
@@ -7,18 +6,19 @@
     border-radius: 0;
     font-family:"Roboto Mono", "Font Awesome 6 Free Solid"; 
     font-size: 14px;
-    /* min-height: 0; */
     font-weight: bolder;
 }
 
 window#waybar {
-    background: @bgcolor;
+    background: shade(alpha(@theme_base_color, 0.6), 0.1); /* bar 90% darker and 40% transparent */
+    border-bottom: 1px solid @unfocused_borders;
+    color: @theme_text_color;
 }
 
 #workspaces button {
     padding-left: 20px;
     padding-right: 20px;
-    border-top: 2px solid @bgcolor;
+    border-top: 2px solid shade(alpha(@theme_base_color, 0.6), 0.1);
 }
 
 #workspaces button.focused {

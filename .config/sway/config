@@ -6,7 +6,7 @@ exec nm-applet --indicator &
 exec sworkstyle &> /tmp/sworkstyle.log
 
 ###### Setup confing (1: laptop, 2: desktop) ######
-set $setupN 2
+set $setupN 1
 
 ###### Variables ######
 set $mod Mod4
@@ -131,7 +131,7 @@ bindsym $mod+minus scratchpad show
 # SUPER +
 bindsym $mod+g exec firefox
 bindsym $mod+w exec brave --enable-features=UseOzonePlatform --ozone-platform=wayland
-bindsym $mod+e exec vscodium
+bindsym $mod+e exec vscodium --enable-features=UseOzonePlatform --ozone-platform=wayland
 bindsym $mod+a exec thunderbird
 bindsym $mod+s exec element-desktop --enable-features=UseOzonePlatform --ozone-platform=wayland
 bindsym $mod+z exec thunar
