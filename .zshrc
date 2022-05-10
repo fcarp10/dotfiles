@@ -62,27 +62,25 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+# Enable zsh plugins
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+# Customize zsh-autocomplete 
+zstyle ':autocomplete:*' insert-unambiguous yes
 
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
+# zsh theme
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-
-# Created by newuser for 5.8
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-eval $(keychain --eval --quiet)
-
+# eval $(keychain --eval --quiet)
+# Enable aliases
 if [ -f ~/.aliases ]; then
 	. ~/.aliases
 fi
 
+# Enable pyenv
 eval "$(pyenv init -)"
