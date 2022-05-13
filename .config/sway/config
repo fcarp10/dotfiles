@@ -22,12 +22,11 @@ include $HOME/.config/sway/setup_$setupN
 
 ###### Theming ######
 default_border none 
-gaps outer 2
-gaps inner 2
+gaps outer 0
+gaps inner 5
 smart_gaps on
-smart_borders off
-default_border pixel 1
-client.focused #808080 #808080 #808080 #808080 #808080 
+smart_borders on
+default_border pixel 2
 set $gnome-schema org.gnome.desktop.interface
 exec_always {
 	gsettings set $gnome-schema gtk-theme 'Skeuos-Blue-Dark'
