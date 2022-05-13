@@ -27,6 +27,8 @@ gaps inner 5
 smart_gaps on
 smart_borders on
 default_border pixel 2
+default_floating_border none
+default_floating_border pixel 2
 set $gnome-schema org.gnome.desktop.interface
 exec_always {
 	gsettings set $gnome-schema gtk-theme 'Skeuos-Blue-Dark'
@@ -56,6 +58,7 @@ for_window [app_id="blueberry.py"] floating enable
 for_window [title="Sharing Indicator"] border none; floating enable
 for_window [app_id="com.nextcloud.desktopclient.nextcloud"] floating enable
 for_window [app_id="thunar" title="Progress"] floating enable
+
 
 ###### Key bindings ######
 # start a terminal
