@@ -130,6 +130,8 @@ bindsym $mod+alt+Right move workspace to output right
 bindsym $mod+Shift+minus move scratchpad
 # Show the next scratchpad window or hide the focused scratchpad window.
 bindsym $mod+minus scratchpad show
+# Resize and center current floating window
+bindsym $mod+c exec swaymsg move position center && swaymsg resize set 80ppt 80ppt
 # SUPER +
 bindsym $mod+g exec firefox
 bindsym $mod+w exec brave --enable-features=UseOzonePlatform --ozone-platform=wayland
