@@ -80,7 +80,6 @@
                 "-synctex=1",
                 "-interaction=nonstopmode",
                 "-file-line-error",
-                "-shell-escape",
                 "%DOC%"
             ],
             "env": {}
@@ -118,5 +117,8 @@
         "drawio": "re.sonny.Junction",
         "pdf": "re.sonny.Junction",
     },
-
+    "latex-workshop.texcount.autorun": "onSave",
+    "cSpell.enableFiletypes": [
+        "latex"
+    ]
 }
