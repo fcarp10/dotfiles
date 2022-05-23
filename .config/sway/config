@@ -10,7 +10,7 @@ set $setupN 1
 
 ###### Variables ######
 set $mod Mod4
-set $term foot
+set $term alacritty
 bindsym $mod+d exec wofi --show drun
 set $calendar $term -e khal interactive
 
