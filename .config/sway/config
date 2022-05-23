@@ -6,11 +6,11 @@ exec nm-applet --indicator &
 exec sworkstyle &> /tmp/sworkstyle.log
 
 ###### Setup confing (1: laptop, 2: desktop) ######
-set $setupN 1
+set $setupN 2
 
 ###### Variables ######
 set $mod Mod4
-set $term foot
+set $term alacritty
 bindsym $mod+d exec wofi --show drun
 set $calendar $term -e khal interactive
 
@@ -48,11 +48,9 @@ exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
 # fullscreen
 # for_window [class="^.*"] inhibit_idle fullscreen
 # for_window [app_id="^.*"] inhibit_idle fullscreen
-for_window [app_id="io.github.celluloid_player.Celluloid"] inhibit_idle fullscreen
 for_window [app_id="brave-browser"] inhibit_idle fullscreen
 for_window [title="Screensaver"] fullscreen enable global
 # floating
-for_window [app_id="pavucontrol"] floating enable
 for_window [app_id="nm-connection-editor"] floating enable
 for_window [app_id="blueberry.py"] floating enable
 for_window [title="Sharing Indicator"] border none; floating enable
