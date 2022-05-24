@@ -33,7 +33,8 @@ set $gnome-schema org.gnome.desktop.interface
 exec_always {
 	gsettings set $gnome-schema gtk-theme 'adw-gtk3-dark'
 	gsettings set $gnome-schema icon-theme 'Vimix-Doder-dark'
-	gsettings set $gnome-schema cursor-theme 'Breeze_Default'
+	gsettings set $gnome-schema cursor-theme 'BreezeX-Black'
+	gsettings set $gnome-schema cursor-size 40
 }
 # Status Bar
 bar {
