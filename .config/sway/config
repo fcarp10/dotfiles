@@ -1,12 +1,13 @@
 include /etc/sway/config.d/*
 
 ###### Autostart ######
-exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+# exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec lxpolkit &
 exec nm-applet --indicator &
 exec sworkstyle &> /tmp/sworkstyle.log
 
 ###### Setup confing (1: laptop, 2: desktop) ######
-set $setupN 2
+set $setupN 1
 
 ###### Variables ######
 set $mod Mod4
