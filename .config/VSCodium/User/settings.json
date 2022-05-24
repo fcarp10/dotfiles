@@ -120,5 +120,9 @@
     "latex-workshop.texcount.autorun": "onSave",
     "cSpell.enableFiletypes": [
         "latex"
-    ]
+    ],
+    "projectManager.git.baseFolders": [
+        "~/repository"
+    ],
+    "projectManager.git.maxDepthRecursion": 2
 }
