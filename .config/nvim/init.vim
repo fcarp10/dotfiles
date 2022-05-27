@@ -31,7 +31,6 @@ set mouse=a										" allows the use of the mouse in the editor
 set title										" show the file title
 set wildmenu									" shows a more advanced menu for auto-completion suggestions
 
-
 " == CHADTree
 nnoremap <leader>v <cmd>CHADopen<cr>
 let g:chadtree_settings = { 'ignore.name_glob':[".*"] }
@@ -64,3 +63,4 @@ let g:vimtex_view_general_viewer = 'evince'
 
 " `update` ensures document is saved before single-shot compilation
 noremap <leader>ll <Cmd>update<CR><Cmd>VimtexCompileSS<CR>
+

@@ -1,8 +1,7 @@
 include /etc/sway/config.d/*
 
 ###### Autostart ######
-# exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec lxpolkit &
+exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec nm-applet --indicator &
 exec sworkstyle &> /tmp/sworkstyle.log
 
@@ -30,12 +29,17 @@ smart_borders on
 default_border pixel 2
 default_floating_border none
 default_floating_border pixel 2
+set $my_theme adw-gtk3-dark
+set $my_icon_theme Vimix-Doder-dark
+set $my_cursor BreezeX-Black
+set $my_cursor_size 40
 set $gnome-schema org.gnome.desktop.interface
+seat seat0 xcursor_theme $my_cursor $my_cursor_size
 exec_always {
-	gsettings set $gnome-schema gtk-theme 'adw-gtk3-dark'
-	gsettings set $gnome-schema icon-theme 'Vimix-Doder-dark'
-	gsettings set $gnome-schema cursor-theme 'BreezeX-Black'
-	gsettings set $gnome-schema cursor-size 40
+	gsettings set $gnome-schema gtk-theme $my_theme
+	gsettings set $gnome-schema icon-theme $my_icon_theme
+	gsettings set $gnome-schema cursor-theme $my_cursor
+	gsettings set $gnome-schema cursor-size $my_cursor_size
 }
 # Status Bar
 bar {
