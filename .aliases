@@ -1,3 +1,6 @@
+alias aliases='function _get_alias(){ grep -r alias ~/.aliases | grep -v \# |  grep alias; };_get_alias'
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
 ## ls ##
 alias ls='ls --color=auto'
 alias ll='ls -la'
@@ -15,9 +18,6 @@ alias wt='function _wt(){ curl wttr.in/$1; };_wt'
 alias pubip="curl ifconfig.co/json"
 alias cheat='function _cheat(){ curl cheat.sh/$1; };_cheat'
 alias cryp='function _cryp(){ curl rate.sx/$1; };_cryp'
-
-## config ##
-alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 ## ssh ##
 alias ssh-rpi='ssh ubuntu@192.168.50.233'
@@ -43,17 +43,24 @@ alias pac-mirrors='sudo reflector --country Germany --latest 10 --protocol https
 ## sway ##
 alias sway-appids='swaymsg -t get_tree | grep "app_id"'
 
+## theme ##
+alias theme-light="gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3 && gsettings set org.gnome.desktop.interface color-scheme prefer-light && sed -i '72s/.*/colors: *light/' ~/.config/alacritty/alacritty.yml"
+alias theme-dark="gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-dark && gsettings set org.gnome.desktop.interface color-scheme prefer-dark && sed -i '72s/.*/colors: *dark/' ~/.config/alacritty/alacritty.yml"
+
 ## docker ##
 alias docker-rmct='docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)'
 alias docker-rmimg='docker rmi -f $(docker images -a -q)'
 
-## others ##
-alias please='sudo $(fc -ln -1)'
+## network ##
 alias nebula-start="sudo systemctl start nebula"
-alias aliases='function _get_alias(){ grep -r alias ~/.aliases | grep -v \# |  grep alias; };_get_alias'
+alias vpn-tubs='sudo openconnect --authgroup Tunnel-All-Traffic -u fracarpi vpngate.tu-bs.de'
+alias nmap-os='function _nmap_os(){sudo nmap -O $1;};_nmap_os'
+
+## utils ##
 alias pdf-words='function _count_words(){pdftotext $1 - | wc -w;};_count_words'
 alias tex-words='function _count_words(){texcount -inc -total $1;};_count_words'
-alias vpn-tubs='sudo openconnect --authgroup Tunnel-All-Traffic -u fracarpi vpngate.tu-bs.de'
-alias pdf-words='function _count_words(){pdftotext $1 - | wc -w;};_count_words'
 alias burn-img='function _burn_img(){sudo dd if=$1 of=$2 status=progress; };_burn_img'
-alias nmap-os='function _nmap_os(){sudo nmap -O $1;};_nmap_os' 
+
+## others ##
+alias please='sudo $(fc -ln -1)'
+ 
