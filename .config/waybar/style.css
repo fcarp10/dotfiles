@@ -10,7 +10,7 @@
 }
 
 window#waybar {
-    background: shade(alpha(@theme_base_color, 0.6), 0.1); /* bar 90% darker and 40% transparent */
+    background: shade(alpha(@theme_base_color, 0.6), 1.0); /* bar 90% darker and 40% transparent */
     border-bottom: 0px solid @unfocused_borders;
     color: @theme_text_color;
 }

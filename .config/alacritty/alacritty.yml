@@ -41,33 +41,56 @@ font:
 schemes:
   theme_light: &light
     primary:
-      background: '0xffffff'
-      foreground: '0x000000'
+      background: '#ffffff'
+      foreground: '#000000'
+    selection:
+      text:       '#000000'
+      background: '#ffffff'
     normal:
-      black:   '0x000000'
-      red:     '0xff0000'
-      green:   '0x33ff00'
-      yellow:  '0xff0099'
-      blue:    '0x0066ff'
-      magenta: '0xcc00ff'
-      cyan:    '0x00ffff'
-      white:   '0xffffff'
+      black:   '#000000'
+      red:     '#ff0000'
+      green:   '#00ff00'
+      yellow:  '#ffff00'
+      blue:    '#ff6600'
+      magenta: '#ff00ff'
+      cyan:    '#00ffff'
+      white:   '#ffffff'
+    bright:
+      black:   '#333333'
+      red:     '#ff0000'
+      green:   '#00ff00'
+      yellow:  '#ffff00'
+      blue:    '#ff6600'
+      magenta: '#ff00ff'
+      cyan:    '#00ffff'
+      white:   '#ffffff'
+      
   theme_dark: &dark
     primary:
-      background: '0x000000'
-      foreground: '0xffffff'
+      background: '#000000'
+      foreground: '#ffffff'
     selection:
-      text: '0x000000'
-      background: '0xffffff'
+      text:       '#000000'
+      background: '#ffffff'
     normal:
-      black:   '0x000000'
-      red:     '0xff0000'
-      green:   '0x33ff00'
-      yellow:  '0xff0099'
-      blue:    '0x0066ff'
-      magenta: '0xcc00ff'
-      cyan:    '0x00ffff'
-      white:   '0xffffff'
+      black:   '#000000'
+      red:     '#ff0000'
+      green:   '#00ff00'
+      yellow:  '#ffff00'
+      blue:    '#ff6600'
+      magenta: '#ff00ff'
+      cyan:    '#00ffff'
+      white:   '#ffffff'
+    bright:
+      black:   '#a9a9a9'
+      red:     '#ff0000'
+      green:   '#00ff00'
+      yellow:  '#ffff00'
+      blue:    '#ff6600'
+      magenta: '#ff00ff'
+      cyan:    '#00ffff'
+      white:   '#ffffff'
+
 
 colors: *dark
 

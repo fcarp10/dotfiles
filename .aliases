@@ -44,8 +44,8 @@ alias pac-mirrors='sudo reflector --country Germany --latest 10 --protocol https
 alias sway-appids='swaymsg -t get_tree | grep "app_id"'
 
 ## theme ##
-alias theme-light="gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3 && gsettings set org.gnome.desktop.interface color-scheme prefer-light && sed -i '72s/.*/colors: *light/' ~/.config/alacritty/alacritty.yml"
-alias theme-dark="gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-dark && gsettings set org.gnome.desktop.interface color-scheme prefer-dark && sed -i '72s/.*/colors: *dark/' ~/.config/alacritty/alacritty.yml"
+alias theme-light="gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3 && gsettings set org.gnome.desktop.interface color-scheme prefer-light && sed -i '95s/.*/colors: *light/' ~/.config/alacritty/alacritty.yml"
+alias theme-dark="gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-dark && gsettings set org.gnome.desktop.interface color-scheme prefer-dark && sed -i '95s/.*/colors: *dark/' ~/.config/alacritty/alacritty.yml"
 
 ## docker ##
 alias docker-rmct='docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)'
