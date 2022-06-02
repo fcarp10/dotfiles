@@ -31,10 +31,12 @@
         "format": "{icon}",
         "tooltip-format": "{title}",
         "on-click": "activate",
-        "on-click-middle": "close"
+        "on-click-middle": "close",
     },
     "tray": {
         "spacing": 10,
+        "show-passive-items": true,
+        "reverse-direction": true,
     },
     "sway/language": {
         "format": "{}",
