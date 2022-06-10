@@ -4,10 +4,11 @@
 call plug#begin('~/.config/nvim/plugged')
 
 " appearance
-Plug 'cpea2506/one_monokai.nvim'
 Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'vim-airline/vim-airline'
+Plug 'agude/vim-eldar'
+Plug 'bignimbus/pop-punk.vim'
 
 " latex
 Plug 'lervag/vimtex'
@@ -18,9 +19,8 @@ call plug#end()
 
 " == Colors ==
 
-syntax on										" syntax highlighting
-colorscheme one_monokai							" theme
-
+syntax on		" syntax highlighting
+colorscheme pop-punk
 
 " == Options ==
 set number										" shows line numbers
@@ -64,3 +64,4 @@ let g:vimtex_view_general_viewer = 'evince'
 " `update` ensures document is saved before single-shot compilation
 noremap <leader>ll <Cmd>update<CR><Cmd>VimtexCompileSS<CR>
 
+let g:livepreview_previewer = 'okular'
