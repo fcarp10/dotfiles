@@ -113,6 +113,6 @@
                 ""
             ]
         },
-        "on-click": "easyeffects"
+        "on-click": "pavucontrol"
     },
 }

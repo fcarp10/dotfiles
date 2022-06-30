@@ -48,6 +48,7 @@ alias theme-light="gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3 
 alias theme-dark="gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-dark && gsettings set org.gnome.desktop.interface color-scheme prefer-dark && sed -i '95s/.*/colors: *dark/' ~/.config/alacritty/alacritty.yml"
 
 ## docker ##
+alias docker-start="sudo systemctl start docker"
 alias docker-rmct='docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)'
 alias docker-rmimg='docker rmi -f $(docker images -a -q)'
 
