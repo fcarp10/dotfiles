@@ -35,10 +35,12 @@ alias bat-custom='sudo cctk --PrimaryBattChargeCfg=Custom:50-80'
 
 ## pacman ##
 alias pac-orphans='sudo pacman -Qtdq | sudo pacman -Rns -'
+alias pac-optional='sudo pacman -Qttdq | sudo pacman -Rns -'
 alias pac-find='function _find-pacman(){ pacman -Qi | grep Name | grep $1;};_find-pacman'
 alias pac-installed='grep -i installed /var/log/pacman.log'
 alias pac-upgraded='grep -i upgraded /var/log/pacman.log'
 alias pac-mirrors='sudo reflector --country Germany --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
+alias pac-explicit='function _make_explicit(){sudo pacman -D --asexplicit $1;};_make_explicit'
 
 ## sway ##
 alias sway-appids='swaymsg -t get_tree | grep "app_id"'
