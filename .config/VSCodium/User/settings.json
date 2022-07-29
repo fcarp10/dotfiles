@@ -33,6 +33,8 @@
         "**/.factorypath": true
     },
     "git.enableSmartCommit": true,
+    "git.autofetch": true,
+    "git.confirmSync": false,
     "python.formatting.provider": "black",
     "python.languageServer": "None",
     "python.linting.pylintEnabled": true,
@@ -42,7 +44,7 @@
     "java.project.importOnFirstTimeStartup": "automatic",
     "latex-workshop.view.pdf.viewer": "tab",
     "latex-workshop.latex.recipe.default": "lastUsed",
-    "latex-workshop.view.pdf.backgroundColor": "#000000",
+    "latex-workshop.view.pdf.color.dark.backgroundColor": "#000000",
     "latex-workshop.latex.autoBuild.run": "onSave",
     "latex-workshop.message.warning.show": false,
     "latex-workshop.message.error.show": false,
@@ -103,10 +105,6 @@
     "[latex]": {
         "editor.fontFamily": "'Roboto'",
     },
-    "git.autofetch": true,
-    "git.confirmSync": false,
-    "dashboard.projectData": null,
-    "dashboard.openOnStartup": "always",
     "shellformat.effectLanguages": [
         "shellscript",
     ],
@@ -117,12 +115,11 @@
         "drawio": "re.sonny.Junction",
         "pdf": "re.sonny.Junction",
     },
-    "latex-workshop.texcount.autorun": "onSave",
     "cSpell.enableFiletypes": [
         "latex"
     ],
     "projectManager.git.baseFolders": [
         "~/repository"
     ],
-    "projectManager.git.maxDepthRecursion": 2
+    "projectManager.git.maxDepthRecursion": 2,
 }
