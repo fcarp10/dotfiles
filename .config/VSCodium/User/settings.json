@@ -33,6 +33,8 @@
         "**/.factorypath": true
     },
     "git.enableSmartCommit": true,
+    "git.autofetch": true,
+    "git.confirmSync": false,
     "python.formatting.provider": "black",
     "python.languageServer": "None",
     "python.linting.pylintEnabled": true,
@@ -41,6 +43,7 @@
     },
     "latex-workshop.view.pdf.viewer": "tab",
     "latex-workshop.latex.recipe.default": "lastUsed",
+    "latex-workshop.view.pdf.color.dark.backgroundColor": "#000000",
     "latex-workshop.latex.autoBuild.run": "onSave",
     "latex-workshop.message.warning.show": false,
     "latex-workshop.message.error.show": false,
@@ -101,8 +104,6 @@
     "[latex]": {
         "editor.fontFamily": "'Roboto'",
     },
-    "git.autofetch": true,
-    "git.confirmSync": false,
     "shellformat.effectLanguages": [
         "shellscript",
     ],
@@ -116,5 +117,4 @@
         "~/repository"
     ],
     "projectManager.git.maxDepthRecursion": 2,
-    "latex-workshop.view.pdf.color.dark.backgroundColor": "#000000"
 }
