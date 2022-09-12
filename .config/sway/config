@@ -160,6 +160,7 @@ bindsym $mod+t exec ferdium --enable-features=UseOzonePlatform --ozone-platform=
 bindsym $mod+y exec freetube --enable-features=UseOzonePlatform --ozone-platform=wayland
 bindsym $mod+p exec pamac-manager
 bindsym $mod+b exec blueberry
+bindsym $mod+Shift+n exec swaync-client -t -sw
 # SUPER + Shift
 bindsym $mod+shift+s exec signal-desktop --enable-features=UseOzonePlatform --ozone-platform=wayland
 # OTHERS
@@ -178,5 +179,6 @@ bindsym XF86MonBrightnessDown exec brightnessctl set 10%- | sed -En 's/.*\(([0-9
 exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec nm-applet --indicator &
 exec sworkstyle &> /tmp/sworkstyle.log
+exec swaync
 
 include /etc/sway/config.d/*
