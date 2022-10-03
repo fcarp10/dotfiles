@@ -136,7 +136,7 @@ bindsym $mod+ctrl+space layout toggle split
 bindsym $mod+f fullscreen
 bindsym $mod+Shift+f fullscreen global
 # Toggle the current focus between tiling and floating mode
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+space floating toggle
 # Moving between workspaces
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
@@ -157,9 +157,8 @@ bindsym $mod+a exec thunderbird
 bindsym $mod+s exec element-desktop --enable-features=UseOzonePlatform --ozone-platform=wayland
 bindsym $mod+z exec thunar
 bindsym $mod+t exec ferdium --enable-features=UseOzonePlatform --ozone-platform=wayland 
-bindsym $mod+y exec freetube --enable-features=UseOzonePlatform --ozone-platform=wayland
-bindsym $mod+p exec pamac-manager
-bindsym $mod+b exec blueberry 
+bindsym $mod+b exec blueberry
+bindsym $mod+x exec swaync-client -t -sw
 # SUPER + Shift
 bindsym $mod+shift+s exec signal-desktop --enable-features=UseOzonePlatform --ozone-platform=wayland
 # OTHERS
@@ -178,5 +177,6 @@ bindsym XF86MonBrightnessDown exec brightnessctl set 10%- | sed -En 's/.*\(([0-9
 exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec nm-applet --indicator &
 exec sworkstyle &> /tmp/sworkstyle.log
+exec swaync
 
 include /etc/sway/config.d/*

@@ -41,7 +41,6 @@
     "[python]": {
         "editor.defaultFormatter": "ms-python.python",
     },
-    "java.project.importOnFirstTimeStartup": "automatic",
     "latex-workshop.view.pdf.viewer": "tab",
     "latex-workshop.latex.recipe.default": "lastUsed",
     "latex-workshop.view.pdf.color.dark.backgroundColor": "#000000",
@@ -110,11 +109,7 @@
     ],
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "explorer.confirmDragAndDrop": false,
-    "go.toolsManagement.autoUpdate": true,
-    "openInApplication.applications": {
-        "drawio": "re.sonny.Junction",
-        "pdf": "re.sonny.Junction",
-    },
+    "latex-workshop.texcount.autorun": "onSave",
     "cSpell.enableFiletypes": [
         "latex"
     ],
