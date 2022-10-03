@@ -2,7 +2,7 @@
 # exec syncthing &
 
 ###### Xwayland Support ######
-xwayland disable
+# xwayland disable
 
 ### input
 input type:touchpad {
