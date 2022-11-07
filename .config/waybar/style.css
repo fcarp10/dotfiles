@@ -1,5 +1,6 @@
-@define-color bordercolor #666666; /* light gray */
-@define-color criticalcolor #ff6347;	/* red */
+@define-color blackcolor #000000;
+@define-color whitecolor #ffffff;
+@define-color redcolor #ff6347;
 
 * {
     border: none;
@@ -10,23 +11,26 @@
 }
 
 window#waybar {
-    background: shade(alpha(@theme_base_color, 0.6), 1.0); /* bar 90% darker and 40% transparent */
+    background: shade(alpha(@blackcolor, 0.4), 0.1); /* transparency and darkness */
     border-bottom: 0px solid @unfocused_borders;
-    color: @theme_text_color;
+    color: @whitecolor;
 }
 
 #workspaces button {
     padding-left: 20px;
     padding-right: 20px;
-    border-top: 2px solid shade(alpha(@theme_base_color, 0.6), 0.1);
+    color: shade(@whitecolor, 0.6); 
+    border-top: 2px solid shade(alpha(@blackcolor, 0.4), 0.1);
 }
 
 #workspaces button.focused {
-    border-top: 2px solid @bordercolor;
+    color: @whitecolor;
+    border-top: 2px solid @whitecolor;
 }
 
 #tray, #language, #idle_inhibitor, #pulseaudio, #temperature, #cpu, #memory,#battery, #clock{
-    border-top: 2px solid @bordercolor;
+    border-top: 2px solid shade(@whitecolor, 0.6);
+    color: @whitecolor;
 }
 
 #tray {
@@ -81,9 +85,9 @@ window#waybar {
 }
 
 #temperature.critical {
-    color: @criticalcolor;
+    color: @redcolor;
 }
 
 #battery.warning:not(.charging) {
-    color:  @criticalcolor;
+    color:  @redcolor;
 } 
