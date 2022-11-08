@@ -34,6 +34,7 @@ alias pac-installed='grep -i installed /var/log/pacman.log'
 alias pac-upgraded='grep -i upgraded /var/log/pacman.log'
 alias pac-mirrors='sudo reflector --country Germany --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
 alias pac-explicit='function _make_explicit(){sudo pacman -D --asexplicit $1;};_make_explicit'
+alias pac-aur='sudo pacman -Qqm'
 
 ## sway ##
 alias sway-appids='swaymsg -t get_tree | grep "app_id"'
