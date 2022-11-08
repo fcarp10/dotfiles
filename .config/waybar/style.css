@@ -19,30 +19,32 @@ window#waybar {
 #workspaces button {
     padding-left: 20px;
     padding-right: 20px;
-    color: shade(@whitecolor, 0.6); 
-    border-top: 2px solid shade(alpha(@blackcolor, 0.4), 0.1);
+    color: shade(@whitecolor, 1.0); 
+    /* border-top: 2px solid shade(alpha(@blackcolor, 0.4), 0.1); */
 }
 
 #workspaces button.focused {
     color: @whitecolor;
-    border-top: 2px solid @whitecolor;
+    background: shade(alpha(@whitecolor, 0.4), 0.6);
+    /* border-top: 2px solid @whitecolor; */
+}
+
+#workspaces button:hover {
+    color: @whitecolor;
+    /* background: shade(alpha(@whitecolor, 0.4), 0.6); */
 }
 
 #tray, #language, #idle_inhibitor, #pulseaudio, #temperature, #cpu, #memory,#battery, #clock{
-    border-top: 2px solid shade(@whitecolor, 0.6);
+    /* border-top: 2px solid shade(@whitecolor, 0.6); */
     color: @whitecolor;
 }
 
 #tray {
-    padding-left: 5px;
-    padding-right: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 #language{
-    padding-left: 7px;
-    margin-left: 5px;
     padding-right: 15px;
 }
 
@@ -51,20 +53,14 @@ window#waybar {
 }
 
 #pulseaudio{
-    padding-right: 5px;
-    margin-right: 5px;
+    padding-right: 15px;
 }
 
 #battery {
-    padding-left: 5px;
-    padding-right: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
+    padding-right: 15px;
 }
 
 #temperature{
-    padding-left: 7px;
-    margin-left: 5px;
     padding-right: 15px;
 }
 
@@ -73,15 +69,11 @@ window#waybar {
 }
 
 #memory{
-    padding-right: 5px;
-    margin-right: 5px;
+    padding-right: 15px;
 }
 
 #clock{
-    padding-left: 5px;
     padding-right: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
 }
 
 #temperature.critical {
