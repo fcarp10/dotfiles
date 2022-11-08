@@ -73,7 +73,7 @@ window#waybar {
 }
 
 #clock{
-    padding-right: 5px;
+    padding-right: 15px;
 }
 
 #temperature.critical {
