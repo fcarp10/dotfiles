@@ -8,7 +8,7 @@ bindsym $mod+d exec wofi --show drun
 set $calendar $term -e khal interactive
 
 ###### Wallpaper ######
-output * bg wallpaper.jpg fill
+output * bg wallpaper3.jpg fill
 
 ###### setup configuration ######
 include $HOME/.config/sway/setup_$setupN
