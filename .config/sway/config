@@ -177,6 +177,6 @@ bindsym XF86MonBrightnessDown exec brightnessctl set 10%- | sed -En 's/.*\(([0-9
 exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec nm-applet --indicator &
 exec sworkstyle &> /tmp/sworkstyle.log
-exec swaync
+exec mako
 
 include /etc/sway/config.d/*
