@@ -34,7 +34,7 @@ window#waybar {
     /* background: shade(alpha(@whitecolor, 0.4), 0.6); */
 }
 
-#tray, #language, #idle_inhibitor, #pulseaudio, #temperature, #cpu, #memory,#battery, #clock{
+#tray, #language, #idle_inhibitor, #pulseaudio, #temperature, #cpu, #memory,#battery, #disk, #clock{
     /* border-top: 2px solid shade(@whitecolor, 0.6); */
     color: @whitecolor;
 }
@@ -69,6 +69,10 @@ window#waybar {
 }
 
 #memory{
+    padding-right: 15px;
+}
+
+#disk{
     padding-right: 15px;
 }
 
