@@ -87,3 +87,19 @@ window#waybar {
 #battery.warning:not(.charging) {
     color:  @redcolor;
 } 
+
+#battery.critical {
+    color:  @redcolor;
+} 
+
+#cpu.critical {
+    color: @redcolor;
+}
+
+#memory.critical {
+    color: @redcolor;
+}
+
+#disk.critical {
+    color: @redcolor;
+}
