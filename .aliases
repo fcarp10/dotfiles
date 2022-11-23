@@ -20,11 +20,11 @@ alias cheat='function _cheat(){ curl cheat.sh/$1; };_cheat'
 alias cryp='function _cryp(){ curl rate.sx/$1; };_cryp'
 
 ## ssh ##
-alias ssh-rpi='ssh ubuntu@192.168.50.233'
-alias ssh-rpi-shutdown='ssh ubuntu@192.168.50.233 "sudo shutdown now"'
+alias ssh-rpi-home='ssh ubuntu@192.168.50.233'
 alias ssh-office='ssh vegeta@192.168.100.3'
-alias ssh-alex='ssh alex@192.168.100.11'
+alias ssh-rpi='ssh ubuntu@192.168.100.4'
 alias ssh-manu='ssh manu@192.168.100.10'
+alias ssh-alex='ssh alex@192.168.100.11'
 
 ## pacman ##
 alias pac-orphans='sudo pacman -Qtdq | sudo pacman -Rns -'
