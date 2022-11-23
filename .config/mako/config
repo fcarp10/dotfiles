@@ -1,5 +1,5 @@
 sort=-time
-layer=top
+layer=overlay
 markup=1
 actions=1
 default-timeout=5000
