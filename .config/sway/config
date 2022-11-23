@@ -1,5 +1,5 @@
 ###### Setup confing (1: laptop, 2: desktop) ######
-set $setupN 2
+set $setupN 1
 
 ###### Variables ######
 set $mod Mod4
