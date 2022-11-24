@@ -37,47 +37,8 @@ window#waybar {
 #tray, #language, #idle_inhibitor, #pulseaudio, #temperature, #cpu, #memory,#battery, #disk, #clock{
     /* border-top: 2px solid shade(@whitecolor, 0.6); */
     color: @whitecolor;
-}
-
-#tray {
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-#language{
-    padding-right: 15px;
-}
-
-#idle_inhibitor{
-    padding-right: 15px;
-}
-
-#pulseaudio{
-    padding-right: 15px;
-}
-
-#battery {
-    padding-right: 15px;
-}
-
-#temperature{
-    padding-right: 15px;
-}
-
-#cpu{
-    padding-right: 15px;
-}
-
-#memory{
-    padding-right: 15px;
-}
-
-#disk{
-    padding-right: 15px;
-}
-
-#clock{
-    padding-right: 15px;
+    padding-left: 12px;
+    padding-right: 12px;
 }
 
 #temperature.critical {

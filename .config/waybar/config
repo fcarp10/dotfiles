@@ -12,6 +12,7 @@
         "sway/language",
         "idle_inhibitor",
         "pulseaudio",
+        "pulseaudio#mic",
         "battery",
         "temperature",
         "cpu",
@@ -72,7 +73,7 @@
         "critical-threshold": 80,
         "thermal-zone": 1,
         "format": "{icon} {temperatureC}°C",
-        "format-critical": "{icon}  {temperatureC}°C",
+        "format-critical": "{icon} {temperatureC}°C",
         "format-icons": {
             "default": [
                 "",
@@ -105,8 +106,8 @@
     },
     "pulseaudio": {
         "format": "{icon} {volume}%",
-        "format-bluetooth": " {icon} {volume}%",
-        "format-muted": "婢 ",
+        "format-bluetooth": "{icon} {volume}%",
+        "format-muted": "",
         "format-icons": {
             "headphone": "",
             "default": [
@@ -114,7 +115,19 @@
                 ""
             ]
         },
-        "on-click": "pavucontrol"
+        "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+        "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-click-right": "pavucontrol"
+    },
+    "pulseaudio#mic": {
+        "format": "{format_source}",
+        "format-source": " {volume}%",
+        "format-source-muted": "",
+        "on-scroll-up": "pactl set-source-volume @DEFAULT_SOURCE@ +5%",
+        "on-scroll-down": "pactl set-source-volume @DEFAULT_SOURCE@ -5%",
+        "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+        "on-click-right": "pavucontrol"
     },
     "disk": {
         "interval": 30,
