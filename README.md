@@ -1,11 +1,5 @@
 # Dotfiles 
 
-My [sway](https://github.com/swaywm/sway) configuration.
-
-![sway_desktop](sway.png)
-
-## Current setup
-
 - OS: [Arch Linux](https://archlinux.org/)
 - Wayland compositor: [Sway](https://github.com/swaywm/sway)
 - Shell: [Zsh](https://www.zsh.org/)
