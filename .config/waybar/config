@@ -62,12 +62,14 @@
         "states": {
             "critical": 90,
         },
+        "on-click": "swaymsg exec \\$monitor",
     },
     "memory": {
         "format": " {}%",
         "states": {
             "critical": 90,
         },
+        "on-click": "swaymsg exec \\$monitor",
     },
     "temperature": {
         "critical-threshold": 80,
@@ -83,6 +85,7 @@
                 ""
             ],
         },
+        "on-click": "swaymsg exec \\$monitor",
     },
     "battery": {
         "bat": "BAT0",
@@ -136,5 +139,6 @@
         "states": {
             "critical": 90,
         },
+        "on-click": "swaymsg exec \\$disk",
     },
 }
