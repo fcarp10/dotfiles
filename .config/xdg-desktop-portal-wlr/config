@@ -1,0 +1,3 @@
+[screencast]
+exec_before=notify-send "DND ON" && sleep 2 && makoctl set-mode dnd
+exec_after=makoctl set-mode default && notify-send "DND OFF"
