@@ -5,7 +5,7 @@ set $setupN 2
 set $mod Mod4
 set $term alacritty
 bindsym $mod+d exec wofi --show drun
-set $calendar $term -e khal interactive
+set $calendar thunderbird -calendar
 set $disk $term -e $SHELL -c 'duf && $SHELL'
 set $monitor $term -e $SHELL -c 'btop'
 

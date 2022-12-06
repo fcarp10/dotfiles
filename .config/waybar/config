@@ -45,7 +45,10 @@
         "format": "{:%a %b %d %R}",
         "tooltip-format": "<big>{:%B %Y}</big>\n<tt>{calendar}</tt>",
         "on-click": "swaymsg exec \\$calendar",
-        "locale": "de_DE.UTF8"
+        "locale": "en_IE.UTF-8",
+        "today-format": "<span color='#ff6699'><b><u>{}</u></b></span>",
+        "format-calendar": "<span color='#ffffff'><b>{}</b></span>",
+        "format-calendar-weekdays": "<span color='#ffcc66'><b>{}</b></span>",
     },
     "idle_inhibitor": {
         "format": "{icon}",

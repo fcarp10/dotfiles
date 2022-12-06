@@ -21,5 +21,5 @@ output 'Dell Inc. DELL P2414H KKMMW6BF0VFB' mode 1920x1080 position 3840,60
 
 ### idle
 exec swayidle -w \
-    timeout 600 "alacritty -t Screensaver -e zsh -c 'sleep .1 && cmatrix' &" \
+    timeout 600 "alacritty -t Screensaver -e zsh -c 'sleep .1 && cava' &" \
     timeout 900 'swaylock -f -c 000000B3'
