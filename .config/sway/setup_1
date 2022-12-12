@@ -35,7 +35,8 @@ input type:keyboard {
 
 ### output
 output eDP-1 mode 3456x2160 position 0,0 scale 2
-output 'Goldstar Company Ltd LG HDR 4K 0x000062D5' mode 3840x2160 position 1728,0 scale 1.5
+output "Goldstar Company Ltd LG HDR 4K 0x000062D5" mode 3840x2160 position 1728,0 scale 1.5
+
 
 # laptop lid
 set $laptop eDP-1
@@ -48,4 +49,8 @@ exec swayidle -w \
     timeout 600 'swaylock -f -c 000000B3' \
     timeout 900 'systemctl suspend'
 
-
+### specific binding
+bindsym $mod+ctrl+0 exec swaymsg output eDP-1 disable
+bindsym $mod+ctrl+Shift+0 exec swaymsg output eDP-1 enable
+bindsym $mod+alt+0 exec swaymsg output '"Goldstar Company Ltd LG HDR 4K 0x000062D5"' scale 1
+bindsym $mod+ctrl+alt+0 exec swaymsg output '"Goldstar Company Ltd LG HDR 4K 0x000062D5"' scale 1.5
