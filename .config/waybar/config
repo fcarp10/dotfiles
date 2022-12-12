@@ -23,16 +23,16 @@
         "disable-click": false,
     },
     "sway/window": {
-        "format": "{}",
+        "format": "{title}"
     },
-    "wlr/taskbar": {
-        "all-outputs": false,
-        "active-first": true,
-        "format": "{icon}",
-        "tooltip-format": "{title}",
-        "on-click": "activate",
-        "on-click-middle": "close",
-    },
+    // "wlr/taskbar": {
+    //     "all-outputs": false,
+    //     "active-first": true,
+    //     "format": "{icon}",
+    //     "tooltip-format": "{title}",
+    //     "on-click": "activate",
+    //     "on-click-middle": "close",
+    // },
     "tray": {
         "spacing": 10,
         "show-passive-items": true,
