@@ -42,6 +42,21 @@ bar {
 set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock
 exec rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob
 exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+# global opacity
+set $opacity 0.9
+for_window [class=".*"] opacity $opacity
+for_window [app_id=".*"] opacity $opacity
+# colors 
+set $bg #000000
+set $br #888888
+set $brbug #FF0000
+# class                 border  backgr. text    indicator child_border
+client.focused          $br     $br     $br     $brbug    $br
+client.focused_inactive $bg     $bg     $br     $bg       $bg
+client.unfocused        $bg     $bg     $br     $bg       $bg
+client.urgent          	$br     $br     $br     $bg       $br 
+client.placeholder     	$br     $br     $br     $bg       $br 
+
 
 ###### windows behavior ######
 # fullscreen
