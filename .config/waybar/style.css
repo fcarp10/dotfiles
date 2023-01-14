@@ -35,7 +35,7 @@ window#waybar {
     padding-left: 25px;
 }
 
-#tray, #language, #idle_inhibitor, #pulseaudio, #temperature, #cpu, #memory,#battery, #disk, #clock{
+#tray, #language, #idle_inhibitor, #pulseaudio, #temperature, #cpu, #memory,#battery, #disk, #clock, #network{
     color: @whitecolor;
     padding-left: 12px;
     padding-right: 12px;
