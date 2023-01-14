@@ -3,11 +3,10 @@ env:
 
 window:
   padding:
-    x: 6
-    y: 6
+    x: 10
+    y: 10
     
   dynamic_padding: true
-
   title: Alacritty
 
   class:
@@ -19,24 +18,26 @@ window:
 scrolling:
   history: 5000
 
-
 font:
   normal:
-    family: MesloLGS NF
+    family: JetBrains Mono Nerd Font
     style: Regular
   bold:
-    family: MesloLGS NF
+    family: JetBrains Mono Nerd Font
     style: Bold
   italic:
-    family: MesloLGS NF
+    family: JetBrains Mono Nerd Font
     style: Italic
   bold_italic:
-    family: MesloLGS NF
+    family: JetBrains Mono Nerd Font
     style: Bold Italic
   size: 11.0
   offset:
     x: 0
-    y: 1
+    y: 4
+  glyph_offset:
+    x: 0
+    y: 4
 
 schemes:
   theme_light: &light
@@ -90,9 +91,6 @@ schemes:
       magenta: '#ff00ff'
       cyan:    '#00ffff'
       white:   '#ffffff'
-
-
+      
 colors: *dark
-
- 
 

@@ -15,15 +15,13 @@ output * bg wallpaper3.jpg fill
 ###### setup configuration ######
 include $HOME/.config/sway/setup_$setupN
 
-###### Theming ######
-default_border none 
+###### Theming ###### 
 gaps outer 0
 gaps inner 5
 smart_gaps on
 smart_borders on
-default_border pixel 2
+default_border pixel 1
 default_floating_border none
-default_floating_border pixel 2
 set $my_theme adw-gtk3-dark
 set $my_icon_theme Vimix-Doder-dark
 set $my_cursor BreezeX-Black
@@ -137,7 +135,7 @@ bindsym $mod+ctrl+space layout toggle split
 bindsym $mod+f fullscreen
 bindsym $mod+Shift+f fullscreen global
 # Toggle the current focus between tiling and floating mode
-bindsym $mod+space floating toggle
+bindsym $mod+space floating toggle; border none
 # Moving between workspaces
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
