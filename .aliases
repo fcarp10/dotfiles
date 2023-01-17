@@ -2,9 +2,9 @@ alias aliases='function _get_alias(){ grep -r alias ~/.aliases | grep -v \# |  g
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 ## ls ##
-alias ls='ls --color=auto'
-alias ll='ls -la'
-alias l.='ls -d .* --color=auto'
+alias ls='lsd'
+alias ll='lsd -la'
+alias l.='lsd -d .* --color=auto'
 
 ## cd ##
 alias dl="cd ~/Downloads"
