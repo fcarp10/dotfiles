@@ -8,6 +8,7 @@
     font-family:"Roboto Mono", "Font Awesome 6 Free Solid"; 
     font-size: 14px;
     font-weight: bolder;
+    min-height: 25px;
 }
 
 window#waybar {
