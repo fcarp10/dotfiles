@@ -8,7 +8,7 @@ Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'vim-airline/vim-airline'
 Plug 'agude/vim-eldar'
-Plug 'bignimbus/pop-punk.vim'
+Plug 'sainnhe/sonokai'
 
 " latex
 Plug 'lervag/vimtex'
@@ -20,7 +20,14 @@ call plug#end()
 " == Colors ==
 
 syntax on		" syntax highlighting
-colorscheme pop-punk
+" Important!!
+if has('termguicolors')
+	set termguicolors
+endif
+" The configuration options should be placed before `colorscheme sonokai`.
+let g:sonokai_style = 'andromeda'
+let g:sonokai_better_performance = 1
+colorscheme sonokai 
 
 " == Options ==
 set number										" shows line numbers
@@ -64,4 +71,9 @@ let g:vimtex_view_general_viewer = 'evince'
 " `update` ensures document is saved before single-shot compilation
 noremap <leader>ll <Cmd>update<CR><Cmd>VimtexCompileSS<CR>
 
-let g:livepreview_previewer = 'okular'
+let g:vimtex_quickfix_ignore_filters = [
+  \'Underfull \\hbox (badness [0-9]*) in ',
+  \'Overfull \\hbox ([0-9]*.[0-9]*pt too wide) in ',
+  \'Package hyperref Warning: Token not allowed in a PDF string',
+  \'Package typearea Warning: Bad type area settings!',
+  \]

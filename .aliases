@@ -1,17 +1,18 @@
 alias aliases='function _get_alias(){ grep -r alias ~/.aliases | grep -v \# |  grep alias; };_get_alias'
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
-## ls ##
+## mappings ##
+alias l='lsd'
 alias ls='lsd'
 alias ll='lsd -la'
 alias l.='lsd -d .* --color=auto'
-
-## cd ##
+alias cat='bat'
 alias dl="cd ~/Downloads"
 alias rp="cd ~/repository"
 alias ..='cd ..'
 alias ...='cd ../../../'
 alias ....='cd ../../../../'
+alias kubectl='kubecolor'
 
 ## web apps ##
 alias wt='function _wt(){ curl wttr.in/$1; };_wt'

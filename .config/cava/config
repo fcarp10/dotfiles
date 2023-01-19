@@ -19,7 +19,7 @@
 # 200 means double height. Accepts only non-negative values.
 ; sensitivity = 100
 
-# The number of bars (0-200). 0 sets it to auto (fill up console).
+# The number of bars (0-512). 0 sets it to auto (fill up console).
 # Bars' width and space between bars in number of characters.
 ; bars = 0
 ; bar_width = 2
@@ -30,6 +30,10 @@
 # For SDL width and space between bars is in pixels, defaults are:
 ; bar_width = 20
 ; bar_spacing = 5
+
+# sdl_glsl have these default values, they are only used to calulate max number of bars.
+; bar_width = 1
+; bar_spacing = 0
 
 
 # Lower and higher cutoff frequencies for lowest and highest bars
@@ -49,6 +53,7 @@
 
 # Audio capturing method. Possible methods are: 'pulse', 'alsa', 'fifo', 'sndio' or 'shmem'
 # Defaults to 'pulse', 'alsa' or 'fifo', in that order, dependent on what support cava was built with.
+# On windows this is automatic and no input settings are needed.
 #
 # All input methods uses the same config variable 'source'
 # to define where it should get the audio.
@@ -79,7 +84,8 @@ source = mic
 
 [output]
 
-# Output method. Can be 'ncurses', 'noncurses', 'raw', 'noritake' or 'sdl'.
+# Output method. Can be 'ncurses', 'noncurses', 'raw', 'noritake', 'sdl'
+# or 'sdl_glsl'.
 # 'noncurses' uses a custom framebuffer technique and prints only changes
 # from frame to frame in the terminal. 'ncurses' is default if supported.
 #
@@ -91,6 +97,8 @@ source = mic
 #  in graphic mode. It only support the 3000 series graphical VFDs for now.
 #
 # 'sdl' uses the Simple DirectMedia Layer to render in a graphical context.
+# 'sdl_glsl' uses SDL to create an OpenGL context. Write your own shaders or
+# use one of the predefined ones.
 ; method = ncurses
 
 # Orientation of the visualization. Can be 'bottom', 'top', 'left' or 'right'.
@@ -141,6 +149,13 @@ source = mic
 # defaults to off since the behaviour in other terminal emulators is unknown
 ; alacritty_sync = 0
 
+# Shaders for sdl_glsl, located in $HOME/.config/cava/shaders
+; vertex_shader = pass_through.vert
+; fragment_shader = normalized_bars.frag
+
+; for glsl output mode, keep rendering even if no audio
+; continuous_rendering = 0
+
 [color]
 
 # Colors can be one of seven predefined: black, blue, cyan, green, magenta, red, white, yellow.
@@ -150,9 +165,9 @@ source = mic
 ; background = default
 ; foreground = default
 
-# SDL only support hex code colors, these are the default:
+# SDL and sdl_glsl only support hex code colors, these are the default:
 ; background = '#111111'
-; foreground = '#33cccc'
+; foreground = '#33ffff'
 
 
 # Gradient mode, only hex defined colors are supported,
@@ -192,10 +207,10 @@ gradient_color_8 = '#cc3333'
 # DEPRECATED as of 0.8.0
 ; ignore = 0
 
-# Noise reduction, float 0 - 1. default 0.77
+# Noise reduction, int 0 - 100. default 77
 # the raw visualization is very noisy, this factor adjusts the integral and gravity filters to keep the signal smooth
 # 1 will be very slow and smooth, 0 will be fast but noisy.
-; noise_reduction = 0.77
+; noise_reduction = 77
 
 
 [eq]
