@@ -5,7 +5,7 @@ window:
   padding:
     x: 10
     y: 10
-    
+
   dynamic_padding: true
   title: Alacritty
 
@@ -13,7 +13,7 @@ window:
     instance: Alacritty
     general: Alacritty
 
-  opacity: 0.6
+  opacity: 0.8
 
 scrolling:
   history: 5000
@@ -39,58 +39,31 @@ font:
     x: 0
     y: 4
 
-schemes:
-  theme_light: &light
-    primary:
-      background: '#ffffff'
-      foreground: '#000000'
-    selection:
-      text:       '#000000'
-      background: '#ffffff'
-    normal:
-      black:   '#000000'
-      red:     '#ff0000'
-      green:   '#00ff00'
-      yellow:  '#ffff00'
-      blue:    '#ff6600'
-      magenta: '#ff00ff'
-      cyan:    '#00ffff'
-      white:   '#ffffff'
-    bright:
-      black:   '#333333'
-      red:     '#ff0000'
-      green:   '#00ff00'
-      yellow:  '#ffff00'
-      blue:    '#ff6600'
-      magenta: '#ff00ff'
-      cyan:    '#00ffff'
-      white:   '#ffffff'
-      
-  theme_dark: &dark
-    primary:
-      background: '#000000'
-      foreground: '#ffffff'
-    selection:
-      text:       '#000000'
-      background: '#ffffff'
-    normal:
-      black:   '#000000'
-      red:     '#ff0000'
-      green:   '#00ff00'
-      yellow:  '#ffff00'
-      blue:    '#ff6600'
-      magenta: '#ff00ff'
-      cyan:    '#00ffff'
-      white:   '#ffffff'
-    bright:
-      black:   '#a9a9a9'
-      red:     '#ff0000'
-      green:   '#00ff00'
-      yellow:  '#ffff00'
-      blue:    '#ff6600'
-      magenta: '#ff00ff'
-      cyan:    '#00ffff'
-      white:   '#ffffff'
-      
-colors: *dark
+colors:
+  # Default colors
+  primary:
+    background: '#000000'
+    foreground: '#ffffff'
 
+  # Normal colors
+  normal:
+    black: '#403E41'
+    red: '#FF6188'
+    green: '#A9DC76'
+    yellow: '#FFD866'
+    blue: '#FC9867'
+    magenta: '#AB9DF2'
+    cyan: '#78DCE8'
+    white: '#FCFCFA'
+
+  # Bright colors
+  bright:
+    black: '#727072'
+    red: '#FF6188'
+    green: '#A9DC76'
+    yellow: '#FFD866'
+    blue: '#FC9867'
+    magenta: '#AB9DF2'
+    cyan: '#78DCE8'
+    white: '#FCFCFA'
+theme: Monokai-Pro
