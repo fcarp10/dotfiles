@@ -13,7 +13,7 @@ window:
     instance: Alacritty
     general: Alacritty
 
-  opacity: 0.8
+  opacity: 1.0
 
 scrolling:
   history: 5000

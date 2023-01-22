@@ -4,7 +4,8 @@ alias c='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 ## mappings ##
 alias l='lsd'
 alias ls='lsd'
-alias ll='lsd -la'
+alias lla='lsd -la'
+alias ll='lsd -l'
 alias l.='lsd -d .* --color=auto'
 alias cat='bat'
 alias dl="cd ~/Downloads"
@@ -14,6 +15,9 @@ alias ...='cd ../../../'
 alias ....='cd ../../../../'
 alias kubectl='kubecolor'
 alias nv='nvim'
+alias vim='nvim'
+alias vi='nvim'
+alias nano='nvim'
 
 ## web apps ##
 alias wt='function _wt(){ curl wttr.in/$1; };_wt'
