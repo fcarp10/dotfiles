@@ -1,5 +1,5 @@
 ###### Setup confing (1: laptop, 2: desktop) ######
-set $setupN 2
+set $setupN 1
 
 ###### Variables ######
 set $mod Mod4
@@ -174,6 +174,8 @@ bindsym $mod+z exec thunar
 bindsym $mod+t exec ferdium --ozone-platform-hint=auto
 bindsym $mod+b exec blueberry
 bindsym $mod+x exec swaync-client -t -sw
+bindsym $mod+o exec swaymsg opacity 1.0
+
 # SUPER + Shift
 bindsym $mod+shift+s exec signal-desktop --ozone-platform-hint=auto
 # OTHERS
