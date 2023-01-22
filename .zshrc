@@ -83,6 +83,11 @@ plugins=(
 	zsh-autosuggestions
 	zsh-autocomplete
 	zsh-syntax-highlighting
+	sudo
+#	copydir
+	copybuffer
+	dirhistory
+	fzf
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -121,3 +126,5 @@ eval $(thefuck --alias f)
 
 # Customize zsh-autocomplete 
 zstyle ':autocomplete:*' insert-unambiguous yes
+zstyle ':autocomplete:*' fzf-completion yes
+zstyle ':autocomplete:*' widget-style menu-select
