@@ -13,7 +13,6 @@ alias rp="cd ~/repository"
 alias ..='cd ..'
 alias ...='cd ../../../'
 alias ....='cd ../../../../'
-alias kubectl='kubecolor'
 alias nv='nvim'
 alias vim='nvim'
 alias vi='nvim'

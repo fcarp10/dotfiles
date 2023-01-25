@@ -24,7 +24,7 @@ smart_borders on
 default_border pixel 1
 default_floating_border none
 set $my_theme adw-gtk3-dark
-set $my_icon_theme Vimix-Doder-dark
+set $my_icon_theme Vimix-White-dark
 set $my_cursor BreezeX-Black
 set $my_cursor_size 40
 set $gnome-schema org.gnome.desktop.interface
@@ -70,7 +70,7 @@ for_window [app_id="nm-connection-editor"] floating enable
 for_window [app_id="blueberry.py"] floating enable
 for_window [title="Sharing Indicator"] border none; floating enable
 for_window [app_id="com.nextcloud.desktopclient.nextcloud"] floating enable
-for_window [app_id="nemo"] floating enable
+# for_window [app_id="nemo"] floating enable
 
 
 ###### Key bindings ######
