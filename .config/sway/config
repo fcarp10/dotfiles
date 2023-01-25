@@ -1,5 +1,5 @@
 ###### Setup confing (1: laptop, 2: desktop) ######
-set $setupN 1
+set $setupN 2
 
 ###### Variables ######
 set $mod Mod4
@@ -44,7 +44,7 @@ set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock
 exec rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob
 exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
 # global opacity
-set $opacity 0.9
+set $opacity 1.0
 for_window [class=".*"] opacity $opacity
 for_window [app_id=".*"] opacity $opacity
 # colors 
@@ -70,7 +70,7 @@ for_window [app_id="nm-connection-editor"] floating enable
 for_window [app_id="blueberry.py"] floating enable
 for_window [title="Sharing Indicator"] border none; floating enable
 for_window [app_id="com.nextcloud.desktopclient.nextcloud"] floating enable
-for_window [app_id="thunar" title="Progress"] floating enable
+for_window [app_id="nemo"] floating enable
 
 
 ###### Key bindings ######
@@ -170,7 +170,7 @@ bindsym $mod+w exec brave --enable-features=UseOzonePlatform --ozone-platform=wa
 bindsym $mod+e exec vscodium --enable-features=UseOzonePlatform --ozone-platform=wayland
 bindsym $mod+a exec thunderbird
 bindsym $mod+s exec element-desktop --ozone-platform-hint=auto
-bindsym $mod+z exec thunar
+bindsym $mod+z exec nemo
 bindsym $mod+t exec ferdium --ozone-platform-hint=auto
 bindsym $mod+b exec blueberry
 bindsym $mod+x exec swaync-client -t -sw
