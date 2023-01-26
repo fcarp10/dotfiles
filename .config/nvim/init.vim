@@ -13,6 +13,10 @@ Plug 'sainnhe/sonokai'
 " latex
 Plug 'lervag/vimtex'
 
+" others
+Plug 'tpope/vim-commentary'
+
+
 " initialize plugin system
 call plug#end()
 

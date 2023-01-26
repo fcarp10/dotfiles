@@ -11,10 +11,15 @@
     min-height: 25px;
 }
 
-window#waybar {
-    background: shade(alpha(@blackcolor, 0.4), 0.1); /* transparency and darkness */
+window#waybar{
+    background: shade(alpha(@blackcolor, 0.4), 1.0);
+    /* background: linear-gradient(to top, shade(alpha(@blackcolor, 0.1), 1.0), shade(alpha(@blackcolor, 0.6), 1.0)); */
     border-bottom: 0px solid @unfocused_borders;
     color: @whitecolor;
+}
+
+window#waybar.solo {
+    background: shade(alpha(@blackcolor, 1.0), 1.0); 
 }
 
 #workspaces button {
