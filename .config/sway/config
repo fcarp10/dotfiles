@@ -1,10 +1,9 @@
 ###### Setup confing (1: laptop, 2: desktop) ######
-set $setupN 1
+set $setupN 2
 
 ###### Variables ######
 set $mod Mod4
 set $term alacritty
-bindsym $mod+d exec wofi --show drun
 set $calendar thunderbird -calendar
 set $disk $term -e $SHELL -c 'duf && $SHELL'
 set $monitor $term -e $SHELL -c 'btop'
@@ -169,6 +168,7 @@ bindsym $mod+g exec firefox
 bindsym $mod+w exec brave --enable-features=UseOzonePlatform --ozone-platform=wayland
 bindsym $mod+e exec vscodium --enable-features=UseOzonePlatform --ozone-platform=wayland
 bindsym $mod+a exec thunderbird
+bindsym $mod+d exec rofi -show drun -theme $HOME/.config/rofi/style.rasi
 bindsym $mod+s exec element-desktop --ozone-platform-hint=auto
 bindsym $mod+z exec nemo
 bindsym $mod+t exec ferdium --ozone-platform-hint=auto
