@@ -1,6 +1,9 @@
-@define-color blackcolor #000000;
-@define-color whitecolor #ffffff;
-@define-color redcolor #ff6347;
+@define-color red	#FF6188;
+@define-color green	#A9DC76;
+@define-color yellow	#FFD866;
+@define-color orange 	#FC9867;
+@define-color purple	#AB9DF2;
+@define-color cyan	#78DCE8;
 
 * {
     border: none;
@@ -12,61 +15,59 @@
 }
 
 window#waybar{
-    background: shade(alpha(@blackcolor, 0.4), 1.0);
+    background: shade(alpha(black, 0.6), 1.0);
     /* background: linear-gradient(to top, shade(alpha(@blackcolor, 0.1), 1.0), shade(alpha(@blackcolor, 0.6), 1.0)); */
-    border-bottom: 0px solid @unfocused_borders;
-    color: @whitecolor;
 }
 
 window#waybar.solo {
-    background: shade(alpha(@blackcolor, 1.0), 1.0); 
+    background: black; 
 }
 
 #workspaces button {
     padding-left: 20px;
     padding-right: 20px;
-    color: shade(@whitecolor, 1.0); 
+    color: @cyan;
 }
 
 #workspaces button.focused {
-    color: @whitecolor;
-    background: shade(alpha(@whitecolor, 0.4), 0.6);
+    background: shade(alpha(white, 0.4), 0.6);
 }
 
 #workspaces button:hover {
-    color: @whitecolor;
+    color: white;
 }
 
 #window {
     padding-left: 25px;
+    color: @green;
 }
 
 #tray, #language, #idle_inhibitor, #pulseaudio, #temperature, #cpu, #memory,#battery, #disk, #clock, #network{
-    color: @whitecolor;
     padding-left: 12px;
     padding-right: 12px;
 }
 
-#temperature.critical {
-    color: @redcolor;
+#language, #idle_inhibitor, #network{
+   color: @yellow;
+}
+
+#pulseaudio {
+    color: @orange;
+}
+
+#battery, #temperature, #cpu, #memory, #disk{
+    color: @red;
+}
+
+#clock {
+    color: @purple;
+}
+
+#temperature.critical, #battery.critical, #cpu.critical, #memory.critical, #disk.critical{
+    color: red;
 }
 
 #battery.warning:not(.charging) {
-    color:  @redcolor;
+    color: red;
 } 
 
-#battery.critical {
-    color:  @redcolor;
-} 
-
-#cpu.critical {
-    color: @redcolor;
-}
-
-#memory.critical {
-    color: @redcolor;
-}
-
-#disk.critical {
-    color: @redcolor;
-}
