@@ -8,12 +8,21 @@
  **/
 
 /*****----- Configuration -----*****/
+/* configuration { */
+/* 	modi:                       "drun"; */
+/*     show-icons:                 true; */
+/*     display-drun:               ""; */
+/* 	drun-display-format:        "{name}"; */
+/* } */
+
 configuration {
-	modi:                       "drun";
+    modi:                       "drun,filebrowser";
     show-icons:                 true;
-    display-drun:               "";
-	drun-display-format:        "{name}";
+    display-drun:               "";
+    display-filebrowser:        "";
+    drun-display-format:        "{name}";
 }
+
 
 /*****----- Global Properties -----*****/
 * {
