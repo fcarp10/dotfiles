@@ -11,9 +11,11 @@
 configuration {
     modi:                       "drun,filebrowser";
     show-icons:                 true;
-    display-drun:               "";
+    display-drun:               "";
+    display-filebrowser:        "";
     drun-display-format:        "{name}";
 }
+
 
 /*****----- Global Properties -----*****/
 * {
