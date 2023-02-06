@@ -23,7 +23,7 @@ smart_borders on
 default_border pixel 1
 default_floating_border none
 set $my_theme adw-gtk3-dark
-set $my_icon_theme Vimix-White-dark
+set $my_icon_theme Papirus-Dark
 set $my_cursor BreezeX-Black
 set $my_cursor_size 40
 set $gnome-schema org.gnome.desktop.interface
