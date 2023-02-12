@@ -1,3 +1,5 @@
+include $HOME/.config/sway/config
+
 ### autostart
 exec syncthing &
 # exec wayvnc 0.0.0.0 &
