@@ -1,5 +1,7 @@
 ### autostart
 # exec syncthing &
+exec easyeffects --gapplication-service
+exec fusuma &
 
 ###### Xwayland Support ######
 # xwayland disable

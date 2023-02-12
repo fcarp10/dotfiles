@@ -1,0 +1,21 @@
+swipe:
+  3:
+    begin:
+      command: ydotool click 0x40
+    update:
+      command: ydotool mousemove -- $move_x, $move_y
+      interval: 0.01
+      accel: 2
+    end:
+      command: ydotool click 0x80
+  4:
+    left:
+      command: ydotool key 56:1 key 106:1 key 106:0 key 56:0
+    right:
+      command: ydotool key 56:1 key 105:1 key 105:0 key 56:0 
+# pinch:
+#   2:
+#     in:
+#       command: ydotool key 29:1 mousemove -w -- 0 1 key 29:0
+#     out:
+#       command: ydotool key 29:1 mousemove -w -- 0 -1 key 29:0
