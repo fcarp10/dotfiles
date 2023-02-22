@@ -162,7 +162,7 @@ bindsym $mod+g exec firefox
 bindsym $mod+w exec brave --enable-features=UseOzonePlatform --ozone-platform=wayland
 bindsym $mod+e exec vscodium --enable-features=UseOzonePlatform --ozone-platform=wayland
 bindsym $mod+a exec thunderbird
-bindsym $mod+d exec rofi -show drun -theme $HOME/.config/rofi/style.rasi
+bindsym $mod+d exec wofi --show drun
 bindsym $mod+s exec element-desktop --ozone-platform-hint=auto
 bindsym $mod+z exec nemo
 bindsym $mod+t exec ferdium --ozone-platform-hint=auto

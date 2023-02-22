@@ -1,7 +1,10 @@
 allow_images=true
 image_size=50px
-allow_markup=true
 insensitive=true
 hide_scroll=true
 no_actions=true
-term=alacritty 
+width=35%
+height=50%
+prompt=Search
+columns=1
+location=center

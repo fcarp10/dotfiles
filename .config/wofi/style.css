@@ -1,21 +1,20 @@
-@define-color bgcolor rgba(0, 0, 0, 1.0); /* black transparent */
-@define-color fgcolor #f2f2f2;	/* white */
-@define-color secondarycolor #282828; /* dark gray */
+@define-color bgcolor #000000;
+@define-color secondarycolor #1a1a1a;
 
 window {
 	background: @bgcolor;
-	color: @fgcolor;
-	border-radius: 4px;
-	border: 2px solid @secondarycolor;
+	color: @secondarycolor;
+	border-radius: 5px;
+	border: 1px solid @secondarycolor;
 }
 
 #outer-box {
-	margin: 20px;	
+	margin: 30px;	
 }
 
 #input {
-	background: @secondarycolor;
-	border-radius: 4px;
+	background: @bgcolor;
+	border-radius: 3px;
 	border: none;
 	padding: 10px;
 	margin-bottom: 20px;
@@ -26,16 +25,22 @@ window {
 }
 
 #text {
-	margin-left: 20px;
+	color: white;
+	margin-left: 15px;
 }
+
 
 #entry:selected {
-	background-color: @fgcolor;
-	border-radius: 0px;
-	border-style: none;
-	box-shadow: none;
+	background-color: @secondarycolor;
+	color: @secondarycolor;
+	border-radius: 3px;
 }
 
-#text:selected {
-	color: black;
-} 
+#img {
+	margin-right: 3px;
+	margin-left: 10px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+
