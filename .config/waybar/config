@@ -24,7 +24,8 @@
         "disable-click": false,
     },
     "sway/window": {
-        "format": "{title}"
+        "format": "{title}",
+        "tooltip": false
     },
     "tray": {
         "spacing": 10,
@@ -36,12 +37,21 @@
     },
     "clock": {
         "format": "{:%a %b %d %R}",
-        "tooltip-format": "<big>{:%B %Y}</big>\n<tt>{calendar}</tt>",
         "on-click": "swaymsg exec \\$calendar",
         "locale": "en_IE.UTF-8",
-        "today-format": "<span color='#ff6699'><b><u>{}</u></b></span>",
-        "format-calendar": "<span color='#ffffff'><b>{}</b></span>",
-        "format-calendar-weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "tooltip-format": "<tt>{calendar}</tt>",
+        "calendar": {
+                    "mode"          : "month",
+                    "mode-mon-col"  : 3,
+                    "on-scroll"     : 1,
+                    "on-click-right": "mode",
+                    "format": {
+                              "months":     "<span color='#ffead3'><b>{}</b></span>",
+                              "days":       "<span color='#ffffff'><b>{}</b></span>",
+                              "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                              "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+                              }
+                    }
     },
     "idle_inhibitor": {
         "format": "{icon}",
@@ -70,6 +80,7 @@
         "thermal-zone": 1,
         "format": "{icon} {temperatureC}°C",
         "format-critical": "{icon} {temperatureC}°C",
+        "interval": 10,
         "format-icons": {
             "default": [
                 "",
@@ -83,7 +94,7 @@
     },
     "battery": {
         "bat": "BAT0",
-        "full-at": 95,
+        "full-at": 100,
         "states": {
             "good": 95,
             "warning": 30,
@@ -100,6 +111,7 @@
             ""
         ],
         "format-time": "{H}h:{M}m",
+        "tooltip-format": "{timeTo}"
     },
     "pulseaudio": {
         "format": "{icon} {volume}%",
