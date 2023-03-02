@@ -14,8 +14,9 @@ gaps outer 0
 gaps inner 5
 smart_gaps on
 smart_borders on
-default_border pixel 1
-default_floating_border none
+default_border pixel 2
+# default_floating_border none
+default_floating_border pixel 2
 set $my_theme adw-gtk3-dark
 set $my_icon_theme Papirus-Dark
 set $my_cursor BreezeX-Black
@@ -41,8 +42,8 @@ set $opacity 1.0
 for_window [class=".*"] opacity $opacity
 for_window [app_id=".*"] opacity $opacity
 # colors 
-set $bg #000000
-set $br #888888
+set $bg #333333
+set $br #ff6666
 set $brbug #FF0000
 # class                 border  backgr. text    indicator child_border
 client.focused          $br     $br     $br     $brbug    $br
@@ -144,7 +145,8 @@ bindsym $mod+ctrl+space layout toggle split
 bindsym $mod+f fullscreen
 bindsym $mod+Shift+f fullscreen global
 # Toggle the current focus between tiling and floating mode
-bindsym $mod+space floating toggle; border none
+# bindsym $mod+space floating toggle; border none
+bindsym $mod+space floating toggle; resize set 1000 600
 # Moving between workspaces
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
