@@ -36,7 +36,7 @@
         "format": "{}",
     },
     "clock": {
-        "format": "{:%a %b %d %R}",
+        "format": " {:%a %b %d %R}",
         "on-click": "swaymsg exec \\$calendar",
         "locale": "en_IE.UTF-8",
         "tooltip-format": "<tt>{calendar}</tt>",
