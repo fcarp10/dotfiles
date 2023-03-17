@@ -7,7 +7,7 @@ set $monitor $term -e $SHELL -c 'btop'
 set $wifi $term -e $SHELL -c 'nmtui'
 
 ###### Wallpaper ######
-output * bg wallpaper3.jpg fill
+output * bg wallpaper2.jpg fill
 
 ###### Theming ###### 
 gaps outer 0
