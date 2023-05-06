@@ -137,4 +137,6 @@
         "~/repository"
     ],
     "projectManager.git.maxDepthRecursion": 2,
+    "redhat.telemetry.enabled": false,
+    "ansible.validation.lint.enabled": false,
 }

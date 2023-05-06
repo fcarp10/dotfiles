@@ -9,6 +9,7 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'vim-airline/vim-airline'
 Plug 'agude/vim-eldar'
 Plug 'sainnhe/sonokai'
+Plug 'chrisbra/csv.vim'
 
 " latex
 Plug 'lervag/vimtex'
