@@ -124,10 +124,6 @@
     "[latex]": {
         "editor.fontFamily": "'Roboto', sans-serif",
     },
-    "shellformat.effectLanguages": [
-        "shellscript",
-    ],
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "explorer.confirmDragAndDrop": false,
     "latex-workshop.texcount.autorun": "onSave",
     "cSpell.enableFiletypes": [
@@ -139,4 +135,7 @@
     "projectManager.git.maxDepthRecursion": 2,
     "redhat.telemetry.enabled": false,
     "ansible.validation.lint.enabled": false,
+    "files.associations": {
+        "**/*.yml": "ansible"
+    },
 }
