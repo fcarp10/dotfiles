@@ -68,8 +68,6 @@ for_window [app_id="com.nextcloud.desktopclient.nextcloud"] floating enable
 
 
 ###### Key bindings ######
-# start a terminal
-bindsym $mod+Return exec $term
 # kill focused window
 bindsym $mod+q kill
 floating_modifier $mod normal
@@ -142,9 +140,10 @@ bindsym $mod+minus scratchpad show
 # Resize and center current floating window
 bindsym $mod+c exec swaymsg move position center && swaymsg resize set 80ppt 80ppt
 # SUPER +
+bindsym $mod+Return exec alacritty
 bindsym $mod+g exec firefox
 bindsym $mod+w exec brave --enable-features=UseOzonePlatform --ozone-platform=wayland
-bindsym $mod+e exec vscodium --enable-features=UseOzonePlatform --ozone-platform=wayland
+bindsym $mod+e exec codium --enable-features=UseOzonePlatform --ozone-platform=wayland
 bindsym $mod+a exec thunderbird
 bindsym $mod+d exec wofi --show drun
 bindsym $mod+s exec freetube --ozone-platform-hint=auto
@@ -154,6 +153,7 @@ bindsym $mod+b exec blueberry
 
 # SUPER + Shift
 bindsym $mod+shift+s exec signal-desktop --ozone-platform-hint=auto
+bindsym $mod+shift+Return exec kitty
 # OTHERS
 bindsym Print exec grim ~/$(date '+%Y-%m-%d-%T')-screenshot.png
 bindsym shift+Print exec grim -g "$(slurp)" ~/$(date '+%Y-%m-%d-%T')-screenshot.png
