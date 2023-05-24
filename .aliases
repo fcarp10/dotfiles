@@ -68,3 +68,4 @@ alias burn-img='function _burn_img(){sudo dd if=$1 of=$2 status=progress; };_bur
 alias please='sudo $(fc -ln -1)'
 alias gotop='gotop -l procs' 
 alias time-sync='sudo ntpd -qg'
+alias color-picker='grim -g "$(slurp -p)" -t ppm - | convert - -format "%[pixel:p{0,0}]" txt:-'

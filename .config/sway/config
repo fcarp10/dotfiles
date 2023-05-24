@@ -28,6 +28,7 @@ exec_always {
 	gsettings set $gnome-schema icon-theme $my_icon_theme
 	gsettings set $gnome-schema cursor-theme $my_cursor
 	gsettings set $gnome-schema cursor-size $my_cursor_size
+	gsettings set org.gtk.Settings.FileChooser startup-mode cwd
 }
 # Status Bar
 bar {
@@ -150,6 +151,7 @@ bindsym $mod+s exec freetube --ozone-platform-hint=auto
 bindsym $mod+z exec nemo
 bindsym $mod+t exec ferdium --ozone-platform-hint=auto
 bindsym $mod+b exec blueberry
+bindsym $mod+o exec waydroid show-full-ui
 
 # SUPER + Shift
 bindsym $mod+shift+s exec signal-desktop --ozone-platform-hint=auto

@@ -136,6 +136,6 @@
     "redhat.telemetry.enabled": false,
     "ansible.validation.lint.enabled": false,
     "files.associations": {
-        "**/*.yml": "ansible"
+        "**/*.yml": "ansible",
     },
 }
