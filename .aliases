@@ -25,12 +25,14 @@ alias cheat='function _cheat(){ curl cheat.sh/$1; };_cheat'
 alias cryp='function _cryp(){ curl rate.sx/$1; };_cryp'
 
 ## ssh ##
-alias ssh-rpi-home='ssh ubuntu@192.168.50.233'
-alias ssh-office='ssh vegeta@192.168.100.3'
+alias ssh-xps='ssh vegito@192.168.100.2'
+alias ssh-office-dell='ssh vegeta@192.168.100.3'
 alias ssh-rpi='ssh ubuntu@192.168.100.4'
-alias ssh-manu-laptop='ssh manu@192.168.100.10'
-alias ssh-alex='ssh alex@192.168.100.11'
-alias ssh-manu-slim='ssh manu@192.168.100.13'
+alias ssh-desktop='ssh broly@192.168.100.5'
+alias ssh-manu-asus='ssh manu@192.168.100.10'
+alias ssh-alex-pi='ssh alex@192.168.100.11'
+alias ssh-manu-slimbook='ssh manu@192.168.100.13'
+
 
 ## pacman ##
 alias pac-orphans='sudo pacman -Qtdq | sudo pacman -Rns -'

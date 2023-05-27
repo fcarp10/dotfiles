@@ -150,6 +150,7 @@ bindsym $mod+s exec freetube --ozone-platform-hint=auto
 bindsym $mod+z exec nemo
 bindsym $mod+t exec ferdium --ozone-platform-hint=auto
 bindsym $mod+b exec blueberry
+bindsym $mod+i exec cartridges
 
 # SUPER + Shift
 bindsym $mod+shift+s exec signal-desktop --ozone-platform-hint=auto
