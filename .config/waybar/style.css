@@ -42,6 +42,10 @@ tooltip label {
     background: shade(alpha(white, 0.4), 0.6);
 }
 
+#workspaces button.active {
+    background: shade(alpha(white, 0.4), 0.6);
+}
+
 #workspaces button:hover {
     color: white;
 }
