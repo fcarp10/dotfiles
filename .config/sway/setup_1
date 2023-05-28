@@ -4,6 +4,7 @@ include $HOME/.config/sway/config
 # exec syncthing &
 exec easyeffects --gapplication-service
 exec fusuma &
+exec poweralertd
 
 ###### Xwayland Support ######
 # xwayland disable
