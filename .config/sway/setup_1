@@ -1,7 +1,6 @@
 include $HOME/.config/sway/config
 
 ### autostart
-# exec syncthing &
 exec easyeffects --gapplication-service
 exec fusuma &
 exec poweralertd
@@ -41,7 +40,6 @@ input type:keyboard {
 ### output
 output eDP-1 mode 3456x2160 position 0,0 scale 2
 
-
 # laptop lid
 set $laptop eDP-1
 bindswitch --reload --locked lid:on output $laptop disable
@@ -53,8 +51,10 @@ exec swayidle -w \
     timeout 600 'swaylock -f -c 00000000' \
     timeout 900 'systemctl suspend'
 
-### specific binding
+###### Key bindings ######
 bindsym $mod+ctrl+0 exec swaymsg output eDP-1 disable
 bindsym $mod+ctrl+Shift+0 exec swaymsg output eDP-1 enable
 bindsym $mod+alt+0 exec swaymsg output eDP-1 scale 1
 bindsym $mod+ctrl+alt+0 exec swaymsg output eDP-1 scale 2
+bindsym XF86MonBrightnessUp exec brightnessctl set +10% | sed -En 's/.*\(([0-9]+)%\).*/\1/p' > $WOBSOCK
+bindsym XF86MonBrightnessDown exec brightnessctl set 10%- | sed -En 's/.*\(([0-9]+)%\).*/\1/p' > $WOBSOCK
