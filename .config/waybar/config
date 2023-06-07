@@ -3,7 +3,9 @@
     "position": "top",
     "modules-left": [
         "sway/workspaces",
+        "wlr/workspaces",
         "sway/window",
+        "hyprland/window",
     ],
     "modules-right": [
         "tray",
@@ -19,6 +21,10 @@
         "disk",
         "clock",
     ],
+    "wlr/workspaces": {
+        "disable-scroll": true,
+        "on-click": "activate",
+    },
     "sway/workspaces": {
         "disable-scroll": true,
         "disable-click": false,
@@ -26,6 +32,10 @@
     "sway/window": {
         "format": "{title}",
         "tooltip": false
+    },
+    "hyprland/window": {
+        "max-length": 200,
+        "separate-outputs": true
     },
     "tray": {
         "spacing": 10,
