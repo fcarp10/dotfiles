@@ -137,8 +137,8 @@ bindsym $mod+c exec swaymsg move position center && swaymsg resize set 80ppt 80p
 # SUPER +
 bindsym $mod+Return exec alacritty
 bindsym $mod+g exec firefox
-bindsym $mod+w exec brave --enable-features=UseOzonePlatform --ozone-platform=wayland
-bindsym $mod+e exec codium --enable-features=UseOzonePlatform --ozone-platform=wayland
+bindsym $mod+w exec brave --ozone-platform-hint=auto
+bindsym $mod+e exec codium --ozone-platform-hint=auto
 bindsym $mod+a exec thunderbird
 bindsym $mod+d exec wofi --show drun
 bindsym $mod+s exec freetube --ozone-platform-hint=auto
