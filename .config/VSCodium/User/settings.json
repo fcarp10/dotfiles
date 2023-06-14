@@ -92,6 +92,12 @@
                 "pdflatex"
             ]
         },
+        {
+            "name": "pdf_with_embedded_fonts",
+            "tools": [
+                "gs",
+            ]
+        },
     ],
     "latex-workshop.latex.tools": [
         {
@@ -102,6 +108,21 @@
                 "-interaction=nonstopmode",
                 "-file-line-error",
                 "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "gs",
+            "command": "gs",
+            "args": [
+                "-dNOPAUSE",
+                "-dBATCH",
+                "-sDEVICE=pdfwrite",
+                "-dPDFSETTINGS=/prepress",
+                "-dEmbedAllFonts=true",
+                "-sOutputFile=%DOC%_with_embedded_fonts.pdf",
+                "-f", 
+                "%DOC%.pdf"
             ],
             "env": {}
         },
