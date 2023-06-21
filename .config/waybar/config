@@ -24,6 +24,7 @@
     "wlr/workspaces": {
         "disable-scroll": true,
         "on-click": "activate",
+        "format": "{icon}",
     },
     "sway/workspaces": {
         "disable-scroll": true,
