@@ -1,0 +1,23 @@
+"thunderbird" = ""
+"codium" = ""
+"firefox" = ""
+"brave-browser" = ""
+"alacritty" = ""
+"nemo" = "" 
+"/Writer/" = ""
+"/Impress/" = ""
+"/Calc/" = ""
+"mpv" = ""
+"evince" = ""
+"draw.io" = ""
+"transmission-gtk" = ""
+"steam" = ""
+"gedit" = ""
+"ferdium"=""
+"signal"=""
+"freetube"=""
+
+[other]
+fallback_icon = ""
+deduplicate_icons = false
+separator = ": "

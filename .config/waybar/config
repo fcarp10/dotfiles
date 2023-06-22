@@ -22,8 +22,10 @@
         "clock",
     ],
     "wlr/workspaces": {
+        "format": "{icon}",
         "disable-scroll": true,
-        "on-click": "activate",
+        "on-click": "activate"
+
     },
     "sway/workspaces": {
         "disable-scroll": true,
