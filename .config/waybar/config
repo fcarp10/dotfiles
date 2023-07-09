@@ -50,6 +50,8 @@
     },
     "hyprland/language": {
         "format": "{}",
+        "format-en": "us",
+        "format-es": "es",
     },
     "clock": {
         "format": " {:%a %b %d %R}",
