@@ -10,6 +10,7 @@
     "modules-right": [
         "tray",
         "sway/language",
+        "hyprland/language",
         "idle_inhibitor",
         "network",
         "pulseaudio",
@@ -46,6 +47,11 @@
     },
     "sway/language": {
         "format": "{}",
+    },
+    "hyprland/language": {
+        "format": "{}",
+        "format-en": "us",
+        "format-es": "es",
     },
     "clock": {
         "format": " {:%a %b %d %R}",
