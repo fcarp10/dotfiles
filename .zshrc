@@ -114,10 +114,6 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
-if [ -f ~/.aliases ]; then
-	. ~/.aliases
-fi
-
 eval "$(pyenv init -)"
 eval $(thefuck --alias f)
 
@@ -128,3 +124,18 @@ eval $(thefuck --alias f)
 zstyle ':autocomplete:*' insert-unambiguous yes
 zstyle ':autocomplete:*' fzf-completion yes
 zstyle ':autocomplete:*' widget-style menu-select
+
+# Set aliases
+if [ -f ~/.aliases ]; then
+	. ~/.aliases
+fi
+
+# Change back terminal color 
+# Add "PermitLocalCommand yes" to /etc/ssh/ssh_config 
+ssh() {
+  FG=$(xtermcontrol --get-fg)
+  BG=$(xtermcontrol --get-bg)
+  command ssh "$@"
+  xtermcontrol --fg="$FG"
+  xtermcontrol --bg="$BG"
+}
