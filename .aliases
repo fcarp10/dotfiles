@@ -36,7 +36,6 @@ alias ssh-manu-asus='ssh manu@192.168.100.10'
 alias ssh-alex-pi='ssh alex@192.168.100.11'
 alias ssh-manu-slimbook='ssh manu@192.168.100.13'
 
-
 ## pacman ##
 alias pac-orphans='sudo pacman -Qtdq | sudo pacman -Rns -'
 alias pac-optional='sudo pacman -Qttdq | sudo pacman -Rns -'
@@ -47,17 +46,15 @@ alias pac-mirrors='sudo reflector --country Germany --latest 10 --protocol https
 alias pac-explicit='function _make_explicit(){sudo pacman -D --asexplicit $1;};_make_explicit'
 alias pac-aur='sudo pacman -Qqm'
 
-## sway ##
-alias sway-appids='swaymsg -t get_tree | grep "app_id"'
-
 ## theme ##
 alias theme-light="gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3 && gsettings set org.gnome.desktop.interface color-scheme prefer-light"
 alias theme-dark="gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-dark && gsettings set org.gnome.desktop.interface color-scheme prefer-dark"
 
-## docker ##
+## containers ##
 alias docker-start="sudo systemctl start docker"
 alias docker-rmct='docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)'
 alias docker-rmimg='docker rmi -f $(docker images -a -q)'
+alias k3s-uninstall='/usr/local/bin/k3s-uninstall.sh'
 
 ## network ##
 alias nebula-start="sudo systemctl start nebula"
@@ -74,3 +71,4 @@ alias please='sudo $(fc -ln -1)'
 alias gotop='gotop -l procs' 
 alias time-sync='sudo ntpd -qg'
 alias color-picker='grim -g "$(slurp -p)" -t ppm - | convert - -format "%[pixel:p{0,0}]" txt:-'
+alias btop='btop --utf-force'

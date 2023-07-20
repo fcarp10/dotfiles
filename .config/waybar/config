@@ -55,7 +55,7 @@
     },
     "clock": {
         "format": " {:%a %b %d %R}",
-        "on-click": "swaymsg exec \\$calendar",
+        "on-click": "hyprctl dispatch -- exec thunderbird -calendar",
         "locale": "en_US.UTF-8",
         "tooltip-format": "<tt>{calendar}</tt>",
         "calendar": {
@@ -91,14 +91,14 @@
         "states": {
             "critical": 90,
         },
-        "on-click": "swaymsg exec \\$monitor",
+        "on-click": "hyprctl dispatch -- exec alacritty -e $SHELL -c 'btop'",
     },
     "memory": {
         "format": " {}%",
         "states": {
             "critical": 90,
         },
-        "on-click": "swaymsg exec \\$monitor",
+        "on-click": "hyprctl dispatch -- exec alacritty -e $SHELL -c 'btop'",
     },
     "temperature": {
         "critical-threshold": 80,
@@ -116,7 +116,7 @@
                 ""
             ],
         },
-        "on-click": "swaymsg exec \\$monitor",
+        "on-click": "hyprctl dispatch -- exec alacritty -e $SHELL -c 'btop'",
     },
     "battery": {
         "bat": "BAT0",
@@ -171,7 +171,7 @@
         "states": {
             "critical": 90,
         },
-        "on-click": "swaymsg exec \\$disk",
+        "on-click": "hyprctl dispatch -- exec alacritty -e $SHELL -c 'duf && $SHELL'",
     },
     "network": {
         // "interface": "wlp2s0",
@@ -185,6 +185,6 @@
         "tooltip-format-disconnected": "Disconnected",
         "max-length": 50,
         "on-click": "nm-connection-editor",
-        "on-click-right": "swaymsg exec \\$wifi",
+        "on-click-right": "hyprctl dispatch -- exec alacritty -e $SHELL -c 'nmtui'",
     }
 }
