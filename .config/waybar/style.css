@@ -15,12 +15,12 @@
 }
 
 window#waybar{
-    background: shade(alpha(black, 0.6), 1.0);
+    background: shade(alpha(black, 0.7), 1.0);
     /* background: linear-gradient(to top, shade(alpha(@blackcolor, 0.1), 1.0), shade(alpha(@blackcolor, 0.6), 1.0)); */
 }
 
 window#waybar.solo {
-    background: black; 
+    background: shade(alpha(black, 0.9), 1.0);
 }
 
 tooltip {

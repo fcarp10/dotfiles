@@ -60,24 +60,24 @@
         "locale": "en_US.UTF-8",
         "tooltip-format": "<tt>{calendar}</tt>",
         "calendar": {
-                    "mode"          : "month",
-                    "mode-mon-col"  : 3,
-                    "on-scroll"     : 1,
-                    "on-click-right": "mode",
-                    "format": {
-                              "months":     "<span color='#ffead3'><b>{}</b></span>",
-                              "days":       "<span color='#ffffff'><b>{}</b></span>",
-                              "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
-                              "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
-                              }
-                    },
-        "actions":  {
+            "mode": "month",
+            "mode-mon-col": 3,
+            "on-scroll": 1,
+            "on-click-right": "mode",
+            "format": {
+                "months": "<span color='#ffead3'><b>{}</b></span>",
+                "days": "<span color='#ffffff'><b>{}</b></span>",
+                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+                "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+            }
+        },
+        "actions": {
             "on-click-right": "mode",
             "on-click-forward": "tz_up",
             "on-click-backward": "tz_down",
             "on-scroll-up": "shift_up",
             "on-scroll-down": "shift_down"
-            }
+        }
     },
     "idle_inhibitor": {
         "format": "{icon}",
@@ -103,20 +103,10 @@
     },
     "temperature": {
         "critical-threshold": 80,
-        // "thermal-zone": 1,
         "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
-        "format": "{icon} {temperatureC}°C",
-        "format-critical": "{icon} {temperatureC}°C",
+        "format": " {temperatureC}°C",
+        "format-critical": " {temperatureC}°C",
         "interval": 10,
-        "format-icons": {
-            "default": [
-                "",
-                "",
-                "",
-                "",
-                ""
-            ],
-        },
         "on-click": "hyprctl dispatch -- exec alacritty -e $SHELL -c 'btop'",
     },
     "battery": {
@@ -129,7 +119,7 @@
         },
         "format": "{icon} {capacity}%",
         "format-plugged": " {capacity}%",
-        "format-charging": " {capacity}%",
+        "format-charging": " {capacity}%",
         "format-icons": [
             "",
             "",
@@ -179,7 +169,7 @@
         "format": "{ifname}",
         "format-wifi": "",
         "format-ethernet": "",
-        "format-disconnected": "", 
+        "format-disconnected": "",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "tooltip-format-wifi": " {essid} ({signalStrength}%)",
         "tooltip-format-ethernet": "{ifname} - {ipaddr}",
