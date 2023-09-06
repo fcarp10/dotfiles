@@ -2,14 +2,14 @@
     "layer": "top",
     "position": "top",
     "modules-left": [
-        "sway/workspaces",
-        "wlr/workspaces",
-        "sway/window",
+        // "sway/workspaces",
+        "hyprland/workspaces",
+        // "sway/window",
         "hyprland/window",
     ],
     "modules-right": [
         "tray",
-        "sway/language",
+        // "sway/language",
         "hyprland/language",
         "idle_inhibitor",
         "network",
@@ -22,21 +22,21 @@
         "disk",
         "clock",
     ],
-    "wlr/workspaces": {
-        "format": "{icon}",
+    "hyprland/workspaces": {
+        // "format": "{icon}",
         "disable-scroll": true,
         "on-click": "activate",
         "sort-by-number": true
 
     },
-    "sway/workspaces": {
-        "disable-scroll": true,
-        "disable-click": false,
-    },
-    "sway/window": {
-        "format": "{title}",
-        "tooltip": false
-    },
+    // "sway/workspaces": {
+    //     "disable-scroll": true,
+    //     "disable-click": false,
+    // },
+    // "sway/window": {
+    //     "format": "{title}",
+    //     "tooltip": false
+    // },
     "hyprland/window": {
         "max-length": 200,
         "separate-outputs": true
@@ -46,9 +46,9 @@
         "show-passive-items": true,
         "reverse-direction": true,
     },
-    "sway/language": {
-        "format": "{}",
-    },
+    // "sway/language": {
+    //     "format": "{}",
+    // },
     "hyprland/language": {
         "format": "{}",
         "format-en": "us",
