@@ -23,7 +23,7 @@
         "clock",
     ],
     "hyprland/workspaces": {
-        // "format": "{icon}",
+        "format": "{name}",
         "disable-scroll": true,
         "on-click": "activate",
         "sort-by-number": true
