@@ -9,14 +9,10 @@ alias lla='lsd -la'
 alias ll='lsd -l'
 alias l.='lsd -d .* --color=auto'
 alias cat='bat'
-alias dl="cd ~/Downloads"
-alias rp="cd ~/repository"
 alias ..='cd ..'
 alias ...='cd ../../../'
 alias ....='cd ../../../../'
 alias nv='nvim'
-alias vim='nvim'
-alias vi='nvim'
 alias nano='nvim'
 
 ## web apps ##
@@ -70,7 +66,6 @@ alias burn-img='function _burn_img(){sudo dd if=$1 of=$2 status=progress; };_bur
 
 ## others ##
 alias please='sudo $(fc -ln -1)'
-alias gotop='gotop -l procs' 
 alias time-sync='sudo ntpd -qg'
 alias color-picker='grim -g "$(slurp -p)" -t ppm - | convert - -format "%[pixel:p{0,0}]" txt:-'
 alias btop='btop --utf-force'

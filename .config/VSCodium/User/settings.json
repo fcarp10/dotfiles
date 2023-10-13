@@ -8,7 +8,7 @@
     "editor.fastScrollSensitivity": 10,
     "editor.suggestSelection": "first",
     "workbench.editor.enablePreview": false,
-    "workbench.iconTheme": "eq-material-theme-icons-light",
+    "workbench.iconTheme": "eq-material-theme-icons",
     "workbench.productIconTheme": "material-product-icons",
     "workbench.startupEditor": "newUntitledFile",
     "workbench.colorCustomizations": {
@@ -40,7 +40,7 @@
         "terminal.ansiBrightWhite": "#FCFCFA",
         "terminal.ansiBrightYellow": "#FFD866",
     },
-    "workbench.colorTheme": "Monokai Vibrant",
+    "workbench.colorTheme": "Aura Dark",
     "window.menuBarVisibility": "toggle",
     "window.openFilesInNewWindow": "off",
     "window.openFoldersInNewWindow": "on",
@@ -162,4 +162,5 @@
     "files.associations": {
         "**/*.yml": "ansible",
     },
+    "go.toolsManagement.autoUpdate": true,
 }
