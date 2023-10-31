@@ -15,18 +15,18 @@
 }
 
 window#waybar{
-    background: shade(alpha(black, 0.7), 1.0);
+    background: shade(alpha(black, 1.0), 1.0);
     /* background: linear-gradient(to top, shade(alpha(@blackcolor, 0.1), 1.0), shade(alpha(@blackcolor, 0.6), 1.0)); */
 }
 
 window#waybar.solo {
-    background: shade(alpha(black, 0.9), 1.0);
+    background: shade(alpha(black, 1.0), 1.0);
 }
 
 tooltip {
     background: rgb(0, 0, 0);
     border: 1px solid rgb(48, 48, 48);
-    border-radius: 5px;
+    border-radius: 2px;
 }
 tooltip label {
     color: white;
@@ -35,19 +35,17 @@ tooltip label {
 #workspaces button {
     padding-left: 20px;
     padding-right: 20px;
-    color: @cyan;
-}
-
-#workspaces button.focused {
-    background: shade(alpha(white, 0.4), 0.6);
+    color: shade(alpha(@cyan, 1.0), 1.0);
 }
 
 #workspaces button.active {
-    background: shade(alpha(white, 0.4), 0.6);
+    background: shade(alpha(@cyan, 0.2), 1.0);
+    color: shade(alpha(@cyan, 1.0), 1.0);
 }
 
 #workspaces button:hover {
-    color: white;
+    color: black;
+    background: shade(alpha(@cyan, 1.0), 1.0);
 }
 
 #window {
@@ -62,7 +60,7 @@ tooltip label {
 
 #language, #idle_inhibitor, #network{
    color: @yellow;
-}
+} 
 
 #pulseaudio {
     color: @orange;
@@ -72,10 +70,6 @@ tooltip label {
     color: @red;
 }
 
-#clock {
-    color: @purple;
-}
-
 #temperature.critical, #battery.critical, #cpu.critical, #memory.critical, #disk.critical{
     color: red;
 }
@@ -83,4 +77,11 @@ tooltip label {
 #battery.warning:not(.charging) {
     color: red;
 } 
+
+#clock {
+    color: @purple;
+}
+
+
+
 
