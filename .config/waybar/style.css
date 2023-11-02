@@ -71,12 +71,9 @@ tooltip label {
 }
 
 #temperature.critical, #battery.critical, #cpu.critical, #memory.critical, #disk.critical{
-    color: red;
+    color: black;
+    background: shade(alpha(@red, 1.0), 1.0);
 }
-
-#battery.warning:not(.charging) {
-    color: red;
-} 
 
 #clock {
     color: @purple;
