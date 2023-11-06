@@ -47,6 +47,7 @@ dedup = true
 "TextEditor" = ""
 "signal"=""
 "FreeTube"=""
+"NewsFlash"=""
 
 #[class_active]
 #DEFAULT = "*{icon}*"
