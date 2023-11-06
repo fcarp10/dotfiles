@@ -73,7 +73,7 @@
         },
     },
     "cpu": {
-        "format": " {usage}<span font_desc='Font Awesome 6 Free Solid'> %</span>",
+        "format": " {usage}",
         "interval": 3,
         "states": {
             "critical": 90,
@@ -81,7 +81,7 @@
         "on-click": "hyprctl dispatch -- exec alacritty -e $SHELL -c 'btop'",
     },
     "memory": {
-        "format": " {}<span font_desc='Font Awesome 6 Free Solid'> %</span>",
+        "format": " {}",
         "states": {
             "critical": 90,
         },
@@ -89,9 +89,9 @@
     },
     "temperature": {
         "critical-threshold": 70,
-        "thermal-zone": 1,
-        "format": " {temperatureC}°C",
-        "format-critical": " {temperatureC}°C",
+        "thermal-zone": 2,
+        "format": " {temperatureC}",
+        "format-critical": " {temperatureC}",
         "interval": 10,
         "on-click": "hyprctl dispatch -- exec alacritty -e $SHELL -c 'btop'",
     },
@@ -103,9 +103,9 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{icon} {capacity}<span font_desc='Font Awesome 6 Free Solid'> %</span>",
-        "format-plugged": " {capacity}<span font_desc='Font Awesome 6 Free Solid'> %</span>",
-        "format-charging": " {capacity}<span font_desc='Font Awesome 6 Free Solid'> %</span>",
+        "format": "{icon} {capacity}",
+        "format-plugged": " {capacity}",
+        "format-charging": " {capacity}",
         "format-icons": [
             "",
             "",
@@ -117,8 +117,8 @@
         "tooltip-format": "{timeTo}"
     },
     "pulseaudio": {
-        "format": "{icon} {volume}<span font_desc='Font Awesome 6 Free Solid'> %</span>",
-        "format-bluetooth": "{icon} {volume}<span font_desc='Font Awesome 6 Free Solid'> %</span>",
+        "format": "{icon} {volume}",
+        "format-bluetooth": "{icon} {volume}",
         "format-muted": "",
         "format-icons": {
             "headphone": "",
@@ -134,7 +134,7 @@
     },
     "pulseaudio#mic": {
         "format": "{format_source}",
-        "format-source": " {volume}<span font_desc='Font Awesome 6 Free Solid'> %</span>",
+        "format-source": " {volume}",
         "format-source-muted": "",
         "on-scroll-up": "pactl set-source-volume @DEFAULT_SOURCE@ +5%",
         "on-scroll-down": "pactl set-source-volume @DEFAULT_SOURCE@ -5%",
@@ -143,7 +143,7 @@
     },
     "disk": {
         "interval": 30,
-        "format": " {percentage_used}<span font_desc='Font Awesome 6 Free Solid'> %</span>",
+        "format": " {percentage_used}",
         "path": "/",
         "states": {
             "critical": 90,
