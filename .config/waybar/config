@@ -41,20 +41,20 @@
         "format-es": "es",
     },
     "clock": {
-        "format": " {:%a %b %d %R}",
+        "format": " {:%a %b %d %H:%M}",
         "on-click": "hyprctl dispatch -- exec thunderbird -calendar",
         "locale": "en_US.UTF-8",
-        "tooltip-format": "<tt>{calendar}</tt>",
+        "tooltip-format": "{calendar}",
         "calendar": {
             "mode": "month",
             "mode-mon-col": 3,
             "on-scroll": 1,
             "on-click-right": "mode",
             "format": {
-                "months": "<span color='#ffead3'><b>{}</b></span>",
-                "days": "<span color='#ffffff'><b>{}</b></span>",
-                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
-                "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+                "months": "<span color='#AB9DF2'><b>{}</b></span>",
+                "weekdays": "<span color='#78DCE8'><b>{}</b></span>",
+                "days": "<span color='#FFFFFF'><b>{}</b></span>",
+                "today": "<span color='#FF6188'><b><u>{}</u></b></span>"
             }
         },
         "actions": {
