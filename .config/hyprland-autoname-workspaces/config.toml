@@ -28,7 +28,7 @@ dedup = true
 # Add your icons mapping
 # use double quote the key and the value
 # take class name from 'hyprctl clients'
-"DEFAULT" = " {class}"
+"DEFAULT" = " "
 "(?i)Alacritty" = ""
 "[Ff]irefox" = ""
 "(?i)codium" = ""

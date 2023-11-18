@@ -1,7 +1,7 @@
 
 /**********************************************************************************************/
   /* Remove arrow buttons */
-  #back-button, #forward-button { display:none!important; }
+  /* #back-button, #forward-button { display:none!important; } */
   /* Remove all tabs button */
   #alltabs-button { display: none !important; }
   /* Remove extensions button */
