@@ -143,7 +143,8 @@
     "clock": {
         "format": " {:%a %b %d %H:%M}",
         "on-click": "hyprctl dispatch -- exec thunderbird -calendar",
-        "locale": "en_US.UTF-8",
+        // "locale": "en_US.UTF-8",
+        "locale": "en_IE.UTF-8",
         "tooltip-format": "{calendar}",
         "calendar": {
             "mode": "month",
