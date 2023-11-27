@@ -45,7 +45,7 @@
     "window.openFilesInNewWindow": "off",
     "window.openFoldersInNewWindow": "on",
     "diffEditor.ignoreTrimWhitespace": false,
-    "terminal.integrated.fontFamily": "MesloLGS NF",
+    "terminal.integrated.fontFamily": "RobotoMono Nerd Font",
     "files.exclude": {
         "**/.classpath": true,
         "**/.project": true,
@@ -163,4 +163,5 @@
         "**/*.yml": "ansible",
     },
     "go.toolsManagement.autoUpdate": true,
+    "typst-lsp.experimentalFormatterMode": "on",
 }
