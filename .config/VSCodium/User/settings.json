@@ -2,7 +2,7 @@
     "editor.minimap.enabled": false,
     "editor.semanticHighlighting.enabled": true,
     "editor.mouseWheelZoom": true,
-    "editor.fontFamily": "'Roboto Mono', monospace",
+    "editor.fontFamily": "'JetBrainsMono Nerd Font', 'RobotoMono Nerd Font', monospace",
     "editor.renderControlCharacters": true,
     "editor.smoothScrolling": true,
     "editor.fastScrollSensitivity": 10,
