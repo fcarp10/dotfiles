@@ -40,7 +40,7 @@
         "terminal.ansiBrightWhite": "#FCFCFA",
         "terminal.ansiBrightYellow": "#FFD866",
     },
-    "workbench.colorTheme": "Aura Dark",
+    "workbench.colorTheme": "Aura Soft Dark",
     "window.menuBarVisibility": "toggle",
     "window.openFilesInNewWindow": "off",
     "window.openFoldersInNewWindow": "on",
