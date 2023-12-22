@@ -41,7 +41,7 @@ alias pac-find='function _find-pacman(){ pacman -Qi | grep Name | grep $1;};_fin
 alias pac-installed='grep -i installed /var/log/pacman.log'
 alias pac-upgraded='grep -i upgraded /var/log/pacman.log'
 alias pac-mirrors='sudo reflector --country Germany --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
-alias pac-explicit='function _make_explicit(){sudo pacman -D --asexplicit $1;};_make_explicit'
+alias pac-explicit='comm -23 <(paru -Qqett | sort) <(paru -Qqg base-devel | sort | uniq)'
 alias pac-aur='sudo pacman -Qqm'
 
 ## theme ##
