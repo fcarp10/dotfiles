@@ -63,7 +63,7 @@ alias nmap-os='function _nmap_os(){sudo nmap -O $1;};_nmap_os'
 alias pdf-words='function _count_words(){pdftotext $1 - | wc -w;};_count_words'
 alias tex-words='function _count_words(){texcount -inc -total $1;};_count_words'
 alias burn-img='function _burn_img(){sudo dd if=$1 of=$2 status=progress; };_burn_img'
-alias gpt4all='python $HOME/repository/gpt4all/app.py repl -m $HOME/repository/gpt4all/nous-hermes-13b.ggmlv3.q4_0.bin -t 16'
+alias gpt4all='python $HOME/repository/gpt4all/app.py repl -m $HOME/repository/gpt4all/nous-hermes-llama2-13b.Q4_0.gguf -t 6'
 
 ## others ##
 alias please='sudo $(fc -ln -1)'
