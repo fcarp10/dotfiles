@@ -40,7 +40,6 @@
         "terminal.ansiBrightWhite": "#FCFCFA",
         "terminal.ansiBrightYellow": "#FFD866",
     },
-    "workbench.colorTheme": "Aura Soft Dark",
     "window.menuBarVisibility": "toggle",
     "window.openFilesInNewWindow": "off",
     "window.openFoldersInNewWindow": "on",
@@ -159,4 +158,5 @@
     },
     "go.toolsManagement.autoUpdate": true,
     "typst-lsp.experimentalFormatterMode": "on",
+    "workbench.colorTheme": "One Monokai",
 }
