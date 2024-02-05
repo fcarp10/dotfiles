@@ -30,9 +30,9 @@ dedup = true
 # take class name from 'hyprctl clients'
 "DEFAULT" = " "
 "(?i)Alacritty" = ""
-"[Ff]irefox" = ""
-"[Cc]hromium" = ""
-"[Bb]rave" = ""
+"[Ff]irefox" = " "
+"[Cc]hromium" = " "
+"[Bb]rave" = " "
 "(?i)codium" = ""
 "thunderbird" = ""
 "nemo" = ""
