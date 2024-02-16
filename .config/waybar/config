@@ -7,9 +7,10 @@
     ],
     "modules-right": [
         "tray",
-        "hyprland/language",
+        // "hyprland/language",
         "idle_inhibitor",
         "network",
+        "bluetooth",
         "pulseaudio",
         "pulseaudio#mic",
         "battery",
@@ -59,6 +60,13 @@
         "max-length": 50,
         "on-click": "nm-connection-editor",
         "on-click-right": "hyprctl dispatch -- exec alacritty -e $SHELL -c 'nmtui'",
+    },
+    "bluetooth": {
+        "format-on": "",
+        "format-connected": "",
+        "tooltip-format-connected": "{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}",
+        "tooltip-format-enumerate-connected-battery": "{device_alias} ({device_battery_percentage}%)"
     },
     "pulseaudio": {
         "format": "{icon} {volume}",
