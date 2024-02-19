@@ -62,6 +62,7 @@
         "on-click-right": "hyprctl dispatch -- exec alacritty -e $SHELL -c 'nmtui'",
     },
     "bluetooth": {
+        "format": "",
         "format-on": "",
         "format-connected": "",
         "tooltip-format-connected": "{device_enumerate}",
