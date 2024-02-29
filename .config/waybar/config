@@ -59,7 +59,7 @@
         "tooltip-format-disconnected": "Disconnected",
         "max-length": 50,
         "on-click": "nm-connection-editor",
-        "on-click-right": "hyprctl dispatch -- exec alacritty -e $SHELL -c 'nmtui'",
+        "on-click-right": "alacritty -e $SHELL -c 'nmtui'",
     },
     "bluetooth": {
         "format": "",
@@ -121,7 +121,7 @@
         "format": " {temperatureC}",
         "format-critical": " {temperatureC}",
         "interval": 10,
-        "on-click": "hyprctl dispatch -- exec alacritty -e $SHELL -c 'btop'",
+        "on-click": "alacritty -e $SHELL -c 'btop --utf-force'",
     },
     "cpu": {
         "format": " {usage}",
@@ -129,14 +129,14 @@
         "states": {
             "critical": 90,
         },
-        "on-click": "hyprctl dispatch -- exec alacritty -e $SHELL -c 'btop'",
+        "on-click": "alacritty -e $SHELL -c 'btop --utf-force'",
     },
     "memory": {
         "format": " {}",
         "states": {
             "critical": 90,
         },
-        "on-click": "hyprctl dispatch -- exec alacritty -e $SHELL -c 'btop'",
+        "on-click": "alacritty -e $SHELL -c 'btop --utf-force'",
         "tooltip-format": "{used:0.1f}GB"
     },
     "disk": {
@@ -146,12 +146,12 @@
         "states": {
             "critical": 90,
         },
-        "on-click": "hyprctl dispatch -- exec alacritty -e $SHELL -c 'duf && $SHELL'",
+        "on-click": "alacritty -e $SHELL -c 'duf && $SHELL'",
         "tooltip-format": "{used} / {total}"
     },
     "clock": {
         "format": " {:%a %b %d %H:%M}",
-        "on-click": "hyprctl dispatch -- exec thunderbird -calendar",
+        "on-click": "thunderbird -calendar",
         // "locale": "en_US.UTF-8",
         "locale": "en_IE.UTF-8",
         "tooltip-format": "{calendar}",
