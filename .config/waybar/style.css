@@ -53,12 +53,17 @@ tooltip label {
     color: @green;
 }
 
-#tray, #language, #idle_inhibitor, #pulseaudio, #temperature, #cpu, #memory,#battery, #disk, #clock, #network, #bluetooth{
+#tray, #language, #privacy, #idle_inhibitor, #pulseaudio, #temperature, #cpu, #memory,#battery, #disk, #clock, #network, #bluetooth{
     padding-left: 10px;
     padding-right: 10px;
 }
 
-#language, #idle_inhibitor, #network, #bluetooth{
+#privacy{
+    color: black;
+    background: shade(alpha(@yellow, 1.0), 1.0);
+}
+
+#language,#idle_inhibitor, #network, #bluetooth{
    color: @yellow;
 } 
 #bluetooth{

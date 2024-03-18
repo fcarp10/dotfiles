@@ -159,4 +159,5 @@
     "go.toolsManagement.autoUpdate": true,
     "typst-lsp.experimentalFormatterMode": "on",
     "workbench.colorTheme": "One Monokai",
+    "continue.telemetryEnabled": false,
 }

@@ -8,6 +8,7 @@
     "modules-right": [
         "tray",
         // "hyprland/language",
+        "privacy",
         "idle_inhibitor",
         "network",
         "bluetooth",
@@ -40,6 +41,28 @@
         "format": "{}",
         "format-en": "us",
         "format-es": "es",
+    },
+    "privacy": {
+        "icon-spacing": 4,
+        "icon-size": 15,
+        "transition-duration": 250,
+        "modules": [
+            {
+                "type": "screenshare",
+                "tooltip": true,
+                "tooltip-icon-size": 20
+            },
+            {
+                "type": "audio-out",
+                "tooltip": true,
+                "tooltip-icon-size": 20
+            },
+            {
+                "type": "audio-in",
+                "tooltip": true,
+                "tooltip-icon-size": 20
+            }
+        ]
     },
     "idle_inhibitor": {
         "format": "{icon}",
