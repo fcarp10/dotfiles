@@ -24,7 +24,7 @@ alias cryp='function _cryp(){ curl rate.sx/$1; };_cryp'
 ## ssh ##
 alias ssh-xps='ssh vegito@192.168.100.2'
 alias ssh-office-dell='ssh vegeta@192.168.100.3'
-alias ssh-rpi='ssh ubuntu@192.168.100.4'
+alias ssh-rpi='ssh krillin@192.168.100.4'
 alias ssh-desktop='ssh broly@192.168.100.5'
 alias ssh-office-desktop='ssh vegeta@192.168.100.6'
 alias ssh-office-laptop='ssh goku@192.168.100.7'
