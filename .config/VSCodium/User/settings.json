@@ -64,7 +64,12 @@
     "latex-workshop.latex.autoBuild.run": "onSave",
     "latex-workshop.message.warning.show": false,
     "latex-workshop.message.error.show": false,
+    "latex-workshop.latex.outDir": "%WORKSPACE_FOLDER%/build/%DOCFILE%",
     "latex-workshop.latex.recipes": [
+        {
+            "name": "tectonic",
+            "tools": ["tectonic"]
+        },
         {
             "name": "pdflatex",
             "tools": [
@@ -137,6 +142,12 @@
             "args": [
                 "%DOCFILE%"
             ]
+        },
+        {
+            "name": "tectonic",
+            "command": "tectonic",
+            "args": ["-X", "build", "--keep-intermediates", "--keep-logs"],
+            "env": {}
         }
     ],
     "[latex]": {
