@@ -172,4 +172,5 @@
     "typst-lsp.experimentalFormatterMode": "on",
     "workbench.colorTheme": "One Monokai",
     "continue.telemetryEnabled": false,
+    "solidity.telemetry": false,
 }
