@@ -22,10 +22,29 @@
         "clock"
     ],
     "hyprland/workspaces": {
-        "format": "{name}",
+        // "format": "{name}",
+        "format": "{icon}: {windows}",
+        "format-window-separator": " ",
         "disable-scroll": true,
         "on-click": "activate",
-        "sort-by-number": true
+        "sort-by-number": true,
+        "window-rewrite-default": " ",
+        "window-rewrite": {
+            "title<.*youtube.*>": "",
+            "class<firefox>": " ",
+            "class<librewolf>": " ",
+            "class<brave-browser>": " ",
+            "class<thunderbird>": "",
+            "alacritty": "",
+            "codium": "",
+            "ferdium": "",
+            "class<steam>": "",
+            "class<org.gnome.TextEditor>": "",
+            "class<nemo>": "",
+            "class<evince>": "",
+            "class<Papers>": "",
+            "class<mpv>": ""
+        },
 
     },
     "hyprland/window": {
