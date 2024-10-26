@@ -23,7 +23,7 @@
     ],
     "hyprland/workspaces": {
         // "format": "{name}",
-        "format": "{icon}: {windows}",
+        "format": "{icon} {windows}",
         "format-window-separator": " ",
         "disable-scroll": true,
         "on-click": "activate",

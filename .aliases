@@ -15,25 +15,6 @@ alias ....='cd ../../../../'
 alias nv='nvim'
 alias nano='nvim'
 
-## web apps ##
-alias wt='function _wt(){ curl wttr.in/$1; };_wt'
-alias pubip="curl ifconfig.co/json"
-alias cheat='function _cheat(){ curl cheat.sh/$1; };_cheat'
-alias cryp='function _cryp(){ curl rate.sx/$1; };_cryp'
-
-## ssh ##
-alias ssh-xps='ssh vegito@192.168.100.2'
-alias ssh-office-dell='ssh vegeta@192.168.100.3'
-alias ssh-rpi='ssh krillin@192.168.100.4'
-alias ssh-desktop='ssh broly@192.168.100.5'
-alias ssh-office-desktop='ssh vegeta@192.168.100.6'
-alias ssh-office-laptop='ssh goku@192.168.100.7'
-alias ssh-imac='ssh mutenroshi@192.168.100.8'
-alias ssh-manu-lenovo='ssh manu@192.168.100.10'
-alias ssh-alex-pi='ssh alex@192.168.100.11'
-alias ssh-manu-slimbook='ssh manu@192.168.100.13'
-alias ssh-manuel='ssh manuel@192.168.100.15'
-
 ## pacman ##
 alias pac-orphans='sudo pacman -Qtdq | sudo pacman -Rns -'
 alias pac-optional='sudo pacman -Qttdq | sudo pacman -Rns -'
@@ -44,29 +25,32 @@ alias pac-mirrors='sudo reflector --country Germany --latest 10 --protocol https
 alias pac-explicit='comm -23 <(paru -Qqett | sort) <(paru -Qqg base-devel | sort | uniq)'
 alias pac-aur='sudo pacman -Qqm'
 
-## theme ##
-alias theme-light="gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3 && gsettings set org.gnome.desktop.interface color-scheme prefer-light"
-alias theme-dark="gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-dark && gsettings set org.gnome.desktop.interface color-scheme prefer-dark"
-
-## containers ##
+## docker ##
 alias docker-start="sudo systemctl start docker"
 alias docker-rmct='docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)'
 alias docker-rmimg='docker rmi -f $(docker images -a -q)'
-alias k3s-uninstall='/usr/local/bin/k3s-uninstall.sh'
 
 ## network ##
 alias nebula-start="sudo systemctl start nebula"
-alias vpn-tubs='sudo openconnect --authgroup Tunnel-All-Traffic -u fracarpi vpngate.tu-bs.de'
-alias nmap-os='function _nmap_os(){sudo nmap -O $1;};_nmap_os'
+alias nbrd-start="sudo systemctl start netbird && netbird up --management-url https://netbird.impossiblecloud.network --admin-url https:://netbird.impossiblecloud.network"
+alias nbrd-stop="sudo systemctl stop netbird"
+alias nmtui="NEWT_COLORS='root=black,black;window=black,black;border=white,black;listbox=white,black;label=blue,black;checkbox=red,black;title=green,black;button=white,red;actsellistbox=white,red;actlistbox=white,gray;compactbutton=white,gray;actcheckbox=white,blue;entry=lightgray,black;textbox=blue,black' nmtui"
+alias pubip="curl ifconfig.co/json"
+
+## ssh ##
+alias ssh-xps='ssh vegito@192.168.100.2'
+alias ssh-office-dell='ssh vegeta@192.168.100.3'
+alias ssh-rpi='ssh krillin@192.168.100.4'
+alias ssh-desktop='ssh broly@192.168.100.5'
+alias ssh-office-laptop='ssh goku@192.168.100.7'
+alias ssh-imac='ssh mutenroshi@192.168.100.8'
+alias ssh-manu-lenovo='ssh manu@192.168.100.10'
+alias ssh-alex-pi='ssh alex@192.168.100.11'
+alias ssh-manu-slimbook='ssh manu@192.168.100.13'
+alias ssh-manuel='ssh manuel@192.168.100.15'
 
 ## utils ##
 alias pdf-words='function _count_words(){pdftotext $1 - | wc -w;};_count_words'
 alias tex-words='function _count_words(){texcount -inc -total $1;};_count_words'
 alias burn-img='function _burn_img(){sudo dd if=$1 of=$2 status=progress; };_burn_img'
-
-## others ##
-alias please='sudo $(fc -ln -1)'
-alias time-sync='sudo ntpd -qg'
 alias color-picker='grim -g "$(slurp -p)" -t ppm - | convert - -format "%[pixel:p{0,0}]" txt:-'
-alias btop='btop --utf-force'
-alias nmtui="NEWT_COLORS='root=black,black;window=black,black;border=white,black;listbox=white,black;label=blue,black;checkbox=red,black;title=green,black;button=white,red;actsellistbox=white,red;actlistbox=white,gray;compactbutton=white,gray;actcheckbox=white,blue;entry=lightgray,black;textbox=blue,black' nmtui"
