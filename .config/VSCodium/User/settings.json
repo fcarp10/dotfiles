@@ -173,4 +173,6 @@
     "workbench.colorTheme": "One Monokai",
     "continue.telemetryEnabled": false,
     "solidity.telemetry": false,
+    "plantuml.render": "PlantUMLServer",
+    "plantuml.server": "http://www.plantuml.com/plantuml",
 }
