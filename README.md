@@ -1,12 +1,9 @@
 # Dotfiles 
 
 - Wayland compositor: [Hyprland](https://github.com/hyprwm/Hyprland)
-- Hyprland official tools:
   - Screen locking: [hyprlock](https://github.com/hyprwm/hyprlock)
   - Wallpaper utility: [hyprpaper](https://github.com/hyprwm/hyprpaper)
-- Status bar
-  - Bar: [waybar](https://github.com/Alexays/Waybar)
-  - Workspaces style: [hyprland-autoname-workspaces](https://github.com/hyprland-community/hyprland-autoname-workspaces)
+- Status bar: [waybar](https://github.com/Alexays/Waybar)
 - Launcher: [wofi](https://hg.sr.ht/~scoopta/wofi)
 - Notifications: [mako](https://github.com/emersion/mako)
 - Overlay bar: [SwayOSD](https://github.com/ErikReider/SwayOSD)
