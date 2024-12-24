@@ -7,9 +7,7 @@
     ],
     "modules-right": [
         "tray",
-        // "hyprland/language",
         "privacy",
-        "idle_inhibitor",
         "network",
         "bluetooth",
         "pulseaudio",
@@ -83,13 +81,6 @@
             }
         ]
     },
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "",
-            "deactivated": "",
-        },
-    },
     "network": {
         "format": "{ifname}",
         "format-wifi": "",
@@ -102,6 +93,7 @@
         "max-length": 50,
         "on-click": "nm-connection-editor",
         "on-click-right": "alacritty -e $SHELL -c 'nmtui'",
+        "interval": 20,
     },
     "bluetooth": {
         "format": "",
