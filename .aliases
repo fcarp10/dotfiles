@@ -33,7 +33,7 @@ alias docker-rmimg='docker rmi -f $(docker images -a -q)'
 ## network ##
 alias nebula-start="sudo systemctl start nebula"
 alias nbrd-start="sudo systemctl start netbird && netbird up --management-url https://netbird.impossiblecloud.network --admin-url https:://netbird.impossiblecloud.network"
-alias nbrd-stop="sudo systemctl stop netbird"
+alias nbrd-stop="sudo systemctl disable --now netbird"
 alias nmtui="NEWT_COLORS='root=black,black;window=black,black;border=white,black;listbox=white,black;label=blue,black;checkbox=red,black;title=green,black;button=white,red;actsellistbox=white,red;actlistbox=white,gray;compactbutton=white,gray;actcheckbox=white,blue;entry=lightgray,black;textbox=blue,black' nmtui"
 alias pubip="curl ifconfig.co/json"
 
