@@ -175,4 +175,13 @@
     "solidity.telemetry": false,
     "plantuml.render": "PlantUMLServer",
     "plantuml.server": "http://www.plantuml.com/plantuml",
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[yaml]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "[css]": {
+        "editor.defaultFormatter": "vscode.css-language-features"
+    },
 }

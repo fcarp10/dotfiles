@@ -1,33 +1,35 @@
-@define-color red	#FF6188;
-@define-color green	#A9DC76;
-@define-color yellow	#FFD866;
-@define-color orange 	#FC9867;
-@define-color purple	#AB9DF2;
-@define-color cyan	#78DCE8;
+@define-color red #FF6188;
+@define-color green #A9DC76;
+@define-color yellow #FFD866;
+@define-color orange #FC9867;
+@define-color purple #AB9DF2;
+@define-color cyan #78DCE8;
+@define-color background-color #000000;
+@define-color border-color #303030;
 
 * {
     border: none;
     border-radius: 0;
-    font-family:"Roboto Mono Medium", "Font Awesome 6 Free Solid"; 
+    font-family: "Roboto Mono Medium", "Font Awesome 6 Free Solid";
     font-size: 14px;
     font-weight: bolder;
     min-height: 25px;
 }
 
-window#waybar{
-    background: shade(alpha(black, 1.0), 1.0);
-    /* background: linear-gradient(to top, shade(alpha(@blackcolor, 0.1), 1.0), shade(alpha(@blackcolor, 0.6), 1.0)); */
+window#waybar {
+    background: @background-color;
 }
 
 window#waybar.solo {
-    background: shade(alpha(black, 1.0), 1.0);
+    background: @background-color;
 }
 
 tooltip {
-    background: rgb(0, 0, 0);
-    border: 1px solid rgb(48, 48, 48);
-    border-radius: 2px;
+    background: @background-color;
+    border: 1px solid @border-color;
+    border-radius: 6px;
 }
+
 tooltip label {
     color: white;
 }
@@ -44,7 +46,7 @@ tooltip label {
 }
 
 #workspaces button:hover {
-    color: black;
+    color: @background-color;
     background: shade(alpha(@cyan, 1.0), 1.0);
 }
 
@@ -53,39 +55,56 @@ tooltip label {
     color: @green;
 }
 
-#tray, #language, #privacy, #idle_inhibitor, #pulseaudio, #temperature, #cpu, #memory,#battery, #disk, #clock, #network, #bluetooth{
+#tray,
+#privacy,
+#pulseaudio,
+#temperature,
+#cpu,
+#memory,
+#battery,
+#disk,
+#clock,
+#network,
+#bluetooth {
     padding-left: 10px;
     padding-right: 10px;
 }
 
-#privacy{
-    color: black;
+#privacy {
+    color: @background-color;
     background: shade(alpha(@yellow, 1.0), 1.0);
 }
 
-#language,#idle_inhibitor, #network, #bluetooth{
-   color: @yellow;
-} 
-#bluetooth{
+#network,
+#bluetooth {
+    color: @yellow;
+}
+
+#bluetooth {
     font-size: 15px;
 }
+
 #pulseaudio {
     color: @orange;
 }
 
-#battery, #temperature, #cpu, #memory, #disk{
+#battery,
+#temperature,
+#cpu,
+#memory,
+#disk {
     color: @red;
 }
 
-#temperature.critical, #battery.critical, #cpu.critical, #memory.critical, #disk.critical{
-    color: black;
+#temperature.critical,
+#battery.critical,
+#cpu.critical,
+#memory.critical,
+#disk.critical {
+    color: @background-color;
     background: shade(alpha(@red, 1.0), 1.0);
 }
 
 #clock {
     color: @purple;
 }
-
-
-
-
