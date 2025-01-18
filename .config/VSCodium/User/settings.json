@@ -174,7 +174,7 @@
     "continue.telemetryEnabled": false,
     "solidity.telemetry": false,
     "plantuml.render": "PlantUMLServer",
-    "plantuml.server": "http://www.plantuml.com/plantuml",
+    "plantuml.server": "http://localhost:9999",
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
