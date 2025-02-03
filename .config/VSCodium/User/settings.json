@@ -184,4 +184,5 @@
     "[css]": {
         "editor.defaultFormatter": "vscode.css-language-features"
     },
+    "java.edit.smartSemicolonDetection.enabled": true,
 }
