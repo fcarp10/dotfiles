@@ -65,7 +65,7 @@
     "latex-workshop.message.warning.show": false,
     "latex-workshop.message.error.show": false,
     "latex-workshop.synctex.afterBuild.enabled": true,
-    // "latex-workshop.latex.outDir": "%WORKSPACE_FOLDER%/build/%DOCFILE%",
+    "latex-workshop.latex.outDir": "${fileDirname}/../../build/%DOCFILE%",
     "latex-workshop.latex.recipes": [
         {
             "name": "tectonic",
@@ -169,12 +169,8 @@
         "**/*.yml": "ansible",
     },
     "go.toolsManagement.autoUpdate": true,
-    "typst-lsp.experimentalFormatterMode": "on",
     "workbench.colorTheme": "One Monokai",
-    "continue.telemetryEnabled": false,
     "solidity.telemetry": false,
-    "plantuml.render": "PlantUMLServer",
-    "plantuml.server": "http://localhost:9999",
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
@@ -184,4 +180,6 @@
     "[css]": {
         "editor.defaultFormatter": "vscode.css-language-features"
     },
+    "java.edit.smartSemicolonDetection.enabled": true,
+    "continue.telemetryEnabled": false,
 }
