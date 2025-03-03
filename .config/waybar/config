@@ -28,7 +28,6 @@
         "sort-by-number": true,
         "window-rewrite-default": " ",
         "window-rewrite": {
-            "title<.*youtube.*>": "",
             "class<firefox>": " ",
             "class<librewolf>": " ",
             "class<.*zen.*>": " ",
@@ -44,7 +43,8 @@
             "class<evince>": "",
             "class<Papers>": "",
             "class<writer>": "",
-            "class<mpv>": ""
+            "class<mpv>": "",
+            "class<.*freetube.*>": " ",
         },
 
     },
