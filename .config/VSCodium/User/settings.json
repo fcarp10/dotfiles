@@ -40,7 +40,6 @@
         "terminal.ansiBrightWhite": "#FCFCFA",
         "terminal.ansiBrightYellow": "#FFD866",
     },
-    "window.menuBarVisibility": "toggle",
     "window.openFilesInNewWindow": "off",
     "window.openFoldersInNewWindow": "on",
     "diffEditor.ignoreTrimWhitespace": false,
@@ -182,4 +181,7 @@
     },
     "java.edit.smartSemicolonDetection.enabled": true,
     "continue.telemetryEnabled": false,
+    "window.menuBarVisibility": "toggle",
+    "window.titleBarStyle": "native",
+    "window.customTitleBarVisibility": "never",
 }
