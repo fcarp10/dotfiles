@@ -1,0 +1,10 @@
+{ "theme": "textual-dark", 
+  "splash-screen": false, 
+  "keymap": {
+    "next.chat": "ctrl+tab",
+    "prev.chat": "ctrl+shift+tab",
+    "quit": "ctrl+q",
+    "newline": "shift+enter",
+    "delete.chat": "ctrl+shift+backspace"
+  }
+}
