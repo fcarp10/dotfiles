@@ -8,6 +8,7 @@
     "editor.fastScrollSensitivity": 10,
     "editor.suggestSelection": "first",
     "workbench.editor.enablePreview": false,
+    "workbench.colorTheme": "One Monokai",
     "workbench.iconTheme": "eq-material-theme-icons",
     "workbench.productIconTheme": "material-product-icons",
     "workbench.startupEditor": "newUntitledFile",
@@ -64,7 +65,7 @@
     "latex-workshop.message.warning.show": false,
     "latex-workshop.message.error.show": false,
     "latex-workshop.synctex.afterBuild.enabled": true,
-    "latex-workshop.latex.outDir": "${fileDirname}/../../build/%DOCFILE%",
+    "latex-workshop.latex.outDir": "%DOC_EXT%/../../build/%DOCFILE%",
     "latex-workshop.latex.recipes": [
         {
             "name": "tectonic",
@@ -159,7 +160,8 @@
         "latex"
     ],
     "projectManager.git.baseFolders": [
-        "~/repository"
+        "~/repository",
+        "~/repository-work"
     ],
     "projectManager.git.maxDepthRecursion": 2,
     "redhat.telemetry.enabled": false,
@@ -168,7 +170,6 @@
         "**/*.yml": "ansible",
     },
     "go.toolsManagement.autoUpdate": true,
-    "workbench.colorTheme": "One Monokai",
     "solidity.telemetry": false,
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
@@ -180,7 +181,6 @@
         "editor.defaultFormatter": "vscode.css-language-features"
     },
     "java.edit.smartSemicolonDetection.enabled": true,
-    "continue.telemetryEnabled": false,
     "window.menuBarVisibility": "toggle",
     "window.titleBarStyle": "native",
     "window.customTitleBarVisibility": "never",
