@@ -88,6 +88,16 @@ tooltip label {
     color: @orange;
 }
 
+#pulseaudio.mic {
+    color: @background-color;
+    background: shade(alpha(@orange, 1.0), 1.0);
+}
+
+#pulseaudio.mic.source-muted {
+    color: @orange;
+     background: @background-color;
+}
+
 #battery,
 #temperature,
 #cpu,
