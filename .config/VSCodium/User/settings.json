@@ -204,4 +204,10 @@
     "window.menuBarVisibility": "toggle",
     "window.titleBarStyle": "native",
     "window.customTitleBarVisibility": "never",
+    "githubPullRequests.remotes": [
+        "origin",
+        "upstream",
+        "github"
+    ],
+    "githubPullRequests.createOnPublishBranch": "never",
 }
