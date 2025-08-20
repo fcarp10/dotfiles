@@ -9,8 +9,7 @@
     "editor.suggestSelection": "first",
     "workbench.editor.enablePreview": false,
     "workbench.colorTheme": "One Monokai",
-    "workbench.iconTheme": "eq-material-theme-icons",
-    "workbench.productIconTheme": "material-product-icons",
+    "workbench.productIconTheme": "fluent-icons",
     "workbench.startupEditor": "newUntitledFile",
     "workbench.colorCustomizations": {
         "sideBar.background": "#000000",
@@ -210,4 +209,5 @@
         "github"
     ],
     "githubPullRequests.createOnPublishBranch": "never",
+    "workbench.iconTheme": "eq-material-theme-icons",
 }
