@@ -79,16 +79,14 @@
     // "latex-workshop.latex.outDir": "%DOC_EXT%/../../build/%DOCFILE%",
     "latex-workshop.latex.recipes": [
         {
+            "name": "latexmk-xelatex",
+            "tools": [
+            "latexmk-xelatex"
+            ]
+        },
+        {
             "name": "tectonic-compile",
             "tools": ["tectonic-compile"]
-        },
-        {
-            "name": "tectonic-build",
-            "tools": ["tectonic-build"]
-        },
-        {
-            "name": "tectonic-compile-biber",
-            "tools": ["tectonic-compile-biber", "tectonic-compile"]
         },
         {
             "name": "pdflatex",
@@ -123,21 +121,21 @@
     ],
     "latex-workshop.latex.tools": [
         {
+            "name": "latexmk-xelatex",
+            "command": "latexmk",
+            "args": [
+            "-xelatex",
+            "-synctex=1",
+            "-interaction=nonstopmode",
+            "-file-line-error",
+            "%DOC%"
+            ],
+            "env": {}
+        },
+        {
             "name": "tectonic-compile",
             "command": "tectonic",
-            "args": ["-X", "compile", "%DOCFILE_EXT%", "--synctex", "--print", "--keep-intermediates","--keep-logs"],
-            "env": {}
-        },
-        {
-            "name": "tectonic-compile-biber",
-            "command": "tectonic",
-            "args": ["-X", "compile", "%DOCFILE_EXT%", "--keep-intermediates", "--keep-logs"],
-            "env": {}
-        },
-        {
-            "name": "tectonic-build",
-            "command": "tectonic",
-            "args": ["-X", "build", "--print", "--keep-intermediates","--keep-logs"],
+            "args": ["-X", "compile", "%DOCFILE_EXT%", "--only-cached", "--synctex", "--print","--keep-logs", "--keep-intermediates"],
             "env": {}
         },
         {
@@ -230,5 +228,5 @@
         "rgba(247, 146, 86,0.15)",
         "rgba(247, 146, 86,0.1)",
         "rgba(247, 146, 86,0.05)"
-    ],
+    ]
 }
