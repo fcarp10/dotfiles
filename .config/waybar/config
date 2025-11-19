@@ -4,6 +4,8 @@
     "modules-left": [
         "hyprland/workspaces",
         "hyprland/window",
+        "niri/workspaces",
+        "niri/window",
     ],
     "modules-right": [
         "tray",
@@ -46,11 +48,21 @@
             "class<mpv>": "",
             "class<.*freetube.*>": " ",
         },
-
+    },
+    "niri/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "active": "",
+            "default": ""
+        },
     },
     "hyprland/window": {
         "max-length": 200,
         "separate-outputs": true
+    },
+    "niri/window": {
+        "format": "{}",
+        // "icon": true,
     },
     "tray": {
         "spacing": 10,

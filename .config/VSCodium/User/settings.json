@@ -228,5 +228,16 @@
         "rgba(247, 146, 86,0.15)",
         "rgba(247, 146, 86,0.1)",
         "rgba(247, 146, 86,0.05)"
-    ]
+    ],
+    "roo-cline.allowedCommands": [
+        "git log",
+        "git diff",
+        "git show",
+        "npm test",
+        "npm install",
+        "tsc"
+    ],
+    "roo-cline.deniedCommands": [],
+    "git.replaceTagsWhenPull": true,
+    "vscode-modernized.autoApplyTheme": false
 }

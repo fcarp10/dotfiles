@@ -1,0 +1,291 @@
+input {
+    keyboard {
+        xkb {
+            layout "us,es"
+            options "grp:alt_shift_toggle"
+        }
+    }
+    mouse {
+        // off
+        // natural-scroll
+        // accel-speed 0.2
+        // accel-profile "flat"
+        // scroll-method "no-scroll"
+    }
+    warp-mouse-to-focus
+    focus-follows-mouse max-scroll-amount="95%"
+}
+
+output "DP-1" {
+    mode "3840x2160"
+    scale 1.5
+    transform "normal"
+    position x=0 y=0
+}
+
+output "DP-3" {
+    mode "2560x1440"
+    scale 1
+    transform "normal"
+    position x=2560 y=0
+}
+
+spawn-sh-at-startup "openrgb -p all_off.orp"
+spawn-sh-at-startup "nextcloud --background"
+
+//////////////////// TEMPORAL /////////////////////////////
+
+spawn-at-startup "waybar"
+spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
+spawn-at-startup "mako"
+spawn-at-startup "swayosd-server"
+spawn-sh-at-startup "swaybg -m fill -i '.config/backgrounds/gta6-dark.jpg'"
+spawn-sh-at-startup "gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-dark"
+spawn-sh-at-startup "gsettings set org.gnome.desktop.interface color-scheme prefer-dark"
+spawn-sh-at-startup "gsettings set org.gnome.desktop.interface icon-theme Papirus-Dark"
+spawn-sh-at-startup "gsettings set org.gnome.desktop.interface cursor-theme BreezeX-Black"
+spawn-sh-at-startup "gsettings set org.gnome.desktop.interface cursor-size 40"
+spawn-sh-at-startup "gsettings set org.gtk.Settings.FileChooser startup-mode cwd"
+
+environment {
+    EDITOR "nvim"
+    VISUAL "nvim"
+    XDG_DATA_DIRS "/usr/local/share/:/usr/share/" // required for junction
+    XDG_SESSION_TYPE "wayland"
+    WLR_DRM_NO_MODIFIERS "1"
+    CLUTTER_BACKEND "wayland"
+    SDL_VIDEODRIVER "wayland"
+    _JAVA_AWT_WM_NONREPARENTING "1"
+}
+
+layout {
+    gaps 12
+    center-focused-column "never"
+    always-center-single-column
+    preset-column-widths {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+    }
+
+    default-column-width { proportion 0.5; }
+
+    focus-ring {
+        off
+        width 1
+        active-color "#7fc8ff"
+        inactive-color "#505050"
+    }
+
+    border {
+        off
+        width 4
+        active-color "#ffc87f"
+        inactive-color "#505050"
+        urgent-color "#9b0000"
+    }
+
+    shadow {
+        on
+        softness 30
+        spread 10
+        offset x=0 y=5
+        color "#00000070"
+        inactive-color "#000000ff"
+    }
+
+    struts {
+        // left 64
+        // right 64
+        // top 64
+        // bottom 64
+    }
+}
+gestures {
+    hot-corners {
+        // top-right
+        // bottom-left
+    }
+}
+cursor {
+    xcursor-theme "BreezeX-Black"
+    xcursor-size 40
+}
+hotkey-overlay {
+    skip-at-startup
+}
+prefer-no-csd
+screenshot-path "screenshot %Y-%m-%d %H-%M-%S.png"
+// Window rules
+window-rule {
+    geometry-corner-radius 10
+    clip-to-geometry true
+}
+window-rule {
+    match app-id=r#"blueberry.py$"#
+    open-floating true
+}
+window-rule {
+    match app-id=r#"re.sonny.Junction$"#
+    open-floating true
+}
+window-rule {
+    match title=".*Sharing Indicator.*"
+    open-floating true
+}
+window-rule {
+    match title=".*Reminder.*" app-id="thunderbird"
+    open-floating true
+}
+window-rule {
+    match app-id="com.nextcloud.desktopclient.nextcloud"
+    open-floating true
+}
+window-rule {
+    match app-id="pinentry"
+    open-floating true
+}
+window-rule {
+    match app-id=".*Papers.*"
+    open-fullscreen false
+    open-maximized false
+    // open-maximized-to-edges false
+}
+
+binds {
+    
+    Mod+Shift+Slash { show-hotkey-overlay; }
+    Mod+G repeat=false { toggle-overview; }
+    Mod+Q repeat=false { close-window; }
+
+    // Apps
+    Mod+Return hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
+    Mod+D hotkey-overlay-title="Run an Application: wofi" { spawn-sh "wofi --show drun"; }
+    Mod+Shift+D hotkey-overlay-title="Run an Application: wofi-pass" { spawn-sh "wofi-pass -s"; }
+    Mod+Z hotkey-overlay-title="Run an Application: nemo" { spawn "nemo"; }
+    Mod+W hotkey-overlay-title="Run an Application: zen-browser" { spawn "zen-browser"; }
+    Mod+Shift+W hotkey-overlay-title="Run an Application: librewolf" { spawn "librewolf"; }
+    Mod+Alt+W hotkey-overlay-title="Run an Application: firefox" { spawn "firefox"; }
+    Mod+R hotkey-overlay-title="Run an Application: brave" { spawn-sh "brave --ozone-platform-hint=auto"; }
+    Mod+Shift+R hotkey-overlay-title="Run an Application: chromium" { spawn-sh "chromium --ozone-platform-hint=auto"; }
+    Mod+E hotkey-overlay-title="Run an Application: vscodium" { spawn-sh "codium --ozone-platform-hint=auto"; }
+    Mod+A hotkey-overlay-title="Run an Application: thunderbird" { spawn "thunderbird"; }
+    Mod+S hotkey-overlay-title="Run an Application: freetube" { spawn-sh "freetube --ozone-platform-hint=auto"; }
+    Mod+Shift+S hotkey-overlay-title="Run an Application: signal" { spawn-sh "signal-desktop -enable-features=UseOzonePlatform -ozone-platform=wayland"; }
+    Mod+T hotkey-overlay-title="Run an Application: ferdium" { spawn-sh "ferdium --ozone-platform-hint=auto"; }
+    Mod+B hotkey-overlay-title="Run an Application: blueberry" { spawn "blueberry"; }
+    Mod+Alt+S hotkey-overlay-title="Run an Application: steam" { spawn "steam"; }
+    Mod+I hotkey-overlay-title="Run an Application: isd" { spawn-sh "alacritty -e $SHELL -c 'isd'"; }
+    Mod+O hotkey-overlay-title="Run an Application: oterm" { spawn-sh "alacritty -e $SHELL -c 'uvx oterm'"; }
+    Mod+Ctrl+V hotkey-overlay-title="Adjust cam settings" { spawn-sh "v4l2-ctl -c white_balance_automatic=0 -c white_balance_temperature=5000"; }
+
+    // Audio
+    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "swayosd-client --output-volume raise --max-volume 200 && paplay /usr/share/sounds/elementary/stereo/audio-volume-change.wav"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "swayosd-client --output-volume lower --max-volume 200 && paplay /usr/share/sounds/elementary/stereo/audio-volume-change.wav"; }
+    XF86AudioMute        allow-when-locked=true { spawn-sh "swayosd-client --output-volume mute-toggle"; }
+    XF86AudioMicMute     allow-when-locked=true { spawn-sh "swayosd-client --input-volume mute-toggle"; }
+    Mod+M hotkey-overlay-title="Mute mic" { spawn-sh "pactl set-source-mute @DEFAULT_SOURCE@ toggle"; }
+
+    // Brightness
+    XF86MonBrightnessUp allow-when-locked=true { spawn-sh "brightnessctl set +10% && swayosd-client --brightness raise"; }
+    XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl set 10%- && swayosd-client --brightness lower"; }
+
+    Mod+Left  { focus-column-left; }
+    Mod+Down  { focus-window-down; }
+    Mod+Up    { focus-window-up; }
+    Mod+Right { focus-column-right; }
+
+    Mod+Shift+Left  { move-column-left; }
+    Mod+Shift+Down  { move-window-down; }
+    Mod+Shift+Up    { move-window-up; }
+    Mod+Shift+Right { move-column-right; }
+
+    // Mod+Shift+Left  { focus-monitor-left; }
+    // Mod+Shift+Down  { focus-monitor-down; }
+    // Mod+Shift+Up    { focus-monitor-up; }
+    // Mod+Shift+Right { focus-monitor-right; }
+
+    Mod+Shift+Ctrl+Left  { move-window-to-monitor-left; }
+    Mod+Shift+Ctrl+Down  { move-window-to-monitor-down; }
+    Mod+Shift+Ctrl+Up    { move-window-to-monitor-up; }
+    Mod+Shift+Ctrl+Right { move-window-to-monitor-right; }
+
+    Mod+Ctrl+Up         { focus-workspace-up; }
+    Mod+Ctrl+Down       { focus-workspace-down; }
+
+    Mod+WheelScrollDown      cooldown-ms=150 { focus-workspace-down; }
+    Mod+WheelScrollUp        cooldown-ms=150 { focus-workspace-up; }
+    Mod+Ctrl+WheelScrollDown cooldown-ms=150 { move-column-to-workspace-down; }
+    Mod+Ctrl+WheelScrollUp   cooldown-ms=150 { move-column-to-workspace-up; }
+
+    Mod+WheelScrollRight      { focus-column-right; }
+    Mod+WheelScrollLeft       { focus-column-left; }
+    Mod+Ctrl+WheelScrollRight { move-column-right; }
+    Mod+Ctrl+WheelScrollLeft  { move-column-left; }
+
+    Mod+Shift+WheelScrollDown      { focus-column-right; }
+    Mod+Shift+WheelScrollUp        { focus-column-left; }
+    Mod+Ctrl+Shift+WheelScrollDown { move-column-right; }
+    Mod+Ctrl+Shift+WheelScrollUp   { move-column-left; }
+
+    Mod+1 { focus-workspace 1; }
+    Mod+2 { focus-workspace 2; }
+    Mod+3 { focus-workspace 3; }
+    Mod+4 { focus-workspace 4; }
+    Mod+5 { focus-workspace 5; }
+    Mod+6 { focus-workspace 6; }
+    Mod+7 { focus-workspace 7; }
+    Mod+8 { focus-workspace 8; }
+    Mod+9 { focus-workspace 9; }
+    Mod+Shift+1 { move-window-to-workspace 1; }
+    Mod+Shift+2 { move-window-to-workspace 2; }
+    Mod+Shift+3 { move-window-to-workspace 3; }
+    Mod+Shift+4 { move-window-to-workspace 4; }
+    Mod+Shift+5 { move-window-to-workspace 5; }
+    Mod+Shift+6 { move-window-to-workspace 6; }
+    Mod+Shift+7 { move-window-to-workspace 7; }
+    Mod+Shift+8 { move-window-to-workspace 8; }
+    Mod+Shift+9 { move-window-to-workspace 9; }
+
+    Mod+Tab { focus-workspace-previous; }
+
+    Mod+BracketLeft  { consume-or-expel-window-left; }
+    Mod+BracketRight { consume-or-expel-window-right; }
+    Mod+Comma  { consume-window-into-column; }
+    Mod+Period { expel-window-from-column; }
+
+    Mod+F { maximize-column; }
+    Mod+Shift+F { fullscreen-window; }
+    Mod+Ctrl+F { expand-column-to-available-width; }
+    Mod+C { center-column; }
+    Mod+Ctrl+C { center-visible-columns; }
+
+    Mod+V       { toggle-window-floating; }
+    // Mod+Shift+V { switch-focus-between-floating-and-tiling; }
+    // Mod+W { toggle-column-tabbed-display; }
+
+    Print { screenshot; }
+    Ctrl+Print { screenshot-screen; }
+    Alt+Print { screenshot-window; }
+
+    Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
+
+    // Mod+Alt+1 { spawn-sh ""; }
+    Mod+Alt+2 { power-off-monitors; }
+    // Mod+Alt+3 { power-on-monitors; }
+    Mod+Alt+4 hotkey-overlay-title="DND on" { spawn-sh "notify-send 'DND ON' && sleep 2 && makoctl set-mode dnd"; }
+    Mod+Alt+5 hotkey-overlay-title="DND off" { spawn-sh "makoctl set-mode default && notify-send 'DND OFF'"; }
+    Mod+Alt+6 hotkey-overlay-title="Restart waybar" { spawn-sh "killall waybar && waybar"; }
+    Mod+Alt+8 { quit; }
+    Mod+Alt+9 hotkey-overlay-title="Reboot" { spawn "reboot"; }
+    Mod+Alt+0 hotkey-overlay-title="Shutdown" { spawn-sh "shutdown now"; }
+
+    ///////////////// TEMPORAL  ////////////////////////
+    Mod+Ctrl+3 hotkey-overlay-title="Disable LEDs" { spawn-sh "openrgb -p all_off.orp"; }
+    Mod+Ctrl+4 hotkey-overlay-title="Enable temperature sync LEDs" { spawn-sh "openrgb -p all_sync_cpu_temp"; }
+    Mod+Ctrl+5 hotkey-overlay-title="Enable rainbow LEDs" { spawn-sh "openrgb -p all_rainbow"; }
+    Mod+Ctrl+6 hotkey-overlay-title="Disable DP-3" { spawn-sh "niri msg output DP-3 off"; }
+    Mod+Ctrl+Shift+6 hotkey-overlay-title="Enable DP-3" { spawn-sh "niri msg output DP-3 on"; }
+    Mod+Ctrl+7 hotkey-overlay-title="Disable DP-1" { spawn-sh "niri msg output DP-1 off"; }
+    Mod+Ctrl+Shift+7 hotkey-overlay-title="Enable DP-1" { spawn-sh "niri msg output DP-1 off"; }
+}

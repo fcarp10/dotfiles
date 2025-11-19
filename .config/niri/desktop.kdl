@@ -1,0 +1,47 @@
+input {
+    keyboard {
+        xkb {
+            layout "us,es"
+            options "grp:alt_shift_toggle"
+        }
+    }
+    mouse {
+        // off
+        // natural-scroll
+        // accel-speed 0.2
+        // accel-profile "flat"
+        // scroll-method "no-scroll"
+    }
+    warp-mouse-to-focus
+    focus-follows-mouse max-scroll-amount="95%"
+}
+
+output "DP-1" {
+    mode "3840x2160"
+    scale 1.5
+    transform "normal"
+    position x=0 y=0
+}
+
+output "DP-3" {
+    mode "2560x1440"
+    scale 1
+    transform "normal"
+    position x=2560 y=0
+}
+
+spawn-sh-at-startup "openrgb -p all_off.orp"
+spawn-sh-at-startup "nextcloud --background"
+
+binds {
+    Mod+Ctrl+3 hotkey-overlay-title="Disable LEDs" { spawn-sh "openrgb -p all_off.orp"; }
+    Mod+Ctrl+4 hotkey-overlay-title="Sync LEDs" { spawn-sh "openrgb -p all_sync_cpu_temp"; }
+    Mod+Ctrl+5 hotkey-overlay-title="Rainbow LEDs" { spawn-sh "openrgb -p all_rainbow"; }
+    Mod+Ctrl+6 hotkey-overlay-title="Disable DP-3" { spawn-sh "niri msg output DP-3 off"; }
+    Mod+Ctrl+Shift+6 hotkey-overlay-title="Disable DP-3" { spawn-sh "niri msg output DP-3 on"; }
+    Mod+Ctrl+7 hotkey-overlay-title="Disable DP-3" { spawn-sh "niri msg output DP-1 off"; }
+    Mod+Ctrl+Shift+7 hotkey-overlay-title="Disable DP-3" { spawn-sh "niri msg output DP-1 off"; }
+}
+
+include "config.kdl"
+
