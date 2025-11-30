@@ -134,8 +134,9 @@ window-rule {
     open-floating true
 }
 window-rule {
-    match title=".*Reminder.*" app-id="thunderbird"
+    match title=".*Reminder.*" app-id="org.mozilla.Thunderbird"
     open-floating true
+    open-focused true
 }
 window-rule {
     match app-id="com.nextcloud.desktopclient.nextcloud"

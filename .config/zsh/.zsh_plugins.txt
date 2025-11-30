@@ -1,0 +1,6 @@
+getantidote/use-omz
+ohmyzsh/ohmyzsh path:lib
+romkatv/powerlevel10k
+zsh-users/zsh-autosuggestions
+zdharma-continuum/fast-syntax-highlighting kind:defer
+marlonrichert/zsh-autocomplete

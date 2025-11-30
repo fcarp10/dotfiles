@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 alias aliases='function _get_alias(){ grep -r alias ~/.aliases | grep -v \# |  grep alias; };_get_alias'
 alias dots='lazygit --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias gdots='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
@@ -58,3 +60,4 @@ alias steam-hdr='ENABLE_HDR_WSI=1 gamescope --fullscreen -w 2560 -h 1440 -r 360 
 alias kde-launch='/usr/lib/plasma-dbus-run-session-if-needed /usr/bin/startplasma-wayland'
 alias notes-push='cd $HOME/repository/notes/ && git add -A && git commit -m "update notes" && git push origin master'
 alias git-clean-branches='git fetch --prune && git branch -vv | grep 'gone]' | awk "{print $1}" | xargs git branch -D'
+
