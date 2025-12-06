@@ -1,0 +1,35 @@
+input {
+    keyboard {
+        xkb {
+            layout "us,es"
+            options "grp:alt_shift_toggle"
+        }
+    }
+    touchpad {
+        tap
+        dwt
+        drag true
+        drag-lock
+        natural-scroll
+        accel-speed 0.2
+        accel-profile "adaptive"
+        scroll-factor 1.0
+        scroll-method "two-finger"
+        tap-button-map "left-middle-right"
+        click-method "clickfinger"
+    }
+    warp-mouse-to-focus
+    focus-follows-mouse max-scroll-amount="95%"
+}
+
+output "DP-1" {
+    mode "3456x2160"
+    scale 1.5
+    transform "normal"
+    position x=0 y=0
+}
+
+spawn-sh-at-startup "nextcloud --background"
+
+include "config.kdl"
+
