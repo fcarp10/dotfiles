@@ -35,12 +35,12 @@ spawn-sh-at-startup "nextcloud --background"
 
 binds {
     Mod+Ctrl+3 hotkey-overlay-title="Disable LEDs" { spawn-sh "openrgb -p all_off.orp"; }
-    Mod+Ctrl+4 hotkey-overlay-title="Sync LEDs" { spawn-sh "openrgb -p all_sync_cpu_temp"; }
-    Mod+Ctrl+5 hotkey-overlay-title="Rainbow LEDs" { spawn-sh "openrgb -p all_rainbow"; }
+    Mod+Ctrl+4 hotkey-overlay-title="Enable temperature sync LEDs" { spawn-sh "openrgb -p all_sync_cpu_temp"; }
+    Mod+Ctrl+5 hotkey-overlay-title="Enable rainbow LEDs" { spawn-sh "openrgb -p all_rainbow"; }
     Mod+Ctrl+6 hotkey-overlay-title="Disable DP-3" { spawn-sh "niri msg output DP-3 off"; }
-    Mod+Ctrl+Shift+6 hotkey-overlay-title="Disable DP-3" { spawn-sh "niri msg output DP-3 on"; }
-    Mod+Ctrl+7 hotkey-overlay-title="Disable DP-3" { spawn-sh "niri msg output DP-1 off"; }
-    Mod+Ctrl+Shift+7 hotkey-overlay-title="Disable DP-3" { spawn-sh "niri msg output DP-1 off"; }
+    Mod+Ctrl+Shift+6 hotkey-overlay-title="Enable DP-3" { spawn-sh "niri msg output DP-3 on"; }
+    Mod+Ctrl+7 hotkey-overlay-title="Disable DP-1" { spawn-sh "niri msg output DP-1 off"; }
+    Mod+Ctrl+Shift+7 hotkey-overlay-title="Disable DP-1" { spawn-sh "niri msg output DP-1 off"; }
 }
 
 include "config.kdl"

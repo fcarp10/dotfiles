@@ -1,5 +1,5 @@
 if id -u "broly" >/dev/null 2>&1; then
-  niri --config .config/niri/config.kdl --session
+  niri --config .config/niri/desktop.kdl --session
 elif id -u "vegito" >/dev/null 2>&1; then
   Hyprland --config .config/hypr/setup_laptop.conf
 elif id -u "vegeta" >/dev/null 2>&1; then

@@ -7,5 +7,5 @@
 - Launcher: [wofi](https://hg.sr.ht/~scoopta/wofi)
 - Notifications: [mako](https://github.com/emersion/mako)
 - Overlay bar: [SwayOSD](https://github.com/ErikReider/SwayOSD)
-- Zsh plugin manager: [antidore](https://github.com/mattmc3/antidote)
+- Zsh plugin manager: [antidote](https://github.com/mattmc3/antidote)
 

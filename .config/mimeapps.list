@@ -11,7 +11,13 @@ image/png=org.gnome.Shotwell-Viewer.desktop
 text/plain=org.gnome.TextEditor.desktop
 application/x-raw-disk-image-xz-compressed=org.gnome.FileRoller.desktop
 video/mp4=io.github.celluloid_player.Celluloid.desktop
+image/webp=org.gnome.Loupe.desktop
+x-scheme-handler/freetube=FreeTube.desktop
+x-scheme-handler/bruno=bruno.desktop
+inode/directory=nemo.desktop
+application/x-gnome-saved-search=nemo.desktop
 
 [Added Associations]
-x-scheme-handler/https=brave-browser.desktop;
 video/mp4=mpv.desktop;io.github.celluloid_player.Celluloid.desktop;
+image/webp=org.gnome.Shotwell-Viewer.desktop;org.gnome.Loupe.desktop;
+audio/ogg=mpv.desktop;
