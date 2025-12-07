@@ -172,6 +172,7 @@ binds {
     Mod+I hotkey-overlay-title="Run an Application: isd" { spawn-sh "alacritty -e $SHELL -c 'isd'"; }
     Mod+O hotkey-overlay-title="Run an Application: oterm" { spawn-sh "alacritty -e $SHELL -c 'uvx oterm'"; }
     Mod+Ctrl+V hotkey-overlay-title="Adjust cam settings" { spawn-sh "v4l2-ctl -c white_balance_automatic=0 -c white_balance_temperature=5000"; }
+    Mod+Shift+N hotkey-overlay-title="Adjust cam settings" { spawn-sh "killall waybar && waybar";}
 
     // Audio
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "swayosd-client --output-volume raise --max-volume 200 && paplay /usr/share/sounds/elementary/stereo/audio-volume-change.wav"; }
