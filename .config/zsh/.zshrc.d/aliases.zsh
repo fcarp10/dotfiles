@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-alias aliases='function _get_alias(){ grep -r alias ~/.aliases | grep -v \# |  grep alias; };_get_alias'
+alias aliases='function _get_alias(){ grep -r alias $HOME/.config/zsh/.zshrc.d/aliases.zsh | grep -v \# |  grep alias; };_get_alias'
 alias dots='lazygit --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias gdots='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 

@@ -189,8 +189,7 @@
         "latex"
     ],
     "projectManager.git.baseFolders": [
-        "~/repository",
-        "~/repository-work"
+        "~/repository"
     ],
     "projectManager.git.maxDepthRecursion": 2,
     "redhat.telemetry.enabled": false,
