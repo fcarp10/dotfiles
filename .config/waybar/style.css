@@ -106,6 +106,12 @@ tooltip label {
     color: @red;
 }
 
+#battery.warning {
+    color: @background-color;
+    background: shade(alpha(@orange, 1.0), 1.0);
+
+}
+
 #temperature.critical,
 #battery.critical,
 #cpu.critical,
@@ -114,6 +120,8 @@ tooltip label {
     color: @background-color;
     background: shade(alpha(@red, 1.0), 1.0);
 }
+
+
 
 #clock {
     color: @purple;
