@@ -3,6 +3,7 @@ spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 spawn-at-startup "mako"
 spawn-at-startup "swayosd-server"
 spawn-sh-at-startup "swaybg -m fill -i '.config/backgrounds/gta6-dark.jpg'"
+spawn-sh-at-startup "sudo logid -c .config/logid.cfg"
 spawn-sh-at-startup "gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-dark"
 spawn-sh-at-startup "gsettings set org.gnome.desktop.interface color-scheme prefer-dark"
 spawn-sh-at-startup "gsettings set org.gnome.desktop.interface icon-theme Papirus-Dark"
@@ -143,7 +144,7 @@ window-rule {
     match app-id=".*Papers.*"
     open-fullscreen false
     open-maximized false
-    // open-maximized-to-edges false
+    open-maximized-to-edges false
 }
 
 binds {
@@ -172,6 +173,7 @@ binds {
     Mod+I hotkey-overlay-title="Run an Application: isd" { spawn-sh "alacritty -e $SHELL -c 'isd'"; }
     Mod+O hotkey-overlay-title="Run an Application: oterm" { spawn-sh "alacritty -e $SHELL -c 'uvx oterm'"; }
     Mod+Ctrl+V hotkey-overlay-title="Adjust cam settings" { spawn-sh "v4l2-ctl -c white_balance_automatic=0 -c white_balance_temperature=5000"; }
+    Mod+Shift+C hotkey-overlay-title="Run an Application: open notes" { spawn-sh "codium -n $HOME/repository/home/notes"; }
 
     // Audio
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "swayosd-client --output-volume raise --max-volume 200 && paplay /usr/share/sounds/elementary/stereo/audio-volume-change.wav"; }
