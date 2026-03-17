@@ -10,8 +10,20 @@ fi
 # Set any zstyles you might use for configuration.
 [[ ! -f ${ZDOTDIR:-$HOME}/.zstyles ]] || source ${ZDOTDIR:-$HOME}/.zstyles
 
-# source antidote 
-source '/usr/share/zsh-antidote/antidote.zsh'
+
+case "$OSTYPE" in
+  darwin*)
+    # source antidote 
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+    source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
+    export HOMEBREW_CASK_OPTS="--appdir=~/Applications"
+    ;;
+  linux*)
+    # source antidote 
+    source '/usr/share/zsh-antidote/antidote.zsh'
+    ;;
+esac
+
 # initialize plugins statically with ${ZDOTDIR:-~}/.zsh_plugins.txt
 antidote load
 
