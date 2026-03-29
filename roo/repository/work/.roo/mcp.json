@@ -1,0 +1,66 @@
+{
+	"mcpServers": {
+		"context7": {
+			"command": "npx",
+			"alwaysAllow": [
+				"resolve-library-id",
+				"query-docs"
+			],
+			"args": [
+				"-y",
+				"@upstash/context7-mcp@latest"
+			],
+			"disabled": false
+		},
+		"notion": {
+			"command": "npx",
+			"args": [
+				"-y",
+				"mcp-remote",
+				"https://mcp.notion.com/mcp"
+			],
+			"disabled": true,
+			"alwaysAllow": []
+		},
+		"miro": {
+			"command": "npx",
+			"timeout": 60,
+			"args": [
+				"mcp-remote",
+				"https://mcp.miro.com/"
+			],
+			"alwaysAllow": [
+				"context_get"
+			],
+			"disabled": true
+		},
+		"jira": {
+			"command": "npx",
+			"timeout": 60,
+			"args": [
+				"mcp-remote",
+				"https://mcp.atlassian.com/v1/mcp"
+			],
+			"alwaysAllow": [
+				"context_get",
+				"getJiraIssue"
+			],
+			"disabled": true
+		},
+		"web-search": {
+			"args": [
+				"open-websearch@latest"
+			],
+			"command": "npx",
+			"env": {
+				"MODE": "stdio",
+				"DEFAULT_SEARCH_ENGINE": "duckduckgo",
+				"ALLOWED_SEARCH_ENGINES": "duckduckgo,bing,exa"
+			},
+			"alwaysAllow": [
+				"fetchWebContent",
+				"search"
+			]
+		}
+	}
+}

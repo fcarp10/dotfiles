@@ -14,47 +14,6 @@
     "workbench.colorTheme": "Andromeda Bordered",
     "workbench.productIconTheme": "fluent-icons",
     "workbench.startupEditor": "newUntitledFile",
-    "workbench.colorCustomizations": {
-        // "sideBar.background": "#000000",
-        // // "sideBar.foreground": "#FFFFFF",
-        // "sideBar.border": "#21252b",
-        // // "panel.border": "#21252b",
-        // // "panel.background": "#21252b",
-        // // "focusBorder":"#21252b",
-        // // "panelTitleBadge.background":"#FFFFFF",
-        // // "panelTitleBadge.foreground":"#000000",
-        // // "statusBar.background": "#000000",
-        // // "statusBar.border": "#21252b",
-        // "editor.background": "#000000",
-        // // "editor.foreground": "#FFFFFF",
-        // "activityBar.background": "#000000",
-        // // "activityBar.border": "#21252b",
-        // // "activityBarBadge.background": "#FFFFFF",
-        // // "activityBarBadge.foreground": "#000000",
-        // "tab.activeBackground": "#000000",
-        // "tab.inactiveBackground":"#21252b",
-        // "tab.activeBorderTop": "#000000",
-        // "terminal.background": "#000000",
-        // "terminal.foreground": "#FFFFFF",
-        // "terminalCursor.background": "#000000",
-        // "terminalCursor.foreground": "#FFFFFF",
-        // "terminal.ansiBlack": "#000000",
-        // "terminal.ansiBlue": "#FC9867",
-        // "terminal.ansiCyan": "#78DCE8",
-        // "terminal.ansiGreen": "#A9DC76",
-        // "terminal.ansiMagenta": "#AB9DF2",
-        // "terminal.ansiRed": "#FF6188",
-        // "terminal.ansiWhite": "#FCFCFA",
-        // "terminal.ansiYellow": "#FFD866",
-        // "terminal.ansiBrightBlack": "#727072",
-        // "terminal.ansiBrightBlue": "#FC9867",
-        // "terminal.ansiBrightCyan": "#78DCE8",
-        // "terminal.ansiBrightGreen": "#A9DC76",
-        // "terminal.ansiBrightMagenta": "#AB9DF2",
-        // "terminal.ansiBrightRed": "#FF6188",
-        // "terminal.ansiBrightWhite": "#FCFCFA",
-        // "terminal.ansiBrightYellow": "#FFD866",
-    },
     "window.openFilesInNewWindow": "off",
     "window.openFoldersInNewWindow": "on",
     "diffEditor.ignoreTrimWhitespace": false,
@@ -228,23 +187,11 @@
         "rgba(247, 146, 86,0.1)",
         "rgba(247, 146, 86,0.05)"
     ],
-    "roo-cline.allowedCommands": [
-        "git log",
-        "git diff",
-        "git show",
-        "npm test",
-        "npm install",
-        "tsc"
-    ],
-    "roo-cline.deniedCommands": [],
     "git.replaceTagsWhenPull": true,
     "markdown.preview.scrollEditorWithPreview": true,
     "workbench.iconTheme": "material-icon-theme",
     "markdown.preview.scrollPreviewWithEditor": true,
-    "roo-cline.debug": false,
-    "kanban-markdown.aiAgent": "codex",
     "kanban-markdown.compactMode": true,
-    "editor.defaultFormatter": "yzhang.markdown-all-in-one",
     "kanban-markdown.columns": [
         {
             "id": "backlog",
@@ -270,9 +217,13 @@
             "id": "done",
             "name": "Done",
             "color": "#22c55e"
+        },
+        {
+            "id": "wont-do",
+            "name": "Won't Do",
+            "color": "#FF0000"
         }
     ],
-    "mermaidLivePreview.previewAppearance": "dark",
     "window.titleBarStyle": "native",
     "window.customTitleBarVisibility": "never",
     "custom-ui-style.electron": {
@@ -283,5 +234,16 @@
     },
     "[lua]": {
         "editor.defaultFormatter": "JohnnyMorganz.stylua"
-    }
+    },
+    "roo-cline.debug": false,
+    "roo-cline.allowedCommands": [
+        "git log",
+        "git diff",
+        "git show",
+        "npm test",
+        "npm install",
+        "tsc"
+    ],
+    "roo-cline.deniedCommands": [],
+    "git.openRepositoryInParentFolders": "never"
 }
