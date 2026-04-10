@@ -15,7 +15,7 @@ input {
         accel-profile "adaptive"
         scroll-factor 1.0
         scroll-method "two-finger"
-        tap-button-map "left-middle-right"
+        tap-button-map "left-right-middle"
         click-method "clickfinger"
     }
     warp-mouse-to-focus

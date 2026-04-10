@@ -1,8 +1,6 @@
 #!/bin/zsh
 
 alias aliases='function _get_alias(){ grep -r alias $HOME/.config/zsh/.zshrc.d/aliases.zsh | grep -v \# |  grep alias; };_get_alias'
-alias dots='lazygit --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-alias gdots='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 ## mappings ##
 alias l='lsd'
@@ -34,8 +32,6 @@ alias docker-rmimg='docker rmi -f $(docker images -a -q)'
 
 ## network ##
 alias nebula-start="sudo systemctl start nebula"
-alias nbrd-start="sudo systemctl start netbird && netbird up --management-url https://netbird.impossiblecloud.network --admin-url https:://netbird.impossiblecloud.network"
-alias nbrd-stop="sudo systemctl disable --now netbird"
 alias nmtui="NEWT_COLORS='root=black,black;window=black,black;border=white,black;listbox=white,black;label=blue,black;checkbox=red,black;title=green,black;button=white,red;actsellistbox=white,red;actlistbox=white,gray;compactbutton=white,gray;actcheckbox=white,blue;entry=lightgray,black;textbox=blue,black' nmtui"
 alias pubip="curl ifconfig.co/json"
 
@@ -58,6 +54,5 @@ alias burn-img='function _burn_img(){sudo dd if=$1 of=$2 status=progress; };_bur
 alias color-picker='grim -g "$(slurp -p)" -t ppm - | convert - -format "%[pixel:p{0,0}]" txt:-'
 alias steam-hdr='ENABLE_HDR_WSI=1 gamescope --fullscreen -w 2560 -h 1440 -r 360 --hdr-enabled --hdr-debug-force-output --hdr-sdr-content-nits 450 --steam -- env ENABLE_GAMESCOPE_WSI=1 DXVK_HDR=1 DISABLE_HDR_WSI=1 steam -bigpicture'
 alias kde-launch='/usr/lib/plasma-dbus-run-session-if-needed /usr/bin/startplasma-wayland'
-alias notes-push='cd $HOME/repository/notes/ && git add -A && git commit -m "update notes" && git push origin master'
 alias git-clean-branches='git fetch --prune && git branch -vv | grep 'gone]' | awk "{print $1}" | xargs git branch -D'
 
