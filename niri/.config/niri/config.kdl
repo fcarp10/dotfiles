@@ -175,6 +175,8 @@ binds {
     Mod+Ctrl+V hotkey-overlay-title="Adjust cam settings" { spawn-sh "v4l2-ctl -c white_balance_automatic=0 -c white_balance_temperature=5000"; }
     Mod+Shift+C hotkey-overlay-title="Run an Application: open notes" { spawn-sh "codium -n $HOME/repository/home/notes"; }
     Mod+Shift+N hotkey-overlay-title="Restart Waybar" { spawn-sh "killall waybar && waybar";}
+    Mod+V hotkey-overlay-title="Run an Application: mullvad" { spawn-sh "mullvad connect && mullvad-vpn"; }
+    Mod+Shift+V hotkey-overlay-title="Run an Application: mullvad" { spawn-sh "mullvad disconnect"; }
 
     // Audio
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "swayosd-client --output-volume raise --max-volume 200 && paplay /usr/share/sounds/elementary/stereo/audio-volume-change.wav"; }
@@ -185,7 +187,7 @@ binds {
 
     // Brightness
     XF86MonBrightnessUp allow-when-locked=true { spawn-sh "brightnessctl set +10% && swayosd-client --brightness raise"; }
-    XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl set 10%- && swayosd-client --brightness lower"; }
+    XF86MonBrightnessDown allow-when-locked=true { spawn-sh "brightnessctl set 10%- && swayosd-client --brightness lower"; }
 
     Mod+Left  { focus-column-left; }
     Mod+Down  { focus-window-down; }
@@ -257,7 +259,7 @@ binds {
     Mod+C { center-column; }
     Mod+Ctrl+C { center-visible-columns; }
 
-    Mod+V       { toggle-window-floating; }
+    Mod+Space { toggle-window-floating; }
     // Mod+Shift+V { switch-focus-between-floating-and-tiling; }
     // Mod+W { toggle-column-tabbed-display; }
 
