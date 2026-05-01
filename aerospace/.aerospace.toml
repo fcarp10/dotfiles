@@ -58,6 +58,9 @@ on-mode-changed = []
     if.app-id = 'com.vscodium'
     run = 'move-node-to-workspace 3'
 [[on-window-detected]]
+    if.app-id = 'zed.app'
+    run = 'move-node-to-workspace 3'
+[[on-window-detected]]
     if.app-id = 'org.ferdium.ferdium-app'
     run = 'move-node-to-workspace 4'
 [[on-window-detected]]
@@ -86,6 +89,7 @@ on-mode-changed = []
 [mode.main.binding]
     alt-enter = 'exec-and-forget open -n $HOME/Applications/Alacritty.app'
     alt-e = 'exec-and-forget open -n $HOME/Applications/VScodium.app'
+    alt-shift-e = 'exec-and-forget open -n $HOME/Applications/Zed.app'
     alt-w = 'exec-and-forget open -n $HOME/Applications/Zen.app'
     alt-shift-w = 'exec-and-forget open -n $HOME/Applications/Brave\ Browser.app'
     alt-t = 'exec-and-forget open -n $HOME/Applications/Ferdium.app'

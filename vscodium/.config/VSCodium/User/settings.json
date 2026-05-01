@@ -11,7 +11,6 @@
     "editor.insertSpaces": true,
     "editor.detectIndentation": false,
     "workbench.editor.enablePreview": false,
-    "workbench.colorTheme": "Andromeda Bordered",
     "workbench.productIconTheme": "fluent-icons",
     "workbench.startupEditor": "newUntitledFile",
     "window.openFilesInNewWindow": "off",
@@ -155,12 +154,7 @@
     ],
     "projectManager.git.maxDepthRecursion": 2,
     "redhat.telemetry.enabled": false,
-    "ansible.validation.lint.enabled": false,
-    "files.associations": {
-        "**/*.yml": "ansible",
-    },
     "go.toolsManagement.autoUpdate": true,
-    "solidity.telemetry": false,
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
@@ -171,13 +165,6 @@
         "editor.defaultFormatter": "vscode.css-language-features"
     },
     "java.edit.smartSemicolonDetection.enabled": true,
-    "window.menuBarVisibility": "toggle",
-    "githubPullRequests.remotes": [
-        "origin",
-        "upstream",
-        "github"
-    ],
-    "githubPullRequests.createOnPublishBranch": "never",
     "indentRainbow.colors": [
         "rgba(29, 78, 137,0.15)",
         "rgba(58, 178, 202,0.15)",
@@ -245,5 +232,6 @@
         "tsc"
     ],
     "roo-cline.deniedCommands": [],
-    "git.openRepositoryInParentFolders": "never"
+    "git.openRepositoryInParentFolders": "never",
+    "workbench.colorTheme": "Andromeda Bordered",
 }

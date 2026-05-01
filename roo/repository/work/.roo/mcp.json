@@ -19,8 +19,10 @@
 				"mcp-remote",
 				"https://mcp.notion.com/mcp"
 			],
-			"disabled": true,
-			"alwaysAllow": []
+			"disabled": false,
+			"alwaysAllow": [
+				"notion-fetch"
+			]
 		},
 		"miro": {
 			"command": "npx",

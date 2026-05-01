@@ -16,6 +16,7 @@ alias ...='cd ../../../'
 alias ....='cd ../../../../'
 alias nv='nvim'
 alias nano='nvim'
+alias k='cd $HOME/repository/home/notes && backlog board'
 
 ## pacman ##
 alias pac-orphans='sudo pacman -Qtdq | sudo pacman -Rns -'
