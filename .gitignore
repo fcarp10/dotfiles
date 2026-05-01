@@ -4,3 +4,6 @@
 .zsh_sessions
 lazy-lock.json
 lazyvim.json
+*.log
+*.ors
+OpenRGB.json

@@ -30,7 +30,7 @@ output "DP-3" {
     position x=2560 y=0
 }
 
-spawn-sh-at-startup "openrgb -p all_sync_cpu_temp.orp"
+spawn-sh-at-startup "openrgb -p all_off.orp"
 spawn-sh-at-startup "nextcloud --background"
 
 binds {

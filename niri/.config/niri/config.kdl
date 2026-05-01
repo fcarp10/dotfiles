@@ -114,6 +114,7 @@ screenshot-path "screenshot %Y-%m-%d %H-%M-%S.png"
 window-rule {
     geometry-corner-radius 10
     clip-to-geometry true
+    // open-maximized true
 }
 window-rule {
     match app-id=r#"blueberry.py$"#
@@ -164,6 +165,7 @@ binds {
     Mod+R hotkey-overlay-title="Run an Application: brave" { spawn-sh "brave --ozone-platform-hint=auto"; }
     Mod+Shift+R hotkey-overlay-title="Run an Application: chromium" { spawn-sh "chromium --ozone-platform-hint=auto"; }
     Mod+E hotkey-overlay-title="Run an Application: vscodium" { spawn-sh "codium --ozone-platform-hint=auto"; }
+    Mod+Shift+E hotkey-overlay-title="Run an Application: zed" { spawn-sh "zeditor"; }
     Mod+A hotkey-overlay-title="Run an Application: thunderbird" { spawn "thunderbird"; }
     Mod+S hotkey-overlay-title="Run an Application: freetube" { spawn-sh "freetube --ozone-platform-hint=auto"; }
     Mod+Shift+S hotkey-overlay-title="Run an Application: signal" { spawn-sh "signal-desktop -enable-features=UseOzonePlatform -ozone-platform=wayland"; }
