@@ -7,7 +7,16 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "mouse_wheel_zoom": true,
   "agent_servers": {
+    "codex-acp": {
+      "favorite_config_option_values": {
+        "mode": [
+          "read-only"
+        ]
+      },
+      "type": "registry"
+    },
     "opencode": {
       "type": "registry"
     },
@@ -16,12 +25,10 @@
     }
   },
   "language_models": {
-    "ollama": {
-      "api_url": "https://ollama.com"
-    }
   },
   "disable_ai": false,
   "title_bar": {
+    "show_menus": false,
     "show_branch_name": true,
     "button_layout": "platform_default",
     "show_user_picture": false,
@@ -42,11 +49,6 @@
     "dock": "right"
   },
   "agent": {
-    "default_model": {
-      "provider": "ollama",
-      "model": "deepseek-v4-pro",
-      "enable_thinking": true
-    },
     "dock": "right",
     "favorite_models": [],
     "model_parameters": []

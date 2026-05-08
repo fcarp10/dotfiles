@@ -15,6 +15,8 @@ alias ....='cd ../../../../'
 alias nv='nvim'
 alias nano='nvim'
 alias k='cd $HOME/repository/home/notes && backlog board'
+alias kk='cd $HOME/repository/home/notes && backlog browser'
+alias kt='function _create_task(){cd $HOME/repository/home/notes && backlog task create $1;};_create_task'
 
 ## pacman ##
 alias pac-orphans='sudo pacman -Qtdq | sudo pacman -Rns -'
