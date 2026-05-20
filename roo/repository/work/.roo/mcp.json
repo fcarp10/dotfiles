@@ -19,7 +19,7 @@
 				"mcp-remote",
 				"https://mcp.notion.com/mcp"
 			],
-			"disabled": false,
+			"disabled": true,
 			"alwaysAllow": [
 				"notion-fetch"
 			]
@@ -62,7 +62,8 @@
 			"alwaysAllow": [
 				"fetchWebContent",
 				"search"
-			]
+			],
+			"disabled": true
 		}
 	}
 }

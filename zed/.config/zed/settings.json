@@ -9,20 +9,7 @@
 {
   "mouse_wheel_zoom": true,
   "agent_servers": {
-    "codex-acp": {
-      "favorite_config_option_values": {
-        "mode": [
-          "read-only"
-        ]
-      },
-      "type": "registry"
-    },
-    "opencode": {
-      "type": "registry"
-    },
-    "dirac": {
-      "type": "registry"
-    }
+    
   },
   "language_models": {
   },
@@ -49,6 +36,16 @@
     "dock": "right"
   },
   "agent": {
+    "default_profile": "write",
+    "profiles": {
+      
+    },
+    "default_model": {
+      "effort": "medium",
+      "provider": "openai-subscribed",
+      "model": "gpt-5.5",
+      "enable_thinking": true
+    },
     "dock": "right",
     "favorite_models": [],
     "model_parameters": []

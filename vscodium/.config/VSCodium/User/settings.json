@@ -208,5 +208,22 @@
     "workbench.editorAssociations": {
         "*.md": "default",
         "*.markdown": "default"
-    }
+    },
+    "zoo-code.debug": false,
+    "zoo-code.allowedCommands": [
+        "git log",
+        "git diff",
+        "git show",
+        "npm test",
+        "npm install",
+        "tsc"
+    ],
+    "zoo-code.deniedCommands": [],
+    "xlsxViewer.md.stickyToolbar": true,
+    "xlsxViewer.md.wordWrap": true,
+    "xlsxViewer.md.syncScroll": true,
+    "xlsxViewer.md.previewPosition": "right",
+    "xlsxViewer.md.moveMdButtonsToEnd": false,
+    "xlsxViewer.md.showOutline": false,
+    "xlsxViewer.md.showLineNumbers": true
 }

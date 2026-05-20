@@ -58,4 +58,4 @@ alias color-picker='grim -g "$(slurp -p)" -t ppm - | convert - -format "%[pixel:
 alias steam-hdr='ENABLE_HDR_WSI=1 gamescope --fullscreen -w 2560 -h 1440 -r 360 --hdr-enabled --hdr-debug-force-output --hdr-sdr-content-nits 450 --steam -- env ENABLE_GAMESCOPE_WSI=1 DXVK_HDR=1 DISABLE_HDR_WSI=1 steam -bigpicture'
 alias kde-launch='/usr/lib/plasma-dbus-run-session-if-needed /usr/bin/startplasma-wayland'
 alias git-clean-branches='git fetch --prune && git branch -vv | grep 'gone]' | awk "{print $1}" | xargs git branch -D'
-
+alias git-delete-merged-branches='git branch --merged | grep -v '^\*\|main\|master' | xargs git branch -d'

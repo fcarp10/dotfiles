@@ -7,3 +7,6 @@ lazyvim.json
 *.log
 *.ors
 OpenRGB.json
+aerospace/.aerospace.toml
+*.kbx
+*.gpg
