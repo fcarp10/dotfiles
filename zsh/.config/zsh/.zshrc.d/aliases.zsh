@@ -17,6 +17,7 @@ alias nano='nvim'
 alias k='cd $HOME/repository/home/notes && backlog board'
 alias kk='cd $HOME/repository/home/notes && backlog browser'
 alias kt='function _create_task(){cd $HOME/repository/home/notes && backlog task create $1;};_create_task'
+alias llama='llama-server -hf unsloth/gemma-4-12b-it-GGUF:UD-Q4_K_XL -c 64000 --jinja --no-mmproj --host 127.0.0.1 --port 8033'
 
 ## pacman ##
 alias pac-orphans='sudo pacman -Qtdq | sudo pacman -Rns -'

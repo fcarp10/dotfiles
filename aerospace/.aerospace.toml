@@ -49,8 +49,11 @@ persistent-workspaces = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
 # See: https://nikitabobko.github.io/AeroSpace/commands#mode
 on-mode-changed = []
 [[on-window-detected]]
-    if.app-id = 'app.zen-browser.zen'
+    if.app-id = 'net.imput.helium'
     run = 'move-node-to-workspace 1'
+[[on-window-detected]]
+    if.app-id = 'app.zen-browser.zen'
+    run = 'move-node-to-workspace 2'
 [[on-window-detected]]
     if.app-id = 'com.brave.Browser'
     run = 'move-node-to-workspace 2'
@@ -58,13 +61,13 @@ on-mode-changed = []
     if.app-id = 'com.vscodium'
     run = 'move-node-to-workspace 3'
 [[on-window-detected]]
-    if.app-id = 'zed.app'
+    if.app-id = 'org.ferdium.ferdium-app'
     run = 'move-node-to-workspace 4'
 [[on-window-detected]]
-    if.app-id = 'org.ferdium.ferdium-app'
-    run = 'move-node-to-workspace 5'
-[[on-window-detected]]
     if.app-id = 'org.mozilla.thunderbird'
+    run = 'move-node-to-workspace 4'
+[[on-window-detected]]
+    if.app-id = 'zed.app'
     run = 'move-node-to-workspace 5'
 
 # Possible values: (qwerty|dvorak|colemak)
@@ -84,11 +87,12 @@ on-mode-changed = []
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
 [mode.main.binding]
-    alt-enter = 'exec-and-forget open -n $HOME/Applications/Alacritty.app'
+    alt-enter = 'exec-and-forget open -n $HOME/Applications/Kitty.app'
     alt-e = 'exec-and-forget open -n $HOME/Applications/VScodium.app'
     alt-shift-e = 'exec-and-forget open -n $HOME/Applications/Zed.app'
     alt-w = 'exec-and-forget open -n $HOME/Applications/Zen.app'
-    alt-shift-w = 'exec-and-forget open -n $HOME/Applications/Brave\ Browser.app'
+    alt-r = 'exec-and-forget open -n $HOME/Applications/Helium.app'
+    alt-shift-r = 'exec-and-forget open -n $HOME/Applications/Brave\ Browser.app'
     alt-t = 'exec-and-forget open -n $HOME/Applications/Ferdium.app'
     alt-a = 'exec-and-forget open -n $HOME/Applications/Thunderbird.app'
     alt-s = 'exec-and-forget open -n $HOME/Applications/Slack.app'

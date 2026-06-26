@@ -10,3 +10,7 @@ OpenRGB.json
 aerospace/.aerospace.toml
 *.kbx
 *.gpg
+*.kbx~
+*.rev
+*.key
+*talpa*

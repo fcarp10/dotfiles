@@ -12,6 +12,27 @@
     
   },
   "language_models": {
+    "openai_compatible": {
+      "llama.cpp": {
+        "api_url": "http://127.0.0.1:8033",
+        "available_models": [
+          {
+            "name": "gemma4",
+            "max_tokens": 200000,
+            "max_output_tokens": 32000,
+            "max_completion_tokens": 200000,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false,
+              "chat_completions": true,
+              "interleaved_reasoning": false
+            }
+          }
+        ]
+      }
+    }
   },
   "disable_ai": false,
   "title_bar": {
