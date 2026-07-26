@@ -165,7 +165,7 @@ binds {
     XF86MonBrightnessDown { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "brightness" "decrease"; }
 
     // Apps
-    Mod+Return hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
+    Mod+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+Z hotkey-overlay-title="Run an Application: nemo" { spawn "nemo"; }
     Mod+W hotkey-overlay-title="Run an Application: zen-browser" { spawn "zen-browser"; }
     Mod+R hotkey-overlay-title="Run an Application: brave" { spawn-sh "brave --ozone-platform-hint=auto"; }

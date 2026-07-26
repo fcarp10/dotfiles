@@ -50,4 +50,5 @@ alias kde-launch='/usr/lib/plasma-dbus-run-session-if-needed /usr/bin/startplasm
 alias k='cd $HOME/repository/home/notes && backlog board'
 alias kk='cd $HOME/repository/home/notes && backlog browser'
 alias kt='function _create_task(){cd $HOME/repository/home/notes && backlog task create $1;};_create_task'
-alias llama='llama-server -hf unsloth/gemma-4-12b-it-GGUF:UD-Q4_K_XL -c 64000 --jinja --no-mmproj --host 127.0.0.1 --port 8033'
+# alias llama='llama-server -hf unsloth/gemma-4-12b-it-GGUF:UD-Q4_K_XL -c 64000 --jinja --no-mmproj --host 127.0.0.1 --port 8033'
+alias llama='llama-server -hf yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF:Q6_K -c 64000 --n-gpu-layers 99 --no-mmap -fa on --jinja --temp 1.0 --top-p 0.95 --top-k 64 --host 127.0.0.1 --port 8033'
