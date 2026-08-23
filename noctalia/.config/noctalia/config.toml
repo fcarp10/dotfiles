@@ -119,8 +119,8 @@ mode = "dark"
 wallpaper_scheme = "m3-content"
 
     [theme.templates]
-    builtin_ids = []
-    enable_builtin_templates = false
+    builtin_ids = [ "btop", "gtk3", "gtk4", "kitty" ]
+    enable_builtin_templates = true
     enable_community_templates = false
 
 [wallpaper]
