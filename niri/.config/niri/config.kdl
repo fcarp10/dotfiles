@@ -1,5 +1,5 @@
 spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
-spawn-at-startup "qs" "-c" "noctalia-shell"
+spawn-at-startup "noctalia"
 spawn-sh-at-startup "sudo logid -c .config/logid.cfg"
 spawn-sh-at-startup "gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-dark"
 spawn-sh-at-startup "gsettings set org.gnome.desktop.interface color-scheme prefer-dark"
@@ -152,9 +152,9 @@ binds {
     Mod+Q repeat=false { close-window; }
 
     // Noctalia
-    Mod+D { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
-    Mod+Shift+D { spawn-sh "qs -c noctalia-shell ipc call plugin:launcher-pass toggle"; }
-    Mod+S { spawn-sh "qs -c noctalia-shell ipc call controlCenter toggle"; }
+    Mod+D { spawn-sh "noctalia msg panel-toggle launcher"; }
+    Mod+Shift+D { spawn-sh "noctalia msg panel-toggle launcher /pass"; }
+    Mod+S { spawn-sh "noctalia msg panel-toggle control-center"; }
 
     // Audio & Brightness
     XF86AudioRaiseVolume { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "increase"; }
@@ -269,3 +269,4 @@ binds {
     Mod+Alt+0 hotkey-overlay-title="Shutdown" { spawn-sh "shutdown now"; }
 
 }
+

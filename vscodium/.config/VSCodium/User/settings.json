@@ -227,5 +227,6 @@
     "xlsxViewer.md.showOutline": false,
     "xlsxViewer.md.showLineNumbers": true,
     "vscode-office.editorTheme": "Dracula",
-    "vscode-office.openOutline": false
+    "vscode-office.openOutline": false,
+    "window.menuBarVisibility": "toggle"
 }
