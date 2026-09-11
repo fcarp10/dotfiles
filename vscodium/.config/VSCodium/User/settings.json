@@ -10,7 +10,6 @@
     "editor.tabSize": 4,
     "editor.insertSpaces": true,
     "editor.detectIndentation": false,
-    "workbench.editor.enablePreview": false,
     "workbench.productIconTheme": "fluent-icons",
     "workbench.startupEditor": "newUntitledFile",
     "window.openFilesInNewWindow": "off",
@@ -215,7 +214,8 @@
         "git show",
         "npm test",
         "npm install",
-        "tsc"
+        "tsc",
+        "uv"
     ],
     "zoo-code.deniedCommands": [],
     "xlsxViewer.md.stickyToolbar": true,
@@ -225,7 +225,13 @@
     "xlsxViewer.md.moveMdButtonsToEnd": false,
     "xlsxViewer.md.showOutline": false,
     "xlsxViewer.md.showLineNumbers": true,
-    "vscode-office.editorTheme": "Dracula",
     "vscode-office.openOutline": false,
-    "window.menuBarVisibility": "toggle"
+    "editor.wordWrap": "on",
+    "vscode-office.editorTheme": "One Dark",
+    "vscode-office.codeMirrorTheme": "One Dark",
+    "workbench.editor.autoLockGroups": {
+        "mainThreadWebview-markdown.preview": true
+    },
+    "material-icon-theme.languages.associations": {},
+    "claudeCode.preferredLocation": "sidebar"
 }
