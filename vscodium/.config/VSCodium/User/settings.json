@@ -176,7 +176,6 @@
     ],
     "git.replaceTagsWhenPull": true,
     "markdown.preview.scrollEditorWithPreview": true,
-    "workbench.iconTheme": "material-icon-theme",
     "markdown.preview.scrollPreviewWithEditor": true,
     "window.titleBarStyle": "native",
     "window.customTitleBarVisibility": "never",
