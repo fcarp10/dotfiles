@@ -198,7 +198,7 @@
     ],
     "roo-cline.deniedCommands": [],
     "git.openRepositoryInParentFolders": "never",
-    "workbench.colorTheme": "Andromeda Bordered",
+    "workbench.colorTheme": "Noctalia Generated",
     "markdown.extension.list.indentationSize": "inherit",
     "workbench.experimental.fontSize": 14,
     "workbench.sideBar.experimental.fontSize": 14,
@@ -233,5 +233,6 @@
         "mainThreadWebview-markdown.preview": true
     },
     "material-icon-theme.languages.associations": {},
-    "claudeCode.preferredLocation": "sidebar"
+    "claudeCode.preferredLocation": "sidebar",
+    "window.menuBarVisibility": "toggle"
 }

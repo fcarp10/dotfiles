@@ -25,30 +25,20 @@ alias pac-explicit='comm -23 <(paru -Qqett | sort) <(paru -Qqg base-devel | sort
 alias pac-aur='sudo pacman -Qqm'
 
 ## docker ##
-alias docker-start="sudo systemctl start docker"
 alias docker-rmct='docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)'
 alias docker-rmimg='docker rmi -f $(docker images -a -q)'
 
 ## network ##
-alias nebula-start="sudo systemctl start nebula"
 alias nmtui="NEWT_COLORS='root=black,black;window=black,black;border=white,black;listbox=white,black;label=blue,black;checkbox=red,black;title=green,black;button=white,red;actsellistbox=white,red;actlistbox=white,gray;compactbutton=white,gray;actcheckbox=white,blue;entry=lightgray,black;textbox=blue,black' nmtui"
-alias ssh-rpi='ssh krillin@192.168.100.4'
 
 ## git ##
 alias git-clean-branches='git fetch --prune && git branch -vv | grep 'gone]' | awk "{print $1}" | xargs git branch -D'
 alias git-delete-merged-branches='git branch --merged | grep -v '^\*\|main\|master' | xargs git branch -d'
 
 ## utils ##
-alias pdf-words='function _count_words(){pdftotext $1 - | wc -w;};_count_words'
-alias tex-words='function _count_words(){texcount -inc -total $1;};_count_words'
 alias burn-img='function _burn_img(){sudo dd if=$1 of=$2 status=progress; };_burn_img'
 alias color-picker='grim -g "$(slurp -p)" -t ppm - | convert - -format "%[pixel:p{0,0}]" txt:-'
 
 ## apps ##
 alias steam-hdr='ENABLE_HDR_WSI=1 gamescope --fullscreen -w 2560 -h 1440 -r 360 --hdr-enabled --hdr-debug-force-output --hdr-sdr-content-nits 450 --steam -- env ENABLE_GAMESCOPE_WSI=1 DXVK_HDR=1 DISABLE_HDR_WSI=1 steam -bigpicture'
-alias kde-launch='/usr/lib/plasma-dbus-run-session-if-needed /usr/bin/startplasma-wayland'
-alias k='cd $HOME/repository/home/notes && backlog board'
-alias kk='cd $HOME/repository/home/notes && backlog browser'
-alias kt='function _create_task(){cd $HOME/repository/home/notes && backlog task create $1;};_create_task'
-# alias llama='llama-server -hf unsloth/gemma-4-12b-it-GGUF:UD-Q4_K_XL -c 64000 --jinja --no-mmproj --host 127.0.0.1 --port 8033'
 alias llama='llama-server -hf yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF:Q6_K -c 64000 --n-gpu-layers 99 --no-mmap -fa on --jinja --temp 1.0 --top-p 0.95 --top-k 64 --host 127.0.0.1 --port 8033'
