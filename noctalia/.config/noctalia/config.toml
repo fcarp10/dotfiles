@@ -108,11 +108,17 @@ widget_order = [ "lockscreen-login-box@DP-1", "lockscreen-login-box@DP-3" ]
         show_unlock_hint = true
         show_weather = true
 
+[osd]
+offset_y = 50
+position = "bottom_center"
+scale = 1.2000000104308128
+
 [plugins]
-enabled = [ "emrtnn/pass" ]
+enabled = [ "mellotanica/launcher-pass" ]
 
 [shell]
 lang = "en"
+niri_overview_type_to_launch_enabled = true
 
     [shell.panel]
     open_near_click_control_center = true

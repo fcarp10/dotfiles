@@ -12,6 +12,7 @@
                 0,
                 0
             ],
+            "configuration": null,
             "description": "ENE SMBus Device",
             "display_name": "",
             "flags": 1,
@@ -41,7 +42,7 @@
                     "name": "DRAM LED 8"
                 }
             ],
-            "location": "I2C: /dev/i2c-13, address 0x71",
+            "location": "I2C: SMBus PIIX4 adapter port 0 at 0b00 (/dev/i2c-13), address 0x71",
             "modes": [
                 {
                     "brightness": 0,
@@ -217,6 +218,7 @@
                 0,
                 0
             ],
+            "configuration": null,
             "description": "ENE SMBus Device",
             "display_name": "",
             "flags": 1,
@@ -246,7 +248,7 @@
                     "name": "DRAM LED 8"
                 }
             ],
-            "location": "I2C: /dev/i2c-13, address 0x73",
+            "location": "I2C: SMBus PIIX4 adapter port 0 at 0b00 (/dev/i2c-13), address 0x73",
             "modes": [
                 {
                     "brightness": 0,
@@ -418,6 +420,7 @@
                 15795714,
                 15795714
             ],
+            "configuration": null,
             "description": "ENE SMBus Device",
             "display_name": "",
             "flags": 1,
@@ -435,7 +438,7 @@
                     "name": "Unknown LED 4"
                 }
             ],
-            "location": "I2C: /dev/i2c-6, address 0x67",
+            "location": "I2C: AMDGPU DM i2c OEM bus (/dev/i2c-6), address 0x67",
             "modes": [
                 {
                     "brightness": 0,
@@ -596,6 +599,350 @@
                     },
                     "name": "Unknown",
                     "type": 1
+                }
+            ]
+        },
+        {
+            "active_mode": 6,
+            "colors": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "configuration": null,
+            "description": "ASUS Aura USB Mainboard Device",
+            "display_name": "",
+            "flags": 1,
+            "leds": [
+                {
+                    "name": "Aura Mainboard, LED 1"
+                },
+                {
+                    "name": "Addressable RGB Header 1, LED 1"
+                },
+                {
+                    "name": "Addressable RGB Header 1, LED 2"
+                },
+                {
+                    "name": "Addressable RGB Header 1, LED 3"
+                },
+                {
+                    "name": "Addressable RGB Header 1, LED 4"
+                },
+                {
+                    "name": "Addressable RGB Header 1, LED 5"
+                },
+                {
+                    "name": "Addressable RGB Header 1, LED 6"
+                },
+                {
+                    "name": "Addressable RGB Header 1, LED 7"
+                }
+            ],
+            "location": "HID: /dev/hidraw10",
+            "modes": [
+                {
+                    "brightness": 0,
+                    "brightness_max": 0,
+                    "brightness_min": 0,
+                    "color_mode": 1,
+                    "colors_max": 0,
+                    "colors_min": 0,
+                    "direction": 0,
+                    "flags": 32,
+                    "name": "Direct",
+                    "speed": 0,
+                    "speed_max": 0,
+                    "speed_min": 0
+                },
+                {
+                    "brightness": 0,
+                    "brightness_max": 0,
+                    "brightness_min": 0,
+                    "color_mode": 0,
+                    "colors_max": 0,
+                    "colors_min": 0,
+                    "direction": 0,
+                    "flags": 256,
+                    "name": "Off",
+                    "speed": 0,
+                    "speed_max": 0,
+                    "speed_min": 0
+                },
+                {
+                    "brightness": 0,
+                    "brightness_max": 0,
+                    "brightness_min": 0,
+                    "color_mode": 2,
+                    "colors": [
+                        0
+                    ],
+                    "colors_max": 1,
+                    "colors_min": 1,
+                    "direction": 0,
+                    "flags": 320,
+                    "name": "Static",
+                    "speed": 0,
+                    "speed_max": 0,
+                    "speed_min": 0
+                },
+                {
+                    "brightness": 0,
+                    "brightness_max": 0,
+                    "brightness_min": 0,
+                    "color_mode": 2,
+                    "colors": [
+                        16124165
+                    ],
+                    "colors_max": 1,
+                    "colors_min": 1,
+                    "direction": 0,
+                    "flags": 320,
+                    "name": "Breathing",
+                    "speed": 0,
+                    "speed_max": 0,
+                    "speed_min": 0
+                },
+                {
+                    "brightness": 0,
+                    "brightness_max": 0,
+                    "brightness_min": 0,
+                    "color_mode": 2,
+                    "colors": [
+                        0
+                    ],
+                    "colors_max": 1,
+                    "colors_min": 1,
+                    "direction": 0,
+                    "flags": 320,
+                    "name": "Flashing",
+                    "speed": 0,
+                    "speed_max": 0,
+                    "speed_min": 0
+                },
+                {
+                    "brightness": 0,
+                    "brightness_max": 0,
+                    "brightness_min": 0,
+                    "color_mode": 0,
+                    "colors_max": 0,
+                    "colors_min": 0,
+                    "direction": 0,
+                    "flags": 256,
+                    "name": "Spectrum Cycle",
+                    "speed": 0,
+                    "speed_max": 0,
+                    "speed_min": 0
+                },
+                {
+                    "brightness": 0,
+                    "brightness_max": 0,
+                    "brightness_min": 0,
+                    "color_mode": 0,
+                    "colors_max": 0,
+                    "colors_min": 0,
+                    "direction": 0,
+                    "flags": 256,
+                    "name": "Rainbow",
+                    "speed": 0,
+                    "speed_max": 0,
+                    "speed_min": 0
+                },
+                {
+                    "brightness": 0,
+                    "brightness_max": 0,
+                    "brightness_min": 0,
+                    "color_mode": 2,
+                    "colors": [
+                        0
+                    ],
+                    "colors_max": 1,
+                    "colors_min": 1,
+                    "direction": 0,
+                    "flags": 320,
+                    "name": "Chase Fade",
+                    "speed": 0,
+                    "speed_max": 0,
+                    "speed_min": 0
+                },
+                {
+                    "brightness": 0,
+                    "brightness_max": 0,
+                    "brightness_min": 0,
+                    "color_mode": 2,
+                    "colors": [
+                        0
+                    ],
+                    "colors_max": 1,
+                    "colors_min": 1,
+                    "direction": 0,
+                    "flags": 320,
+                    "name": "Chase",
+                    "speed": 0,
+                    "speed_max": 0,
+                    "speed_min": 0
+                }
+            ],
+            "name": "ASUS ROG STRIX B650E-I GAMING WIFI",
+            "serial": "9876543210",
+            "type": 0,
+            "vendor": "ASUS",
+            "version": "AULA3-AR32-0215",
+            "zones": [
+                {
+                    "display_name": "",
+                    "flags": 4096,
+                    "leds_count": 1,
+                    "leds_max": 1,
+                    "leds_min": 1,
+                    "matrix_map": {
+                        "height": 0,
+                        "width": 0
+                    },
+                    "name": "Aura Mainboard",
+                    "type": 1
+                },
+                {
+                    "display_name": "",
+                    "flags": 4158,
+                    "leds_count": 7,
+                    "leds_max": 120,
+                    "leds_min": 0,
+                    "matrix_map": {
+                        "height": 0,
+                        "width": 0
+                    },
+                    "name": "Addressable RGB Header 1",
+                    "type": 1
+                }
+            ]
+        },
+        {
+            "active_mode": 3,
+            "colors": [
+                0,
+                0
+            ],
+            "description": "Logitech Wireless Lightspeed Device",
+            "display_name": "",
+            "flags": 1,
+            "leds": [
+                {
+                    "name": "Primary LED"
+                },
+                {
+                    "name": "Logo LED"
+                }
+            ],
+            "location": "HID: /dev/hidraw6 (Receiver) \r\nWireless Index: 255",
+            "modes": [
+                {
+                    "brightness": 0,
+                    "brightness_max": 0,
+                    "brightness_min": 0,
+                    "color_mode": 0,
+                    "colors_max": 0,
+                    "colors_min": 0,
+                    "direction": 0,
+                    "flags": 0,
+                    "name": "Off",
+                    "speed": 0,
+                    "speed_max": 0,
+                    "speed_min": 0
+                },
+                {
+                    "brightness": 0,
+                    "brightness_max": 0,
+                    "brightness_min": 0,
+                    "color_mode": 1,
+                    "colors_max": 0,
+                    "colors_min": 0,
+                    "direction": 0,
+                    "flags": 32,
+                    "name": "Direct",
+                    "speed": 0,
+                    "speed_max": 0,
+                    "speed_min": 0
+                },
+                {
+                    "brightness": 100,
+                    "brightness_max": 100,
+                    "brightness_min": 1,
+                    "color_mode": 1,
+                    "colors_max": 0,
+                    "colors_min": 0,
+                    "direction": 0,
+                    "flags": 48,
+                    "name": "Static",
+                    "speed": 0,
+                    "speed_max": 0,
+                    "speed_min": 0
+                },
+                {
+                    "brightness": 100,
+                    "brightness_max": 100,
+                    "brightness_min": 1,
+                    "color_mode": 0,
+                    "colors_max": 0,
+                    "colors_min": 0,
+                    "direction": 0,
+                    "flags": 17,
+                    "name": "Spectrum Cycle",
+                    "speed": 50,
+                    "speed_max": 10,
+                    "speed_min": 200
+                },
+                {
+                    "brightness": 100,
+                    "brightness_max": 100,
+                    "brightness_min": 1,
+                    "color_mode": 1,
+                    "colors_max": 0,
+                    "colors_min": 0,
+                    "direction": 0,
+                    "flags": 49,
+                    "name": "Breathing",
+                    "speed": 50,
+                    "speed_max": 10,
+                    "speed_min": 200
+                }
+            ],
+            "name": "G403 Prodigy Wired/Wireless Gaming Mouse",
+            "serial": "",
+            "type": 6,
+            "vendor": "Logitech",
+            "version": "",
+            "zones": [
+                {
+                    "display_name": "",
+                    "flags": 0,
+                    "leds_count": 1,
+                    "leds_max": 1,
+                    "leds_min": 1,
+                    "matrix_map": {
+                        "height": 0,
+                        "width": 0
+                    },
+                    "name": "Primary Zone",
+                    "type": 0
+                },
+                {
+                    "display_name": "",
+                    "flags": 0,
+                    "leds_count": 1,
+                    "leds_max": 1,
+                    "leds_min": 1,
+                    "matrix_map": {
+                        "height": 0,
+                        "width": 0
+                    },
+                    "name": "Logo Zone",
+                    "type": 0
                 }
             ]
         },
