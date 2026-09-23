@@ -1,3 +1,6 @@
+[backdrop]
+enabled = true
+
 [bar.default]
 capsule = true
 center = []
@@ -43,6 +46,24 @@ sync_all_monitors = true
 
 [control_center]
 sidebar = "full"
+
+[idle]
+behavior_order = [ "screen-off", "lock", "lock-and-suspend" ]
+
+    [idle.behavior.lock]
+    action = "lock"
+    enabled = false
+    timeout = 600.0
+
+    [idle.behavior.lock-and-suspend]
+    action = "lock_and_suspend"
+    enabled = false
+    timeout = 900.0
+
+    [idle.behavior.screen-off]
+    action = "screen_off"
+    enabled = true
+    timeout = 60.0
 
 [lockscreen_widgets]
 enabled = false
@@ -117,6 +138,7 @@ scale = 1.2000000104308128
 enabled = [ "mellotanica/launcher-pass" ]
 
 [shell]
+app_icon_color = "tertiary"
 lang = "en"
 niri_overview_type_to_launch_enabled = true
 
@@ -128,11 +150,13 @@ niri_overview_type_to_launch_enabled = true
 
 [theme]
 builtin = "Ayu"
+community_palette = "Oxocarbon"
 mode = "dark"
+source = "builtin"
 wallpaper_scheme = "m3-content"
 
     [theme.templates]
-    builtin_ids = [ "btop", "gtk3", "gtk4", "kitty" ]
+    builtin_ids = [ "alacritty", "btop", "gtk3", "gtk4", "kitty" ]
     community_ids = [ "opencode", "brave", "zen-browser", "vscode" ]
     enable_builtin_templates = true
     enable_community_templates = true

@@ -144,6 +144,10 @@ window-rule {
     open-maximized false
     open-maximized-to-edges false
 }
+layer-rule {
+  match namespace="^noctalia-backdrop"
+  place-within-backdrop true
+}
 
 binds {
     
@@ -166,6 +170,7 @@ binds {
 
     // Apps
     Mod+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
+    Mod+Shift+Return hotkey-overlay-title="Open a Terminal: Alacritty" { spawn "alacritty"; }
     Mod+Z hotkey-overlay-title="Run an Application: nemo" { spawn "nemo"; }
     Mod+W hotkey-overlay-title="Run an Application: zen-browser" { spawn "zen-browser"; }
     Mod+R hotkey-overlay-title="Run an Application: brave" { spawn-sh "brave --ozone-platform-hint=auto"; }
