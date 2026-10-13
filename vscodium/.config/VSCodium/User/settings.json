@@ -175,7 +175,6 @@
     ],
     "git.replaceTagsWhenPull": true,
     "markdown.preview.scrollEditorWithPreview": true,
-    "workbench.iconTheme": "material-icon-theme",
     "markdown.preview.scrollPreviewWithEditor": true,
     "window.titleBarStyle": "native",
     "window.customTitleBarVisibility": "never",
@@ -199,7 +198,7 @@
     ],
     "roo-cline.deniedCommands": [],
     "git.openRepositoryInParentFolders": "never",
-    "workbench.colorTheme": "Ayu Dark",
+    "workbench.colorTheme": "Noctalia Generated",
     "markdown.extension.list.indentationSize": "inherit",
     "workbench.experimental.fontSize": 14,
     "workbench.sideBar.experimental.fontSize": 14,
@@ -234,5 +233,6 @@
         "mainThreadWebview-markdown.preview": true
     },
     "material-icon-theme.languages.associations": {},
-    "claudeCode.preferredLocation": "sidebar"
+    "claudeCode.preferredLocation": "sidebar",
+    "window.menuBarVisibility": "toggle"
 }

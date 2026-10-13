@@ -144,6 +144,10 @@ window-rule {
     open-maximized false
     open-maximized-to-edges false
 }
+layer-rule {
+  match namespace="^noctalia-backdrop"
+  place-within-backdrop true
+}
 
 binds {
     
@@ -157,15 +161,16 @@ binds {
     Mod+S { spawn-sh "noctalia msg panel-toggle control-center"; }
 
     // Audio & Brightness
-    XF86AudioRaiseVolume { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "increase"; }
-    XF86AudioLowerVolume { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "decrease"; }
-    XF86AudioMute { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "muteOutput"; }
+    XF86AudioRaiseVolume { spawn-sh "noctalia msg volume-up"; }
+    XF86AudioLowerVolume { spawn-sh "noctalia msg volume-down"; }
+    XF86AudioMute { spawn-sh "noctalia msg volume-mute"; }
+    XF86MonBrightnessUp { spawn-sh "noctalia msg brightness-up"; }
+    XF86MonBrightnessDown { spawn-sh "noctalia msg brightness-down"; }
     Mod+M hotkey-overlay-title="Mute mic" { spawn-sh "pactl set-source-mute @DEFAULT_SOURCE@ toggle"; }
-    XF86MonBrightnessUp { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "brightness" "increase"; }
-    XF86MonBrightnessDown { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "brightness" "decrease"; }
 
     // Apps
     Mod+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
+    Mod+Shift+Return hotkey-overlay-title="Open a Terminal: Alacritty" { spawn "alacritty"; }
     Mod+Z hotkey-overlay-title="Run an Application: nemo" { spawn "nemo"; }
     Mod+W hotkey-overlay-title="Run an Application: zen-browser" { spawn "zen-browser"; }
     Mod+R hotkey-overlay-title="Run an Application: brave" { spawn-sh "brave --ozone-platform-hint=auto"; }
@@ -178,8 +183,8 @@ binds {
     Mod+Alt+S hotkey-overlay-title="Run an Application: steam" { spawn "steam"; }
     Mod+I hotkey-overlay-title="Run an Application: isd" { spawn-sh "alacritty -e $SHELL -c 'isd'"; }
     Mod+Ctrl+V hotkey-overlay-title="Adjust cam settings" { spawn-sh "v4l2-ctl -c white_balance_automatic=0 -c white_balance_temperature=5000"; }
-    Mod+V hotkey-overlay-title="Run an Application: mullvad" { spawn-sh "mullvad connect && mullvad-vpn"; }
-    Mod+Shift+V hotkey-overlay-title="Run an Application: mullvad" { spawn-sh "mullvad disconnect"; }
+    Mod+V hotkey-overlay-title="Run an Application: ivpn" { spawn-sh "ivpn connect -last"; }
+    Mod+Shift+V hotkey-overlay-title="Run an Application: ivpn" { spawn-sh "ivpn disconnect"; }
 
 
 

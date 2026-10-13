@@ -13,3 +13,4 @@ aerospace/.aerospace.toml
 *.key
 *talpa*
 */.gnupg/*
+*.bak

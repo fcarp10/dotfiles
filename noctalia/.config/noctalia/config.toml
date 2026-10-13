@@ -1,3 +1,6 @@
+[backdrop]
+enabled = true
+
 [bar.default]
 capsule = true
 center = []
@@ -37,8 +40,30 @@ start = [ "workspaces", "active_window" ]
     opacity = 1.0
     padding = 6.0
 
+[brightness]
+enable_ddcutil = true
+sync_all_monitors = true
+
 [control_center]
 sidebar = "full"
+
+[idle]
+behavior_order = [ "screen-off", "lock", "lock-and-suspend" ]
+
+    [idle.behavior.lock]
+    action = "lock"
+    enabled = false
+    timeout = 600.0
+
+    [idle.behavior.lock-and-suspend]
+    action = "lock_and_suspend"
+    enabled = false
+    timeout = 900.0
+
+    [idle.behavior.screen-off]
+    action = "screen_off"
+    enabled = true
+    timeout = 60.0
 
 [lockscreen_widgets]
 enabled = false
@@ -56,8 +81,8 @@ widget_order = [ "lockscreen-login-box@DP-1", "lockscreen-login-box@DP-3" ]
     cx = 1280.0
     cy = 1258.0
     output = "DP-1"
-    placement_height = 0.0
-    placement_width = 0.0
+    placement_height = 1440.0
+    placement_width = 2560.0
     rotation = 0.0
     type = "login_box"
 
@@ -104,8 +129,18 @@ widget_order = [ "lockscreen-login-box@DP-1", "lockscreen-login-box@DP-3" ]
         show_unlock_hint = true
         show_weather = true
 
+[osd]
+offset_y = 50
+position = "bottom_center"
+scale = 1.2000000104308128
+
+[plugins]
+enabled = [ "mellotanica/launcher-pass" ]
+
 [shell]
+app_icon_color = "tertiary"
 lang = "en"
+niri_overview_type_to_launch_enabled = true
 
     [shell.panel]
     open_near_click_control_center = true
@@ -115,13 +150,16 @@ lang = "en"
 
 [theme]
 builtin = "Ayu"
+community_palette = "Oxocarbon"
 mode = "dark"
+source = "builtin"
 wallpaper_scheme = "m3-content"
 
     [theme.templates]
-    builtin_ids = [ "btop", "gtk3", "gtk4", "kitty" ]
+    builtin_ids = [ "alacritty", "btop", "gtk3", "gtk4", "kitty" ]
+    community_ids = [ "opencode", "brave", "zen-browser", "vscode" ]
     enable_builtin_templates = true
-    enable_community_templates = false
+    enable_community_templates = true
 
 [wallpaper]
 directory = "/home/broly/.config/backgrounds"
@@ -140,6 +178,7 @@ directory = "/home/broly/.config/backgrounds"
 
 [widget.active_window]
 color = "secondary"
+display = "text_only"
 
 [widget.bluetooth]
 capsule = true
