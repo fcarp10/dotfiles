@@ -2,8 +2,6 @@
 .zsh_history
 .zsh_plugins.zsh
 .zsh_sessions
-lazy-lock.json
-lazyvim.json
 *.log
 *.ors
 OpenRGB.json
@@ -14,3 +12,4 @@ aerospace/.aerospace.toml
 *.rev
 *.key
 *talpa*
+*/.gnupg/*
