@@ -14,3 +14,4 @@ aerospace/.aerospace.toml
 *talpa*
 */.gnupg/*
 *.bak
+gtk/.config/gtk-3.0/bookmarks

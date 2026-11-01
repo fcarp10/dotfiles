@@ -8,10 +8,10 @@ spawn-sh-at-startup "gsettings set org.gnome.desktop.interface cursor-theme Bree
 spawn-sh-at-startup "gsettings set org.gnome.desktop.interface cursor-size 40"
 spawn-sh-at-startup "gsettings set org.gtk.Settings.FileChooser startup-mode cwd"
 
+
 environment {
     EDITOR "nvim"
     VISUAL "nvim"
-    XDG_DATA_DIRS "/usr/local/share/:/usr/share/" // required for junction
     XDG_SESSION_TYPE "wayland"
     WLR_DRM_NO_MODIFIERS "1"
     CLUTTER_BACKEND "wayland"

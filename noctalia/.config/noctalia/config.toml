@@ -4,7 +4,7 @@ enabled = true
 [bar.default]
 capsule = true
 center = []
-end = [ "tray", "media", "group:g3", "group:g2", "group:g1", "clock" ]
+end = [ "bar", "bar_2", "tray", "media", "group:g3", "group:g2", "group:g1", "clock" ]
 margin_ends = 0
 radius_top_left = 0
 radius_top_right = 0
@@ -13,6 +13,7 @@ start = [ "workspaces", "active_window" ]
     [[bar.default.capsule_group]]
     accordion = false
     accordion_direction = "end"
+    border_width = 1.0
     enabled = true
     fill = "surface_variant"
     id = "g1"
@@ -23,6 +24,7 @@ start = [ "workspaces", "active_window" ]
     [[bar.default.capsule_group]]
     accordion = false
     accordion_direction = "end"
+    border_width = 1.0
     enabled = true
     fill = "surface_variant"
     id = "g2"
@@ -33,10 +35,11 @@ start = [ "workspaces", "active_window" ]
     [[bar.default.capsule_group]]
     accordion = false
     accordion_direction = "end"
+    border_width = 1.0
     enabled = true
     fill = "surface_variant"
     id = "g3"
-    members = [ "network", "bluetooth", "battery" ]
+    members = [ "caffeine", "network", "bluetooth", "battery" ]
     opacity = 1.0
     padding = 6.0
 
@@ -56,14 +59,15 @@ behavior_order = [ "screen-off", "lock", "lock-and-suspend" ]
     timeout = 600.0
 
     [idle.behavior.lock-and-suspend]
-    action = "lock_and_suspend"
-    enabled = false
+    action = "suspend"
+    enabled = true
+    lock_before_suspend = false
     timeout = 900.0
 
     [idle.behavior.screen-off]
     action = "screen_off"
     enabled = true
-    timeout = 60.0
+    timeout = 300.0
 
 [lockscreen_widgets]
 enabled = false
@@ -135,7 +139,7 @@ position = "bottom_center"
 scale = 1.2000000104308128
 
 [plugins]
-enabled = [ "mellotanica/launcher-pass" ]
+enabled = [ "mellotanica/launcher-pass", "felipeartur/ai-usagebar" ]
 
 [shell]
 app_icon_color = "tertiary"
@@ -179,6 +183,16 @@ directory = "/home/broly/.config/backgrounds"
 [widget.active_window]
 color = "secondary"
 display = "text_only"
+
+[widget.bar]
+type = "salemsayed/codexbar-meter:bar"
+
+[widget.bar_2]
+extras = "none"
+scale = 1.1500000000000001
+type = "felipeartur/ai-usagebar:bar"
+vendor = "opencode-go"
+visualization = "gauge"
 
 [widget.bluetooth]
 capsule = true
